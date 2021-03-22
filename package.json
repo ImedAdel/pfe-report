@@ -1,0 +1,13 @@
+{
+	"name": "report",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"private": true,
+	"devDependencies": {
+		"nodemon": "^2.0.7"
+	},
+	"scripts": {
+		"start": "nodemon"
+	}
+}
