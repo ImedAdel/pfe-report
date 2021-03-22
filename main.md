@@ -2,6 +2,12 @@
 title: A Collaborative Visual Database
 author: Imed Adel
 date: March 21, 2021
+documentclass: article
+papersize: a4
+mainfont: Inter
+sansfont: Inter
+monofont: IBM Plex Mono
+fontsize: 10pt
 ---
 
 # Flos sim orbi Macaroni
@@ -71,6 +77,7 @@ _Ignaro_ os [senis](http://queror-cives.com/) furiisque ferentes ille ne aves
 **Penei** nectare! Succumbere per! Natales habes. Pharetra Menelae virtutem;
 accede color cladis habemus **cursuque tulimus**.
 
+```
     kilobit_camera_ole.hexadecimalHardeningWorm.key(mashupCorrection + party,
             module_copy_remote);
     if (alertMaster) {
@@ -88,6 +95,7 @@ accede color cladis habemus **cursuque tulimus**.
                 ddr_frequency_bing), cyberspace);
         cyberbullying = rate;
     }
+```
 
 ## Numero trementia numinis
 

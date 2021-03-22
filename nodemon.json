@@ -1,5 +1,5 @@
 {
-	"exec": "pandoc -s main.md --pdf-engine=xelatex --variable mainfont=\"IBM Plex Mono\" -o main.pdf",
+	"exec": "pandoc -s main.md --pdf-engine=xelatex -o main.pdf",
 	"ext": "md",
 	"delay": "5000",
 	"ignore": [".git", "node_modules"]
