@@ -38,6 +38,18 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.cfg
 INPUT /usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/makeidx.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/makeidx.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
@@ -98,8 +110,6 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/bookmark/bkm-dvipdfm.def
 INPUT /usr/share/texlive/texmf-dist/tex/latex/bookmark/bkm-dvipdfm.def
 INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def

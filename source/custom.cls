@@ -17,6 +17,9 @@
            
 \RequirePackage{fontspec}
            
+\RequirePackage{csquotes} % Context-sensitive quotation marks
+\RequirePackage{makeidx}  % For creating indices
+\RequirePackage{xspace}   % For automatically "eating" spaces
 
 \RequirePackage{setspace}
 \onehalfspacing
