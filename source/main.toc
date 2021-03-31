@@ -34,6 +34,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.4}Use case diagrams}{6}{section.2.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.5}Conclusion}{7}{section.2.5}%
+\contentsline {section}{\numberline {2.5}Conclusion}{6}{section.2.5}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\nonumberline Bibliography}{8}{chapter*.8}%
