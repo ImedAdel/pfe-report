@@ -14,7 +14,17 @@
            titlepage,
            toc=bibliography,
            toc=index,]{scrbook}
-           
+
+          %  \usepackage[includemp,
+          %   paperwidth=18.90cm,
+          %   paperheight=24.58cm,
+          %   top=2.170cm,
+          %   bottom=3.510cm,
+          %   inner=2.1835cm,
+          %   outer=2.1835cm,
+          %   marginparwidth=4cm,
+          %   marginparsep=0.4cm]{geometry}
+
 \RequirePackage{fontspec}
            
 \RequirePackage{csquotes} % Context-sensitive quotation marks
