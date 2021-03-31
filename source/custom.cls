@@ -17,3 +17,30 @@
            
 \RequirePackage{fontspec}
            
+
+\RequirePackage{setspace}
+\onehalfspacing
+
+\RequirePackage[%
+  colorlinks = false,
+  % citecolor  = RoyalBlue,
+  % linkcolor  = RoyalBlue,
+  % urlcolor   = RoyalBlue,
+  unicode,
+  ]{hyperref}
+
+\RequirePackage{bookmark}
+
+\RequirePackage[%
+  autocite     = plain,
+  backend      = biber,
+  doi          = true,
+  url          = true,
+  giveninits   = true,
+  hyperref     = true,
+  maxbibnames  = 99,
+  maxcitenames = 99,
+  sortcites    = true,
+  style        = numeric,
+  ]{biblatex}
+
