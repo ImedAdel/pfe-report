@@ -44,3 +44,37 @@
   style        = numeric,
   ]{biblatex}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Penalties
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clubpenalty         = 10000
+\widowpenalty        = 10000
+\displaywidowpenalty = 10000
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Headers
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\RequirePackage{scrlayer-scrpage}
+\pagestyle{scrheadings}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Typefaces for parts, chapters, and sections
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\partformat}{\huge\partname~\thepart\autodot}
+\renewcommand{\raggedpart}{\flushleft}
+
+\setkomafont{part}{\normalfont\huge\scshape}
+
+\setkomafont{sectioning}{\normalfont\bfseries}
+\setkomafont{descriptionlabel}{\normalfont\bfseries}
+
+\setkomafont{caption}{\small}
+\setkomafont{captionlabel}{\usekomafont{caption}}
+
+% Large number for chapter
+\renewcommand*{\chapterformat}{%
+  \fontsize{50}{55}\selectfont\thechapter\autodot\enskip
+}
