@@ -4,7 +4,7 @@ author: Imed Adel
 date: March 21, 2021
 documentclass: article
 papersize: a4
-mainfont: IBM Plex Serif
+mainfont: TeX Gyre Pagella
 sansfont: Inter
 monofont: IBM Plex Mono
 fontsize: 12pt
@@ -16,8 +16,9 @@ fontsize: 12pt
 The world has been seeing a continuous shift to remote work since the internet boom in the early 2000s. The recent global pandemic instantly boosted the number of remote workers to unprecedented levels. On top of that, businesses have been gradually moving away from brick-and-mortar stores to online software-managed ones. Furthermore, client-side web apps and no-code web apps and websites have experienced a surge in the number of users. These factors uncovered a gap in the niche of easy-to-use collaborative data and content management software.
 
 
-## Preliminary study / product research
-To better understand users' needs, we have to explore the existing solutions and their drawbacks.
+## Preliminary study
+
+In order to better understand users' needs, we have to explore the existing solutions and their shortfalls.
 
 ### Existing solutions
 
@@ -76,41 +77,49 @@ Merebase is a collaborative visual database that can be used for data and conten
 
 The recent changes in workplaces and software development require robust collaborative and intuitive visual database systems, which we currently lack. Merebase is a proposed solution for these problems, built on top of cutting-edge technologies to offer the best user experience possible.
 
-# Analysis
+# Analysis and specification of needs
 ## Introduction
 
-// What should this part be about?
+Researching the current solutions led us to formulate a set of requirements to ensure that Merebase offers the best experience.
 
 ## Functional requirements
 
- A user must signup and login using only their email
-A user's account picture is fetched automatically from Gravatar
-A user can create a maximum of 20 workspaces ^[This is a technical limit imposed by Stripe, the payment processor]
-A user can invite other users to their workspace using their email
-A user can create new projects, columns, and rows
-A user can query the database using a REST endpoint and a Websocket endpoint
-A user can upgrade their account to a premium one
-A user can cancel their premium subscription
-A user can edit the same document as other users at the same time
+- A user must signup and login using only their email
+- A user's account picture is fetched automatically from Gravatar
+- A user can create a maximum of 20 workspaces ^[This is a technical limit imposed by Stripe, the payment processor]
+- A user can invite other users to their workspace using their email
+- A user can create new projects, columns, and rows
+- A user can query the database using a REST endpoint and a Websocket endpoint
+- A user can upgrade their account to a premium one
+- A user can cancel their premium subscription
+- A user can edit the same document as other users at the same time
+- A user can define the column data type (text, number, boolean, etc.)
 
 ## Non-functional requirements
 
-The web app should load within milliseconds
-Browsing large documents should not result in glitches or lags
-The interface should be accessible and intuitive
-Private documents should remain private and inaccessible to hackers
-The web app and the real-time server should be always available
+- The web app should load within milliseconds
+- Browsing large documents should not result in glitches or lags
+- The interface should be accessible and intuitive
+- Private documents should remain private and inaccessible to hackers
+- The web app and the real-time server should be always available
 
 ## Identification of actors
 
 Merebase uses RBAC (Role-Based Access Control) to manage users' access levels and permissions. There is only one actor, the user, but with multiple assignable roles.
 
-Owner: The user who created the resource, be it the workspace or the project. This role gives you entire access to the resource and it is assigned automatically.
-Admin: This role gives non-owner users the same privileges as the owner. Admins can invite new users and assign roles.
-Editor: This role permits a user to edit documents in a workspace.
-Viewer: This role permits a user to view documents in a workspace, without the ability to modify them.
+* Owner: The user who created the resource, be it the workspace or the project. This role gives you entire access to the resource and it is assigned automatically.
+* Admin: This role gives non-owner users the same privileges as the owner. Admins can invite new users and assign roles.
+* Editor: This role permits a user to edit documents in a workspace.
+* Viewer: This role permits a user to view documents in a workspace, without the ability to modify them.
 
 ## Use case diagrams
+
+To better illustrate the main interactions between the user and the application, we rely on a use case diagram.
+
+![General use case diagram](./assets/UCD, General.svg)
+
 ## Conclusion
+
+_TBD_
 
 
