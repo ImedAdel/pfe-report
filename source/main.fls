@@ -338,6 +338,12 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 OUTPUT /home/imed/Code/pfe/report/source/main.toc
+INPUT /home/imed/Code/pfe/report/source/main.lof
+INPUT /home/imed/Code/pfe/report/source/main.lof
+OUTPUT /home/imed/Code/pfe/report/source/main.lof
+INPUT /home/imed/Code/pfe/report/source/main.lot
+INPUT /home/imed/Code/pfe/report/source/main.lot
+OUTPUT /home/imed/Code/pfe/report/source/main.lot
 OUTPUT /home/imed/Code/pfe/report/source/Chapters/Introduction.aux
 INPUT /home/imed/Code/pfe/report/source/Chapters/Introduction.tex
 INPUT /home/imed/Code/pfe/report/source/Chapters/Introduction.tex

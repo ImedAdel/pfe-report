@@ -2,7 +2,7 @@
 \ProvidesClass{custom}[2021/03/31 My custom thesis and book class]
 
 \PassOptionsToPackage{
-  DIV  = 10,    % TODO: Make configurable
+  DIV  = 8,    % TODO: Make configurable
   BCOR = 10mm,  % TODO: Make configurable
 }{typearea}
 
