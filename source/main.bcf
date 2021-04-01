@@ -2182,7 +2182,10 @@
     <bcf:datasource type="file" datatype="bibtex">main.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">Bringhurst12</bcf:citekey>
+    <bcf:citekey order="1">noauthor_macintosh_2010</bcf:citekey>
+    <bcf:citekey order="2">polsson_chronology_2009</bcf:citekey>
+    <bcf:citekey order="3">december_2019_what_nodate</bcf:citekey>
+    <bcf:citekey order="4">Bringhurst12</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

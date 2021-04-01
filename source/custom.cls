@@ -94,6 +94,7 @@
   \fontsize{50}{55}\selectfont\thechapter\autodot\enskip
 }
 
+% For centring figures and maybe tables
 \makeatletter
 \newcommand*{\centerfloat}{%
   \parindent \z@
@@ -101,3 +102,16 @@
   \rightskip\leftskip
   \parfillskip \z@skip}
 \makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Glossaries
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\RequirePackage[%
+  acronym,
+  automake,
+  nogroupskip,
+  nopostdot,
+  nonumberlist,
+  toc,
+  ]{glossaries}

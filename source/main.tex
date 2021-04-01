@@ -10,8 +10,7 @@
 
 \addbibresource{main.bib}
 
-% \usepackage{tikz}
-% \usepackage{tikz-uml}
+\input{Misc/Glossaries}
 
 \begin{document}
 
@@ -22,10 +21,18 @@
 \listoftables
 
 \mainmatter
+\include{Chapters/General-Introduction}
 \include{Chapters/Introduction}
 \include{Chapters/Analysis}
 
 \backmatter
+\begingroup
+\let\clearpage\relax
+\glsaddall
+\printglossary[type=\acronymtype]
+\newpage
+\printglossary
+\endgroup
 \printbibliography
 
 \end{document}
