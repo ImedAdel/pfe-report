@@ -93,3 +93,11 @@
 \renewcommand*{\chapterformat}{%
   \fontsize{50}{55}\selectfont\thechapter\autodot\enskip
 }
+
+\makeatletter
+\newcommand*{\centerfloat}{%
+  \parindent \z@
+  \leftskip \z@ \@plus 1fil \@minus \textwidth
+  \rightskip\leftskip
+  \parfillskip \z@skip}
+\makeatother
