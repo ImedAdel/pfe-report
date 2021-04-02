@@ -36,7 +36,7 @@
 
 \RequirePackage{setspace}
 \onehalfspacing
-% \setlength{\parskip}{0.5\baselineskip}
+\setlength{\parskip}{0.5em}
 
 \RequirePackage[%
   colorlinks = false,
