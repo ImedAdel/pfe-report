@@ -19,34 +19,6 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
-    \entry{Bringhurst12}{book}{}
-      \name{author}{1}{}{%
-        {{hash=26e95fb42484f0ba33bccaf28955982e}{%
-           family={Bringhurst},
-           familyi={B\bibinitperiod},
-           given={Robert},
-           giveni={R\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Vancouver, British Columbia, Canada}%
-      }
-      \list{publisher}{1}{%
-        {Hartley \& Marks Publishers}%
-      }
-      \strng{namehash}{26e95fb42484f0ba33bccaf28955982e}
-      \strng{fullhash}{26e95fb42484f0ba33bccaf28955982e}
-      \strng{bibnamehash}{26e95fb42484f0ba33bccaf28955982e}
-      \strng{authorbibnamehash}{26e95fb42484f0ba33bccaf28955982e}
-      \strng{authornamehash}{26e95fb42484f0ba33bccaf28955982e}
-      \strng{authorfullhash}{26e95fb42484f0ba33bccaf28955982e}
-      \field{sortinit}{B}
-      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{edition}{4}
-      \field{title}{The Elements of Typographic Style}
-      \field{year}{2012}
-    \endentry
     \entry{noauthor_macintosh_2010}{misc}{}
       \field{sortinit}{M}
       \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}

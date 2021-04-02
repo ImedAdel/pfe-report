@@ -26,6 +26,9 @@
           %   marginparsep=0.4cm]{geometry}
 
 \RequirePackage{fontspec}
+
+\setmainfont[Numbers=OldStyle,Ligatures={Required,Common,Contextual,Discretionary}]{EB Garamond}
+\setsansfont{Inter}
            
 \RequirePackage{csquotes} % Context-sensitive quotation marks
 \RequirePackage{makeidx}  % For creating indices
@@ -78,6 +81,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Typefaces for parts, chapters, and sections
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \newfontfamily\chapterfont[Color=MSLightBlue]{Times New Roman}
 
 \renewcommand{\partformat}{\huge\partname~\thepart\autodot}
 \renewcommand{\raggedpart}{\flushleft}
