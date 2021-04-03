@@ -64,6 +64,8 @@
 \RequirePackage{tikz}
 \RequirePackage{tikz-uml}
 
+\RequirePackage{tabularx}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Graphics
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -76,7 +78,16 @@
 
 \makeatletter
 \def\maxwidth#1{\ifdim\Gin@nat@width>#1 #1\else\Gin@nat@width\fi}
+\def\maxheight#1{\ifdim\Gin@nat@height>#1 #1\else\Gin@nat@height\fi}
 \makeatother
+
+\newcommand{\logofig}[2]{
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=\maxwidth{\linewidth},height=\maxheight{0.5\linewidth},keepaspectratio]{#2}
+    \caption{#1 logo}
+  \end{figure}
+}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

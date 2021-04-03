@@ -60,22 +60,14 @@ We will start by presenting the selected solutions.
 
 \subsubsection{PostgREST}
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=\linewidth]{postgrest-logo.png}
-	\caption{PostgREST logo}
-\end{figure}
+\logofig{PostgREST}{postgrest-logo.png}
 
 PostgREST is an automatic API generator for Postgres databases.
 
 
 \subsubsection{Firebase}
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=\linewidth]{firebase-logo.png}
-	\caption{Firebase logo}
-\end{figure}
+\logofig{Firebase}{firebase-logo.png}
 
 Firebase is a platform developed by Google for creating mobile and web
 applications. It was initially released in 2012. It offers, among its
@@ -88,11 +80,7 @@ develop highly demanding mobile applications.
 
 \subsubsection{Airtable}
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=\linewidth]{airtable-logo.png}
-	\caption{Airtable logo}
-\end{figure}
+\logofig{Airtable}{airtable-logo.png}
 
 Airtable is a visual database app inspired by the ease of spreadsheets
 and the wide adoption of software like Microsoft Excel. The company
@@ -106,11 +94,7 @@ storage and uploads.
 
 \subsubsection{Contentful}
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=\linewidth]{contentful-logo.png}
-	\caption{Contentful logo}
-\end{figure}
+\logofig{Contentful}{contentful-logo.png}
 
 Contentful is a headless\footnote{Content is decoupled from the main
 	application. It's made accessible through a set of APIs.} CMS (Content
@@ -123,11 +107,7 @@ at US\$489 per month.
 
 \subsubsection{Sanity}
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=\linewidth]{sanity-logo.png}
-	\caption{Sanity logo}
-\end{figure}
+\logofig{Sanity}{sanity-logo.png}
 
 Sanity is another headless CMS. It competes directly with Contentful,
 offers an even more configurable editor, and its pricing starts at
@@ -136,11 +116,7 @@ Contentful lacks.
 
 \subsubsection{Webflow CMS}
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=\linewidth]{webflow-logo.png}
-	\caption{Webflow logo}
-\end{figure}
+\logofig{Webflow}{webflow-logo.png}
 
 Webflow is a website builder. It bundles a CMS and an e-commerce
 management system along with its visual website builder. The CMS is not
@@ -149,11 +125,7 @@ user interface.
 
 \subsubsection{Notion}
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.5\linewidth]{notion-logo-2.png}
-	\caption{Notion logo}
-\end{figure}
+\logofig{Notion}{notion-logo-2.png}
 
 Notion is a new contender in the space of content management. It
 presents itself as a collaborative workspace for teams. Its use cases
@@ -202,17 +174,24 @@ Table \ref{table:exisiting-solutions-comparison} is an objective side-by-side co
 
 \begin{table}[h]
 	\centerfloat
-	\begin{tabular}{ | l | c | c | c | c | c | c | }
+	\begin{tabularx}{1.25\linewidth}{ | >{\raggedright\arraybackslash}X
+			| >{\centering\arraybackslash}X
+			| >{\centering\arraybackslash}X
+			| >{\centering\arraybackslash}X
+			| >{\centering\arraybackslash}X
+			| >{\centering\arraybackslash}X
+			| >{\centering\arraybackslash}X |}
 		\hline
-		         & PostgREST & Firebase & Airtable & Contentful & Sanity & Notion \\
+		         & PostgREST     & Firebase & Airtable               & Contentful & Sanity & Notion      \\
 		\hline
-		Released & 6         & 87837    & 787      & Contentful & Sanity & Notion \\
-		Type     & 7         & 78       & 5415     & Contentful & Sanity & Notion \\
-		3        & 545       & 778      & 7507     & Contentful & Sanity & Notion \\
-		4        & 545       & 18744    & 7560     & Contentful & Sanity & Notion \\
-		5        & 88        & 788      & 6344     & Contentful & Sanity & Notion \\
+		Released & 2016          & 2016     & 2012                   & 2016       & 2016   & 2012        \\
+		Type     & Databse / API & Database & Spreadsheet / database & CMS        & CMS    & Note-taking \\
+		Requires & Yes           & Yes      & No                     & No         & No     & No          \\
+		API      & Yes           & Yes      & Yes                    & Yes        & Yes    & No          \\
+		4        & 545           & 18744    & 7560                   & Contentful & Sanity & Notion      \\
+		5        & 88            & 788      & 6344                   & Contentful & Sanity & Notion      \\
 		\hline
-	\end{tabular}
+	\end{tabularx}
 	\caption{Comparative table of the existing solutions}
 	\label{table:exisiting-solutions-comparison}
 \end{table}
@@ -235,6 +214,10 @@ also suffers from some performance issues when loading large documents.
 Furthermore, it doesn't have the same rich text capabilities as Notion.
 Finally, it lacks a real-time API and it's relatively expensive.
 
+\subsubsection{Case study: Notion}
+
+Notion is great.
+
 \subsection{Proposed solution}
 
 Merebase is a collaborative visual database that can be used for data
@@ -244,6 +227,10 @@ the field of browser apps and high-performance real-time servers, it
 should be able to load instantaneously, while offering a smooth user
 experience with no glitching or slowdowns when loading large documents,
 and with the ability to effortlessly collaborate with other users.
+
+\section{Development process}
+
+Agile and a bit of spiral.
 
 \section{Conclusion}
 

@@ -295,6 +295,10 @@ INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries
 INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
 INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.markings.code.tex
 INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.markings.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlayer-scrpage.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlayer-scrpage.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlayer.sty
