@@ -50,20 +50,30 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.5}Development process}{12}{section.1.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.6}Conclusion}{12}{section.1.6}%
+\contentsline {subsection}{\numberline {1.5.1}Agile software development}{12}{subsection.1.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Analysis and specification of needs}{13}{chapter.2}%
+\contentsline {subsubsection}{\nonumberline Values}{13}{section*.18}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Functional requirements}{13}{section.2.1}%
+\contentsline {subsubsection}{\nonumberline Principles}{13}{section*.19}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Non-functional requirements}{14}{section.2.2}%
+\contentsline {subsection}{\numberline {1.5.2}\acrlong {fdd}}{14}{subsection.1.5.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Identification of actors}{14}{section.2.3}%
+\contentsline {subsection}{\numberline {1.5.3}Kanban}{14}{subsection.1.5.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Use case diagrams}{15}{section.2.4}%
+\contentsline {section}{\numberline {1.6}Conclusion}{14}{section.1.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.5}Conclusion}{15}{section.2.5}%
+\contentsline {chapter}{\numberline {2}Analysis and specification of needs}{15}{chapter.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Acronyms}{16}{section*.18}%
+\contentsline {section}{\numberline {2.1}Functional requirements}{15}{section.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Bibliography}{17}{chapter*.20}%
+\contentsline {section}{\numberline {2.2}Non-functional requirements}{16}{section.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Identification of actors}{16}{section.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.4}Use case diagrams}{17}{section.2.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.5}Conclusion}{17}{section.2.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Acronyms}{18}{section*.20}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Bibliography}{19}{chapter*.22}%

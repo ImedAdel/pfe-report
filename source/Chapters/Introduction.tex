@@ -174,7 +174,8 @@ Table \ref{table:exisiting-solutions-comparison} is an objective side-by-side co
 
 \begin{table}[h]
 	\centerfloat
-	\begin{tabularx}{1.25\linewidth}{ | >{\raggedright\arraybackslash}X
+	\begin{tabularx}{1.45\linewidth}{ | >{\raggedright\arraybackslash}X
+			| >{\centering\arraybackslash}X
 			| >{\centering\arraybackslash}X
 			| >{\centering\arraybackslash}X
 			| >{\centering\arraybackslash}X
@@ -182,14 +183,14 @@ Table \ref{table:exisiting-solutions-comparison} is an objective side-by-side co
 			| >{\centering\arraybackslash}X
 			| >{\centering\arraybackslash}X |}
 		\hline
-		         & PostgREST     & Firebase & Airtable               & Contentful & Sanity & Notion      \\
+		         & PostgREST     & Firebase & Airtable               & Contentful & Sanity & Webflow CMS & Notion      \\
 		\hline
-		Released & 2016          & 2016     & 2012                   & 2016       & 2016   & 2012        \\
-		Type     & Databse / API & Database & Spreadsheet / database & CMS        & CMS    & Note-taking \\
-		Requires & Yes           & Yes      & No                     & No         & No     & No          \\
-		API      & Yes           & Yes      & Yes                    & Yes        & Yes    & No          \\
-		4        & 545           & 18744    & 7560                   & Contentful & Sanity & Notion      \\
-		5        & 88            & 788      & 6344                   & Contentful & Sanity & Notion      \\
+		Released & 2016          & 2016     & 2012                   & 2016       & 2016   & 2012        & 2012        \\
+		Type     & Databse / API & Database & Spreadsheet / database & CMS        & CMS    & CMS         & Note-taking \\
+		Requires & Yes           & Yes      & No                     & No         & No     & No          & No          \\
+		API      & Yes           & Yes      & Yes                    & Yes        & Yes    & Partial     & No          \\
+		4        & 545           & 18744    & 7560                   & 55         & 44     & 55          & 44          \\
+		5        & 88            & 788      & 6344                   & Contentful & Sanity & Notion      & Njj         \\
 		\hline
 	\end{tabularx}
 	\caption{Comparative table of the existing solutions}
@@ -230,7 +231,53 @@ and with the ability to effortlessly collaborate with other users.
 
 \section{Development process}
 
-Agile and a bit of spiral.
+To ensure the optimal use of time and energy, we chose to follow a development process throughout this project.
+That is, dividing work into smaller chunks according to a certain set of rules. In particular, we followed the principles of Agile software development, which is an umbrella for multiple methodologies and frameworks.
+Of these methodologies, we adopted \acrfull{fdd} and the Kanban method for their practicality and ease-of-use, especially for projects with small teams.
+
+\subsection{Agile software development}
+
+Agile software development is an umbrella term for a set of frameworks and practices based on the set of principles popularized by the Manifesto for Agile Software Development in 2001.
+It advocates adaptive planning, evolutionary development, early delivery, and continual improvement, and it encourages flexible responses to change.
+It derives its values from a range of software development frameworks and methodologies.
+
+\subsubsection{Values}
+
+The Manifesto for Agile Software Development proclaims the following values:
+
+\begin{itemize}
+	\item Individuals and interactions over processes and tools
+	\item Working software over comprehensive documentation
+	\item Customer collaboration over contract negotiation
+	\item Responding to change over following a plan
+\end{itemize}
+
+\subsubsection{Principles}
+
+The Manifesto for Agile Software Development is based on twelve principles:
+
+\begin{enumerate}
+	\item Customer satisfaction by early and continuous delivery of valuable software
+	\item Welcome changing requirements, even in late development
+	\item Deliver working software frequently (weeks rather than months)
+	\item Close, daily cooperation between business people and developers
+	\item Projects are built around motivated individuals, who should be trusted
+	\item Face-to-face conversation is the best form of communication (co-location)
+	\item Working software is the primary measure of progress
+	\item Sustainable development, able to maintain a constant pace
+	\item Continuous attention to technical excellence and good design
+	\item Simplicity—the art of maximizing the amount of work not done—is essential
+	\item Best architectures, requirements, and designs emerge from self-organizing teams
+	\item Regularly, the team reflects on how to become more effective, and adjusts accordingly
+\end{enumerate}
+
+\subsection{\acrlong{fdd}}
+
+\acrfull{fdd} is an Agile method for developing software iteratively and incrementally. It encourages planning, design, and development based on features.
+
+\subsection{Kanban}
+
+Kanban is an Agile method to manage work by balancing demands with available capacity, while uncovering bottlenecks. Work is devided into smaller tasks that are visualized on top of a Kanban board.
 
 \section{Conclusion}
 
