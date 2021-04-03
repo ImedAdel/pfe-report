@@ -27,7 +27,7 @@
 
 \RequirePackage{fontspec}
 
-\setmainfont[Numbers=OldStyle,Ligatures={Required,Common,Contextual,Discretionary}]{EB Garamond}
+\setmainfont[Numbers=OldStyle,Ligatures={Required,Common,Contextual}]{EB Garamond}
 \setsansfont{Inter}
            
 \RequirePackage{csquotes} % Context-sensitive quotation marks
@@ -88,7 +88,7 @@
 
 \setkomafont{part}{\normalfont\huge\scshape}
 
-\setkomafont{sectioning}{\normalfont\bfseries}
+\setkomafont{sectioning}{\normalfont\addfontfeature{Ligatures=Discretionary}\bfseries}
 \setkomafont{descriptionlabel}{\normalfont\bfseries}
 
 \setkomafont{caption}{\small}
