@@ -14,38 +14,40 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.4}Preliminary study}{5}{section.1.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.4.1}Existing solution}{5}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.1}Existing solutions}{5}{subsection.1.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Notion.so}{6}{section*.5}%
+\contentsline {subsubsection}{\nonumberline PostgREST}{6}{section*.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Airtable}{6}{section*.6}%
+\contentsline {subsubsection}{\nonumberline Firebase}{6}{section*.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Contentful}{7}{section*.7}%
+\contentsline {subsubsection}{\nonumberline Airtable}{7}{section*.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Sanity.io}{7}{section*.8}%
+\contentsline {subsubsection}{\nonumberline Contentful}{7}{section*.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Webflow CMS}{7}{section*.9}%
+\contentsline {subsubsection}{\nonumberline Sanity}{8}{section*.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Firebase}{7}{section*.10}%
+\contentsline {subsubsection}{\nonumberline Webflow CMS}{8}{section*.10}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.4.2}Critique}{8}{subsection.1.4.2}%
+\contentsline {subsubsection}{\nonumberline Notion}{9}{section*.11}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.4.3}Proposed solution}{8}{subsection.1.4.3}%
+\contentsline {subsection}{\numberline {1.4.2}Critique}{10}{subsection.1.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.5}Conclusion}{9}{section.1.5}%
+\contentsline {subsection}{\numberline {1.4.3}Proposed solution}{10}{subsection.1.4.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Analysis and specification of needs}{10}{chapter.2}%
+\contentsline {section}{\numberline {1.5}Conclusion}{11}{section.1.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Functional requirements}{10}{section.2.1}%
+\contentsline {chapter}{\numberline {2}Analysis and specification of needs}{12}{chapter.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Non-functional requirements}{11}{section.2.2}%
+\contentsline {section}{\numberline {2.1}Functional requirements}{12}{section.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Identification of actors}{11}{section.2.3}%
+\contentsline {section}{\numberline {2.2}Non-functional requirements}{13}{section.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Use case diagrams}{12}{section.2.4}%
+\contentsline {section}{\numberline {2.3}Identification of actors}{13}{section.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.5}Conclusion}{12}{section.2.5}%
+\contentsline {section}{\numberline {2.4}Use case diagrams}{14}{section.2.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Acronyms}{13}{section*.11}%
+\contentsline {section}{\numberline {2.5}Conclusion}{14}{section.2.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Bibliography}{14}{chapter*.13}%
+\contentsline {chapter}{Acronyms}{15}{section*.12}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Bibliography}{16}{chapter*.14}%
