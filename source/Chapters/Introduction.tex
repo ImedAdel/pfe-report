@@ -1,27 +1,62 @@
 \chapter{Presentation}
 \label{chap:intro}
 
-Throughout this chapter, we are going to lay the existing problem in explicit terms, research the existing solutions and critique them, and finally introduce our proposed solution.
+\section{Introduction}
 
-The world has been seeing a continuous shift to remote work since the
-internet boom in the early 2000s. The recent global pandemic instantly
-boosted the number of remote workers to unprecedented levels. On top of
-that, businesses have been gradually moving away from brick-and-mortar
-stores to online software-managed ones. Furthermore, client-side web
-apps and no-code web apps and websites have experienced a surge in the
-number of users. These factors uncovered a gap in the niche of
-easy-to-use collaborative data and content management software.
+The aim of this chapter is to contextualize our work.
+We will start by introducing the hosting institution for the graduation project.
+Then, we will present the project, its motivations, and its objectives.
+And finally, we will discuss the development process used throughout the making of this project.
+
+% The world has been seeing a continuous shift to remote work since the
+% internet boom in the early 2000s. The recent global pandemic instantly
+% boosted the number of remote workers to unprecedented levels. On top of
+% that, businesses have been gradually moving away from brick-and-mortar
+% stores to online software-managed ones. Furthermore, client-side web
+% apps and no-code web apps and websites have experienced a surge in the
+% number of users. These factors uncovered a gap in the niche of
+% easy-to-use collaborative data and content management software.
+
+\section{Host}
+
+This project is done as part of the final graduation project with the goal of obtaining the License Degree in Computer Science within the Higher School of Sciences and Technology of Hammam Sousse.
+
+\section{Project presentation}
+
+Our project's main idea and design choices stem from the problems we faced while trying to accomplish certain tasks using other tools.
+% A robust implementation of our project requires deep research of multiple aspects that will guide our design and implementation decisions.
+
+\subsection{Problematics}
+
+The continous shift to \acrfull{saas}, coupled with the rise of remote work, uncovered a gap in the field of data and content management software. The gap is further exacerbated due to the accelarting adoption of web applications, which are mostly client-side applications without any server requirements. Nowadays, businesses are looking for easy and collaborative ways to allow stakeholders to manage data and content, and to connect the data to their different applications. The solution must respond to the needs of businesses from different backgrounds, with varying budgets, and minimal technical knowledge. The solution must also be easily intergratable with other tools that these businesses might rely on. Furthermore, the solution must support recent technilogical advancements in the web, such as real-time collbaoration and real-time queries. To ensure these requirements, we need to answer the following questions:
+
+\begin{itemize}
+	\item How to support real-time collaboration?
+	\item What level of collaboration is required for optimal productivity?
+	\item How should we organize and share data between multiple users?
+	\item What interface structure ensures the most accesible software?
+	\item What data types should we support?
+	\item How important is speed?
+	\item How can we ensure a fast user experience?
+	\item What are the bottlenecks of the existing solutions and how can we solve them?
+	\item How can we ensure a fast and easy on-boarding?
+\end{itemize}
 
 \section{Preliminary study}
 
-In order to better understand users' needs, we have to explore the
-existing solutions and their shortfalls.
+Before starting the development process of our projects, it is of utmost importance to research the existing solutions in the field of data and content management that our potential users are currently relying on.
+It is necessary to understand what problems users are facing while using these solutions and what kind of tricks and shortcuts do they have to depend on to achieve their desired outcome. We should also focus on the points that users admire about their current choices, as these are the features keeping them from looking for another solution in the meantime.
 
-\subsection{Existing solutions}
+With this goal in mind, we went on to research multiple applications and software systems with varying degrees of features and requirements.
+While some might require deep technical knowledge of databases, servers, and programming, others are more straightforward and require little to no technical knowledge.
+However, while some applications may require no programming skills, they still require some time for on-boarding and getting familiar with the software.
+This can be a significant roadblock for many entreprises that are already stuck with some other software system.
 
-A plethora of solutions in the niche of data and content management
-software exist today, with each having its own focus and its own
-distinctive use.
+From this wide pool of data and content management software, we selected the most used and loved ones and put them to comparison. In particular, we chose to focus on the PostgREST, Notion, Airtable, Contentful, Sanity, Webflow CMS, and Firebase.
+
+\subsection{Existing solution}
+
+We will start by presenting the selected solutions and then compre them side by side.
 
 \subsubsection{Notion.so}
 
