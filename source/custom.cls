@@ -88,7 +88,7 @@
 
 \setkomafont{part}{\normalfont\huge\scshape}
 
-\setkomafont{sectioning}{\normalfont\addfontfeature{Ligatures=Discretionary}\bfseries}
+\setkomafont{sectioning}{\normalfont\bfseries}
 \setkomafont{descriptionlabel}{\normalfont\bfseries}
 
 \setkomafont{caption}{\small}
