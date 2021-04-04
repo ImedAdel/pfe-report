@@ -16,64 +16,62 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.4.1}Existing solutions}{5}{subsection.1.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline PostgREST}{6}{section*.5}%
+\contentsline {subsubsection}{\nonumberline Firebase}{6}{section*.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Firebase}{6}{section*.6}%
+\contentsline {subsubsection}{\nonumberline Airtable}{6}{section*.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Airtable}{7}{section*.7}%
+\contentsline {subsubsection}{\nonumberline Contentful}{7}{section*.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Contentful}{7}{section*.8}%
+\contentsline {subsubsection}{\nonumberline Sanity}{7}{section*.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Sanity}{8}{section*.9}%
+\contentsline {subsubsection}{\nonumberline Webflow CMS}{8}{section*.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Webflow CMS}{8}{section*.10}%
+\contentsline {subsubsection}{\nonumberline Notion}{8}{section*.10}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Notion}{9}{section*.11}%
+\contentsline {subsection}{\numberline {1.4.2}Comparison of the existing solutions}{9}{subsection.1.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.4.2}Comparison of the existing solutions}{10}{subsection.1.4.2}%
+\contentsline {subsubsection}{\nonumberline Methodology}{10}{section*.11}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Methodology}{10}{section*.12}%
+\contentsline {paragraph}{\nonumberline Web.Dev}{10}{section*.12}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Web.Dev}{10}{section*.13}%
+\contentsline {paragraph}{\nonumberline Google Chrome Lighthouse}{10}{figure.1.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Google Chrome Lighthouse}{10}{section*.14}%
+\contentsline {paragraph}{\nonumberline Capterra}{11}{figure.1.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Capterra}{10}{section*.15}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Comparison table}{10}{section*.16}%
+\contentsline {subsubsection}{\nonumberline Comparison table}{11}{section*.15}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.4.3}Critique}{11}{subsection.1.4.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Case study: Notion}{11}{section*.17}%
+\contentsline {subsubsection}{\nonumberline Case study: Notion}{12}{section*.16}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.4.4}Proposed solution}{12}{subsection.1.4.4}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.5}Development process}{12}{section.1.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.5.1}Agile software development}{12}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.1}Agile software development}{13}{subsection.1.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Values}{13}{section*.18}%
+\contentsline {subsubsection}{\nonumberline Values}{13}{section*.17}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Principles}{13}{section*.19}%
+\contentsline {subsubsection}{\nonumberline Principles}{13}{section*.18}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.5.2}\acrlong {fdd}}{14}{subsection.1.5.2}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.5.3}Kanban}{14}{subsection.1.5.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.6}Conclusion}{14}{section.1.6}%
+\contentsline {section}{\numberline {1.6}Conclusion}{15}{section.1.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Analysis and specification of needs}{15}{chapter.2}%
+\contentsline {chapter}{\numberline {2}Analysis and specification of needs}{16}{chapter.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Functional requirements}{15}{section.2.1}%
+\contentsline {section}{\numberline {2.1}Functional requirements}{16}{section.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Non-functional requirements}{16}{section.2.2}%
+\contentsline {section}{\numberline {2.2}Non-functional requirements}{17}{section.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Identification of actors}{16}{section.2.3}%
+\contentsline {section}{\numberline {2.3}Identification of actors}{17}{section.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Use case diagrams}{17}{section.2.4}%
+\contentsline {section}{\numberline {2.4}Use case diagrams}{18}{section.2.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.5}Conclusion}{17}{section.2.5}%
+\contentsline {section}{\numberline {2.5}Conclusion}{18}{section.2.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Acronyms}{18}{section*.20}%
+\contentsline {chapter}{Acronyms}{19}{section*.19}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Bibliography}{19}{chapter*.22}%
+\contentsline {chapter}{\nonumberline Bibliography}{20}{chapter*.21}%

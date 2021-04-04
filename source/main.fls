@@ -433,7 +433,6 @@ INPUT /home/imed/Code/pfe/report/source/Chapters/General-Introduction.tex
 OUTPUT /home/imed/Code/pfe/report/source/Chapters/Introduction.aux
 INPUT /home/imed/Code/pfe/report/source/Chapters/Introduction.tex
 INPUT /home/imed/Code/pfe/report/source/Chapters/Introduction.tex
-INPUT /home/imed/Code/pfe/report/source/Graphics/postgrest-logo.png
 INPUT /home/imed/Code/pfe/report/source/Graphics/firebase-logo.png
 INPUT /home/imed/Code/pfe/report/source/Graphics/airtable-logo.png
 INPUT /home/imed/Code/pfe/report/source/Graphics/contentful-logo.png
@@ -442,6 +441,8 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /home/imed/Code/pfe/report/source/Graphics/sanity-logo.png
 INPUT /home/imed/Code/pfe/report/source/Graphics/webflow-logo.png
 INPUT /home/imed/Code/pfe/report/source/Graphics/notion-logo-2.png
+INPUT /home/imed/Code/pfe/report/source/Graphics/lighthouse-logo.png
+INPUT /home/imed/Code/pfe/report/source/Graphics/capterra-logo.png
 OUTPUT /home/imed/Code/pfe/report/source/Chapters/Analysis.aux
 INPUT /home/imed/Code/pfe/report/source/Chapters/Analysis.tex
 INPUT /home/imed/Code/pfe/report/source/Chapters/Analysis.tex

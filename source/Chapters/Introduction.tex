@@ -52,18 +52,11 @@ While some might require deep technical knowledge of databases, servers, and pro
 However, while some applications may require no programming skills, they still require some time for on-boarding and getting familiar with the software.
 This can be a significant roadblock for many entreprises that are already stuck with some other software system.
 
-From this wide pool of data and content management software, we selected the most used and loved ones and put them to comparison. In particular, we chose to focus on PostgREST, Notion, Airtable, Contentful, Sanity, Webflow CMS, and Firebase.
+From this wide pool of data and content management software, we selected the most used and loved ones and put them to comparison. In particular, we chose to focus on Notion, Airtable, Contentful, Sanity, Webflow CMS, and Firebase.
 
 \subsection{Existing solutions}
 
 We will start by presenting the selected solutions.
-
-\subsubsection{PostgREST}
-
-\logofig{PostgREST}{postgrest-logo.png}
-
-PostgREST is an automatic API generator for Postgres databases.
-
 
 \subsubsection{Firebase}
 
@@ -154,19 +147,27 @@ In order to have a better understanding of the different offerings of the select
 
 \subsubsection{Methodology}
 
-For a fair and objective comparison of the different solutions, we will rely on Web.Dev and Google Chrome Lighthouse for measuring performance and accesibility speed, and Capterra for aggregating user reviews.
+For a fair and objective comparison of the different solutions, we will rely on Web.Dev and Google Chrome Lighthouse for measuring performance, accesibility, speed and security, and Capterra for aggregating user reviews and forming a consensus about the main strain points in the existing tools.
 
 \paragraph{Web.Dev}
 
-Web.Dev is a tool developed by Google that uses the Lighthouse enginge to measure different websites and web applications metrics.
+Web.Dev is a web application developed by Google that uses the Lighthouse tool to measure different websites and web applications metrics. It can only audit public web pages, however, it offers metrics totally unbiased by our browser setup.
 
 \paragraph{Google Chrome Lighthouse}
 
-Web.Dev is a tool developed by Google that uses the Lighthouse enginge to measure different websites and web applications metrics.
+\logofig{Lighthouse}{lighthouse-logo.png}
+
+Google Chrome Lighthouse is an extension available by default in Google Chrome browsers.
+It can measure different website and web application metrics.
+It can audit both public and private web pages. However, the results can be affected by any installed browser extensions.
+Which is why we run this tool in an isolated browser installed for this particular use case.
 
 \paragraph{Capterra}
 
-Web.Dev is a tool developed by Google that uses the Lighthouse enginge to measure different websites and web applications metrics.
+\logofig{Capterra}{capterra-logo.png}
+
+Capterra is a free resource that helps businesses of all kinds compare available software and find the right software for their needs.
+It offers software ratings, reviews and buying guides.
 
 \subsubsection{Comparison table}
 
@@ -174,8 +175,8 @@ Table \ref{table:exisiting-solutions-comparison} is an objective side-by-side co
 
 \begin{table}[h]
 	\centerfloat
-	\begin{tabularx}{1.45\linewidth}{ | >{\raggedright\arraybackslash}X
-			| >{\centering\arraybackslash}X
+	\footnotesize
+	\begin{tabularx}{1.25\linewidth}{ | >{\raggedright\arraybackslash}X
 			| >{\centering\arraybackslash}X
 			| >{\centering\arraybackslash}X
 			| >{\centering\arraybackslash}X
@@ -183,14 +184,13 @@ Table \ref{table:exisiting-solutions-comparison} is an objective side-by-side co
 			| >{\centering\arraybackslash}X
 			| >{\centering\arraybackslash}X |}
 		\hline
-		         & PostgREST     & Firebase & Airtable               & Contentful & Sanity & Webflow CMS & Notion      \\
+		         & Firebase & Airtable    & Contentful & Sanity & Webflow CMS & Notion  \\
 		\hline
-		Released & 2016          & 2016     & 2012                   & 2016       & 2016   & 2012        & 2012        \\
-		Type     & Databse / API & Database & Spreadsheet / database & CMS        & CMS    & CMS         & Note-taking \\
-		Requires & Yes           & Yes      & No                     & No         & No     & No          & No          \\
-		API      & Yes           & Yes      & Yes                    & Yes        & Yes    & Partial     & No          \\
-		4        & 545           & 18744    & 7560                   & 55         & 44     & 55          & 44          \\
-		5        & 88            & 788      & 6344                   & Contentful & Sanity & Notion      & Njj         \\
+		Released & 2016     & 2012        & 2016       & 2016   & 2012        & 2012    \\
+		Type     & Database & Spreadsheet & CMS        & CMS    & CMS         & Wiki    \\
+		Requires & Yes      & No          & No         & No     & No          & No      \\
+		API      & Yes      & Yes         & Yes        & Yes    & Yes         & Partial \\
+		Rating   & 4.6      & 4.7         & 4.5        & ---    & ---         & 4.7     \\
 		\hline
 	\end{tabularx}
 	\caption{Comparative table of the existing solutions}
