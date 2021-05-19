@@ -62,16 +62,38 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {2}Analysis and specification of needs}{16}{chapter.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Functional requirements}{16}{section.2.1}%
+\contentsline {section}{\numberline {2.1}Analysis of requirements}{16}{section.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Non-functional requirements}{17}{section.2.2}%
+\contentsline {subsection}{\numberline {2.1.1}Functional requirements}{17}{subsection.2.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Identification of actors}{17}{section.2.3}%
+\contentsline {subsection}{\numberline {2.1.2}Non-functional requirements}{18}{subsection.2.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Use case diagrams}{18}{section.2.4}%
+\contentsline {paragraph}{\nonumberline Security}{18}{section*.19}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.5}Conclusion}{18}{section.2.5}%
+\contentsline {paragraph}{\nonumberline User experience}{18}{section*.20}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Acronyms}{19}{section*.19}%
+\contentsline {paragraph}{\nonumberline Speed}{18}{section*.21}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Bibliography}{20}{chapter*.21}%
+\contentsline {paragraph}{\nonumberline Performance}{18}{section*.22}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Accessibility}{19}{section*.23}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Scalability}{19}{section*.24}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Developer experience}{19}{section*.25}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Specification of needs}{19}{section.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.1}Identification of actors}{19}{subsection.2.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Use case diagrams}{20}{section.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.4}Conclusion}{20}{section.2.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Conceptual study}{21}{chapter.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Implementation}{22}{chapter.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Acronyms}{23}{section*.26}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Bibliography}{24}{chapter*.28}%
