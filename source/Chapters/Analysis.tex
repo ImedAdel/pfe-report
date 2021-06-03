@@ -7,13 +7,15 @@ After researching the current solutions and their drawbacks, we set---within thi
 
 \section{Analysis of requirements}
 
-The goal of our project is creating a collaborative visual database that allows users to easily manage their data, be it a list of users, blog posts, or a store inventory, and to easily and securely access this data through an API. Our application is targeted at enterprises and individuals with no or minimal technical skills---a goal that should be kept in mind while structuring our project.
+The goal of our project is creating a collaborative visual database that allows users to easily manage their data, be it a list of users, blog posts, or a store inventory, and to easily and securely access this data through an API.
+Our application is targeted at enterprises and individuals with no or minimal technical skills---a goal that should be kept in mind while structuring our project.
 
 The analysis of requirements phase aims to list a set of both functional and non-functional requirements for modeling and developing our application.
 
 \subsection{Functional requirements}
 
-Functional requirements specify the different tasks of a system. Therefore, in this section, we set the exact tasks that our application must be able to successfully handle, from the most general to the most specific.
+Functional requirements specify the different tasks of a system.
+Therefore, in this section, we set the exact tasks that our application must be able to successfully handle, from the most general to the most specific.
 
 \begin{itemize}
 	% \tightlist
@@ -41,52 +43,68 @@ Functional requirements specify the different tasks of a system. Therefore, in t
 
 \subsection{Non-functional requirements}
 
-Non-functional requirements define \textit{how} a system performs its various tasks. The goal is to offer the best user experience.
+Non-functional requirements define \textit{how} a system performs its various tasks.
+The goal is to offer the best user experience.
 
 \paragraph{Security}
 
-Our application should ensure the security of the hosted data. It should respect the permissions and roles set by the user. Therefore, a robust authentication and authorization system must be put in place.
+Our application should ensure the security of the hosted data.
+It should respect the permissions and roles set by the user.
+Therefore, a robust authentication and authorization system must be put in place.
 
 \paragraph{User experience}
 
-Our goal is to offer the best user experience achievable. Our users will not have must technical knowledge to understand a technically complicated application and they do not have much time to accommodate themselves with a completely new set of interfaces. Our application must be simple and familiar.
+Our goal is to offer the best user experience achievable.
+Our users will not have must technical knowledge to understand a technically complicated application, and they do not have much time to accommodate themselves with a completely new set of interfaces.
+Our application must be simple and familiar.
 
 \paragraph{Speed}
 
-Our users may not have the best internet connectivity and they might be sharing a single internet connection to accomplish their work. Therefore, our application must load within seconds. This includes caching resources, minifying them, and predicting and preloading what the user is going to need next.
+Our users may not have the best internet connectivity and they might be sharing a single internet connection to accomplish their work.
+Therefore, our application must load within seconds.
+This includes caching resources, minifying them, and predicting and preloading what the user is going to need next.
 
 \paragraph{Performance}
 
-Our application has to load and display large amounts of data. This can result in an undesirable glitching and huge memory and CPU usage, which, aside from the slowness of the application, increases the temperature and noise of the computer. Therefore, resulting in an uncomfortable user experience, especially when working within groups.
+Our application has to load and display large amounts of data.
+This can result in an undesirable glitching and huge memory and CPU usage, which, aside from the slowness of the application, increases the temperature and noise of the computer.
+Therefore, resulting in an uncomfortable user experience, especially when working within groups.
 
 \paragraph{Accessibility}
 
-Our users might have some preferences when it comes to navigating the interface, such as relying on the keyboard rather than using the cursor. Other users might rely different input devices that require special care. This is an important point to consider in order to render our application usable by as many people as possible.
+Our users might have some preferences when it comes to navigating the interface, such as relying on the keyboard rather than using the cursor.
+Other users might rely different input devices that require special care.
+This is an important point to consider in order to render our application usable by as many people as possible.
 
 \paragraph{Scalability}
 
-Our application must be developed with scalability in mind. This includes having to increase the number of servers while maintaining the collaborative aspect of the application.
+Our application must be developed with scalability in mind.
+This includes having to increase the number of servers while maintaining the collaborative aspect of the application.
 
 \paragraph{Developer experience}
 
-Our application must use state-of-the-art technology to offer the best developer experience. This includes using linting and formatting tools, along with deployment platforms such as Docker.
+Our application must use state-of-the-art technology to offer the best developer experience.
+This includes using linting and formatting tools, along with deployment platforms such as Docker.
 
 \section{Specification of needs}
 \subsection{Identification of actors}
 
 Merebase uses RBAC (Role-Based Access Control) to manage users' access
-levels and permissions. There is only one actor, the user, but with
+levels and permissions.
+There is only one actor, the user, but with
 multiple assignable roles.
 
 \begin{itemize}
 	% \tightlist
 	\item
 	      Owner: The user who created the resource, be it the workspace or the
-	      project. This role gives you entire access to the resource and it is
+	      project.
+	      This role gives you entire access to the resource and it is
 	      assigned automatically.
 	\item
 	      Admin: This role gives non-owner users the same privileges as the
-	      owner. Admins can invite new users and assign roles.
+	      owner.
+	      Admins can invite new users and assign roles.
 	\item
 	      Editor: This role permits a user to edit documents in a workspace.
 	\item
