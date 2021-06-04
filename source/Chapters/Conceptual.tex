@@ -1,5 +1,63 @@
 \chapter{Conceptual study}
 \label{chap:conceptual}
 
-\noindent Researching the current solutions led us to formulate a set of
-requirements to ensure that Merebase offers the best experience.
+The deciding factor for the success of one application and the failure of another is the architecture.
+In order to achieve the requirements we set in the previous chapter, along with solving the issues faced by the existing solutions, we need to carefully design our systems.
+
+In this chapter, we will first dive into the realm of real-time collaboration and read into the existing theoretical research in the field and its practical applications in the real world.
+Then, we will explore the different architectures for building and scaling our application. Finally, we will present the sequence and class diagrams to better define the implementation of our ideas and the trajectory of our work in the following chapter.
+
+\section{Real-time collaboration}
+
+Real-time collaboration is a type of collaboration used in editors and web applications with the goal of enabling multiple users on different computers or mobile devices to modify the same document with automatic and nearly instantaneous merging of their edits.
+The document could either be a computer file, stored locally, or a cloud-stored data shared over the internet, such as an online spreadsheet, a word processing document, a database, or a presentation.
+
+Multiple web applications support real-time collaboration under various names.
+Microsoft, for example, refers to it as "co-authoring" and offers it as part of its Microsoft Office bundle, including Word, Excel, and PowerPoint. \cite{noauthor_document_nodate}
+Google Docs is another notorious contender in the space of collaborative editing, with products such as Google Docs and Google Sheets.
+
+The interest in collaborative software has seen a resurgence since 2020, mainly due to the move to remote work, with companies like Microsoft offering ready-to-use APIs to enable this feature.
+
+Real-time collaboration is different from other offline or delayed collaborative approaches, such as Git.
+While real-time editing performs automatic, frequent, or even instantaneous synchronization of data between all the connected users, offline editing requires manual submission, merging, and resolution of editing conflicts.
+
+\subsection{History}
+
+In 1968, Douglas Engelbart introduced the first collaborative real-time editor in a presentation named "The Mother of All Demos", which also demonstrated many other fundamental elements of modern personal computing including windows, hypertext, graphics, video conferencing, the computer mouse, word processing, and revision control. \cite{noauthor_firsts:_nodate}
+It took decades for widely available implementations of the notion to materialize.
+
+\begin{figure}[h]
+	\centerfloat
+	\startchronology[startyear=1960, height=0.1pc, arrow=false]
+	\chronoevent{1968}{"The Mother of All Demos" \endgraf by Douglas Engelbart}
+	\chronoevent[markdepth=56pt]{2006}{Writely}
+	\chronoevent{2009}{Google Wave}
+	\chronoevent[markdepth=56pt]{2017}{Figma}
+	\chronoevent{2019}{Notion}
+	\stopchronology
+
+	\caption{Timeline of real-time collaboration}
+	\label{fig:timeline-collab}
+\end{figure}
+
+\subsection{Theoretical grounds}
+\subsubsection{CRDT}
+\subsubsection{OT}
+\subsection{Practical examples}
+\subsubsection{Figma}
+\subsubsection{Excalidraw}
+\subsubsection{Automerge}
+\subsubsection{Centige}
+\subsection{Conclusion}
+
+\section{Design patterns}
+\subsection{Common patterns}
+\subsection{Comparison}
+\subsection{Conclusion}
+
+\section{Detailed architecture}
+\section{Class diagrams}
+\section{Sequence diagrams}
+\section{Activity diagrams}
+
+\section{Conclusion}
