@@ -30,7 +30,12 @@
 \setmainfont[Numbers=OldStyle,Ligatures={Required,Common,Contextual}]{EB Garamond}
 \setsansfont{Inter}
            
-\RequirePackage{csquotes} % Context-sensitive quotation marks
+\RequirePackage{polyglossia}
+\setmainlanguage{english}
+
+\RequirePackage[autostyle=true]{csquotes} % Context-sensitive quotation marks
+\MakeOuterQuote{"}
+
 \RequirePackage{makeidx}  % For creating indices
 \RequirePackage{xspace}   % For automatically "eating" spaces
 
@@ -63,6 +68,7 @@
 
 \RequirePackage{tikz}
 \RequirePackage{tikz-uml}
+\RequirePackage{floatpag}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Tables
@@ -89,9 +95,18 @@
 
 \newcommand{\logofig}[2]{
   \begin{figure}[h]
-    \centering
+    \centerfloat
     \includegraphics[width=\maxwidth{\linewidth},height=\maxheight{0.5\linewidth},keepaspectratio]{#2}
     \caption{#1 logo}
+  \end{figure}
+}
+
+\newcommand{\wirefig}[3]{
+  \begin{figure}[h]
+    \centerfloat
+    \includegraphics[width=\maxwidth{1.2\linewidth},height=\maxheight{0.6\linewidth},keepaspectratio]{#3}
+    \caption{"#1" wireframe}
+    \label{fig:#2-wireframe}
   \end{figure}
 }
 
