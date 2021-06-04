@@ -69,6 +69,9 @@
 \RequirePackage{tikz}
 \RequirePackage{tikz-uml}
 \RequirePackage{floatpag}
+\RequirePackage{float}
+
+% \RequirePackage[showframe]{geometry}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Tables
@@ -94,7 +97,7 @@
 \makeatother
 
 \newcommand{\logofig}[2]{
-  \begin{figure}[h]
+  \begin{figure}[H]
     \centerfloat
     \includegraphics[width=\maxwidth{\linewidth},height=\maxheight{0.5\linewidth},keepaspectratio]{#2}
     \caption{#1 logo}
@@ -102,7 +105,7 @@
 }
 
 \newcommand{\wirefig}[3]{
-  \begin{figure}[h]
+  \begin{figure}[H]
     \centerfloat
     \includegraphics[width=\maxwidth{1.2\linewidth},height=\maxheight{0.6\linewidth},keepaspectratio]{#3}
     \caption{"#1" wireframe}

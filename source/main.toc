@@ -24,11 +24,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\nonumberline Contentful}{7}{section*.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Sanity}{7}{section*.8}%
+\contentsline {subsubsection}{\nonumberline Sanity}{8}{section*.8}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\nonumberline Webflow CMS}{8}{section*.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Notion}{8}{section*.10}%
+\contentsline {subsubsection}{\nonumberline Notion}{9}{section*.10}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.4.2}Comparison of the existing solutions}{10}{subsection.1.4.2}%
 \defcounter {refsection}{0}\relax 
@@ -36,23 +36,23 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{\nonumberline Web.Dev}{10}{section*.12}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Google Chrome Lighthouse}{10}{figure.1.7}%
+\contentsline {paragraph}{\nonumberline Google Chrome Lighthouse}{11}{figure.1.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Capterra}{10}{figure.1.8}%
+\contentsline {paragraph}{\nonumberline Capterra}{11}{figure.1.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Comparison table}{11}{section*.15}%
+\contentsline {subsubsection}{\nonumberline Comparison table}{12}{section*.15}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.4.3}Critique}{11}{subsection.1.4.3}%
+\contentsline {subsection}{\numberline {1.4.3}Critique}{12}{subsection.1.4.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Case study: Notion}{12}{section*.16}%
+\contentsline {subsubsection}{\nonumberline Case study: Notion}{13}{section*.16}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.4.4}Proposed solution}{12}{subsection.1.4.4}%
+\contentsline {subsection}{\numberline {1.4.4}Proposed solution}{13}{subsection.1.4.4}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.5}Development process}{13}{section.1.5}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.5.1}Agile software development}{13}{subsection.1.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Values}{13}{section*.17}%
+\contentsline {subsubsection}{\nonumberline Values}{14}{section*.17}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\nonumberline Principles}{14}{section*.18}%
 \defcounter {refsection}{0}\relax 
@@ -92,50 +92,50 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3.1}General use case diagram}{20}{subsection.2.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.2}\csqQQ {34}Sign up\csqQQ {34} use case diagram}{20}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.2}\csqQQ {34}Sign up\csqQQ {34} use case diagram}{22}{subsection.2.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.3}\csqQQ {34}Log in\csqQQ {34} use case diagram}{21}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.3}\csqQQ {34}Log in\csqQQ {34} use case diagram}{22}{subsection.2.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.4}\csqQQ {34}View resources\csqQQ {34} use case diagram}{21}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.4}\csqQQ {34}View resources\csqQQ {34} use case diagram}{23}{subsection.2.3.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.5}\csqQQ {34}Edit resources\csqQQ {34} use case diagram}{21}{subsection.2.3.5}%
+\contentsline {subsection}{\numberline {2.3.5}\csqQQ {34}Edit resources\csqQQ {34} use case diagram}{23}{subsection.2.3.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.6}\csqQQ {34}Manage users\csqQQ {34} use case diagram}{21}{subsection.2.3.6}%
+\contentsline {subsection}{\numberline {2.3.6}\csqQQ {34}Manage users\csqQQ {34} use case diagram}{24}{subsection.2.3.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.7}\csqQQ {34}Manage workspace\csqQQ {34} use case diagram}{21}{subsection.2.3.7}%
+\contentsline {subsection}{\numberline {2.3.7}\csqQQ {34}Manage workspace\csqQQ {34} use case diagram}{24}{subsection.2.3.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.8}\csqQQ {34}Authentication and authorization\csqQQ {34} use case diagram}{21}{subsection.2.3.8}%
+\contentsline {subsection}{\numberline {2.3.8}\csqQQ {34}Authentication and authorization\csqQQ {34} use case diagram}{25}{subsection.2.3.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Wireframes}{22}{section.2.4}%
+\contentsline {section}{\numberline {2.4}Wireframes}{25}{section.2.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.1}\csqQQ {34}Log in\csqQQ {34} wireframe}{22}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.1}\csqQQ {34}Log in\csqQQ {34} wireframe}{26}{subsection.2.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.2}\csqQQ {34}Sign up\csqQQ {34} wireframe}{22}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.2}\csqQQ {34}Sign up\csqQQ {34} wireframe}{26}{subsection.2.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.3}\csqQQ {34}Confirmation\csqQQ {34} wireframe}{22}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.3}\csqQQ {34}Confirmation\csqQQ {34} wireframe}{27}{subsection.2.4.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.4}\csqQQ {34}Workspace setup\csqQQ {34} wireframe}{23}{subsection.2.4.4}%
+\contentsline {subsection}{\numberline {2.4.4}\csqQQ {34}Workspace setup\csqQQ {34} wireframe}{27}{subsection.2.4.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.5}\csqQQ {34}Homepage\csqQQ {34} wireframe}{23}{subsection.2.4.5}%
+\contentsline {subsection}{\numberline {2.4.5}\csqQQ {34}Homepage\csqQQ {34} wireframe}{28}{subsection.2.4.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.6}\csqQQ {34}Projects\csqQQ {34} wireframe}{23}{subsection.2.4.6}%
+\contentsline {subsection}{\numberline {2.4.6}\csqQQ {34}Projects\csqQQ {34} wireframe}{28}{subsection.2.4.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.7}\csqQQ {34}Collections\csqQQ {34} wireframe}{23}{subsection.2.4.7}%
+\contentsline {subsection}{\numberline {2.4.7}\csqQQ {34}Collections\csqQQ {34} wireframe}{29}{subsection.2.4.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.8}\csqQQ {34}Documents\csqQQ {34} wireframe}{23}{subsection.2.4.8}%
+\contentsline {subsection}{\numberline {2.4.8}\csqQQ {34}Documents\csqQQ {34} wireframe}{29}{subsection.2.4.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.9}\csqQQ {34}Fields\csqQQ {34} wireframe}{23}{subsection.2.4.9}%
+\contentsline {subsection}{\numberline {2.4.9}\csqQQ {34}Fields\csqQQ {34} wireframe}{30}{subsection.2.4.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.10}\csqQQ {34}Blocks\csqQQ {34} wireframe}{23}{subsection.2.4.10}%
+\contentsline {subsection}{\numberline {2.4.10}\csqQQ {34}Blocks\csqQQ {34} wireframe}{30}{subsection.2.4.10}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.11}\csqQQ {34}Access tokens\csqQQ {34} wireframe}{24}{subsection.2.4.11}%
+\contentsline {subsection}{\numberline {2.4.11}\csqQQ {34}Access tokens\csqQQ {34} wireframe}{31}{subsection.2.4.11}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.5}Conclusion}{24}{section.2.5}%
+\contentsline {section}{\numberline {2.5}Conclusion}{32}{section.2.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Conceptual study}{35}{chapter.3}%
+\contentsline {chapter}{\numberline {3}Conceptual study}{33}{chapter.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Implementation}{36}{chapter.4}%
+\contentsline {chapter}{\numberline {4}Implementation}{34}{chapter.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\textenglish {Acronyms}}{37}{section*.26}%
+\contentsline {chapter}{\textenglish {Acronyms}}{35}{section*.26}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Bibliography}{38}{chapter*.28}%
+\contentsline {chapter}{\nonumberline Bibliography}{36}{chapter*.28}%
