@@ -33,6 +33,8 @@
 \RequirePackage{polyglossia}
 \setmainlanguage{english}
 
+\RequirePackage[babel=true]{microtype}
+
 \RequirePackage[autostyle=true]{csquotes} % Context-sensitive quotation marks
 \MakeOuterQuote{"}
 

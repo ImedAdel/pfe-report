@@ -66,6 +66,13 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/polyglossia/gloss-latex.ldf
 INPUT /usr/share/texlive/texmf-dist/tex/latex/polyglossia/gloss-english.ldf
 INPUT /usr/share/texlive/texmf-dist/tex/latex/polyglossia/gloss-english.ldf
 INPUT /usr/share/texlive/texmf-dist/tex/latex/polyglossia/gloss-english.ldf
+INPUT /usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-xetex.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-xetex.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg
 INPUT /usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.def
@@ -481,6 +488,8 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT /usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 OUTPUT /home/imed/Code/pfe/report/source/main.toc
