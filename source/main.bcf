@@ -2192,6 +2192,15 @@
     <bcf:citekey order="8">sun_real_2020</bcf:citekey>
     <bcf:citekey order="9">shapiro_conflict-free_2011</bcf:citekey>
     <bcf:citekey order="10">shapiro_conflict-free_2011</bcf:citekey>
+    <bcf:citekey order="11">tools_2020_nodate</bcf:citekey>
+    <bcf:citekey order="12">wallace_how_nodate</bcf:citekey>
+    <bcf:citekey order="13">wallace_how_nodate</bcf:citekey>
+    <bcf:citekey order="14">noauthor_rethinking_nodate</bcf:citekey>
+    <bcf:citekey order="15">noauthor_building_nodate</bcf:citekey>
+    <bcf:citekey order="16">noauthor_building_nodate</bcf:citekey>
+    <bcf:citekey order="17">noauthor_building_nodate</bcf:citekey>
+    <bcf:citekey order="18">noauthor_building_nodate</bcf:citekey>
+    <bcf:citekey order="19">kleppmann_conflict-free_2017</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

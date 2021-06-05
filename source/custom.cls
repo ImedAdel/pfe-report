@@ -108,6 +108,15 @@
   \end{figure}
 }
 
+\newcommand{\lgfig}[3]{
+  \begin{figure}[H]
+    \centerfloat
+    \includegraphics[width=\maxwidth{\linewidth},height=\maxheight{0.5\linewidth},keepaspectratio]{#2}
+    \caption{#1}
+    \label{fig:#3}
+  \end{figure}
+}
+
 \newcommand{\wirefig}[3]{
   \begin{figure}[H]
     \centerfloat

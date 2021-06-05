@@ -5,7 +5,8 @@ The deciding factor for the success of one application and the failure of anothe
 In order to achieve the requirements we set in the previous chapter, along with solving the issues faced by the existing solutions, we need to carefully design our systems.
 
 In this chapter, we will first dive into the realm of real-time collaboration and read into the existing theoretical research in the field and its practical applications in the real world.
-Then, we will explore the different architectures for building and scaling our application. Finally, we will present the sequence and class diagrams to better define the implementation of our ideas and the trajectory of our work in the following chapter.
+Then, we will explore the different architectures for building and scaling our application, taking into consideration our choice of collaboration algorithms.
+Finally, we will present the sequence and class diagrams to better define the implementation of our ideas and the trajectory of our work in the following chapter.
 
 \section{Real-time collaboration}
 
@@ -188,35 +189,99 @@ Upon receiving these operations, remote clients must apply them to become in syn
 
 \subsection{Practical examples}
 
-In practice, web applications do not adhere to one algorithm. Instead, they draw from different concepts to a solution that perfectly fits their needs.
+In practice, web applications do not adhere to one algorithm.
+Instead, they draw from different concepts to establish a solution that perfectly fits their needs.
 
 \subsubsection{Figma}
 
+\logofig{Figma}{figma-logo.png}
+
 Figma is one of the first web design tools with real-time collaboration.
-It was released in 2016 and since then it has been hailed as one of the best examples of performant and collaborative software.
+It was released in 2016 and since then it has been hailed as one of the best examples of performant and collaborative software~\autocite{tools_2020_nodate}.
 
+The engineering team behind Figma avoided following the same footsteps of Google Docs in using \acrshort{ot}s, which, while performant and required less memory, were too complicated to implement and scale~\autocite{wallace_how_nodate}.
+Instead, they decided to implement their real-time collaboration features using a system inspired by \acrshort{crdt}.
+Since they already had a centralized server and a database acting as the source of truth, they were able to remove much of the complexity of \acrshort{crdt}s while maintaining their original concept~\autocite{wallace_how_nodate}.
+In particular, the server decides which changes are applied and which ones are discarded based on the timing of these changes and their order.
+This mode of operation can be viewed as a modified version of \acrshort{cmrdt}.
 
-% refer to ther blog post
+\lgfig{Figma collaborative interface}{figma-interface.png}{figma-interface}
 
 \subsubsection{Excalidraw}
-Excalidraw is an open-source white-board and wireframing web application.
 
-% refer to their blog post
+\logofig{Excalidraw}{excalidraw-logo.png}
+
+Excalidraw is an open-source virtual collaborative whiteboard tool that lets you easily sketch diagrams that have a hand-drawn feel to them~\autocite{noauthor_rethinking_nodate}.
+Contrary to Figma, Excalidraw is \acrfull{p2p}, that is, the server is not the source of truth and used merely for connecting the different clients and propagating changes~\autocite{noauthor_building_nodate}.
+On top of that, the exchanged data is encrypted end-to-end, meaning that the server has no access to clients' changes.
+Excalidraw uses a variant of \acrfull{cvrdt} with the whole state being sent over and compared to the local state before applying changes.
+
+\lgfig{Excalidraw collaborative interface}{excalidraw-interface.jpeg}{excalidraw-interface}
+
+What is peculiar about Excalidraw's example is the way they handle concurrent changes of the same element. Each element has a version attached to it and a hash of that version, which are compared to know which changes to apply and which ones to discard. If two clients edit the same element at the same time, Excalidraw does not try to merge those changes, instead, it picks whichever change came first~\autocite{noauthor_building_nodate}.
+Figure~\ref{fig:excalidraw-algo} illustrates the algorithm implemented by Excalidraw for merging conflicting states.
+
+\lgfig{Excalidraw collaboration algorithm as explained on their blog~\autocite{noauthor_building_nodate}}{excalidraw-algo.png}{excalidraw-algo}
+
 \subsubsection{Automerge}
 
-Automerge is a JavaScript data structure designed specifically for collaborative software.
+\begin{figure}[h]
+	\centerfloat
+	\begin{tikzpicture}[auto,scale=0.8]
+		\path [draw,dotted] (4,-1) -- (4,8);
+		\node (left0)  at (0,7.5) [rectangle,draw] {\{``colors'': \{``blue'': ``\#0000ff''\}\}};
+		\node (right0) at (8,7.5) [rectangle,draw] {\{``colors'': \{``blue'': ``\#0000ff''\}\}};
+		\node [matrix] (left1) at (0,4) [rectangle,draw] {
+			\node {\{``colors'': \{``blue'': ``\#0000ff'',}; \\
+			\node {``red'': ``\#ff0000''\}\}}; \\
+		};
+		\node (right1) at (8,5.5) [rectangle,draw] {\{``colors'': \{\}\}};
+		\node (right2) at (8,3) [rectangle,draw] {\{``colors'': \{``green'': ``\#00ff00''\}\}};
+		\node [matrix] (left2) at (0,0) [rectangle,draw] {
+			\node {\{``colors'': \{``red'': ``\#ff0000'',}; \\
+			\node {``green'': ``\#00ff00''\}\}}; \\
+		};
+		\node [matrix] (right3) at (8,0) [rectangle,draw] {
+			\node {\{``colors'': \{``red'': ``\#ff0000'',}; \\
+			\node {``green'': ``\#00ff00''\}\}}; \\
+		};
+		\node (comms) at (4,2.1) [text=blue] {\footnotesize network communication};
+		\draw [thick,->] (left0)  -- (left1)
+		node [left,text width=4.2cm,text centered,midway]  {doc.get(``colors'').get(``red'') := ``\#ff0000'';};
+		\draw [thick,->] (right0) to node [right] {doc.get(``colors'') := \{\};} (right1);
+		\draw [thick,->] (right1) -- (right2)
+		node [right,text width=4.2cm,text centered,midway] {doc.get(``colors'').get(``green'') := ``\#00ff00'';};
+		\draw [thick,->] (left1)  to (left2);
+		\draw [thick,->] (right2) to (right3);
+		\draw [thick,dashed,blue,->] (left1.south)  to [out=270,in=135] (right3.north west);
+		\draw [thick,dashed,blue,->] (right2.south) to [out=270,in=45]  (left2.north east);
+	\end{tikzpicture}
+	\caption{Example of Automerge algorithms}\label{fig:automerge-algo}
+\end{figure}
 
-% refer to their github
+Automerge is a set of algorithms for applying \acrshort{crdt} concepts to a \acrfull{json} data structure without having prior knowledge of the inner working of the data structure or the infrastructure used to transmit changes.
+It works by registering all the changes applied locally to the state and sending these operations to remote clients, while employing a variety of \acrshort{crdt} algorithms for resolving conflicts~\autocite{kleppmann_conflict-free_2017}. Automerge also comes with a ready-to-use JavaScript library. Figure~\ref{fig:automerge-algo} illustrates one of the algorithms provided by Automerge.
+
+Compared to Figma, Automerge does not require any central source of truth. On top of that, it tries to resolve conflicts rather than picking one of the changes based on the version or timestamp, as it is the case in Figma and Excalidraw.
 
 \subsubsection{Centige}
 
 Centige is a discontinued collaborative web app builder by the author.
-It was mainly a learning project, started in late 2019 and developed throughout 2020.
+It was mainly a research project, started in late 2019 and developed throughout 2020, around the same time as Excalidraw.
+The web application used a collaboration model very similar to that of Figma, as it relied on a centralized server acting as the source of truth and used Operation-based \acrshort{crdt} for transmitting changes to the other clients.
+Each client had a \acrfull{crdt} and on ever change, the new local state would be compared with the older one, in a model similar to that of State-based \acrshort{crdt}, before generating a set of operations that are sent to the server.
+The latter would compare the operations' hash before propagating them to rest of the connected clients.
+All of these computations happened within milliseconds and supported offline editing to some extent.
 
-% explain your experience
+\subsection{Our choice}
 
-\subsection{Conclusion}
-% What the current choice: we're using blocks -> easy collaboration
+After reviewing the literature on real-time collaboration and having researched the different implementations of the feature in varying products, it is time to choose a fitting design pattern for real-time collaboration in Merebase.
+It is important to keep in mind that the design of the collaborative aspect of our application greatly influences the rest of the architecture.
+Considering the ease-of-use of \acrfull{crdt} and the sheer volume of the scientific literature around it, coupled with the community around it and our knowledge of the algorithm, we chose to implement a variant of \acrshort{crdt}.
+
+In particular, we are going to implement Operation-based \acrshort{crdt} (\acrshort{cmrdt}) in approach similar to that of Excalidraw with each element having a version attached to it.
+However, in contrast to Excalidraw's implementation, we are going to rely on a server a sourth of truth.
+This choice eliminates any complexities with \acrshort{p2p} technology and keeps the performance smooth as we do not have to perform any comparisons or calculations on the client's device. Therefore, we achieve one of our non-functional requirements---speed.
 
 \section{Design patterns}
 \subsection{Common patterns}

@@ -19,6 +19,26 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{noauthor_building_nodate}{misc}{}
+      \list{language}{1}{%
+        {en}%
+      }
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Excalidraw is a whiteboard tool that lets you easily sketch diagrams that have a hand-drawn feel to them. As tech companies started to institute mandatory work from home policies due to the COVID-19 pandemic, we realized that Excalidraw could be the perfect substitute for the whiteboard that is usually required for systems design interviews.}
+      \field{title}{Building {Excalidraw}'s {P2P} {Collaboration} {Feature} | {Excalidraw} {Blog}}
+      \field{urlday}{5}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://blog.excalidraw.com/building-excalidraw-p2p-collaboration-feature/
+      \endverb
+      \verb{url}
+      \verb https://blog.excalidraw.com/building-excalidraw-p2p-collaboration-feature/
+      \endverb
+    \endentry
     \entry{chang_ehub_2005}{misc}{}
       \name{author}{1}{}{%
         {{hash=3bb5d254bf122c67a2c69223f5c89a1a}{%
@@ -148,6 +168,64 @@
       \endverb
       \verb{url}
       \verb https://venturebeat.com/2006/03/09/google-acquires-online-word-processor-writely/
+      \endverb
+    \endentry
+    \entry{kleppmann_conflict-free_2017}{article}{}
+      \name{author}{2}{}{%
+        {{hash=34b8d5b1d29d175527a6642f3ec8a76d}{%
+           family={Kleppmann},
+           familyi={K\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=fc4b061bc9e1eb54449d09671ee62255}{%
+           family={Beresford},
+           familyi={B\bibinitperiod},
+           given={Alastair\bibnamedelima R.},
+           giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{07935bd06be5b22ec7f95e31888ab36f}
+      \strng{fullhash}{07935bd06be5b22ec7f95e31888ab36f}
+      \strng{bibnamehash}{07935bd06be5b22ec7f95e31888ab36f}
+      \strng{authorbibnamehash}{07935bd06be5b22ec7f95e31888ab36f}
+      \strng{authornamehash}{07935bd06be5b22ec7f95e31888ab36f}
+      \strng{authorfullhash}{07935bd06be5b22ec7f95e31888ab36f}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Many applications model their data in a general-purpose storage format such as JSON. This data structure is modified by the application as a result of user input. Such modifications are well understood if performed sequentially on a single copy of the data, but if the data is replicated and modified concurrently on multiple devices, it is unclear what the semantics should be. In this paper we present an algorithm and formal semantics for a JSON data structure that automatically resolves concurrent modifications such that no updates are lost, and such that all replicas converge towards the same state (a conflict-free replicated datatype or CRDT). It supports arbitrarily nested list and map types, which can be modified by insertion, deletion and assignment. The algorithm performs all merging client-side and does not depend on ordering guarantees from the network, making it suitable for deployment on mobile devices with poor network connectivity, in peer-to-peer networks, and in messaging systems with end-to-end encryption.}
+      \field{issn}{1558-2183}
+      \field{journaltitle}{IEEE Transactions on Parallel and Distributed Systems}
+      \field{month}{10}
+      \field{number}{10}
+      \field{title}{A {Conflict}-{Free} {Replicated} {JSON} {Datatype}}
+      \field{volume}{28}
+      \field{year}{2017}
+      \field{pages}{2733\bibrangedash 2746}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1109/TPDS.2017.2697382
+      \endverb
+      \keyw{Data structures,Collaboration,Semantics,Registers,Servers,Data models,Mobile handsets,CRDTs,collaborative editing,P2P,JSON,optimistic replication,operational semantics,eventual consistency}
+    \endentry
+    \entry{noauthor_rethinking_nodate}{misc}{}
+      \list{language}{1}{%
+        {en}%
+      }
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Excalidraw started as a virtual tool to draw diagrams but a lot of people started using it to replace physical whiteboards. In this post we’ll walk through many aspects of physical whiteboards that do not make sense to translate as is in the virtual world.}
+      \field{title}{Rethinking {Virtual} {Whiteboard} | {Excalidraw} {Blog}}
+      \field{urlday}{5}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://blog.excalidraw.com/rethinking-virtual-whiteboard/
+      \endverb
+      \verb{url}
+      \verb https://blog.excalidraw.com/rethinking-virtual-whiteboard/
       \endverb
     \endentry
     \entry{shapiro_conflict-free_2011}{inproceedings}{}
@@ -288,6 +366,75 @@
       \endverb
       \verb{url}
       \verb https://dl.acm.org/doi/10.1145/3375186
+      \endverb
+    \endentry
+    \entry{tools_2020_nodate}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=8588f26f40642b4c0d7ac4381d6782ce}{%
+           family={Tools},
+           familyi={T\bibinitperiod},
+           given={U.\bibnamedelimi X.},
+           giveni={U\bibinitperiod\bibinitdelim X\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en-us}%
+      }
+      \strng{namehash}{8588f26f40642b4c0d7ac4381d6782ce}
+      \strng{fullhash}{8588f26f40642b4c0d7ac4381d6782ce}
+      \strng{bibnamehash}{8588f26f40642b4c0d7ac4381d6782ce}
+      \strng{authorbibnamehash}{8588f26f40642b4c0d7ac4381d6782ce}
+      \strng{authornamehash}{8588f26f40642b4c0d7ac4381d6782ce}
+      \strng{authorfullhash}{8588f26f40642b4c0d7ac4381d6782ce}
+      \field{sortinit}{T}
+      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{See the most popular tools used by over 4,000 designers based on this annual survey.}
+      \field{title}{2020 {Tools} {Survey} {Results}}
+      \field{urlday}{5}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://uxtools.co/survey-2020/
+      \endverb
+      \verb{url}
+      \verb https://uxtools.co/survey-2020/
+      \endverb
+    \endentry
+    \entry{wallace_how_nodate}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=f2a8c3d7362bf4e6a7dbc4d6ceae7a10}{%
+           family={Wallace},
+           familyi={W\bibinitperiod},
+           given={Evan},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en-US}%
+      }
+      \strng{namehash}{f2a8c3d7362bf4e6a7dbc4d6ceae7a10}
+      \strng{fullhash}{f2a8c3d7362bf4e6a7dbc4d6ceae7a10}
+      \strng{bibnamehash}{f2a8c3d7362bf4e6a7dbc4d6ceae7a10}
+      \strng{authorbibnamehash}{f2a8c3d7362bf4e6a7dbc4d6ceae7a10}
+      \strng{authornamehash}{f2a8c3d7362bf4e6a7dbc4d6ceae7a10}
+      \strng{authorfullhash}{f2a8c3d7362bf4e6a7dbc4d6ceae7a10}
+      \field{sortinit}{W}
+      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A peek into the homegrown solution we built as the first design tool with live collaborative editing.}
+      \field{journaltitle}{Figma}
+      \field{title}{How {Figma}’s multiplayer technology works}
+      \field{urlday}{5}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.figma.com/blog/how-figmas-multiplayer-technology-works/
+      \endverb
+      \verb{url}
+      \verb https://www.figma.com/blog/how-figmas-multiplayer-technology-works/
       \endverb
     \endentry
     \entry{noauthor_whats_nodate}{misc}{}
