@@ -127,75 +127,6 @@
       \verb https://www.cnet.com/news/google-pulls-plug-on-google-wave/
       \endverb
     \endentry
-    \entry{garrett_elements_2011}{book}{}
-      \name{author}{1}{}{%
-        {{hash=d061f60676574ea537a62d4635bccf11}{%
-           family={Garrett},
-           familyi={G\bibinitperiod},
-           given={Jesse\bibnamedelima James},
-           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Berkeley, CA}%
-      }
-      \list{publisher}{1}{%
-        {New Riders}%
-      }
-      \strng{namehash}{d061f60676574ea537a62d4635bccf11}
-      \strng{fullhash}{d061f60676574ea537a62d4635bccf11}
-      \strng{bibnamehash}{d061f60676574ea537a62d4635bccf11}
-      \strng{authorbibnamehash}{d061f60676574ea537a62d4635bccf11}
-      \strng{authornamehash}{d061f60676574ea537a62d4635bccf11}
-      \strng{authorfullhash}{d061f60676574ea537a62d4635bccf11}
-      \field{sortinit}{G}
-      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{Provides an overview of the complexities of interactive Web design for non-designers, explaining the processes, methods, and vocabulary of user experience design}
-      \field{edition}{2nd ed}
-      \field{isbn}{9780321683687}
-      \field{note}{OCLC: ocn503049598}
-      \field{series}{Voices that matter}
-      \field{shorttitle}{The elements of user experience}
-      \field{title}{The elements of user experience: user-centered design for the {Web} and beyond}
-      \field{year}{2011}
-      \keyw{Web sites,Design,Human-computer interaction,Web sites,Design,Human-computer interaction}
-    \endentry
-    \entry{gemayel_how_nodate}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=67b8ff193c098896a07b0781412656ee}{%
-           family={Gemayel},
-           familyi={G\bibinitperiod},
-           given={Toni},
-           giveni={T\bibinitperiod}}}%
-      }
-      \list{language}{1}{%
-        {en-US}%
-      }
-      \strng{namehash}{67b8ff193c098896a07b0781412656ee}
-      \strng{fullhash}{67b8ff193c098896a07b0781412656ee}
-      \strng{bibnamehash}{67b8ff193c098896a07b0781412656ee}
-      \strng{authorbibnamehash}{67b8ff193c098896a07b0781412656ee}
-      \strng{authornamehash}{67b8ff193c098896a07b0781412656ee}
-      \strng{authorfullhash}{67b8ff193c098896a07b0781412656ee}
-      \field{sortinit}{G}
-      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Learn when to create a wireframe, what goes into them, and how they can help you communicate and iterate on ideas with your team.}
-      \field{journaltitle}{Figma}
-      \field{title}{How to wireframe}
-      \field{urlday}{4}
-      \field{urlmonth}{6}
-      \field{urlyear}{2021}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.figma.com/blog/how-to-wireframe/
-      \endverb
-      \verb{url}
-      \verb https://www.figma.com/blog/how-to-wireframe/
-      \endverb
-    \endentry
     \entry{noauthor_google_2006}{misc}{}
       \list{language}{1}{%
         {en-US}%
@@ -217,57 +148,6 @@
       \endverb
       \verb{url}
       \verb https://venturebeat.com/2006/03/09/google-acquires-online-word-processor-writely/
-      \endverb
-    \endentry
-    \entry{noauthor_macintosh_2010}{misc}{}
-      \field{sortinit}{M}
-      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Stanford University Libraries \& Academic Information Resources}
-      \field{month}{7}
-      \field{title}{Macintosh {Product} {Introduction} {Plan}}
-      \field{urlday}{1}
-      \field{urlmonth}{4}
-      \field{urlyear}{2021}
-      \field{year}{2010}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://web.archive.org/web/20100721013724/http://library.stanford.edu/mac/primary/docs/pip83.html
-      \endverb
-      \verb{url}
-      \verb https://web.archive.org/web/20100721013724/http://library.stanford.edu/mac/primary/docs/pip83.html
-      \endverb
-    \endentry
-    \entry{polsson_chronology_2009}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=fb577b677e84d79956bda31de50551a4}{%
-           family={Polsson},
-           familyi={P\bibinitperiod},
-           given={Ken},
-           giveni={K\bibinitperiod}}}%
-      }
-      \strng{namehash}{fb577b677e84d79956bda31de50551a4}
-      \strng{fullhash}{fb577b677e84d79956bda31de50551a4}
-      \strng{bibnamehash}{fb577b677e84d79956bda31de50551a4}
-      \strng{authorbibnamehash}{fb577b677e84d79956bda31de50551a4}
-      \strng{authornamehash}{fb577b677e84d79956bda31de50551a4}
-      \strng{authorfullhash}{fb577b677e84d79956bda31de50551a4}
-      \field{sortinit}{P}
-      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{8}
-      \field{title}{Chronology of {Apple} {Computer} {Personal} {Computers} (1984-1985)}
-      \field{urlday}{1}
-      \field{urlmonth}{4}
-      \field{urlyear}{2021}
-      \field{year}{2009}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://web.archive.org/web/20090821105822/http://www.islandnet.com/~kpolsson/applehis/appl1984.htm
-      \endverb
-      \verb{url}
-      \verb https://web.archive.org/web/20090821105822/http://www.islandnet.com/~kpolsson/applehis/appl1984.htm
       \endverb
     \endentry
     \entry{shapiro_conflict-free_2011}{inproceedings}{}
@@ -408,42 +288,6 @@
       \endverb
       \verb{url}
       \verb https://dl.acm.org/doi/10.1145/3375186
-      \endverb
-    \endentry
-    \entry{december_2019_what_nodate}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=7729f5c1a352578407da2cf8ce639c47}{%
-           family={Turner},
-           familyi={T\bibinitperiod},
-           given={Brian},
-           giveni={B\bibinitperiod}}}%
-      }
-      \list{language}{1}{%
-        {en}%
-      }
-      \strng{namehash}{7729f5c1a352578407da2cf8ce639c47}
-      \strng{fullhash}{7729f5c1a352578407da2cf8ce639c47}
-      \strng{bibnamehash}{7729f5c1a352578407da2cf8ce639c47}
-      \strng{authorbibnamehash}{7729f5c1a352578407da2cf8ce639c47}
-      \strng{authornamehash}{7729f5c1a352578407da2cf8ce639c47}
-      \strng{authorfullhash}{7729f5c1a352578407da2cf8ce639c47}
-      \field{sortinit}{T}
-      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{Software as a Service explained}
-      \field{journaltitle}{TechRadar}
-      \field{shorttitle}{What is {SaaS}?}
-      \field{title}{What is {SaaS}? {Everything} you need to know about {Software} as a {Service}}
-      \field{urlday}{1}
-      \field{urlmonth}{4}
-      \field{urlyear}{2021}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.techradar.com/news/what-is-saas
-      \endverb
-      \verb{url}
-      \verb https://www.techradar.com/news/what-is-saas
       \endverb
     \endentry
     \entry{noauthor_whats_nodate}{misc}{}

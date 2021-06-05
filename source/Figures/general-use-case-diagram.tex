@@ -1,0 +1,60 @@
+\begin{figure}[H]
+	\thisfloatpagestyle{empty}
+	\centerfloat
+	\begin{tikzpicture}
+		\begin{umlsystem}[x=4]{Application}
+			\umlusecase[y=1, name=signup]{Sign up}
+			\umlusecase[y=-1, name=login]{Log in}
+			\umlusecase[y=-3, name=view]{View resources}
+			\umlusecase[y=-5, name=api]{Manage API access}
+			\umlusecase[y=-8, name=edit]{Edit resources}
+			\umlusecase[y=-12, name=users]{Manage users}
+			\umlusecase[y=-16, name=spaces]{Manage workspace}
+			% \umlusecase[x=4, y=-2, width=1.5cm]{
+			% 	\shortstack{use case 4\\\footnotesize{on 2 lines}}
+			% }
+			\umlusecase[x=8, y=-8, fill=yellow!20, name=auth]{
+				\shortstack{Authentication\\ and authorization}
+			}
+			% \umlusecase[x=6, y=-4]{use case 6}
+			% \umlusecase[x=6, y=-12]{use case 6}
+		\end{umlsystem}
+
+		\umlactor[y=0]{Visitor}
+		\umlactor[y=-4]{Viewer}
+		\umlactor[y=-8]{Editor}
+		\umlactor[y=-12]{Admin}
+		\umlactor[y=-16]{Owner}
+
+		\umlinherit{Editor}{Viewer}
+		\umlinherit{Admin}{Editor}
+		\umlinherit{Owner}{Admin}
+
+		\umlassoc{Visitor}{signup}
+		\umlassoc{Visitor}{login}
+
+		\umlassoc{Viewer}{view}
+		\umlassoc{Viewer}{api}
+
+		\umlassoc{Editor}{edit}
+
+		\umlassoc{Admin}{users}
+
+		\umlassoc{Owner}{spaces}
+		% \umlinherit{usecase-2}{usecase-1}
+		% \umlVHextend{usecase-5}{usecase-4}
+		\umlHVinclude[name=incl]{view}{auth}
+		\umlinclude[name=incl]{api}{auth}
+		\umlinclude[name=incl]{edit}{auth}
+		\umlinclude[name=incl]{users}{auth}
+		\umlHVinclude[name=incl]{spaces}{auth}
+
+		% \umlnote[x=7, y=-7]{incl-1}{
+		% 		\footnotesize{note on include dependency}
+		% }
+
+	\end{tikzpicture}
+
+	\caption{General use case diagram}
+	\label{fig:general-use-case-diagram}
+\end{figure}

@@ -84,8 +84,9 @@ Both have their benefits and drawbacks, and each one has numerous variations and
 \acrlong{ot} was invented for supporting real-time co-editors in the late 1980s and has evolved to become a collection of core techniques widely used in today's working co-editors and adopted in major industrial products~\autocite{sun_real_2020}.
 Google Docs has been using \acrshort{ot} since at least 2009~\autocite{noauthor_whats_nodate}.
 
-The model of \acrlong{ot} works by defining all possible transformations for a text and applying those transformations to the received text after applying any needed adjustments to it.
+The model of \acrlong{ot} works by calculating all possible transformations for a text and using them to transform received changes according to the local state, thus eliminating any possible mistakes of synchronization.
 Figures~\ref{fig:ot-sol-before} and~\ref{fig:ot-sol-after} explain the algorithm followed by \acrshort{ot} for resolving conflicts.
+Figure~\ref{fig:collab-sol-ot} illustrates the solution proposed by \acrshort{ot} for the problem proposed in~\ref{fig:collab-problem}.
 
 
 \begin{figure}[H]
@@ -193,6 +194,7 @@ In practice, web applications do not adhere to one algorithm. Instead, they draw
 
 Figma is one of the first web design tools with real-time collaboration.
 It was released in 2016 and since then it has been hailed as one of the best examples of performant and collaborative software.
+
 
 % refer to ther blog post
 

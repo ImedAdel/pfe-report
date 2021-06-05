@@ -2,184 +2,54 @@
 \defcounter {refsection}{0}\relax 
 \selectlanguage *{english}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{General Introduction}{1}{chapter*.4}%
+\contentsline {chapter}{\numberline {1}Conceptual study}{1}{chapter.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {1}Presentation}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Real-time collaboration}{1}{section.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.1}Introduction}{3}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}History}{2}{subsection.1.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.2}Host}{3}{section.1.2}%
+\contentsline {subsection}{\numberline {1.1.2}Theoretical grounds}{3}{subsection.1.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.3}Project presentation}{3}{section.1.3}%
+\contentsline {subsubsection}{\nonumberline \acrfull {ot}}{4}{section*.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.3.1}Problematics}{4}{subsection.1.3.1}%
+\contentsline {subsubsection}{\nonumberline \acrshort {crdt}}{7}{section*.10}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.4}Preliminary study}{5}{section.1.4}%
+\contentsline {paragraph}{\nonumberline \acrshort {cmrdt}}{7}{section*.11}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.4.1}Existing solutions}{5}{subsection.1.4.1}%
+\contentsline {paragraph}{\nonumberline \acrshort {cvrdt}}{7}{section*.12}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Firebase}{6}{section*.5}%
+\contentsline {subsection}{\numberline {1.1.3}Practical examples}{8}{subsection.1.1.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Airtable}{6}{section*.7}%
+\contentsline {subsubsection}{\nonumberline Figma}{8}{section*.13}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Contentful}{7}{section*.9}%
+\contentsline {subsubsection}{\nonumberline Excalidraw}{8}{section*.14}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Sanity}{7}{section*.11}%
+\contentsline {subsubsection}{\nonumberline Automerge}{8}{section*.15}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Webflow CMS}{8}{section*.13}%
+\contentsline {subsubsection}{\nonumberline Centige}{8}{section*.16}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Notion}{9}{section*.15}%
+\contentsline {subsection}{\numberline {1.1.4}Conclusion}{9}{subsection.1.1.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.4.2}Comparison of the existing solutions}{10}{subsection.1.4.2}%
+\contentsline {section}{\numberline {1.2}Design patterns}{9}{section.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Methodology}{10}{section*.17}%
+\contentsline {subsection}{\numberline {1.2.1}Common patterns}{9}{subsection.1.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Web.Dev}{10}{section*.18}%
+\contentsline {subsection}{\numberline {1.2.2}Comparison}{9}{subsection.1.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Google Chrome Lighthouse}{11}{figure.caption.20}%
+\contentsline {subsection}{\numberline {1.2.3}Conclusion}{9}{subsection.1.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Capterra}{11}{figure.caption.22}%
+\contentsline {section}{\numberline {1.3}Detailed architecture}{9}{section.1.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Comparison table}{12}{section*.23}%
+\contentsline {section}{\numberline {1.4}Class diagrams}{9}{section.1.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.4.3}Critique}{12}{subsection.1.4.3}%
+\contentsline {section}{\numberline {1.5}Sequence diagrams}{9}{section.1.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Case study: Notion}{13}{section*.25}%
+\contentsline {section}{\numberline {1.6}Activity diagrams}{9}{section.1.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.4.4}Proposed solution}{13}{subsection.1.4.4}%
+\contentsline {section}{\numberline {1.7}Conclusion}{9}{section.1.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.5}Development process}{13}{section.1.5}%
+\contentsline {chapter}{\numberline {2}Implementation}{10}{chapter.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.5.1}Agile software development}{13}{subsection.1.5.1}%
+\contentsline {chapter}{\textenglish {Acronyms}}{11}{section*.17}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Values}{14}{section*.26}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Principles}{14}{section*.27}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.5.2}\acrlong {fdd}}{15}{subsection.1.5.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.5.3}Kanban}{15}{subsection.1.5.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.6}Conclusion}{15}{section.1.6}%
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Analysis and specification of needs}{16}{chapter.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Analysis of requirements}{16}{section.2.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.1}Functional requirements}{17}{subsection.2.1.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.2}Non-functional requirements}{18}{subsection.2.1.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Security}{18}{section*.28}%
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline User experience}{18}{section*.29}%
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Speed}{18}{section*.30}%
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Performance}{18}{section*.31}%
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Accessibility}{19}{section*.32}%
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Scalability}{19}{section*.33}%
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Developer experience}{19}{section*.34}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Specification of needs}{19}{section.2.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.1}Identification of actors}{19}{subsection.2.2.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Use case diagrams}{20}{section.2.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.1}General use case diagram}{20}{subsection.2.3.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.2}\csqQQ {34}Sign up\csqQQ {34} use case diagram}{22}{subsection.2.3.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.3}\csqQQ {34}Log in\csqQQ {34} use case diagram}{22}{subsection.2.3.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.4}\csqQQ {34}View resources\csqQQ {34} use case diagram}{23}{subsection.2.3.4}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.5}\csqQQ {34}Edit resources\csqQQ {34} use case diagram}{23}{subsection.2.3.5}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.6}\csqQQ {34}Manage users\csqQQ {34} use case diagram}{24}{subsection.2.3.6}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.7}\csqQQ {34}Manage workspace\csqQQ {34} use case diagram}{24}{subsection.2.3.7}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.8}\csqQQ {34}Authentication and authorization\csqQQ {34} use case diagram}{25}{subsection.2.3.8}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Wireframes}{25}{section.2.4}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.1}\csqQQ {34}Log in\csqQQ {34} wireframe}{26}{subsection.2.4.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.2}\csqQQ {34}Sign up\csqQQ {34} wireframe}{26}{subsection.2.4.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.3}\csqQQ {34}Confirmation\csqQQ {34} wireframe}{27}{subsection.2.4.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.4}\csqQQ {34}Workspace setup\csqQQ {34} wireframe}{27}{subsection.2.4.4}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.5}\csqQQ {34}Homepage\csqQQ {34} wireframe}{28}{subsection.2.4.5}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.6}\csqQQ {34}Projects\csqQQ {34} wireframe}{28}{subsection.2.4.6}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.7}\csqQQ {34}Collections\csqQQ {34} wireframe}{29}{subsection.2.4.7}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.8}\csqQQ {34}Documents\csqQQ {34} wireframe}{29}{subsection.2.4.8}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.9}\csqQQ {34}Fields\csqQQ {34} wireframe}{30}{subsection.2.4.9}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.10}\csqQQ {34}Blocks\csqQQ {34} wireframe}{30}{subsection.2.4.10}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.11}\csqQQ {34}Access tokens\csqQQ {34} wireframe}{31}{subsection.2.4.11}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.5}Conclusion}{31}{section.2.5}%
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Conceptual study}{32}{chapter.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Real-time collaboration}{32}{section.3.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.1}History}{33}{subsection.3.1.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.2}Theoretical grounds}{34}{subsection.3.1.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline \acrfull {ot}}{35}{section*.56}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline \acrshort {crdt}}{38}{section*.60}%
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline \acrshort {cmrdt}}{38}{section*.61}%
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline \acrshort {cvrdt}}{38}{section*.62}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.3}Practical examples}{39}{subsection.3.1.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Figma}{39}{section*.63}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Excalidraw}{39}{section*.64}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Automerge}{39}{section*.65}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Centige}{39}{section*.66}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.4}Conclusion}{40}{subsection.3.1.4}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Design patterns}{40}{section.3.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.1}Common patterns}{40}{subsection.3.2.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.2}Comparison}{40}{subsection.3.2.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.3}Conclusion}{40}{subsection.3.2.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Detailed architecture}{40}{section.3.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}Class diagrams}{40}{section.3.4}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.5}Sequence diagrams}{40}{section.3.5}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.6}Activity diagrams}{40}{section.3.6}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.7}Conclusion}{40}{section.3.7}%
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Implementation}{41}{chapter.4}%
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\textenglish {Acronyms}}{42}{section*.67}%
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Bibliography}{43}{chapter*.69}%
+\contentsline {chapter}{\nonumberline Bibliography}{12}{chapter*.19}%
