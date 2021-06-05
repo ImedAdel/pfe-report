@@ -1,0 +1,1 @@
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Qot's solution for the problem in figure \\E(?:Dummy|Ina|Jimmy-)[0-9]+$"}

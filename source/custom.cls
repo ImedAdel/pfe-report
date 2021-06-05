@@ -68,8 +68,10 @@
 
 \RequirePackage{tikz}
 \RequirePackage{tikz-uml}
+\RequirePackage{tikz-cd}
 \RequirePackage{floatpag}
 \RequirePackage{float}
+\RequirePackage{cancel}
 
 % \RequirePackage[showframe]{geometry}
 
@@ -114,6 +116,7 @@
 }
 
 \RequirePackage{chronosys}
+\RequirePackage{subcaption}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

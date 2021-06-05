@@ -19,6 +19,42 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{chang_ehub_2005}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=3bb5d254bf122c67a2c69223f5c89a1a}{%
+           family={Chang},
+           familyi={C\bibinitperiod},
+           given={Emily},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \strng{namehash}{3bb5d254bf122c67a2c69223f5c89a1a}
+      \strng{fullhash}{3bb5d254bf122c67a2c69223f5c89a1a}
+      \strng{bibnamehash}{3bb5d254bf122c67a2c69223f5c89a1a}
+      \strng{authorbibnamehash}{3bb5d254bf122c67a2c69223f5c89a1a}
+      \strng{authornamehash}{3bb5d254bf122c67a2c69223f5c89a1a}
+      \strng{authorfullhash}{3bb5d254bf122c67a2c69223f5c89a1a}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{eHub}
+      \field{month}{10}
+      \field{title}{{eHub} {Interviews} {Writely}}
+      \field{urlday}{4}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{year}{2005}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://web.archive.org/web/20110722190058/http://emilychang.com/ehub/app/ehub-interviews-writely/
+      \endverb
+      \verb{url}
+      \verb https://web.archive.org/web/20110722190058/http://emilychang.com/ehub/app/ehub-interviews-writely/
+      \endverb
+    \endentry
     \entry{noauthor_document_nodate}{misc}{}
       \list{language}{1}{%
         {en-US}%
@@ -54,6 +90,41 @@
       \endverb
       \verb{url}
       \verb https://www.dougengelbart.org/content/view/209/448/
+      \endverb
+    \endentry
+    \entry{fried_google_nodate}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=62fff6e0e9245bded11d28640760e735}{%
+           family={Fried},
+           familyi={F\bibinitperiod},
+           given={Ina},
+           giveni={I\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{62fff6e0e9245bded11d28640760e735}
+      \strng{fullhash}{62fff6e0e9245bded11d28640760e735}
+      \strng{bibnamehash}{62fff6e0e9245bded11d28640760e735}
+      \strng{authorbibnamehash}{62fff6e0e9245bded11d28640760e735}
+      \strng{authornamehash}{62fff6e0e9245bded11d28640760e735}
+      \strng{authorfullhash}{62fff6e0e9245bded11d28640760e735}
+      \field{sortinit}{F}
+      \field{sortinithash}{fb0c0faa89eb6abae8213bf60e6799ea}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The search giant says the real-time collaboration tool saw less use than the company had hoped. The company will aim to use technology in other products.}
+      \field{journaltitle}{CNET}
+      \field{title}{Google pulls plug on {Google} {Wave}}
+      \field{urlday}{4}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.cnet.com/news/google-pulls-plug-on-google-wave/
+      \endverb
+      \verb{url}
+      \verb https://www.cnet.com/news/google-pulls-plug-on-google-wave/
       \endverb
     \endentry
     \entry{garrett_elements_2011}{book}{}
@@ -125,6 +196,29 @@
       \verb https://www.figma.com/blog/how-to-wireframe/
       \endverb
     \endentry
+    \entry{noauthor_google_2006}{misc}{}
+      \list{language}{1}{%
+        {en-US}%
+      }
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Elevate your enterprise data technology and strategy at Transform 2021. Google has acquired Upstartle, the Silicon Valley-based maker of online word processor Writely. It gives Google yet another tool in its kit of applications to take on Microsoft — and brush aside its dominance through the desktop. There are many similar products out there, in […]}
+      \field{journaltitle}{VentureBeat}
+      \field{month}{3}
+      \field{title}{Google acquires online word processor, {Writely}}
+      \field{urlday}{4}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{year}{2006}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://venturebeat.com/2006/03/09/google-acquires-online-word-processor-writely/
+      \endverb
+      \verb{url}
+      \verb https://venturebeat.com/2006/03/09/google-acquires-online-word-processor-writely/
+      \endverb
+    \endentry
     \entry{noauthor_macintosh_2010}{misc}{}
       \field{sortinit}{M}
       \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
@@ -176,6 +270,146 @@
       \verb https://web.archive.org/web/20090821105822/http://www.islandnet.com/~kpolsson/applehis/appl1984.htm
       \endverb
     \endentry
+    \entry{shapiro_conflict-free_2011}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=f13a03ea8c9e34968f9bc55bb4e93d9f}{%
+           family={Shapiro},
+           familyi={S\bibinitperiod},
+           given={Marc},
+           giveni={M\bibinitperiod}}}%
+        {{hash=01eb907fe4f9429b911ea87887f73363}{%
+           family={Preguiça},
+           familyi={P\bibinitperiod},
+           given={Nuno},
+           giveni={N\bibinitperiod}}}%
+        {{hash=0bb140bbbc1d3ac7ec6a28bd9d506581}{%
+           family={Baquero},
+           familyi={B\bibinitperiod},
+           given={Carlos},
+           giveni={C\bibinitperiod}}}%
+        {{hash=d091ed4cb7e2ab01f03d04bfcd52f83f}{%
+           family={Zawirski},
+           familyi={Z\bibinitperiod},
+           given={Marek},
+           giveni={M\bibinitperiod}}}%
+      }
+      \name{editor}{3}{}{%
+        {{hash=e815d3c85a6566efef0716dbeb6df496}{%
+           family={Défago},
+           familyi={D\bibinitperiod},
+           given={Xavier},
+           giveni={X\bibinitperiod}}}%
+        {{hash=cac3f398e493ef46fe9796f1a3524e9e}{%
+           family={Petit},
+           familyi={P\bibinitperiod},
+           given={Franck},
+           giveni={F\bibinitperiod}}}%
+        {{hash=043d604a66f23a1f2f7c302317fd87a2}{%
+           family={Villain},
+           familyi={V\bibinitperiod},
+           given={Vincent},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{00bf62d46bf695019c2c8f76a176456a}
+      \strng{fullhash}{00bf62d46bf695019c2c8f76a176456a}
+      \strng{bibnamehash}{00bf62d46bf695019c2c8f76a176456a}
+      \strng{authorbibnamehash}{00bf62d46bf695019c2c8f76a176456a}
+      \strng{authornamehash}{00bf62d46bf695019c2c8f76a176456a}
+      \strng{authorfullhash}{00bf62d46bf695019c2c8f76a176456a}
+      \strng{editorbibnamehash}{6a150f6c69114b0eaf2bbc447992dbfb}
+      \strng{editornamehash}{6a150f6c69114b0eaf2bbc447992dbfb}
+      \strng{editorfullhash}{6a150f6c69114b0eaf2bbc447992dbfb}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Replicating data under Eventual Consistency (EC) allows any replica to accept updates without remote synchronisation. This ensures performance and scalability in large-scale distributed systems (e.g., clouds). However, published EC approaches are ad-hoc and error-prone. Under a formal Strong Eventual Consistency (SEC) model, we study sufficient conditions for convergence. A data type that satisfies these conditions is called a Conflict-free Replicated Data Type (CRDT). Replicas of any CRDT are guaranteed to converge in a self-stabilising manner, despite any number of failures. This paper formalises two popular approaches (state- and operation-based) and their relevant sufficient conditions. We study a number of useful CRDTs, such as sets with clean semantics, supporting both add and remove operations, and consider in depth the more complex Graph data type. CRDT types can be composed to develop large-scale distributed applications, and have interesting theoretical properties.}
+      \field{booktitle}{Stabilization, {Safety}, and {Security} of {Distributed} {Systems}}
+      \field{isbn}{9783642245503}
+      \field{series}{Lecture {Notes} in {Computer} {Science}}
+      \field{title}{Conflict-{Free} {Replicated} {Data} {Types}}
+      \field{year}{2011}
+      \field{pages}{386\bibrangedash 400}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1007/978-3-642-24550-3_29
+      \endverb
+      \keyw{Eventual Consistency,Replicated Shared Objects,Large-Scale Distributed Systems}
+    \endentry
+    \entry{sun_real_2020}{article}{}
+      \name{author}{5}{}{%
+        {{hash=637fdbefe4bb1ef3b5f562de5d806ecc}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Chengzheng},
+           giveni={C\bibinitperiod}}}%
+        {{hash=d72e4639bdaeeacb0048e12586285e47}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=1c14237c88450fac0355a0a791eaf34d}{%
+           family={Ng},
+           familyi={N\bibinitperiod},
+           given={Agustina},
+           giveni={A\bibinitperiod}}}%
+        {{hash=4c3492d3e614de77c03ddd4b66dc0d6b}{%
+           family={Cai},
+           familyi={C\bibinitperiod},
+           given={Weiwei},
+           giveni={W\bibinitperiod}}}%
+        {{hash=2651e067a9cb96496cc38412686d2d71}{%
+           family={Cho},
+           familyi={C\bibinitperiod},
+           given={Bryden},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{c2c440c027ccb37e31f73ceed07e675e}
+      \strng{fullhash}{c2c440c027ccb37e31f73ceed07e675e}
+      \strng{bibnamehash}{c2c440c027ccb37e31f73ceed07e675e}
+      \strng{authorbibnamehash}{c2c440c027ccb37e31f73ceed07e675e}
+      \strng{authornamehash}{c2c440c027ccb37e31f73ceed07e675e}
+      \strng{authorfullhash}{c2c440c027ccb37e31f73ceed07e675e}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{OT (Operational Transformation) was invented for supporting real-time co-editors in the late 1980s and has evolved to become a collection of core techniques widely used in today's working co-editors and adopted in major industrial products. CRDT (Commutative Replicated Data Type) for co-editors was first proposed around 2006, under the name of WOOT (WithOut Operational Transformation). Follow-up CRDT variations are commonly labeled as "post-OT" techniques capable of making concurrent operations natively commutativity in co-editors. On top of that, CRDT solutions have made broad claims of superiority over OT solutions, and routinely portrayed OT as an incorrect, complex and inefficient technique. Over one decade later, however, CRDT is rarely found in working co-editors, and OT remains the choice for building the vast majority of today's co-editors. Contradictions between the reality and CRDT's purported advantages have been the source of much confusion and debate in co-editing research and developer communities. Have the vast majority of co-editors been unfortunate in choosing the faulty and inferior OT, or those CRDT claims are false? What are the real differences between OT and CRDT for co-editors? What are the key factors and underlying reasons behind the choices between OT and CRDT in the real world? A thorough examination of these questions is relevant not only to researchers who are exploring the frontiers of co-editing technologies and systems, but also to practitioners who are seeking viable techniques to build real world applications. To seek truth from facts, we set out to conduct a comprehensive and critical review on representative OT and CRDT solutions and working co-editors based on them. From this work, we have made important discoveries about OT and CRDT, and revealed facts and evidences that refute CRDT claims over OT on all accounts. We report our discoveries in a series of articles and the current article is the first one in this series. In this paper, we present a general transformation framework for consistency maintenance in co-editors, which was distilled from dissecting and examining representative OT and CRDT solutions (and other alternative solutions) during this work, and report our discoveries under the guidance of this framework. In particular, we reveal that CRDT is like OT in following a general transformation approach, but achieves the same transformation indirectly, in contrast to OT direct transformation approach; and CRDT is not natively commutative for concurrent co-editing operations, but has to achieve the same OT commutativity indirectly as well, with consequential correctness and complexity issues. Uncovering the hidden transformation nature and demystifying the commutativity property of CRDT provides much-needed clarity about what CRDT really is and is not to co-editing, and serves as the foundation to explore the real differences between OT and CRDT in correctness, complexity, implementation, and real world applications, which are reported in follow-up articles. We hope discoveries from this work help clear up common misconceptions and confusions surrounding OT and CRDT, and accelerate progress in co-editing technology for real world applications.?}
+      \field{issn}{2573-0142}
+      \field{journaltitle}{Proceedings of the ACM on Human-Computer Interaction}
+      \field{month}{1}
+      \field{number}{GROUP}
+      \field{title}{Real {Differences} between {OT} and {CRDT} under a {General} {Transformation} {Framework} for {Consistency} {Maintenance} in {Co}-{Editors}}
+      \field{urlday}{4}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{volume}{4}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 26}
+      \range{pages}{26}
+      \verb{doi}
+      \verb 10.1145/3375186
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/3375186
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/3375186
+      \endverb
+    \endentry
     \entry{december_2019_what_nodate}{misc}{}
       \name{author}{1}{}{%
         {{hash=7729f5c1a352578407da2cf8ce639c47}{%
@@ -210,6 +444,28 @@
       \endverb
       \verb{url}
       \verb https://www.techradar.com/news/what-is-saas
+      \endverb
+    \endentry
+    \entry{noauthor_whats_nodate}{misc}{}
+      \list{language}{1}{%
+        {en}%
+      }
+      \field{sortinit}{W}
+      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{News and notes from the Google Drive team}
+      \field{journaltitle}{Google Drive Blog}
+      \field{shorttitle}{What’s different about the new {Google} {Docs}}
+      \field{title}{What’s different about the new {Google} {Docs}: {Conflict} resolution}
+      \field{urlday}{4}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://drive.googleblog.com/2010/09/whats-different-about-new-google-docs_22.html
+      \endverb
+      \verb{url}
+      \verb https://drive.googleblog.com/2010/09/whats-different-about-new-google-docs_22.html
       \endverb
     \endentry
   \enddatalist

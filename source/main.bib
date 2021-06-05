@@ -77,3 +77,78 @@
   abstract = {Doug Engelbart's 1968 "Mother of All Demos" - brief background with links to complete video footage, annotated video footage, abridged video footage, 1998 retrospective panel discussion by the original participants, and more},
   urldate  = {2021-06-04}
 }
+
+@misc{fried_google_nodate,
+  title    = {Google pulls plug on {Google} {Wave}},
+  url      = {https://www.cnet.com/news/google-pulls-plug-on-google-wave/},
+  abstract = {The search giant says the real-time collaboration tool saw less use than the company had hoped. The company will aim to use technology in other products.},
+  language = {en},
+  urldate  = {2021-06-04},
+  journal  = {CNET},
+  author   = {Fried, Ina}
+}
+
+@misc{noauthor_google_2006,
+  title    = {Google acquires online word processor, {Writely}},
+  url      = {https://venturebeat.com/2006/03/09/google-acquires-online-word-processor-writely/},
+  abstract = {Elevate your enterprise data technology and strategy at Transform 2021. Google has acquired Upstartle, the Silicon Valley-based maker of online word processor Writely. It gives Google yet another tool in its kit of applications to take on Microsoft — and brush aside its dominance through the desktop. There are many similar products out there, in […]},
+  language = {en-US},
+  urldate  = {2021-06-04},
+  journal  = {VentureBeat},
+  month    = mar,
+  year     = {2006}
+}
+
+@misc{chang_ehub_2005,
+  title    = {{eHub} {Interviews} {Writely}},
+  url      = {https://web.archive.org/web/20110722190058/http://emilychang.com/ehub/app/ehub-interviews-writely/},
+  language = {English},
+  urldate  = {2021-06-04},
+  journal  = {eHub},
+  author   = {Chang, Emily},
+  month    = oct,
+  year     = {2005}
+}
+
+@article{sun_real_2020,
+  title    = {Real {Differences} between {OT} and {CRDT} under a {General} {Transformation} {Framework} for {Consistency} {Maintenance} in {Co}-{Editors}},
+  volume   = {4},
+  issn     = {2573-0142},
+  url      = {https://dl.acm.org/doi/10.1145/3375186},
+  doi      = {10.1145/3375186},
+  abstract = {OT (Operational Transformation) was invented for supporting real-time co-editors in the late 1980s and has evolved to become a collection of core techniques widely used in today's working co-editors and adopted in major industrial products. CRDT (Commutative Replicated Data Type) for co-editors was first proposed around 2006, under the name of WOOT (WithOut Operational Transformation). Follow-up CRDT variations are commonly labeled as "post-OT" techniques capable of making concurrent operations natively commutativity in co-editors. On top of that, CRDT solutions have made broad claims of superiority over OT solutions, and routinely portrayed OT as an incorrect, complex and inefficient technique. Over one decade later, however, CRDT is rarely found in working co-editors, and OT remains the choice for building the vast majority of today's co-editors. Contradictions between the reality and CRDT's purported advantages have been the source of much confusion and debate in co-editing research and developer communities. Have the vast majority of co-editors been unfortunate in choosing the faulty and inferior OT, or those CRDT claims are false? What are the real differences between OT and CRDT for co-editors? What are the key factors and underlying reasons behind the choices between OT and CRDT in the real world? A thorough examination of these questions is relevant not only to researchers who are exploring the frontiers of co-editing technologies and systems, but also to practitioners who are seeking viable techniques to build real world applications. To seek truth from facts, we set out to conduct a comprehensive and critical review on representative OT and CRDT solutions and working co-editors based on them. From this work, we have made important discoveries about OT and CRDT, and revealed facts and evidences that refute CRDT claims over OT on all accounts. We report our discoveries in a series of articles and the current article is the first one in this series. In this paper, we present a general transformation framework for consistency maintenance in co-editors, which was distilled from dissecting and examining representative OT and CRDT solutions (and other alternative solutions) during this work, and report our discoveries under the guidance of this framework. In particular, we reveal that CRDT is like OT in following a general transformation approach, but achieves the same transformation indirectly, in contrast to OT direct transformation approach; and CRDT is not natively commutative for concurrent co-editing operations, but has to achieve the same OT commutativity indirectly as well, with consequential correctness and complexity issues. Uncovering the hidden transformation nature and demystifying the commutativity property of CRDT provides much-needed clarity about what CRDT really is and is not to co-editing, and serves as the foundation to explore the real differences between OT and CRDT in correctness, complexity, implementation, and real world applications, which are reported in follow-up articles. We hope discoveries from this work help clear up common misconceptions and confusions surrounding OT and CRDT, and accelerate progress in co-editing technology for real world applications.?},
+  language = {en},
+  number   = {GROUP},
+  urldate  = {2021-06-04},
+  journal  = {Proceedings of the ACM on Human-Computer Interaction},
+  author   = {Sun, Chengzheng and Sun, David and Ng, Agustina and Cai, Weiwei and Cho, Bryden},
+  month    = jan,
+  year     = {2020},
+  pages    = {1--26}
+}
+@inproceedings{shapiro_conflict-free_2011,
+  address   = {Berlin, Heidelberg},
+  series    = {Lecture {Notes} in {Computer} {Science}},
+  title     = {Conflict-{Free} {Replicated} {Data} {Types}},
+  isbn      = {9783642245503},
+  doi       = {10.1007/978-3-642-24550-3_29},
+  abstract  = {Replicating data under Eventual Consistency (EC) allows any replica to accept updates without remote synchronisation. This ensures performance and scalability in large-scale distributed systems (e.g., clouds). However, published EC approaches are ad-hoc and error-prone. Under a formal Strong Eventual Consistency (SEC) model, we study sufficient conditions for convergence. A data type that satisfies these conditions is called a Conflict-free Replicated Data Type (CRDT). Replicas of any CRDT are guaranteed to converge in a self-stabilising manner, despite any number of failures. This paper formalises two popular approaches (state- and operation-based) and their relevant sufficient conditions. We study a number of useful CRDTs, such as sets with clean semantics, supporting both add and remove operations, and consider in depth the more complex Graph data type. CRDT types can be composed to develop large-scale distributed applications, and have interesting theoretical properties.},
+  language  = {en},
+  booktitle = {Stabilization, {Safety}, and {Security} of {Distributed} {Systems}},
+  publisher = {Springer},
+  author    = {Shapiro, Marc and Preguiça, Nuno and Baquero, Carlos and Zawirski, Marek},
+  editor    = {Défago, Xavier and Petit, Franck and Villain, Vincent},
+  year      = {2011},
+  keywords  = {Eventual Consistency ,  Replicated Shared Objects ,  Large-Scale Distributed Systems },
+  pages     = {386--400}
+}
+
+@misc{noauthor_whats_nodate,
+  title      = {What’s different about the new {Google} {Docs}: {Conflict} resolution},
+  shorttitle = {What’s different about the new {Google} {Docs}},
+  url        = {https://drive.googleblog.com/2010/09/whats-different-about-new-google-docs_22.html},
+  abstract   = {News and notes from the Google Drive team},
+  language   = {en},
+  urldate    = {2021-06-04},
+  journal    = {Google Drive Blog}
+}
