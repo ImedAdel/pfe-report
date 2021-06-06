@@ -1,1 +1,2 @@
 {"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Qot's solution for the problem in figure \\E(?:Dummy|Ina|Jimmy-)[0-9]+$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Q[React] It is an open-source front-end JavaScript library for developing uis created by Facebook starting in 2013 \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}

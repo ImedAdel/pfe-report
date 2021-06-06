@@ -1,5 +1,114 @@
 \chapter{Implementation}
 \label{chap:implementation}
 
-\noindent Researching the current solutions led us to formulate a set of
-requirements to ensure that Merebase offers the best experience.
+As exciting as ideas may be, they are worthless if they never leave the books to the real world.
+In this chapter, we are finally bringing our application to life.
+We will start, as always, by exploring the possible choice for our implementation, proceed to justify our choice, and finally present our application.
+
+\section{Technology stack}
+
+So far, within the last three chapters, we only made a choice after objectively analyzing the existing possibilities, comparing them, and picking the one that suited our needs the best.
+This chapter is no different.
+
+In the last chapter, we decided that our application will follow an \emph{n}-tier architecture and a \acrshort{mvvm} client.
+Therefore, we need to start by picking the right technology for each tier.
+Our requirements, defined in the second chapter, should always be our main focus.
+That is, speed, performance, accessibility, security, and scalability.
+
+\subsection{The \emph{n}-tier stack}
+\subsubsection{Client stack}
+
+With the \acrshort{mvvm} pattern in mind, we have multiple options to pick from.
+The selection of these options is based on our past-expertise in them.
+
+\begin{description}
+	\item[React] An open-source front-end JavaScript library for developing \acrshort{ui}s created by Facebook starting in 2013~\autocite{noauthor_why_nodate}.
+
+	      It advocates declarative, componenet-based views and relies on a virtual \acrfull{dom} to selectively update the browser's \acrshort{dom} based on state changes, thus, achieving better performance and a greater developer experience~\autocite{noauthor_react_nodate}.
+
+	\item[Vue.js] An open-source front-end JavaScript framework for developing \acrshort{ui}s created by Evan You starting in 2014~\autocite{macrae_vue.js:_2018}.
+
+	      In a similar fashion to React, Vue.js also relies on a virtual \acrshort{dom} and advocates a component-based architecture.
+
+	\item[Svelte] An open-source front-end JavaScript \emph{compiler} created by Rich Harris in 2016~\autocite{nov_26_2016_frameworks_nodate}.
+	      Contrary to React and Vue.js, Svelte is \emph{not} a run-time library.
+	      Instead, it operates like a language on its own that gets compiled down to efficient JavaScript code.
+	      Therefore, it does not rely on concepts such as the virtual \acrshort{dom} and minimizes the final size of the application.
+\end{description}
+
+While React and Vue.js are similar, Svelte has a completely different approach that can offer better performance.
+However, speed is not everything---the size of the community matters much more.
+On top of that, Svelte's performance metrics can be achieved using React too, albeit with more configuration.
+More concretely, React's monthly downloads were 54 times Svelte's downloads during the same month and 5 times Vue.js' downloads~\autocite{noauthor_compare_nodate}.
+Library-wise, one can find up to 160,000 open-source libraries for React, compared to 50,000 for Vue.js and 3,000 for Svelte~\autocite{noauthor_npm_nodate}.
+
+Taking all of these points into consideration, React seems the perfect choice for our application.
+
+\subsubsection{Server stack}
+
+Since they have to handle thousands of computationally expensive requests with millisecond-latency, our servers' technology stack has to be as performant as possible.
+However, while performance is the top priority, it is also important to pick a stack with large community support, otherwise our implementation might have a poor developer experience, and it might face maintainability issues in the future.
+
+The choice of the technology is also limited by our expertise.
+A performant language or framework with no expertise would as good as or maybe even worse than a slow language with experience in using it.
+
+\begin{description}
+	\item[Node.js] An open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine\footnote{The JavaScript engine used in Google Chrome} and executes JavaScript code outside a web browser. It has an event-driven architecture that aims to optimize throughput and scalability in web applications, especially ones with real-time requirements~\autocite{node.js_about_nodate}.
+
+	\item[Go] A statically typed\footnote{Type safety is checked during compilation}, compiled programming language created at Google.
+	      Its syntax is similar to C, but with memory safety, garbage collection, structural typing, and concurrency~\autocite{metz_google_nodate}.
+	      Being a compiled, concurrent programming language, Go usually offers better performance than Node.js~\autocite{noauthor_go_nodate}.
+
+	\item[Rust] A multi-paradigm\footnote{It supports object-oriented, and functional programming, among others} programming language designed for performance and memory safety, which it achieves without garbage collection~\autocite{noauthor_frequently_2016}. It is notable for its extreme speed and low usage of server resources even when compared to Go~\autocite{noauthor_rust_nodate}.
+\end{description}
+
+When comparing our options, Rust wins by sheer performance, while Node.js wins for its large community and the ability to share code between our front-end and our back-end.
+However, since our application is technically a database on top of another database, performance is an important metric. This is why Go, with its performance and community, is the best choice for our use case.
+
+\subsubsection{Database}
+
+Merebase is essentially a no-code collaborative database on top of another low-level database.
+Aside from being regularly queried by our users, our database will act as the source of truth for real-time collaboration.
+Therefore, the choice of our application's data store must primarily rely on the performance of such store.
+
+\begin{description}
+	\item[MongoDB] A source-available\footnote{A type of a licensing in which the source code can be viewed, but with no or restricted modification} cross-platform NoSQL database program~\autocite{noauthor_what_nodate}.
+	      MongoDB uses JSON-like documents with optional schemas.
+	      It is developed by MongoDB Inc. and licensed under \acrfull{sspl}~\autocite{noauthor_what_nodate}. It was initially released in 2009~\autocite{noauthor_mongodb_nodate}.
+	\item[MySQL] A widely used open-source \acrfull{rdmbs} initially released in 1995~\autocite{noauthor_mysql_nodate-1}.
+	\item[PostgreSQL] A free and open-source \acrshort{rdmbs} emphasizing extensibility and SQL compliance initially released in 1985~\autocite{noauthor_postgresql_nodate-1,noauthor_postgresql:_2017,noauthor_1._2021}. It offers various features, including transactions, automatically updatable views, materialized views, triggers, and stored procedures~\autocite{noauthor_1._2021}.
+	      It is designed to handle a wide range of workloads, from single machines to data warehouses or web servers with numerous concurrent users.
+	      Some notable products built on top of Postgres include Amazon Redshift, a data warehouse service.
+\end{description}
+
+Since each user can shape their database however they like, it might be tempting to choose a NoSQL database, such as MongoDB, for our application.
+However, benchmarks show that SQL databases, such as Postgres and MySQL, perform significantly better~\autocite{noauthor_benchmark:_2018}.
+
+Finally, when it comes to choosing between SQL databases, MySQL is the most taught one in our schools, and it is the most used in enterprise software. However, Postgres or PostgreSQL offers more concurrency features~\autocite{noauthor_mysql_nodate,noauthor_postgresql_nodate}, and it was demonstrated to be more performant than MySQL~\autocite{khushi_benchmarking_2015}. Furthermore, the latter's open-source, non-commercial, liberal nature makes it more popular among developers online, thus, providing it with more libraries and extensions.
+
+Based on these points, we decided to choose Postgres as our database.
+
+\subsubsection{Pub-Sub}
+
+Contrary to the choice overload of the other tiers of our stack, the pub-sub tier is easily dominated by Redis.
+
+Redis is an in-memory store~\autocite{noauthor_faq_nodate}. It can be used as a distributed, in-memory key–value database, cache, or message broker. It supports multiple data structures, such as strings, lists, maps, and sets.
+
+\subsection{Detailed technology profile}
+
+\subsubsection{TypeScript}
+\subsubsection{Yarn}
+\subsubsection{Next.js}
+\subsubsection{Zustand}
+\subsubsection{Reakit}
+\subsubsection{TailwindCSS}
+\subsubsection{Virtualization}
+\subsubsection{Websocket}
+\subsubsection{Gin}
+\subsubsection{SQLC}
+\subsubsection{Dbmate}
+\subsubsection{Docker and Docker Compose}
+\subsubsection{Git}
+\subsubsection{VS Code and VS Code Remote}
+\subsubsection{Jetbrains Datagrip}
+\subsubsection{XeLaTeX and Tikz}

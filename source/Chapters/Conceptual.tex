@@ -432,7 +432,7 @@
 
 	\acrshort{mvvm} was originally a variation of the Presentation Model design pattern. It was invented in Microsoft to supported their event-driven \acrshort{ui}s, and it was incorporated into their Windows Presentation Foundation~\autocite{smith_patterns_2009}.
 
-	Most recent \acrshort{ui} frameworks, such as React.js, Angular, Vue.js, and Svelte, implement some variation or another of \acrshort{mvvm}~\autocite{noauthor_javascript_nodate}.
+	Most recent \acrshort{ui} frameworks, such as React, Angular, Vue.js, and Svelte, implement some variation or another of \acrshort{mvvm}~\autocite{noauthor_javascript_nodate}.
 
 	\subsection{Our choice}
 
@@ -454,6 +454,7 @@
 
 	\begin{figure}[H]
 		\centerfloat
+		\tikzsetnextfilename{ntier-arch}
 		\begin{tikzpicture}
 			\draw[fill=blue!30] (0,0)
 			-- (2,0) node[midway,below] {Client}
@@ -539,7 +540,8 @@ Figure~\ref{fig:gen-class-diagram} represents our application's general class di
 \begin{figure}[H]
 	\thisfloatpagestyle{empty}
 	\centerfloat
-	\begin{tikzpicture}[scale=0.75, every node/.append style={transform shape}]
+	\sffamily
+	\begin{tikzpicture}[scale=0.5, every node/.append style={transform shape}]
 		\umlclass[x=-4]{User}{
 			ID : UUID \\
 			Name : Text \\
@@ -549,7 +551,7 @@ Figure~\ref{fig:gen-class-diagram} represents our application's general class di
 			ModifiedAt: Timestamptz
 		}{}
 
-		\umlclass[right=5cm of User.north, anchor=north]{Space}{
+		\umlclass[left=10cm of User]{Space}{
 			ID : UUID \\
 			Name : Text \\
 			Handle : Text \\
@@ -557,38 +559,8 @@ Figure~\ref{fig:gen-class-diagram} represents our application's general class di
 			ModifiedAt: Timestamptz
 		}{}
 
-		\umlclass[right=10cm of User.north,
-			anchor=north]{Member}{
-			UserID : UUID \\
-			SpaceID : UUID \\
-			AccessLevel: AccessLevel \\
-			CreatedAt: Timestamptz \\
-			ModifiedAt: Timestamptz
-		}{}
 
-		\umlclass[below=1cm of User.south,
-			anchor=north]{Confirmation}{
-			UserID : UUID \\
-			SpaceID : UUID \\
-			AccessLevel: AccessLevel \\
-			CreatedAt: Timestamptz \\
-			ModifiedAt: Timestamptz
-		}{}
-
-		\umlclass[below right=0.5cm and 6cm of User.south,
-			anchor=north]{AccessToken}{
-			ID : UUID \\
-			Token : Text \\
-			Name : Text \\
-			Resource : Text \\
-			ResourceID : UUID \\
-			AccessLevel: AccessLevel \\
-			CreatedAt: Timestamptz \\
-			CreatedBy: UUID
-		}{}
-
-		\umlclass[below right=0.5cm and 11cm of User.south,
-			anchor=north]{Project}{
+		\umlclass[below left=4cm and 2cm of Space]{Project}{
 			ID : UUID \\
 			Name : Text \\
 			Icon : Text \\
@@ -601,8 +573,35 @@ Figure~\ref{fig:gen-class-diagram} represents our application's general class di
 			ModifiedBy: UUID
 		}{}
 
-		\umlclass[below=6cm of User.south,
-			anchor=north]{Collection}{
+		\umlclass[left=4cm of Project]{Member}{
+			UserID : UUID \\
+			SpaceID : UUID \\
+			AccessLevel: AccessLevel \\
+			CreatedAt: Timestamptz \\
+			ModifiedAt: Timestamptz
+		}{}
+
+		\umlclass[right=3cm of Project]{Confirmation}{
+			UserID : UUID \\
+			SpaceID : UUID \\
+			Token: Text \\
+			CreatedAt: Timestamptz \\
+			ModifiedAt: Timestamptz
+		}{}
+
+		\umlclass[right=3cm of Confirmation]{AccessToken}{
+			ID : UUID \\
+			Token : Text \\
+			Name : Text \\
+			Resource : Text \\
+			ResourceID : UUID \\
+			AccessLevel: AccessLevel \\
+			CreatedAt: Timestamptz \\
+			CreatedBy: UUID
+		}{}
+
+
+		\umlclass[below=2cm of Project]{Collection}{
 			ID : UUID \\
 			Name : Text \\
 			Icon : Text \\
@@ -615,19 +614,7 @@ Figure~\ref{fig:gen-class-diagram} represents our application's general class di
 			ModifiedBy: UUID
 		}{}
 
-		\umlclass[below right=8cm and 6cm of User.south,
-			anchor=north]{Document}{
-			ID : UUID \\
-			Version: Integer \\
-			CollectionID: UUID \\
-			CreatedAt: Timestamptz \\
-			ModifiedAt: Timestamptz \\
-			CreatedBy: UUID \\
-			ModifiedBy: UUID
-		}{}
-
-		\umlclass[below right=9cm and 11cm of User.south,
-			anchor=north]{Field}{
+		\umlclass[below=2cm of Collection]{Field}{
 			ID : UUID \\
 			Name : Text \\
 			Icon : Text \\
@@ -640,8 +627,18 @@ Figure~\ref{fig:gen-class-diagram} represents our application's general class di
 			ModifiedBy: UUID
 		}{}
 
-		\umlclass[below left=2cm and 5cm of User.south,
-			anchor=north]{View}{
+		\umlclass[right=4cm of Field]{Document}{
+			ID : UUID \\
+			Version: Integer \\
+			CollectionID: UUID \\
+			CreatedAt: Timestamptz \\
+			ModifiedAt: Timestamptz \\
+			CreatedBy: UUID \\
+			ModifiedBy: UUID
+		}{}
+
+
+		\umlclass[left=4cm of Field]{View}{
 			ID : UUID \\
 			Name : Text \\
 			Type : Text \\
@@ -652,8 +649,7 @@ Figure~\ref{fig:gen-class-diagram} represents our application's general class di
 			ModifiedAt: Timestamptz \\
 		}{}
 
-		\umlclass[below left=9cm and 5cm of User.south,
-			anchor=north]{Block}{
+		\umlclass[below=2cm of Document]{Block}{
 			ID : UUID \\
 			Data : Text \\
 			ParentID : UUID \\
@@ -665,9 +661,44 @@ Figure~\ref{fig:gen-class-diagram} represents our application's general class di
 			CreatedBy: UUID \\
 			ModifiedBy: UUID
 		}{}
+		\umlclass[below=1.5cm of AccessToken, type=enumeration]{AccessLevel}{
+			Owner \\
+			Admin \\
+			ReadWrite \\
+			ReadOnly
+		}{}
 
 		% \umlVHVinherit{B}{A}
 		\umlVHVinherit{Document}{Collection}
+		\umluniassoc[geometry=-|-, weight=0.3, arg1=x, mult1=1, pos1=1.9, arg2=y, mult2=*, pos2=0.2]{Member}{User}
+		\umluniassoc[geometry=|-, arg1=x, mult1=1, pos1=1.9, arg2=y, mult2=*, pos2=0.2]{Member}{Space}
+
+		\umluniassoc[geometry=|-|, arg1=x, mult1=1, pos1=0.9, arg2=SpaceID, mult2=*, pos2=0.2]{Project}{Space}
+		\umluniassoc[geometry=|-, arg1=x, mult1=1, pos1=0.9, arg2=CreatedBy, mult2=*, pos2=0.2]{Project}{User}
+		\umluniassoc[geometry=-|-, arg1=x, mult1=1, pos1=1.9, arg2=ModifiedBy, mult2=*, pos2=0.2]{Project}{User}
+
+		\umluniassoc[geometry=-|-, arg1=x, mult1=1, pos1=1.9, arg2=y, mult2=*, pos2=0.2]{Confirmation}{User}
+
+		\umluniassoc[geometry=|-, arg1=x, mult1=1, pos1=1.9, arg2=y, mult2=*, pos2=0.2]{AccessToken}{User}
+
+		\umluniassoc[geometry=--, arg1=x, mult1=1, pos1=0.9, arg2=ProjectID, mult2=*, pos2=0.2]{Collection}{Project}
+		\umluniassoc[geometry=-|-, arg1=x, mult1=1, pos1=0.9, arg2=CreatedBy, mult2=*, pos2=0.2]{Collection}{User}
+		\umluniassoc[geometry=-|-, arg1=x, mult1=1, pos1=1.9, arg2=ModifiedBy, mult2=*, pos2=0.2]{Collection}{User}
+
+		\umluniassoc[geometry=-|-, arg1=x, mult1=1, pos1=0.9, arg2=CollectionID, mult2=*, pos2=0.2]{View}{Collection}
+
+		\umluniassoc[geometry=|-|, arg1=x, mult1=1, pos1=0.9, arg2=CollectionID, mult2=*, pos2=0.2]{Field}{Collection}
+
+		\umluniassoc[geometry=-|-, arg1=x, mult1=1, pos1=0.9, arg2=CollectionID, mult2=*, pos2=0.2]{Document}{Collection}
+		\umluniassoc[geometry=-|, arg1=x, mult1=1, pos1=0.9, arg2=CreatedBy, mult2=*, pos2=0.2]{Document}{User}
+		\umluniassoc[geometry=-|, arg1=x, mult1=1, pos1=1.9, arg2=ModifiedBy, mult2=*, pos2=0.2]{Document}{User}
+
+		\umluniassoc[geometry=|-|, arg1=x, mult1=1, pos1=0.9, arg2=DocumentID, mult2=*, pos2=0.2]{Block}{Document}
+		\umluniassoc[geometry=|-|, arg1=x, mult1=1, pos1=0.9, arg2=FieldID, mult2=*, pos2=0.2]{Block}{Field}
+		\umluniassoc[arg1=x, mult1=1, pos1=0.9, arg2=ParentID, mult2=*, pos2=0.2,loopsize=6cm]{Block}{Block}
+		\umluniassoc[geometry=-|, arg1=x, mult1=1, pos1=0.9, arg2=CreatedBy, mult2=*, pos2=0.2,arm1=3cm]{Block}{User}
+		\umluniassoc[geometry=-|, arg1=x, mult1=1, pos1=1.9, arg2=ModifiedBy, mult2=*, pos2=0.2,arm1=4cm]{Block}{User}
+
 
 	\end{tikzpicture}
 
@@ -678,3 +709,8 @@ Figure~\ref{fig:gen-class-diagram} represents our application's general class di
 \subsection{Sequence diagrams}
 \subsection{Activity diagrams}
 \section{Conclusion}
+
+In this chapter, we analyzed the possible architectures of the different aspects of our applications, compared them, and made an objective choice. 
+Then, we proceeded to present, in details, the architecture of our application.
+
+Within the next chapter, we are going to glue all the pieces of research and theory together, and bring our application to life.

@@ -13,7 +13,7 @@
            numbers=noenddot,
            titlepage,
            toc=bibliography,
-           toc=index,]{scrbook}
+           toc=index]{scrbook}
 
           %  \usepackage[includemp,
           %   paperwidth=18.90cm,
@@ -24,6 +24,9 @@
           %   outer=2.1835cm,
           %   marginparwidth=4cm,
           %   marginparsep=0.4cm]{geometry}
+
+\hfuzz=10.002pt 
+
 
 \RequirePackage{fontspec}
 
@@ -69,9 +72,15 @@
   ]{biblatex}
 
 \RequirePackage{tikz}
-\usetikzlibrary{positioning}
+\usetikzlibrary{positioning,external}
 \RequirePackage{tikz-uml}
 \RequirePackage{tikz-cd}
+\RequirePackage{pgfplots}
+
+\tikzexternalize[mode=graphics if exists,
+figure list=true,
+prefix=TikzFigures/] % activate!
+
 \RequirePackage{floatpag}
 \RequirePackage{float}
 \RequirePackage{cancel}

@@ -16,5 +16,517 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{noauthor_1._2021}{misc}{}
+      \list{language}{1}{%
+        {en}%
+      }
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labeltitlesource}{title}
+      \field{abstract}{1.\&nbsp; What Is PostgreSQL? PostgreSQL is an object-relational database management system (ORDBMS) based on POSTGRES, Version 4.2, developed at the …}
+      \field{journaltitle}{PostgreSQL Documentation}
+      \field{month}{5}
+      \field{title}{1. {What} {Is} {PostgreSQL}?}
+      \field{urlday}{6}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.postgresql.org/docs/13/intro-whatis.html
+      \endverb
+      \verb{url}
+      \verb https://www.postgresql.org/docs/13/intro-whatis.html
+      \endverb
+    \endentry
+    \entry{noauthor_benchmark:_2018}{misc}{}
+      \list{language}{1}{%
+        {en-US}%
+      }
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{This article is part of ArangoDB’s open-source performance benchmark series. This time we included MongoDB, PostgreSQL, OrienDB and Neo4j.}
+      \field{journaltitle}{ArangoDB}
+      \field{month}{2}
+      \field{shorttitle}{Benchmark}
+      \field{title}{Benchmark: {MongoDB}, {PostgreSQL}, {OrientDB}, {Neo4j} and {ArangoDB}}
+      \field{urlday}{6}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.arangodb.com/2018/02/nosql-performance-benchmark-2018-mongodb-postgresql-orientdb-neo4j-arangodb/
+      \endverb
+      \verb{url}
+      \verb https://www.arangodb.com/2018/02/nosql-performance-benchmark-2018-mongodb-postgresql-orientdb-neo4j-arangodb/
+      \endverb
+    \endentry
+    \entry{noauthor_compare_nodate}{misc}{}
+      \list{language}{1}{%
+        {en}%
+      }
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Weekly downloads - react: 10,156,798 (-6.7\%), vue: 2,398,427 (-0.5\%), svelte: 143,667 (-43.0\%)}
+      \field{title}{Compare npm downloads for react, vue and svelte - npmcharts 📈}
+      \field{urlday}{6}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://npmcharts.com/compare/react,vue,svelte
+      \endverb
+      \verb{url}
+      \verb https://npmcharts.com/compare/react,vue,svelte
+      \endverb
+    \endentry
+    \entry{noauthor_faq_nodate}{misc}{}
+      \field{sortinit}{F}
+      \field{sortinithash}{fb0c0faa89eb6abae8213bf60e6799ea}
+      \field{labeltitlesource}{title}
+      \field{title}{{FAQ} – {Redis}}
+      \field{urlday}{6}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://redis.io/topics/faq
+      \endverb
+      \verb{url}
+      \verb https://redis.io/topics/faq
+      \endverb
+    \endentry
+    \entry{noauthor_frequently_2016}{misc}{}
+      \field{sortinit}{F}
+      \field{sortinithash}{fb0c0faa89eb6abae8213bf60e6799ea}
+      \field{labeltitlesource}{title}
+      \field{month}{6}
+      \field{title}{Frequently {Asked} {Questions} · {The} {Rust} {Programming} {Language}}
+      \field{urlday}{6}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://web.archive.org/web/20160609195720/https://www.rust-lang.org/faq.html#project
+      \endverb
+      \verb{url}
+      \verb https://web.archive.org/web/20160609195720/https://www.rust-lang.org/faq.html#project
+      \endverb
+    \endentry
+    \entry{noauthor_go_nodate}{misc}{}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Go Node js - Which programs are fastest?}
+      \field{title}{Go vs {Node} js - {Which} programs are fastest? | {Computer} {Language} {Benchmarks} {Game}}
+      \field{urlday}{6}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://benchmarksgame-team.pages.debian.net/benchmarksgame/fastest/go-node.html
+      \endverb
+      \verb{url}
+      \verb https://benchmarksgame-team.pages.debian.net/benchmarksgame/fastest/go-node.html
+      \endverb
+    \endentry
+    \entry{khushi_benchmarking_2015}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ad188ee8f3cd0bf4f168b6379b62c04d}{%
+           family={Khushi},
+           familyi={K\bibinitperiod},
+           given={Matloob},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{ad188ee8f3cd0bf4f168b6379b62c04d}
+      \strng{fullhash}{ad188ee8f3cd0bf4f168b6379b62c04d}
+      \strng{bibnamehash}{ad188ee8f3cd0bf4f168b6379b62c04d}
+      \strng{authorbibnamehash}{ad188ee8f3cd0bf4f168b6379b62c04d}
+      \strng{authornamehash}{ad188ee8f3cd0bf4f168b6379b62c04d}
+      \strng{authorfullhash}{ad188ee8f3cd0bf4f168b6379b62c04d}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{issn}{07302312}
+      \field{journaltitle}{Journal of Cellular Biochemistry}
+      \field{month}{6}
+      \field{number}{6}
+      \field{shorttitle}{Benchmarking {Database} {Performance} for {Genomic} {Data}}
+      \field{title}{Benchmarking {Database} {Performance} for {Genomic} {Data}: {DATABASE} {BENCHMARKING}}
+      \field{urlday}{6}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{volume}{116}
+      \field{year}{2015}
+      \field{urldateera}{ce}
+      \field{pages}{877\bibrangedash 883}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1002/jcb.25049
+      \endverb
+      \verb{urlraw}
+      \verb http://doi.wiley.com/10.1002/jcb.25049
+      \endverb
+      \verb{url}
+      \verb http://doi.wiley.com/10.1002/jcb.25049
+      \endverb
+    \endentry
+    \entry{macrae_vue.js:_2018}{book}{}
+      \name{author}{1}{}{%
+        {{hash=fef74beaeb7546bd7c23b8a9ce7afdf7}{%
+           family={Macrae},
+           familyi={M\bibinitperiod},
+           given={Callum},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Sebastopol, California}%
+      }
+      \list{publisher}{1}{%
+        {O'Reilly Media}%
+      }
+      \strng{namehash}{fef74beaeb7546bd7c23b8a9ce7afdf7}
+      \strng{fullhash}{fef74beaeb7546bd7c23b8a9ce7afdf7}
+      \strng{bibnamehash}{fef74beaeb7546bd7c23b8a9ce7afdf7}
+      \strng{authorbibnamehash}{fef74beaeb7546bd7c23b8a9ce7afdf7}
+      \strng{authornamehash}{fef74beaeb7546bd7c23b8a9ce7afdf7}
+      \strng{authorfullhash}{fef74beaeb7546bd7c23b8a9ce7afdf7}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Get a brisk introduction to building fast, interactive single-page web applications with Vue.js, the popular JavaScript framework that organizes and simplifies web development. With this practical guide, you'll quickly move from basics to custom components and advanced features, including JSX, the JavaScript syntax extension}
+      \field{edition}{First edition}
+      \field{isbn}{9781491997246}
+      \field{note}{OCLC: on1002834117}
+      \field{shorttitle}{Vue.js}
+      \field{title}{Vue.js: up and running: building accessible and performant web apps}
+      \field{year}{2018}
+      \keyw{Vue (Electronic resource),Vue (Electronic resource),JavaScript (Computer program language),Web site development,Web applications,Development,JavaScript (Computer program language),Web site development}
+    \endentry
+    \entry{metz_google_nodate}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=933ed9cdf5d86f8ed4df1bbbca747d53}{%
+           family={Metz},
+           familyi={M\bibinitperiod},
+           given={Cade},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{933ed9cdf5d86f8ed4df1bbbca747d53}
+      \strng{fullhash}{933ed9cdf5d86f8ed4df1bbbca747d53}
+      \strng{bibnamehash}{933ed9cdf5d86f8ed4df1bbbca747d53}
+      \strng{authorbibnamehash}{933ed9cdf5d86f8ed4df1bbbca747d53}
+      \strng{authornamehash}{933ed9cdf5d86f8ed4df1bbbca747d53}
+      \strng{authorfullhash}{933ed9cdf5d86f8ed4df1bbbca747d53}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{How to build all the Google stuff Google won't talk about}
+      \field{title}{Google {Go} boldly goes where no code has gone before}
+      \field{urlday}{6}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.theregister.com/2011/05/05/google_go/
+      \endverb
+      \verb{url}
+      \verb https://www.theregister.com/2011/05/05/google_go/
+      \endverb
+    \endentry
+    \entry{noauthor_mongodb_nodate}{misc}{}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Detailed overview of the characteristics of MongoDB}
+      \field{title}{{MongoDB} {System} {Properties}}
+      \field{urlday}{6}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://db-engines.com/en/system/MongoDB
+      \endverb
+      \verb{url}
+      \verb https://db-engines.com/en/system/MongoDB
+      \endverb
+    \endentry
+    \entry{noauthor_mysql_nodate-1}{misc}{}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Detailed overview of the characteristics of MySQL}
+      \field{title}{{MySQL} {System} {Properties}}
+      \field{urlday}{6}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://db-engines.com/en/system/MySQL
+      \endverb
+      \verb{url}
+      \verb https://db-engines.com/en/system/MySQL
+      \endverb
+    \endentry
+    \entry{noauthor_mysql_nodate}{misc}{}
+      \list{language}{1}{%
+        {en}%
+      }
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Which is better? MySQL or Postgres? In this post we'll compare the strengths and weaknesses of each.}
+      \field{journaltitle}{Okta Developer}
+      \field{title}{{MySQL} vs {PostgreSQL} -- {Choose} the {Right} {Database} for {Your} {Project}}
+      \field{urlday}{6}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://developer.okta.com/blog/2019/07/19/mysql-vs-postgres
+      \endverb
+      \verb{url}
+      \verb https://developer.okta.com/blog/2019/07/19/mysql-vs-postgres
+      \endverb
+    \endentry
+    \entry{node.js_about_nodate}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=4b00bbf4971bea7d45e4ee343c881d44}{%
+           family={{Node.js}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{4b00bbf4971bea7d45e4ee343c881d44}
+      \strng{fullhash}{4b00bbf4971bea7d45e4ee343c881d44}
+      \strng{bibnamehash}{4b00bbf4971bea7d45e4ee343c881d44}
+      \strng{authorbibnamehash}{4b00bbf4971bea7d45e4ee343c881d44}
+      \strng{authornamehash}{4b00bbf4971bea7d45e4ee343c881d44}
+      \strng{authorfullhash}{4b00bbf4971bea7d45e4ee343c881d44}
+      \field{sortinit}{N}
+      \field{sortinithash}{98cf339a479c0454fe09153a08675a15}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.}
+      \field{journaltitle}{Node.js}
+      \field{title}{About}
+      \field{urlday}{6}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://nodejs.org/en/about/
+      \endverb
+      \verb{url}
+      \verb https://nodejs.org/en/about/
+      \endverb
+    \endentry
+    \entry{nov_26_2016_frameworks_nodate}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=81c956cc06e113a7479a49f3dee0fc82}{%
+           family={Nov\bibnamedelimb 26\bibnamedelima 2016},
+           familyi={N\bibinitperiod\bibinitdelim 2\bibinitperiod\bibinitdelim 2\bibinitperiod},
+           given={Rich\bibnamedelimb Harris\bibnamedelima Sat},
+           giveni={R\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{81c956cc06e113a7479a49f3dee0fc82}
+      \strng{fullhash}{81c956cc06e113a7479a49f3dee0fc82}
+      \strng{bibnamehash}{81c956cc06e113a7479a49f3dee0fc82}
+      \strng{authorbibnamehash}{81c956cc06e113a7479a49f3dee0fc82}
+      \strng{authornamehash}{81c956cc06e113a7479a49f3dee0fc82}
+      \strng{authorfullhash}{81c956cc06e113a7479a49f3dee0fc82}
+      \field{sortinit}{N}
+      \field{sortinithash}{98cf339a479c0454fe09153a08675a15}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{shorttitle}{Frameworks without the framework}
+      \field{title}{Frameworks without the framework: why didn't we think of this sooner?}
+      \field{urlday}{6}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://svelte.dev/blog/frameworks-without-the-framework
+      \endverb
+      \verb{url}
+      \verb https://svelte.dev/blog/frameworks-without-the-framework
+      \endverb
+    \endentry
+    \entry{noauthor_npm_nodate}{misc}{}
+      \list{language}{1}{%
+        {en}%
+      }
+      \field{sortinit}{n}
+      \field{sortinithash}{98cf339a479c0454fe09153a08675a15}
+      \field{labeltitlesource}{title}
+      \field{title}{npm}
+      \field{urlday}{6}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.npmjs.com/
+      \endverb
+      \verb{url}
+      \verb https://www.npmjs.com/
+      \endverb
+    \endentry
+    \entry{noauthor_postgresql_nodate-1}{misc}{}
+      \field{sortinit}{P}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Detailed overview of the characteristics of PostgreSQL}
+      \field{title}{{PostgreSQL} {System} {Properties}}
+      \field{urlday}{6}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://db-engines.com/en/system/PostgreSQL
+      \endverb
+      \verb{url}
+      \verb https://db-engines.com/en/system/PostgreSQL
+      \endverb
+    \endentry
+    \entry{noauthor_postgresql_nodate}{misc}{}
+      \list{language}{1}{%
+        {en-US}%
+      }
+      \field{sortinit}{P}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{labeltitlesource}{title}
+      \field{abstract}{MySQL and PostgreSQL are two database management systems developed back in the mid 90’s and are still consistently rank among the top 5 most popular databases around.}
+      \field{journaltitle}{Sumo Logic}
+      \field{title}{{PostgreSQL} vs {MySQL}}
+      \field{urlday}{6}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.sumologic.com/blog/postgresql-vs-mysql/
+      \endverb
+      \verb{url}
+      \verb https://www.sumologic.com/blog/postgresql-vs-mysql/
+      \endverb
+    \endentry
+    \entry{noauthor_postgresql:_2017}{misc}{}
+      \field{sortinit}{P}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{labeltitlesource}{shorttitle}
+      \field{month}{3}
+      \field{shorttitle}{{PostgreSQL}}
+      \field{title}{{PostgreSQL}: {History}}
+      \field{urlday}{6}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://web.archive.org/web/20170326020245/https://www.postgresql.org/about/history/#
+      \endverb
+      \verb{url}
+      \verb https://web.archive.org/web/20170326020245/https://www.postgresql.org/about/history/#
+      \endverb
+    \endentry
+    \entry{noauthor_react_nodate}{misc}{}
+      \list{language}{1}{%
+        {en}%
+      }
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A JavaScript library for building user interfaces}
+      \field{title}{React – {A} {JavaScript} library for building user interfaces}
+      \field{urlday}{6}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://reactjs.org/
+      \endverb
+      \verb{url}
+      \verb https://reactjs.org/
+      \endverb
+    \endentry
+    \entry{noauthor_rust_nodate}{misc}{}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Rust Go - Which programs are fastest?}
+      \field{title}{Rust vs {Go} - {Which} programs are fastest? | {Computer} {Language} {Benchmarks} {Game}}
+      \field{urlday}{6}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://benchmarksgame-team.pages.debian.net/benchmarksgame/fastest/rust-go.html
+      \endverb
+      \verb{url}
+      \verb https://benchmarksgame-team.pages.debian.net/benchmarksgame/fastest/rust-go.html
+      \endverb
+    \endentry
+    \entry{noauthor_what_nodate}{misc}{}
+      \list{language}{1}{%
+        {en-us}%
+      }
+      \field{sortinit}{W}
+      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{labeltitlesource}{title}
+      \field{abstract}{MongoDB is a document database with the scalability and flexibility that you want with the querying and indexing that you need.}
+      \field{journaltitle}{MongoDB}
+      \field{title}{What {Is} {MongoDB}?}
+      \field{urlday}{6}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.mongodb.com/what-is-mongodb
+      \endverb
+      \verb{url}
+      \verb https://www.mongodb.com/what-is-mongodb
+      \endverb
+    \endentry
+    \entry{noauthor_why_nodate}{misc}{}
+      \list{language}{1}{%
+        {en}%
+      }
+      \field{sortinit}{W}
+      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{There are a lot of JavaScript MVC frameworks out there. Why did we build React and why would you want to use it? React isn’t an MVC framework. React is a library for building composable user interfaces. It encourages the creation of reusable UI components which present data that changes over time. React doesn’t use templates. Traditionally, web application UIs are built using templates or HTML directives. These templates dictate the full set of abstractions that you are allowed to use to build…}
+      \field{shorttitle}{Why did we build {React}?}
+      \field{title}{Why did we build {React}? – {React} {Blog}}
+      \field{urlday}{6}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://reactjs.org/blog/2013/06/05/why-react.html
+      \endverb
+      \verb{url}
+      \verb https://reactjs.org/blog/2013/06/05/why-react.html
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 
