@@ -343,6 +343,8 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/cancel/cancel.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/cancel/cancel.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/comment/comment.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/comment/comment.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
@@ -487,11 +489,6 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 INPUT /usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
-INPUT /home/imed/Code/pfe/report/source/Graphics/figma-logo.png
-INPUT /home/imed/Code/pfe/report/source/Graphics/figma-interface.png
-INPUT /home/imed/Code/pfe/report/source/Graphics/excalidraw-logo.png
-INPUT /home/imed/Code/pfe/report/source/Graphics/excalidraw-interface.jpeg
-INPUT /home/imed/Code/pfe/report/source/Graphics/excalidraw-algo.png
 OUTPUT /home/imed/Code/pfe/report/source/Chapters/Implementation.aux
 INPUT /home/imed/Code/pfe/report/source/Chapters/Implementation.tex
 INPUT /home/imed/Code/pfe/report/source/Chapters/Implementation.tex

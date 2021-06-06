@@ -75,6 +75,9 @@
 \RequirePackage{float}
 \RequirePackage{cancel}
 
+\RequirePackage{comment}
+\excludecomment{toexclude}
+
 % \RequirePackage[showframe]{geometry}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
