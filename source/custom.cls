@@ -69,6 +69,7 @@
   ]{biblatex}
 
 \RequirePackage{tikz}
+\usetikzlibrary{positioning}
 \RequirePackage{tikz-uml}
 \RequirePackage{tikz-cd}
 \RequirePackage{floatpag}
