@@ -394,6 +394,7 @@ INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries
 INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryplotmarks.code.tex
 INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
 INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
+OUTPUT /home/imed/Code/pfe/report/source/main.auxlock
 INPUT /usr/share/texlive/texmf-dist/tex/latex/sttools/floatpag.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/sttools/floatpag.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/float/float.sty
@@ -544,6 +545,10 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT /home/imed/Code/pfe/report/source/TikzFigures/windowing-example.md5
+INPUT /home/imed/Code/pfe/report/source/TikzFigures/windowing-example.pdf
+INPUT /home/imed/Code/pfe/report/source/TikzFigures/windowing-example.dpth
+INPUT /home/imed/Code/pfe/report/source/TikzFigures/windowing-example.pdf
 INPUT /home/imed/Code/pfe/report/source/main.acr
 INPUT /home/imed/Code/pfe/report/source/main.acr
 INPUT /home/imed/Code/pfe/report/source/main.acr

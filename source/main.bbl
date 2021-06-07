@@ -42,6 +42,22 @@
       \verb https://www.postgresql.org/docs/13/intro-whatis.html
       \endverb
     \endentry
+    \entry{noauthor_about_nodate}{misc}{}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labeltitlesource}{title}
+      \field{title}{About - {Git}}
+      \field{urlday}{7}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://git-scm.com/about/small-and-fast
+      \endverb
+      \verb{url}
+      \verb https://git-scm.com/about/small-and-fast
+      \endverb
+    \endentry
     \entry{noauthor_benchmark:_2018}{misc}{}
       \list{language}{1}{%
         {en-US}%
@@ -86,6 +102,104 @@
       \verb https://npmcharts.com/compare/react,vue,svelte
       \endverb
     \endentry
+    \entry{conroy_kyleconroy/sqlc_2021}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=8331699e8063e6711b15b36b957567cf}{%
+           family={Conroy},
+           familyi={C\bibinitperiod},
+           given={Kyle},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{8331699e8063e6711b15b36b957567cf}
+      \strng{fullhash}{8331699e8063e6711b15b36b957567cf}
+      \strng{bibnamehash}{8331699e8063e6711b15b36b957567cf}
+      \strng{authorbibnamehash}{8331699e8063e6711b15b36b957567cf}
+      \strng{authornamehash}{8331699e8063e6711b15b36b957567cf}
+      \strng{authorfullhash}{8331699e8063e6711b15b36b957567cf}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Generate type safe Go from SQL. Contribute to kyleconroy/sqlc development by creating an account on GitHub.}
+      \field{month}{6}
+      \field{note}{original-date: 2019-06-21T21:11:35Z}
+      \field{title}{kyleconroy/sqlc}
+      \field{urlday}{7}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/kyleconroy/sqlc
+      \endverb
+      \verb{url}
+      \verb https://github.com/kyleconroy/sqlc
+      \endverb
+      \keyw{mysql,go,sql,orm,code-generator,postgresql}
+    \endentry
+    \entry{noauthor_container_nodate}{misc}{}
+      \list{language}{1}{%
+        {en}%
+      }
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Learn about Docker Engine, the industry-leading container runtime that enables containerized applications to run anywhere consistently on any infrastructure.}
+      \field{title}{Container {Runtime} with {Docker} {Engine} | {Docker}}
+      \field{urlday}{7}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.docker.com/products/container-runtime
+      \endverb
+      \verb{url}
+      \verb https://www.docker.com/products/container-runtime
+      \endverb
+    \endentry
+    \entry{noauthor_datagrip:_nodate}{misc}{}
+      \list{language}{1}{%
+        {en}%
+      }
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{A powerful IDE from JetBrains for SQL on macOS, Windows, and Linux.}
+      \field{journaltitle}{JetBrains}
+      \field{shorttitle}{{DataGrip}}
+      \field{title}{{DataGrip}: {The} {Cross}-{Platform} {IDE} for {Databases} \& {SQL} by {JetBrains}}
+      \field{urlday}{7}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.jetbrains.com/datagrip/
+      \endverb
+      \verb{url}
+      \verb https://www.jetbrains.com/datagrip/
+      \endverb
+    \endentry
+    \entry{noauthor_facebooks_nodate}{misc}{}
+      \list{language}{1}{%
+        {en}%
+      }
+      \field{sortinit}{F}
+      \field{sortinithash}{fb0c0faa89eb6abae8213bf60e6799ea}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Frank Yan discussed at React Conf some of the technologies and strategies powering FB5, the new facebook.com, addressing topics such as Facebook’s approach to CSS-in-JS.}
+      \field{journaltitle}{InfoQ}
+      \field{title}{Facebook's {CSS}-in-{JS} {Approach} - {Frank} {Yan} at {React} {Conf} 2019}
+      \field{urlday}{7}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.infoq.com/news/2020/04/facebook-cssinjs-react-conf-2019/
+      \endverb
+      \verb{url}
+      \verb https://www.infoq.com/news/2020/04/facebook-cssinjs-react-conf-2019/
+      \endverb
+    \endentry
     \entry{noauthor_faq_nodate}{misc}{}
       \field{sortinit}{F}
       \field{sortinithash}{fb0c0faa89eb6abae8213bf60e6799ea}
@@ -118,6 +232,46 @@
       \endverb
       \verb{url}
       \verb https://web.archive.org/web/20160609195720/https://www.rust-lang.org/faq.html#project
+      \endverb
+    \endentry
+    \entry{noauthor_gin-gonic/gin_2021}{misc}{}
+      \list{publisher}{1}{%
+        {Gin-Gonic}%
+      }
+      \field{sortinit}{g}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Gin is a HTTP web framework written in Go (Golang). It features a Martini-like API with much better performance -- up to 40 times faster. If you need smashing performance, get yourself some Gin.}
+      \field{month}{6}
+      \field{note}{original-date: 2014-06-16T23:57:25Z}
+      \field{title}{gin-gonic/gin}
+      \field{urlday}{7}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/gin-gonic/gin
+      \endverb
+      \verb{url}
+      \verb https://github.com/gin-gonic/gin
+      \endverb
+      \keyw{go,middleware,performance,framework,router,server,gin}
+    \endentry
+    \entry{noauthor_git_nodate}{misc}{}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{labeltitlesource}{title}
+      \field{title}{Git - {A} {Short} {History} of {Git}}
+      \field{urlday}{7}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://git-scm.com/book/en/v2/Getting-Started-A-Short-History-of-Git
+      \endverb
+      \verb{url}
+      \verb https://git-scm.com/book/en/v2/Getting-Started-A-Short-History-of-Git
       \endverb
     \endentry
     \entry{noauthor_go_nodate}{misc}{}
@@ -181,6 +335,41 @@
       \verb{url}
       \verb http://doi.wiley.com/10.1002/jcb.25049
       \endverb
+    \endentry
+    \entry{macneil_amacneil/dbmate_2021}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=7770f4d96cda7a8898cb012858a68520}{%
+           family={Macneil},
+           familyi={M\bibinitperiod},
+           given={Adrian},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{7770f4d96cda7a8898cb012858a68520}
+      \strng{fullhash}{7770f4d96cda7a8898cb012858a68520}
+      \strng{bibnamehash}{7770f4d96cda7a8898cb012858a68520}
+      \strng{authorbibnamehash}{7770f4d96cda7a8898cb012858a68520}
+      \strng{authornamehash}{7770f4d96cda7a8898cb012858a68520}
+      \strng{authorfullhash}{7770f4d96cda7a8898cb012858a68520}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{:rocket: A lightweight, framework-agnostic database migration tool.}
+      \field{month}{6}
+      \field{note}{original-date: 2015-11-25T18:58:30Z}
+      \field{title}{amacneil/dbmate}
+      \field{urlday}{7}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/amacneil/dbmate
+      \endverb
+      \verb{url}
+      \verb https://github.com/amacneil/dbmate
+      \endverb
+      \keyw{nodejs,mysql,python,docker,golang,migrations,sqlite,postgresql,migration,database-migrations,database-schema}
     \endentry
     \entry{macrae_vue.js:_2018}{book}{}
       \name{author}{1}{}{%
@@ -304,6 +493,26 @@
       \verb https://developer.okta.com/blog/2019/07/19/mysql-vs-postgres
       \endverb
     \endentry
+    \entry{noauthor_next.js_nodate}{misc}{}
+      \list{language}{1}{%
+        {en}%
+      }
+      \field{sortinit}{N}
+      \field{sortinithash}{98cf339a479c0454fe09153a08675a15}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Production grade React applications that scale. The world’s leading companies use Next.js by Vercel to build static and dynamic websites and web applications.}
+      \field{title}{Next.js by {Vercel} - {The} {React} {Framework}}
+      \field{urlday}{7}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://nextjs.org
+      \endverb
+      \verb{url}
+      \verb https://nextjs.org
+      \endverb
+    \endentry
     \entry{node.js_about_nodate}{misc}{}
       \name{author}{1}{}{%
         {{hash=4b00bbf4971bea7d45e4ee343c881d44}{%
@@ -388,6 +597,86 @@
       \endverb
       \verb{url}
       \verb https://www.npmjs.com/
+      \endverb
+    \endentry
+    \entry{osmani_rendering_nodate}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=d44fced3055604fd09c4e99476a58f00}{%
+           family={Osmani},
+           familyi={O\bibinitperiod},
+           given={Addy},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{d44fced3055604fd09c4e99476a58f00}
+      \strng{fullhash}{d44fced3055604fd09c4e99476a58f00}
+      \strng{bibnamehash}{d44fced3055604fd09c4e99476a58f00}
+      \strng{authorbibnamehash}{d44fced3055604fd09c4e99476a58f00}
+      \strng{authornamehash}{d44fced3055604fd09c4e99476a58f00}
+      \strng{authorfullhash}{d44fced3055604fd09c4e99476a58f00}
+      \field{sortinit}{O}
+      \field{sortinithash}{ff8d4eeb5101e3cf3809959b3592d942}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{If you use React and need to display large lists of data efficiently, you may be familiar with react-virtualized. It's a windowing library by Brian Vaugh...}
+      \field{title}{Rendering large lists with react-window}
+      \field{urlday}{7}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://addyosmani.com/blog/react-window/
+      \endverb
+      \verb{url}
+      \verb https://addyosmani.com/blog/react-window/
+      \endverb
+    \endentry
+    \entry{noauthor_overview_2021}{misc}{}
+      \list{language}{1}{%
+        {en}%
+      }
+      \field{sortinit}{O}
+      \field{sortinithash}{ff8d4eeb5101e3cf3809959b3592d942}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Introduction and Overview of Compose}
+      \field{journaltitle}{Docker Documentation}
+      \field{month}{6}
+      \field{title}{Overview of {Docker} {Compose}}
+      \field{urlday}{7}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.docker.com/compose/
+      \endverb
+      \verb{url}
+      \verb https://docs.docker.com/compose/
+      \endverb
+    \endentry
+    \entry{noauthor_pmndrs/zustand_2021}{misc}{}
+      \list{publisher}{1}{%
+        {Poimandres}%
+      }
+      \field{sortinit}{p}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{labeltitlesource}{title}
+      \field{abstract}{🐻 Bear necessities for state management in React. Contribute to pmndrs/zustand development by creating an account on GitHub.}
+      \field{month}{6}
+      \field{note}{original-date: 2019-04-09T09:10:06Z}
+      \field{title}{pmndrs/zustand}
+      \field{urlday}{7}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/pmndrs/zustand
+      \endverb
+      \verb{url}
+      \verb https://github.com/pmndrs/zustand
       \endverb
     \endentry
     \entry{noauthor_postgresql_nodate-1}{misc}{}
@@ -484,6 +773,169 @@
       \verb https://benchmarksgame-team.pages.debian.net/benchmarksgame/fastest/rust-go.html
       \endverb
     \endentry
+    \entry{staff_microsoft_2012}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=6987fb564c86b5cb1905334a02bf2bd2}{%
+           family={staff},
+           familyi={s\bibinitperiod},
+           given={IDG\bibnamedelimb News\bibnamedelima Service},
+           giveni={I\bibinitperiod\bibinitdelim N\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{6987fb564c86b5cb1905334a02bf2bd2}
+      \strng{fullhash}{6987fb564c86b5cb1905334a02bf2bd2}
+      \strng{bibnamehash}{6987fb564c86b5cb1905334a02bf2bd2}
+      \strng{authorbibnamehash}{6987fb564c86b5cb1905334a02bf2bd2}
+      \strng{authornamehash}{6987fb564c86b5cb1905334a02bf2bd2}
+      \strng{authorfullhash}{6987fb564c86b5cb1905334a02bf2bd2}
+      \field{sortinit}{s}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In an extension to JavaScript, Microsoft provides static typing, classes and modularization}
+      \field{journaltitle}{InfoWorld}
+      \field{month}{10}
+      \field{title}{Microsoft augments {JavaScript} for large-scale development}
+      \field{urlday}{7}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{year}{2012}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.infoworld.com/article/2614863/microsoft-augments-javascript-for-large-scale-development.html
+      \endverb
+      \verb{url}
+      \verb https://www.infoworld.com/article/2614863/microsoft-augments-javascript-for-large-scale-development.html
+      \endverb
+    \endentry
+    \entry{noauthor_tailwind_nodate}{misc}{}
+      \list{language}{1}{%
+        {en}%
+      }
+      \field{sortinit}{T}
+      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Documentation for the Tailwind CSS framework.}
+      \field{title}{Tailwind {CSS} - {Rapidly} build modern websites without ever leaving your {HTML}.}
+      \field{urlday}{7}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://tailwindcss.com/
+      \endverb
+      \verb{url}
+      \verb https://tailwindcss.com/
+      \endverb
+    \endentry
+    \entry{noauthor_tikz_nodate}{misc}{}
+      \list{language}{1}{%
+        {en}%
+      }
+      \field{sortinit}{T}
+      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
+      \field{labeltitlesource}{title}
+      \field{abstract}{An online LaTeX editor that's easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more.}
+      \field{title}{{TikZ} package}
+      \field{urlday}{7}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.overleaf.com/learn/latex/TikZ_package
+      \endverb
+      \verb{url}
+      \verb https://www.overleaf.com/learn/latex/TikZ_package
+      \endverb
+    \endentry
+    \entry{noauthor_typed_nodate}{misc}{}
+      \list{language}{1}{%
+        {en}%
+      }
+      \field{sortinit}{T}
+      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
+      \field{labeltitlesource}{title}
+      \field{abstract}{TypeScript extends JavaScript by adding types to the language. TypeScript speeds up your development experience by catching errors and providing fixes before you even run your code.}
+      \field{title}{Typed {JavaScript} at {Any} {Scale}.}
+      \field{urlday}{7}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.typescriptlang.org/
+      \endverb
+      \verb{url}
+      \verb https://www.typescriptlang.org/
+      \endverb
+    \endentry
+    \entry{ubl_introducing_nodate}{misc}{}
+      \name{author}{3}{}{%
+        {{hash=e561f0f37a4f8e0ca0bc7626cabbee55}{%
+           family={Ubl},
+           familyi={U\bibinitperiod},
+           given={Malte},
+           giveni={M\bibinitperiod}}}%
+        {{hash=ad106cad52ab65299fdd0368989f381b}{%
+           family={October\bibnamedelima 20th},
+           familyi={O\bibinitperiod\bibinitdelim 2\bibinitperiod},
+           given={Eiji\bibnamedelimb Kitamura\bibnamedelima Published:},
+           giveni={E\bibinitperiod\bibinitdelim K\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=b1d8ee0545c405aca26a6e97ac960e6d}{%
+           family={article},
+           familyi={a\bibinitperiod},
+           given={2010\bibnamedelimb Comments:\bibnamedelimb 0\bibnamedelimb Your\bibnamedelimb browser\bibnamedelimb may\bibnamedelimb not\bibnamedelimb support\bibnamedelimb the\bibnamedelimb functionality\bibnamedelimb in\bibnamedelima this},
+           giveni={2\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim 0\bibinitperiod\bibinitdelim Y\bibinitperiod\bibinitdelim b\bibinitperiod\bibinitdelim m\bibinitperiod\bibinitdelim n\bibinitperiod\bibinitdelim s\bibinitperiod\bibinitdelim t\bibinitperiod\bibinitdelim f\bibinitperiod\bibinitdelim i\bibinitperiod\bibinitdelim t\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{5de290dad9ac188824e5c612f7463586}
+      \strng{fullhash}{5de290dad9ac188824e5c612f7463586}
+      \strng{bibnamehash}{5de290dad9ac188824e5c612f7463586}
+      \strng{authorbibnamehash}{5de290dad9ac188824e5c612f7463586}
+      \strng{authornamehash}{5de290dad9ac188824e5c612f7463586}
+      \strng{authorfullhash}{5de290dad9ac188824e5c612f7463586}
+      \field{sortinit}{U}
+      \field{sortinithash}{77a6935510e008adcf5b555e7b4f0711}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Learn how to use WebSockets to add low latency bidirectional client-server communication to your web app.}
+      \field{journaltitle}{HTML5 Rocks - A resource for open web HTML5 developers}
+      \field{shorttitle}{Introducing {WebSockets}}
+      \field{title}{Introducing {WebSockets}: {Bringing} {Sockets} to the {Web} - {HTML5} {Rocks}}
+      \field{urlday}{7}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.html5rocks.com/en/tutorials/websockets/basics/
+      \endverb
+      \verb{url}
+      \verb https://www.html5rocks.com/en/tutorials/websockets/basics/
+      \endverb
+    \endentry
+    \entry{noauthor_visual_nodate}{misc}{}
+      \list{language}{1}{%
+        {en}%
+      }
+      \field{sortinit}{V}
+      \field{sortinithash}{02432525618c08e2b03cac47c19764af}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Visual Studio Code is a code editor redefined and optimized for building and debugging modern web and cloud applications. Visual Studio Code is free and available on your favorite platform - Linux, macOS, and Windows.}
+      \field{title}{Visual {Studio} {Code} - {Code} {Editing}. {Redefined}}
+      \field{urlday}{7}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://code.visualstudio.com/
+      \endverb
+      \verb{url}
+      \verb https://code.visualstudio.com/
+      \endverb
+    \endentry
     \entry{noauthor_what_nodate}{misc}{}
       \list{language}{1}{%
         {en-us}%
@@ -524,6 +976,50 @@
       \endverb
       \verb{url}
       \verb https://reactjs.org/blog/2013/06/05/why-react.html
+      \endverb
+    \endentry
+    \entry{noauthor_xelatex_nodate}{misc}{}
+      \list{language}{1}{%
+        {en}%
+      }
+      \field{sortinit}{X}
+      \field{sortinithash}{e90038f30fa4b9ce59606fc8347e3cc7}
+      \field{labeltitlesource}{title}
+      \field{abstract}{An online LaTeX editor that's easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more.}
+      \field{title}{{XeLaTeX}}
+      \field{urlday}{7}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.overleaf.com/learn/latex/XeLaTeX
+      \endverb
+      \verb{url}
+      \verb https://www.overleaf.com/learn/latex/XeLaTeX
+      \endverb
+    \endentry
+    \entry{noauthor_yarn:_2016}{misc}{}
+      \list{language}{1}{%
+        {en-US}%
+      }
+      \field{sortinit}{Y}
+      \field{sortinithash}{6ae2ff5458ff901249c2745238c951b7}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{In the JavaScript community, engineers share hundreds of thousands of pieces of code so we can avoid rewriting basic components, libraries, or frameworks of our own. Each piece of code may in turn depend on other pieces of code, and these dependencies are managed by package managers. The most popular JavaScript package manager is the [...]Read More...}
+      \field{journaltitle}{Facebook Engineering}
+      \field{month}{10}
+      \field{shorttitle}{Yarn}
+      \field{title}{Yarn: {A} new package manager for {JavaScript}}
+      \field{urlday}{7}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://engineering.fb.com/2016/10/11/web/yarn-a-new-package-manager-for-javascript/
+      \endverb
+      \verb{url}
+      \verb https://engineering.fb.com/2016/10/11/web/yarn-a-new-package-manager-for-javascript/
       \endverb
     \endentry
   \enddatalist

@@ -97,18 +97,111 @@ Redis is an in-memory store~\autocite{noauthor_faq_nodate}. It can be used as a 
 \subsection{Detailed technology profile}
 
 \subsubsection{TypeScript}
+
+TypeScript is a programming language developed and maintained by Microsoft since 2012~\autocite{staff_microsoft_2012}.
+It is a strict superset of JavaScript that adds optional static typing to the language~\autocite{noauthor_typed_nodate}.
+The use of TypeScript type checking significantly reduces the number of bugs in JavaScript applications.
+
 \subsubsection{Yarn}
+
+Yarn is a fast package manager for JavaScript initially developed by Facebook~\autocite{noauthor_yarn:_2016}. It allows developers to easily use and share open-source JavaScript packages. One of Yarn's features is Workspaces, which allows us to develop multiple packages locally and manage them using a single command.
+
 \subsubsection{Next.js}
+
+Next.js is an open-source React front-end framework created by Vercel that enables functionalities such as server-side rendering and generating static websites for React based web applications~\autocite{noauthor_next.js_nodate}.
+This eliminates any performance slowdowns caused by client-rendered JavaScript applications.
+Furthermore, Next.js provides prefetching links, thus enabling faster navigation between pages, along with code-splitting, which only sends the JavaScript code needed to run a page instead of sending the whole application~\autocite{noauthor_next.js_nodate}.
+
 \subsubsection{Zustand}
+
+Zustand is a small, fast and scalable state-management library for React. It features an observer pattern, reduces unnecessary React re-renders, and keep the application performant~\autocite{noauthor_pmndrs/zustand_2021}.
+
 \subsubsection{Reakit}
-\subsubsection{TailwindCSS}
-\subsubsection{Virtualization}
+
+Reakit is a lower level component library for building accessible high level \acrshort{ui} libraries, design systems and applications with React. It strictly follows \acrfull{waiaria} 1.1 standards, which meets our accessibility requirements.
+
+
+\subsubsection{Tailwind CSS}
+
+Tailwind CSS is a utility-first CSS framework~\autocite{noauthor_tailwind_nodate}.
+Instead of writing CSS styles in separate files, Tailwind CSS provides developers with a set of predefined CSS classes. This makes the development process faster and more consistent.
+On top of that, this ensures a minimal CSS file size, thus reducing the time needed for loading our application.
+
+A concept similar to that of Tailwind CSS, sometimes labeled Atomic CSS, is currently used in many leading companies, such as Facebook~\autocite{noauthor_facebooks_nodate}.
+
+\subsubsection{Windowing}
+
+\begin{figure}[H]
+	\centerfloat
+	\tikzsetnextfilename{windowing-example}
+	\sffamily
+	\begin{tikzpicture}
+		\node[fill=green!30, minimum width=4cm, minimum height=1cm] (r1) {Row};
+		\node[fill=green!30, minimum width=4cm, minimum height=1cm, below=0.08cm of r1] (r2) {Row};
+		\node[fill=green!30, minimum width=4cm, minimum height=1cm, below=0.08cm of r2] (r3) {Row};
+		\node[fill=green!30, minimum width=4cm, minimum height=1cm, below=0.08cm of r3] (r4) {Row};
+		\node[fill=gray!30, minimum width=4cm, minimum height=1cm, below=0.08cm of r4] (r5) {Not Rendered};
+		\node[fill=gray!30, minimum width=4cm, minimum height=1cm, below=0.08cm of r5] (r6) {Not Rendered};
+
+		\node[draw, minimum width=4.5cm, minimum height=3.5cm, below=0cm of r1.north, rounded corners] (w1) {};
+		\node[fill=white, opacity=0.5, minimum width=4.5cm, minimum height=3cm, below=0cm of w1.south] {};
+	\end{tikzpicture}
+
+	\caption{Example of the windowing pattern}
+	\label{fig:windowing-example}
+\end{figure}
+
+Windowing or virtual scrolling is a pattern for rendering large lists of data without slowing down the application.
+It works by only showing the visible elements to the user and instantly rendering any new elements while removing the ones that were hidden~\autocite{osmani_rendering_nodate}.
+Figure~\ref{fig:windowing-example} shows an example of the windowing pattern on a list of rows.
+This concept is important in our application since a single page could include thousands of rows of data. In our case, we will be using the library React Virtual.
+
 \subsubsection{Websocket}
+
+WebSocket is a standardized computer communications protocol that enables interaction between a web browser and a web server with lower latency than HTTP, thus, facilitating real-time data transfer from and to the server~\autocite{ubl_introducing_nodate}.
+
 \subsubsection{Gin}
+
+Gin is a high-performance HTTP web framework written in Go that supports routing, data validation, custom middlewares, and websockets~\autocite{noauthor_gin-gonic/gin_2021}.
+
 \subsubsection{SQLC}
+
+SQLC a command-line tool for generating type-safe Go code from SQL schemas and queries~\autocite{conroy_kyleconroy/sqlc_2021}.
+This is an alternative approach to relying on an ORM library since the latter would result in a network latency that we cannot tolerate.
+
 \subsubsection{Dbmate}
+
+Dbmate is a command-line tool for performing database migrations~\autocite{macneil_amacneil/dbmate_2021}.
+Throughout the development of our application, we had to change the schema a couple of times to accommodate new requirements or findings.
+Dbmate allows us to safely modify our database.
+
 \subsubsection{Docker and Docker Compose}
+
+Docker is tool that relies on OS-level virtualization to deliver software in packages called "containers"~\autocite{noauthor_container_nodate}. Containers are isolated from one another and bundle their own software, libraries and configuration files, making them easily deployable in any environment.
+
+Docker Compose is a tool for defining and running multiple Docker containers at once~\autocite{noauthor_overview_2021}. With Compose, the application's architecture is defined in a YAML file and easily executed with a single command.
+
+These technologies enable us to quickly set up and launch our different tiers without worrying about compatibility or scalability.
+
 \subsubsection{Git}
-\subsubsection{VS Code and VS Code Remote}
-\subsubsection{Jetbrains Datagrip}
+
+Git is a free and open source distributed version control system, originally developed for tracking changes in the Linux Kernel in 2005~\autocite{noauthor_git_nodate}.
+Compared to other version control system, such as SVN, it is faster, smaller, and easier to use~\autocite{noauthor_about_nodate}.
+
+\subsubsection{Visual Studio Code}
+
+Visual Studio Code is a source-code editor made by Microsoft~\autocite{noauthor_visual_nodate}.
+It is tightly integrated with TypeScript since both technologies are developed by the same company.
+
+VS Code's performant code editor inspired part of Merebase's architecture. In particular, the use of windowing.
+
+\subsubsection{JetBrains DataGrip}
+
+DataGrip is a database management tool developed by JetBrains. It supports a wide range of database engines and offers smart code completion for SQL~\autocite{noauthor_datagrip:_nodate}.
+
 \subsubsection{XeLaTeX and Tikz}
+
+As mentioned in the introduction, this work is typeset using \LaTeX. Four chapters later, this is still the case.
+More specifically, we are using XeLaTeX, which is a typesetting engine derived from the original TeX engine with native support for Unicode~\autocite{noauthor_xelatex_nodate}.
+
+For the diagrams, we used Ti\emph{k}Z, which is a language for producing vector graphics~\autocite{noauthor_tikz_nodate}.
