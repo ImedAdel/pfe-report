@@ -2182,13 +2182,10 @@
     <bcf:datasource type="file" datatype="bibtex">main.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">akulov_case_2020</bcf:citekey>
-    <bcf:citekey order="2">noauthor_airtable_nodate</bcf:citekey>
-    <bcf:citekey order="3">noauthor_airtable_nodate</bcf:citekey>
-    <bcf:citekey order="4">akulov_case_2020</bcf:citekey>
-    <bcf:citekey order="5">noauthor_long_nodate</bcf:citekey>
-    <bcf:citekey order="6">noauthor_cacheable_nodate</bcf:citekey>
-    <bcf:citekey order="7">noauthor_polyfill_nodate</bcf:citekey>
+    <bcf:citekey order="1">gemayel_how_nodate</bcf:citekey>
+    <bcf:citekey order="2">garrett_elements_2011</bcf:citekey>
+    <bcf:citekey order="3">noauthor_cacheable_nodate</bcf:citekey>
+    <bcf:citekey order="4">noauthor_polyfill_nodate</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

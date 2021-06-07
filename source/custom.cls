@@ -77,10 +77,10 @@
 \RequirePackage{tikz-cd}
 \RequirePackage{pgfplots}
 
-\tikzexternalize[
-%   mode=graphics if exists,
-% figure list=true,
-prefix=TikzFigures/] % activate!
+% \tikzexternalize[
+% %   mode=graphics if exists,
+% % figure list=true,
+% prefix=TikzFigures/] % activate!
 
 \RequirePackage{floatpag}
 \RequirePackage{float}

@@ -1,282 +1,399 @@
 \chapter{Analysis and specification of needs}
 \label{chap:analysis}
 
-The development process of any application or system requires taking into consideration the needs of the user and their main objectives of using the application.
+\begin{toexclude}
+	The development process of any application or system requires taking into consideration the needs of the user and their main objectives of using the application.
 
-After researching the current solutions and their drawbacks, we set---within this chapter---to analyze the functional requirements of our users, and therefore our different system actors and their use cases.
+	After researching the current solutions and their drawbacks, we set---within this chapter---to analyze the functional requirements of our users, and therefore our different system actors and their use cases.
 
-\section{Analysis of requirements}
-
-The goal of our project is creating a collaborative visual database that allows users to easily manage their data, be it a list of users, blog posts, or a store inventory, and to easily and securely access this data through an API.
-Our application is targeted at enterprises and individuals with no or minimal technical skills---a goal that should be kept in mind while structuring our project.
-
-The analysis of requirements phase aims to list a set of both functional and non-functional requirements for modeling and developing our application.
-
-\subsection{Functional requirements}
+	\section{Analysis of requirements}
+
+	The goal of our project is creating a collaborative visual database that allows users to easily manage their data, be it a list of users, blog posts, or a store inventory, and to easily and securely access this data through an API.
+	Our application is targeted at enterprises and individuals with no or minimal technical skills---a goal that should be kept in mind while structuring our project.
+
+	The analysis of requirements phase aims to list a set of both functional and non-functional requirements for modeling and developing our application.
+
+	\subsection{Functional requirements}
+
+	Functional requirements specify the different tasks of a system.
+	Therefore, in this section, we set the exact tasks that our application must be able to successfully handle, from the most general to the most specific.
 
-Functional requirements specify the different tasks of a system.
-Therefore, in this section, we set the exact tasks that our application must be able to successfully handle, from the most general to the most specific.
+	\begin{itemize}
+		% \tightlist
+		\item A user must be able to collaborate with other users on the same document at the same time, in real-time.
+		\item A user must be able to organize and share multiple documents at once.
+		\item A user must be able to create multiple workspaces.
+		\item Workspaces must be organized in the following way:
+		      \begin{itemize}
+			      \item Each workspace contains multiple projects
+			      \item Each project contains multiple collections
+			      \item Each collection contains multiple documents
+		      \end{itemize}
+		\item A user must be able to grant different permissions to different users.
+		\item A user must be able to access their documents and collections through an API endpoint.
+		\item A user must be able to set a defined structure for their documents.
+		\item A user must be able to set predefined filters and queries for each collection, also called a "view".
+		\item A user must be able to secure access to their API endpoints.
+		\item The API must support real-time updates.
+		\item A user must be able to reference other documents.
+		\item A user must be able to add rich text to documents.
+		\item
+		      A user must sign up and login.
+		\item
+		      A user's account picture must be fetched automatically from Gravatar
+		\item
+		      A user can upgrade their account to a premium one
+		\item
+		      A user can cancel their premium subscription
+	\end{itemize}
 
-\begin{itemize}
-	% \tightlist
-	\item A user must be able to collaborate with other users on the same document at the same time, in real-time.
-	\item A user must be able to organize and share multiple documents at once.
-	\item A user must be able to create multiple workspaces.
-	\item Workspaces must be organized in the following way:
-	      \begin{itemize}
-		      \item Each workspace contains multiple projects
-		      \item Each project contains multiple collections
-		      \item Each collection contains multiple documents
-	      \end{itemize}
-	\item A user must be able to grant different permissions to different users.
-	\item A user must be able to access their documents and collections through an API endpoint.
-	\item A user must be able to set a defined structure for their documents.
-	\item A user must be able to set predefined filters and queries for each collection, also called a "view".
-	\item A user must be able to secure access to their API endpoints.
-	\item The API must support real-time updates.
-	\item A user must be able to reference other documents.
-	\item A user must be able to add rich text to documents.
-	\item
-	      A user must sign up and login.
-	\item
-	      A user's account picture must be fetched automatically from Gravatar
-	\item
-	      A user can upgrade their account to a premium one
-	\item
-	      A user can cancel their premium subscription
-\end{itemize}
+	\subsection{Non-functional requirements}
 
-\subsection{Non-functional requirements}
+	Non-functional requirements define \textit{how} a system performs its various tasks.
+	The goal is to offer the best user experience.
+
+	\paragraph{Security}
+
+	Our application should ensure the security of the hosted data.
+	It should respect the permissions and roles set by the user.
+	Therefore, a robust authentication and authorization system must be put in place.
 
-Non-functional requirements define \textit{how} a system performs its various tasks.
-The goal is to offer the best user experience.
+	\paragraph{User experience}
+
+	Our goal is to offer the best user experience achievable.
+	Our users will not have the technical knowledge to understand a technically complicated application, and they do not have much time to accommodate themselves with a completely new set of interfaces.
+	Therefore, our application must be simple and familiar.
 
-\paragraph{Security}
+	\paragraph{Speed}
 
-Our application should ensure the security of the hosted data.
-It should respect the permissions and roles set by the user.
-Therefore, a robust authentication and authorization system must be put in place.
+	Our users may not have the best internet connectivity, and they might be sharing a single internet connection to accomplish their work.
+	Therefore, our application must load within seconds.
+	This includes caching resources, minifying them, and predicting and preloading what the user is going to need next.
 
-\paragraph{User experience}
+	\paragraph{Performance}
 
-Our goal is to offer the best user experience achievable.
-Our users will not have the technical knowledge to understand a technically complicated application, and they do not have much time to accommodate themselves with a completely new set of interfaces.
-Therefore, our application must be simple and familiar.
+	Our application has to load and display large amounts of data.
+	This can result in an undesirable glitching and huge memory and CPU usage, which, aside from the slowness of the application, increases the temperature and noise of the computer.
+	Therefore, resulting in an uncomfortable user experience, especially when working within groups.
 
-\paragraph{Speed}
+	\paragraph{Accessibility}
 
-Our users may not have the best internet connectivity, and they might be sharing a single internet connection to accomplish their work.
-Therefore, our application must load within seconds.
-This includes caching resources, minifying them, and predicting and preloading what the user is going to need next.
+	Our users might have some preferences when it comes to navigating the interface, such as relying on the keyboard rather than using the cursor.
+	Other users might rely on different input devices that require special care.
+	This is an important point to consider in order to render our application usable by as many people as possible.
 
-\paragraph{Performance}
+	\paragraph{Scalability}
+
+	Our application must be developed with scalability in mind.
+	This includes having to increase the number of servers while maintaining the collaborative aspect of the application.
+
+	\paragraph{Developer experience}
+
+	Our application must use state-of-the-art technology to offer the best developer experience.
+	This includes using linting and formatting tools, along with deployment platforms such as Docker.
+
+	\section{Specification of needs}
+	\subsection{Identification of actors}
+
+	Merebase uses \acrfull{rbac} to manage users' access levels and permissions.
+	The role defines what actions the user is allowed to execute.
+	For the time being, it will be assigned per workspace.
+	Based on the discussed requirements, the way our application handles permissions, and the manner in which our services interact, we can identify a set of actors for our use-case models. An actor specifies a role played by a user or any other system that interacts with the application.
+
+	\begin{description}
+		% \tightlist
+		\item[Visitor] They are an unknown user to our application.
+		      They can either sign up or log in.
+		\item[Viewer] They can view documents in the workspace without being allowed to modify them.
+		\item[Editor] Along with viewing documents, they can also edit them.
+		\item[Admin] They are editors with elevated privileges: along with viewing and editing documents, they can invite new users and assign roles.
+		\item[Owner] They are the creator of the workspace and they have the similar privileges to admins.
+		      They own the workspace and they can delete it.
+	\end{description}
+
+	\section{Use case diagrams}
 
-Our application has to load and display large amounts of data.
-This can result in an undesirable glitching and huge memory and CPU usage, which, aside from the slowness of the application, increases the temperature and noise of the computer.
-Therefore, resulting in an uncomfortable user experience, especially when working within groups.
+	Use case diagrams represent a more in-depth analysis of users' interaction with the application by highlighting the different services and functionalities. Therefore, in this section, we will explore the interactions between our application's different components and services, and the user.
+
+	\subsection{General use case diagram}
+	Diagram~\ref{fig:general-use-case-diagram} describes the general use case of our application.
+	In the following diagrams, we will further analyze and dissect each use case.
+
+	\input{Figures/general-use-case-diagram}
+	\subsection{"Sign up" use case diagram}
+	Diagram~\ref{fig:signup-use-case-diagram} describes the "sign up" use case of our application.
+
+	\begin{figure}[H]
+		\centerfloat
+		\sffamily
+		\begin{tikzpicture}
+			\begin{umlsystem}[x=5]{Application}
+				\umlusecase[y=0, name=signup,draw=none]{Sign up}
+				\umlusecase[x=7, y=0, name=confirm,draw=none]{Confirm email}
+			\end{umlsystem}
+
+			\umlactor[y=0]{Visitor}
 
-\paragraph{Accessibility}
+			\umlassoc{Visitor}{signup}
+			\umlinclude{signup}{confirm}
+
+		\end{tikzpicture}
+
+		\caption{"Sign up" use case diagram}
+		\label{fig:signup-use-case-diagram}
+	\end{figure}
+
+	\subsection{"Log in" use case diagram}
+	Diagram~\ref{fig:login-use-case-diagram} describes the "log in" use case of our application.
+
+	\begin{figure}[H]
+		\centerfloat
+		\sffamily
+		\begin{tikzpicture}
+			\begin{umlsystem}[x=5]{Application}
+				\umlusecase[y=0, name=login,draw=none]{Log in}
+				\umlusecase[x=7, y=0, name=confirm,draw=none]{Confirm email}
+			\end{umlsystem}
+
+			\umlactor[y=0]{Visitor}
+
+			\umlassoc{Visitor}{login}
+			\umlinclude{login}{confirm}
+
+		\end{tikzpicture}
+
+		\caption{"Log in" use case diagram}
+		\label{fig:login-use-case-diagram}
+	\end{figure}
+
+
+	\subsection{"View resources" use case diagram}
+	Diagram~\ref{fig:view-use-case-diagram} describes the "view resources" use case of our application.
+
+	\begin{figure}[H]
+		\centerfloat
+		\sffamily
+		\begin{tikzpicture}
+			\begin{umlsystem}[x=5]{Application}
+				\umlusecase[y=1, name=d,draw=none]{View document}
+				\umlusecase[below=1cm of d, name=c,draw=none]{View collection}
+				\umlusecase[below=2cm of c, name=p,draw=none]{View project}
+				\umlusecase[below=1cm of p, name=w,draw=none]{View workspace}
+
+				\umlusecase[below right=0.5cm and 4cm of c, fill=yellow!20, name=auth,draw=none]{
+					\shortstack{Authentication\\ and authorization}
+				}
+			\end{umlsystem}
+
+			\umlactor[y=0]{Viewer}
+			\umlactor[y=-4]{Editor}
+			\umlactor[y=-8]{Admin}
+			\umlactor[y=-12]{Owner}
+
+			\umlinherit{Editor}{Viewer}
+			\umlinherit{Admin}{Editor}
+			\umlinherit{Owner}{Admin}
+
+			\umlassoc{Viewer}{d}
+			\umlassoc{Viewer}{c}
+			\umlassoc{Viewer}{p}
+			\umlassoc{Viewer}{w}
+
+			\umlHVinclude[name=incl]{d}{auth}
+			\umlHVinclude[name=incl]{c}{auth}
+			\umlHVinclude[name=incl]{p}{auth}
+			\umlHVinclude[name=incl]{w}{auth}
+
+		\end{tikzpicture}
+
+		\caption{"View resources" use case diagram}
+		\label{fig:view-use-case-diagram}
+	\end{figure}
+
+
+
+	\subsection{"Edit resources" use case diagram}
+	Diagram~\ref{fig:edit-use-case-diagram} describes the "edit resources" use case of our application.
+
+	\begin{figure}[H]
+		\centerfloat
+		\sffamily
+		\begin{tikzpicture}[scale=0.65, every node/.append style={transform shape}]
+			\begin{umlsystem}[x=5]{Application}
+				\umlusecase[y=1, name=d,draw=none]{Edit document}
+				\umlusecase[below=4cm of d, name=c,draw=none]{Edit collection}
+				\umlusecase[below=4cm of c, name=p,draw=none]{Edit project}
+				\umlusecase[below=6cm of p, name=w,draw=none]{Edit workspace}
+
+
+				\umlusecase[above right=3cm and 10cm of d, name=ub,draw=none]{Update blocks}
+				\umlusecase[below=4cm of ub, name=uf,draw=none]{Update fields}
+
+				\umlusecase[below=4cm of uf, name=un,draw=none]{Update name}
+				\umlusecase[below=4cm of un, name=ud,draw=none]{Update description}
+				\umlusecase[below=4cm of ud, name=del,draw=none]{Delete}
+
+				\umlusecase[below=3cm of del, name=uat,draw=none]{
+					\shortstack{Update access\\ tokens}
+				}
+
+				\umlusecase[below right=6cm and 16cm of w, fill=yellow!20, name=auth,draw=none]{
+					\shortstack{Authentication\\ and authorization}
+				}
+			\end{umlsystem}
+
+			\umlactor[y=0]{Editor}
+			\umlactor[y=-4]{Admin}
+			\umlactor[y=-8]{Owner}
 
-Our users might have some preferences when it comes to navigating the interface, such as relying on the keyboard rather than using the cursor.
-Other users might rely on different input devices that require special care.
-This is an important point to consider in order to render our application usable by as many people as possible.
+			\umlinherit{Admin}{Editor}
+			\umlinherit{Owner}{Admin}
 
-\paragraph{Scalability}
+			\umlassoc{Editor}{d}
+			\umlassoc{Editor}{c}
+			\umlassoc{Editor}{p}
+			\umlassoc{Editor}{w}
 
-Our application must be developed with scalability in mind.
-This includes having to increase the number of servers while maintaining the collaborative aspect of the application.
+			\umlHVinclude[pos stereo=0.5]{d}{auth}
+			\umlHVinclude[pos stereo=0.5]{c}{auth}
+			\umlHVinclude[pos stereo=0.5]{p}{auth}
+			\umlVHinclude[pos stereo=0.5]{w}{auth}
 
-\paragraph{Developer experience}
+			\umlextend{c}{un}
+			\umlextend{c}{ud}
+			\umlextend{c}{uf}
+			\umlextend{c}{del}
 
-Our application must use state-of-the-art technology to offer the best developer experience.
-This includes using linting and formatting tools, along with deployment platforms such as Docker.
+			\umlextend{d}{uf}
+			\umlextend{d}{ub}
+			\umlextend{d}{del}
 
-\section{Specification of needs}
-\subsection{Identification of actors}
+			\umlextend{p}{un}
+			\umlextend{p}{ud}
+			\umlextend{p}{del}
 
-Merebase uses \acrfull{rbac} to manage users' access levels and permissions.
-The role defines what actions the user is allowed to execute.
-For the time being, it will be assigned per workspace.
-Based on the discussed requirements, the way our application handles permissions, and the manner in which our services interact, we can identify a set of actors for our use-case models. An actor specifies a role played by a user or any other system that interacts with the application.
+			\umlextend{d}{uat}
+			\umlextend{c}{uat}
+			\umlextend{p}{uat}
+			\umlextend{w}{uat}
 
-\begin{description}
-	% \tightlist
-	\item[Visitor] They are an unknown user to our application.
-	      They can either sign up or log in.
-	\item[Viewer] They can view documents in the workspace without being allowed to modify them.
-	\item[Editor] Along with viewing documents, they can also edit them.
-	\item[Admin] They are editors with elevated privileges: along with viewing and editing documents, they can invite new users and assign roles.
-	\item[Owner] They are the creator of the workspace and they have the similar privileges to admins.
-	      They own the workspace and they can delete it.
-\end{description}
+		\end{tikzpicture}
 
-\section{Use case diagrams}
+		\caption{"Edit resources" use case diagram}
+		\label{fig:edit-use-case-diagram}
+	\end{figure}
 
-Use case diagrams represent a more in-depth analysis of users' interaction with the application by highlighting the different services and functionalities. Therefore, in this section, we will explore the interactions between our application's different components and services, and the user.
+	\subsection{"Manage users" use case diagram}
+	Diagram~\ref{fig:manage-use-case-diagram} describes the "manage users" use case of our application.
 
-\subsection{General use case diagram}
-Diagram~\ref{fig:general-use-case-diagram} describes the general use case of our application.
-In the following diagrams, we will further analyze and dissect each use case.
+	\begin{figure}[H]
+		\centerfloat
+		\sffamily
+		\begin{tikzpicture}
+			\begin{umlsystem}[x=5]{Application}
+				\umlusecase[y=0, name=au,draw=none]{Add user}
+				\umlusecase[below=2cm of au, name=uur,draw=none]{\shortstack{Update\\ user role}}
+				\umlusecase[below=2cm of uur, name=du,draw=none]{Delete user}
+				\umlusecase[below=2cm of du, name=uwn,draw=none]{\shortstack{Update\\ workspace name}}
 
-\input{Figures/general-use-case-diagram}
+				\umlusecase[below right=4cm and 4cm of du, fill=yellow!20, name=auth,draw=none]{
+					\shortstack{Authentication\\ and authorization}
+				}
+			\end{umlsystem}
 
-\subsection{"Sign up" use case diagram}
-Diagram~\ref{fig:signup-use-case-diagram} describes the "sign up" use case of our application.
+			\umlactor[y=0]{Admin}
+			\umlactor[y=-4]{Owner}
+			\umlinherit{Owner}{Admin}
 
-\begin{figure}[H]
-	\centerfloat
-	\begin{tikzpicture}
-		\begin{umlsystem}[x=4]{Application}
-			\umlusecase[y=1, name=signup]{Sign up}
-			\umlusecase[y=-1, name=confirm]{Confirm email}
-		\end{umlsystem}
+			\umlassoc{Admin}{au}
+			\umlassoc{Admin}{uur}
+			\umlassoc{Admin}{du}
+			\umlassoc{Admin}{uwn}
 
-		\umlactor[y=0]{Visitor}
+			\umlHVinclude{au}{auth}
+			\umlHVinclude{uur}{auth}
+			\umlHVinclude{du}{auth}
+			\umlVHinclude{uwn}{auth}
 
-		\umlassoc{Visitor}{signup}
-		\umlassoc{Visitor}{confirm}
+		\end{tikzpicture}
 
-	\end{tikzpicture}
+		\caption{"Manage users" use case diagram}
+		\label{fig:manage-use-case-diagram}
+	\end{figure}
 
-	\caption{"Sign up" use case diagram}
-	\label{fig:signup-use-case-diagram}
-\end{figure}
 
-\subsection{"Log in" use case diagram}
-Diagram~\ref{fig:login-use-case-diagram} describes the "log in" use case of our application.
+	\subsection{"Manage workspace" use case diagram}
+	Diagram~\ref{fig:spaces-use-case-diagram} describes the "manage workspace" use case of our application.
 
-\begin{figure}[H]
-	\centerfloat
-	\begin{tikzpicture}
-		\begin{umlsystem}[x=4]{Application}
-			\umlusecase[y=1, name=login]{Log in}
-			\umlusecase[y=-1, name=confirm]{Confirm email}
-		\end{umlsystem}
+	\begin{figure}[H]
+		\centerfloat
+		\sffamily
+		\begin{tikzpicture}
+			\begin{umlsystem}[x=5]{Application}
+				\umlusecase[y=0, name=del]{Delete}
 
-		\umlactor[y=0]{Visitor}
+				\umlusecase[below right=4cm and 4cm of del, fill=yellow!20, name=auth,draw=none]{
+					\shortstack{Authentication\\ and authorization}
+				}
+			\end{umlsystem}
 
-		\umlassoc{Visitor}{login}
-		\umlassoc{Visitor}{confirm}
+			\umlactor[y=0]{Owner}
 
-	\end{tikzpicture}
+			\umlassoc{Owner}{del}
 
-	\caption{"Log in" use case diagram}
-	\label{fig:login-use-case-diagram}
-\end{figure}
+			\umlHVinclude{del}{auth}
 
-\subsection{"View resources" use case diagram}
-Diagram~\ref{fig:view-use-case-diagram} describes the "view resources" use case of our application.
 
-\begin{figure}[H]
-	\centerfloat
-	\begin{tikzpicture}
-		\begin{umlsystem}[x=4]{Application}
-			\umlusecase[y=1, name=login]{Log in}
-			\umlusecase[y=-1, name=confirm]{Confirm email}
-		\end{umlsystem}
+		\end{tikzpicture}
 
-		\umlactor[y=0]{Viewer}
+		\caption{"Manage workspace" use case diagram}
+		\label{fig:spaces-use-case-diagram}
+	\end{figure}
+\end{toexclude}
 
-		\umlassoc{Viewer}{login}
-		\umlassoc{Viewer}{confirm}
-
-	\end{tikzpicture}
-
-	\caption{"View resources" use case diagram}
-	\label{fig:view-use-case-diagram}
-\end{figure}
-
-\subsection{"Edit resources" use case diagram}
-Diagram~\ref{fig:edit-use-case-diagram} describes the "edit resources" use case of our application.
-
-\begin{figure}[H]
-	\centerfloat
-	\begin{tikzpicture}
-		\begin{umlsystem}[x=4]{Application}
-			\umlusecase[y=1, name=login]{Log in}
-			\umlusecase[y=-1, name=confirm]{Confirm email}
-		\end{umlsystem}
-
-		\umlactor[y=0]{Viewer}
-
-		\umlassoc{Viewer}{login}
-		\umlassoc{Viewer}{confirm}
-
-	\end{tikzpicture}
-
-	\caption{"Edit resources" use case diagram}
-	\label{fig:edit-use-case-diagram}
-\end{figure}
-
-\subsection{"Manage users" use case diagram}
-Diagram~\ref{fig:manage-use-case-diagram} describes the "manage users" use case of our application.
-
-\begin{figure}[H]
-	\centerfloat
-	\begin{tikzpicture}
-		\begin{umlsystem}[x=4]{Application}
-			\umlusecase[y=1, name=login]{Log in}
-			\umlusecase[y=-1, name=confirm]{Confirm email}
-		\end{umlsystem}
-
-		\umlactor[y=0]{Viewer}
-
-		\umlassoc{Viewer}{login}
-		\umlassoc{Viewer}{confirm}
-
-	\end{tikzpicture}
-
-	\caption{"Manage users" use case diagram}
-	\label{fig:manage-use-case-diagram}
-\end{figure}
-
-\subsection{"Manage workspace" use case diagram}
-Diagram~\ref{fig:spaces-use-case-diagram} describes the "manage workspace" use case of our application.
-
-\begin{figure}[H]
-	\centerfloat
-	\begin{tikzpicture}
-		\begin{umlsystem}[x=4]{Application}
-			\umlusecase[y=1, name=login]{Log in}
-			\umlusecase[y=-1, name=confirm]{Confirm email}
-		\end{umlsystem}
-
-		\umlactor[y=0]{Viewer}
-
-		\umlassoc{Viewer}{login}
-		\umlassoc{Viewer}{confirm}
-
-	\end{tikzpicture}
-
-	\caption{"Manage workspace" use case diagram}
-	\label{fig:spaces-use-case-diagram}
-\end{figure}
 
 \subsection{"Authentication and authorization" use case diagram}
 Diagram~\ref{fig:auth-use-case-diagram} describes the "authentication and authorization" use case of our application.
 
 \begin{figure}[H]
 	\centerfloat
+	\sffamily
 	\begin{tikzpicture}
-		\begin{umlsystem}[x=4]{Application}
-			\umlusecase[y=1, name=login]{Log in}
-			\umlusecase[y=-1, name=confirm]{Confirm email}
+		\begin{umlsystem}[x=5]{Application}
+
+			\umlusecase[y=0, name=auth,draw=none]{
+				\shortstack{Authentication\\ and authorization}
+			}
+
+			\umlusecase[right=4cm of auth, name=t,draw=none]{
+				\shortstack{Verify\\ token}
+			}
+
+			\umlusecase[below=2cm of t, name=r,draw=none]{
+				\shortstack{Verify\\ role}
+			}
 		\end{umlsystem}
 
 		\umlactor[y=0]{Viewer}
+		\umlactor[y=-4]{Editor}
+		\umlactor[y=-8]{Admin}
+		\umlactor[y=-12]{Owner}
 
-		\umlassoc{Viewer}{login}
-		\umlassoc{Viewer}{confirm}
+		\umlinherit{Editor}{Viewer}
+		\umlinherit{Admin}{Editor}
+		\umlinherit{Owner}{Admin}
+
+		\umlassoc{Viewer}{auth}
+
+
+		\umlinclude{auth}{t}
+		\umlVHinclude{auth}{r}
 
 	\end{tikzpicture}
 
 	\caption{"Authentication and authorization" use case diagram}
 	\label{fig:auth-use-case-diagram}
 \end{figure}
-
-
-
-
 
 
 \section{Wireframes}
@@ -289,64 +406,68 @@ Wireframes are simple visual guides representing the skeletal framework of a web
 They depict the page layout or arrangement of the website's content, including interface components and navigational systems, as well as how they operate together.
 Since the major focus is on functionality, behavior, and content prioritization, the wireframe usually lacks typographic style, color, or images~\autocite{garrett_elements_2011}.
 
-\subsection{"Log in" wireframe}
-Figure~\ref{fig:login-wireframe} shows the wireframe of the log-in page.
+\begin{toexclude}
 
-\wirefig{Log in}{login}{wireframe-cta.pdf}
+	\subsection{"Log in" wireframe}
+	Figure~\ref{fig:login-wireframe} shows the wireframe of the log-in page.
 
-\subsection{"Sign up" wireframe}
-Figure~\ref{fig:signup-wireframe} shows the wireframe of the log-in page.
+	\wirefig{Log in}{login}{wireframe-cta.pdf}
 
-\wirefig{Log in}{signup}{wireframe-cta.pdf}
+	\subsection{"Sign up" wireframe}
+	Figure~\ref{fig:signup-wireframe} shows the wireframe of the log-in page.
 
-\subsection{"Confirmation" wireframe}
-Figure~\ref{fig:confirmation-wireframe} shows the wireframe of the log-in page.
+	\wirefig{Log in}{signup}{wireframe-cta.pdf}
 
-\wirefig{Log in}{confirmation}{wireframe-cta.pdf}
+	\subsection{"Confirmation" wireframe}
+	Figure~\ref{fig:confirmation-wireframe} shows the wireframe of the log-in page.
 
-\subsection{"Workspace setup" wireframe}
-Figure~\ref{fig:setup-wireframe} shows the wireframe of the log-in page.
+	\wirefig{Log in}{confirmation}{wireframe-cta.pdf}
 
-\wirefig{Log in}{setup}{wireframe-cta.pdf}
+	\subsection{"Workspace setup" wireframe}
+	Figure~\ref{fig:setup-wireframe} shows the wireframe of the log-in page.
 
-\subsection{"Homepage" wireframe}
-Figure~\ref{fig:homepage-wireframe} shows the wireframe of the log-in page.
+	\wirefig{Log in}{setup}{wireframe-cta.pdf}
 
-\wirefig{Log in}{homepage}{wireframe-cta.pdf}
+	\subsection{"Homepage" wireframe}
+	Figure~\ref{fig:homepage-wireframe} shows the wireframe of the log-in page.
 
-\subsection{"Projects" wireframe}
-Figure~\ref{fig:projects-wireframe} shows the wireframe of the log-in page.
+	\wirefig{Log in}{homepage}{wireframe-cta.pdf}
 
-\wirefig{Log in}{projects}{wireframe-cta.pdf}
+	\subsection{"Projects" wireframe}
+	Figure~\ref{fig:projects-wireframe} shows the wireframe of the log-in page.
 
-\subsection{"Collections" wireframe}
-Figure~\ref{fig:collections-wireframe} shows the wireframe of the log-in page.
+	\wirefig{Log in}{projects}{wireframe-cta.pdf}
 
-\wirefig{Log in}{collections}{wireframe-cta.pdf}
+	\subsection{"Collections" wireframe}
+	Figure~\ref{fig:collections-wireframe} shows the wireframe of the log-in page.
 
-\subsection{"Documents" wireframe}
-Figure~\ref{fig:documents-wireframe} shows the wireframe of the log-in page.
+	\wirefig{Log in}{collections}{wireframe-cta.pdf}
 
-\wirefig{Log in}{documents}{wireframe-cta.pdf}
+	\subsection{"Documents" wireframe}
+	Figure~\ref{fig:documents-wireframe} shows the wireframe of the log-in page.
 
-\subsection{"Fields" wireframe}
-Figure~\ref{fig:fields-wireframe} shows the wireframe of the log-in page.
+	\wirefig{Log in}{documents}{wireframe-cta.pdf}
 
-\wirefig{Log in}{fields}{wireframe-cta.pdf}
+	\subsection{"Fields" wireframe}
+	Figure~\ref{fig:fields-wireframe} shows the wireframe of the log-in page.
 
-\subsection{"Blocks" wireframe}
-Figure~\ref{fig:blocks-wireframe} shows the wireframe of the log-in page.
+	\wirefig{Log in}{fields}{wireframe-cta.pdf}
 
-\wirefig{Log in}{blocks}{wireframe-cta.pdf}
+	\subsection{"Blocks" wireframe}
+	Figure~\ref{fig:blocks-wireframe} shows the wireframe of the log-in page.
 
-\subsection{"Access tokens" wireframe}
-Figure~\ref{fig:tokens-wireframe} shows the wireframe of the log-in page.
+	\wirefig{Log in}{blocks}{wireframe-cta.pdf}
 
-\wirefig{Log in}{tokens}{wireframe-cta.pdf}
+	\subsection{"Access tokens" wireframe}
+	Figure~\ref{fig:tokens-wireframe} shows the wireframe of the log-in page.
 
-\section{Conclusion}
+	\wirefig{Log in}{tokens}{wireframe-cta.pdf}
 
-In this chapter, we presented the functional and non-functional requirements of our application, the different system actors, and their use case diagrams.
-We also explored the \acrlong{ui} and verified our needs using low-fidelity wireframes.
+	\section{Conclusion}
 
-Within the next chapter, we are going to have a deeper look into the architecture powering our application.
+	In this chapter, we presented the functional and non-functional requirements of our application, the different system actors, and their use case diagrams.
+	We also explored the \acrlong{ui} and verified our needs using low-fidelity wireframes.
+
+	Within the next chapter, we are going to have a deeper look into the architecture powering our application.
+
+\end{toexclude}

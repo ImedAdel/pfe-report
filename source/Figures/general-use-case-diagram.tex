@@ -1,19 +1,21 @@
 \begin{figure}[H]
+	\tikzexternaldisable
 	\thisfloatpagestyle{empty}
+	\sffamily
 	\centerfloat
 	\begin{tikzpicture}
-		\begin{umlsystem}[x=4]{Application}
-			\umlusecase[y=1, name=signup]{Sign up}
-			\umlusecase[y=-1, name=login]{Log in}
-			\umlusecase[y=-3, name=view]{View resources}
-			\umlusecase[y=-5, name=api]{Manage API access}
-			\umlusecase[y=-8, name=edit]{Edit resources}
-			\umlusecase[y=-12, name=users]{Manage users}
-			\umlusecase[y=-16, name=spaces]{Manage workspace}
+		\begin{umlsystem}[x=5]{Application}
+			\umlusecase[y=1, name=signup,draw=none]{Sign up}
+			\umlusecase[y=-1, name=login,draw=none]{Log in}
+			\umlusecase[y=-3, name=view,draw=none]{View resources}
+			\umlusecase[y=-5, name=api,draw=none]{Manage API access}
+			\umlusecase[y=-8, name=edit,draw=none]{Edit resources}
+			\umlusecase[y=-12, name=users,draw=none]{Manage users}
+			\umlusecase[y=-16, name=spaces,draw=none]{Manage workspace}
 			% \umlusecase[x=4, y=-2, width=1.5cm]{
 			% 	\shortstack{use case 4\\\footnotesize{on 2 lines}}
 			% }
-			\umlusecase[x=8, y=-8, fill=yellow!20, name=auth]{
+			\umlusecase[x=8, y=-8, fill=yellow!20, name=auth,draw=none]{
 				\shortstack{Authentication\\ and authorization}
 			}
 			% \umlusecase[x=6, y=-4]{use case 6}
