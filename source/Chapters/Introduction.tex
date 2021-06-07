@@ -6,16 +6,7 @@
 The aim of this chapter is to contextualize our work.
 We will start by introducing the hosting institution for the graduation project.
 Then, we will present the project, its motivations, and its objectives.
-And finally, we will discuss the development process used throughout the making of this project.
-
-% The world has been seeing a continuous shift to remote work since the
-% internet boom in the early 2000s. The recent global pandemic instantly
-% boosted the number of remote workers to unprecedented levels. On top of
-% that, businesses have been gradually moving away from brick-and-mortar
-% stores to online software-managed ones. Furthermore, client-side web
-% apps and no-code web apps and websites have experienced a surge in the
-% number of users. These factors uncovered a gap in the niche of
-% easy-to-use collaborative data and content management software.
+Finally, we will discuss the development process used throughout the making of this project.
 
 \section{Host}
 
@@ -24,11 +15,16 @@ This project is done as part of the final graduation project with the goal of ob
 \section{Project presentation}
 
 Our project's main idea and design choices stem from the problems we faced while trying to accomplish certain tasks using other tools.
-% A robust implementation of our project requires deep research of multiple aspects that will guide our design and implementation decisions.
 
 \subsection{Problematics}
 
-The continuous shift to \acrfull{saas}, coupled with the rise of remote work, uncovered a gap in the field of data and content management software. The gap is further exacerbated due to the accelerating adoption of web applications, which are mostly client-side applications without any server requirements. Nowadays, businesses are looking for easy and collaborative ways to allow stakeholders to manage data and content, and to connect the data to their different applications. The solution must respond to the needs of businesses from different backgrounds, with varying budgets, and minimal technical knowledge. The solution must also be easily integrable with other tools that these businesses might rely on. Furthermore, the solution must support recent technological advancements in the web, such as real-time collaboration and real-time queries. To ensure these requirements, we need to answer the following questions:
+The continuous shift to \acrfull{saas}, coupled with the rise of remote work, uncovered a gap in the field of data and content management software.
+The gap is further exacerbated due to the accelerating adoption of web applications, which are mostly client-side applications without any server requirements.
+Nowadays, businesses are looking for easy and collaborative ways to allow stakeholders to manage data and content, and to connect the data to their different applications.
+The solution must respond to the needs of businesses from different backgrounds, with varying budgets, and minimal technical knowledge.
+The solution must also be easily integrable with other tools that these businesses might rely on.
+Furthermore, it must support recent technological advancements on the web, such as real-time collaboration and real-time queries.
+To ensure these requirements, we need to answer the following questions:
 
 \begin{itemize}
 	\item How to support real-time collaboration?
@@ -38,21 +34,23 @@ The continuous shift to \acrfull{saas}, coupled with the rise of remote work, un
 	\item What data types should we support?
 	\item How important is speed?
 	\item How can we ensure a fast user experience?
-	\item What are the bottlenecks of the existing solutions and how can we solve them?
+	\item What are the bottlenecks of the existing solutions, and how can we solve them?
 	\item How can we ensure a fast and easy on-boarding?
 \end{itemize}
 
 \section{Preliminary study}
 
 Before starting the development process of our projects, it is of utmost importance to research the existing solutions in the field of data and content management that our potential users are currently relying on.
-It is necessary to understand what problems users are facing while using these solutions and what kind of tricks and shortcuts do they have to depend on to achieve their desired outcome. We should also focus on the points that users admire about their current choices, as these are the features keeping them from looking for another solution in the meantime.
+It is necessary to understand what problems users are facing while using these solutions and what kind of tricks and shortcuts do they have to depend on to achieve their desired outcome.
+We should also focus on the points that users admire about their current choices, as these are the features keeping them from looking for another solution in the meantime.
 
 With this goal in mind, we went on to research multiple applications and software systems with varying degrees of features and requirements.
 While some might require deep technical knowledge of databases, servers, and programming, others are more straightforward and require little to no technical knowledge.
 However, while some applications may require no programming skills, they still require some time for on-boarding and getting familiar with the software.
 This can be a significant roadblock for many enterprises that are already stuck with some other software system.
 
-From this wide pool of data and content management software, we selected the most used and loved ones and put them to comparison. In particular, we chose to focus on Notion, Airtable, Contentful, Sanity, Webflow CMS, and Firebase.
+From this wide pool of data and content management software, we selected the most used and loved ones and put them to comparison.
+In particular, we chose to focus on Notion, Airtable, Contentful, Sanity, Webflow CMS, and Firebase.
 
 \subsection{Existing solutions}
 
@@ -63,12 +61,11 @@ We will start by presenting the selected solutions.
 \logofig{Firebase}{firebase-logo.png}
 
 Firebase is a platform developed by Google for creating mobile and web
-applications. It was initially released in 2012. It offers, among its
-products, a real-time database. In which, data is stored in JSON format
-and synced between all the connected clients. The database was not
-developed with non-technical users in mind, however, its real-time
-capabilities offer an example of what's desired in real-time database
-software. Firebase Realtime Database has been successfully used to
+applications.
+It was initially released in 2012.
+It offers, among its products, a real-time database, in which, data is stored in JSON format and synced between all the connected clients.
+The database was not developed with non-technical users in mind, however, its real-time capabilities offer an example of what's desired in real-time database software.
+Firebase Realtime Database has been successfully used to
 develop highly demanding mobile applications.
 
 \subsubsection{Airtable}
@@ -76,67 +73,62 @@ develop highly demanding mobile applications.
 \logofig{Airtable}{airtable-logo.png}
 
 Airtable is a visual database app inspired by the ease of spreadsheets
-and the wide adoption of software like Microsoft Excel. The company
-behind the app was founded in 2012.
+and the wide adoption of software like Microsoft Excel.
+The company behind the app was founded in 2012.
 
 Airtable comes with team collaboration out of the box. It also
 automatically generates a REST API from each database.
 
-Pricing is done per team member. There are several limits to the size of
-storage and uploads.
+Pricing is done per team member.
+There are several limits to the size of storage and uploads.
 
 \subsubsection{Contentful}
 
 \logofig{Contentful}{contentful-logo.png}
 
-Contentful is a headless\footnote{Content is decoupled from the main
-	application. It's made accessible through a set of APIs.} CMS (Content
-Management Software). It offers a flexible CMS editor and a configurable
-API. It also comes with multiple SDKs (Software Development Kits) in
-multiple programming languages to make its integration easier.
+Contentful is a headless
+\footnote{Content is decoupled from the main application.
+	It's made accessible through a set of APIs.}
+\acrfull{cms}.
+It offers a flexible \acrshort{cms} editor and a configurable API.
+It also comes with multiple \acrshort{sdk}s in multiple programming languages to make its integration easier.
 
-Pricing is offered per package, with the lowest premium package starting
-at US\$489 per month.
+Pricing is offered per package, with the lowest premium package starting at US\$489 per month.
 
 \subsubsection{Sanity}
 
 \logofig{Sanity}{sanity-logo.png}
 
-Sanity is another headless CMS. It competes directly with Contentful,
-offers an even more configurable editor, and its pricing starts at
-US\$199 per month. It comes with real-time collaboration, a feature that
-Contentful lacks.
+Sanity is another headless CMS.
+It competes directly with Contentful, offers an even more configurable editor, and its pricing starts at US\$199 per month.
+It comes with real-time collaboration, a feature that Contentful lacks.
 
 \subsubsection{Webflow CMS}
 
 \logofig{Webflow}{webflow-logo.png}
 
-Webflow is a website builder. It bundles a CMS and an e-commerce
-management system along with its visual website builder. The CMS is not
-usable outside of Webflow websites, however, it comes with an intuitive
-user interface.
+Webflow is a website builder.
+It bundles a \acrshort{cms} and an e-commerce management system along with its visual website builder.
+The \acrshort{cms} is not usable outside of Webflow websites, however, it comes with an intuitive user interface.
 
 \subsubsection{Notion}
 
 \logofig{Notion}{notion-logo-2.png}
 
-Notion is a new contender in the space of content management. It
-presents itself as a collaborative workspace for teams. Its use cases
-vary from product management and team documentation to note-taking and
-personal organization. The initial version of Notion was released in
-2016. The second version, which received a lot of praise and media
-coverage, was released two years later in 2018. However, the largest
-surge in sign-ups happened during the pandemic, with 40\% of sign-ups
-occurring from December 2020 to January.
+Notion is a new contender in the space of content management.
+It presents itself as a collaborative workspace for teams.
+Its use cases vary from product management and team documentation to note-taking and personal organization.
+The initial version of Notion was released in 2016.
+The second version, which received a lot of praise and media coverage, was released two years later in 2018.
+However, the largest surge in sign-ups happened during the pandemic, with 40\% of sign-ups occurring from December 2020 to January.
 
 Notion is built on the concept of blocks: A block is any single piece
 of content you add to your page, like a to-do item, an image, a code
-block, an embedded file, etc. \footnote{citation needed, see Notion FAQ}
+block, an embedded file, etc.
 This makes it easy to build complex pages and move content around.
 
 Notion is also built as a collaborative web app---eliminating the need
-for saving and figuring out how to share one's documents as is the case
-in other apps.
+for saving and figuring out how to share one's documents as is the case in other apps.
 
 Pricing is done per workspace member with unlimited storage starting
 from the free plan.
@@ -151,7 +143,8 @@ For a fair and objective comparison of the different solutions, we will rely on 
 
 \paragraph{Web.Dev}
 
-Web.Dev is a web application developed by Google that uses the Lighthouse tool to measure different websites and web applications metrics. It can only audit public web pages, however, it offers metrics totally unbiased by our browser setup.
+Web.Dev is a web application developed by Google that uses the Lighthouse tool to measure different websites and web applications metrics.
+It can only audit public web pages, however, it offers metrics totally unbiased by our browser setup.
 
 \paragraph{Google Chrome Lighthouse}
 
@@ -172,25 +165,29 @@ It offers software ratings, reviews and buying guides.
 \subsubsection{Comparison table}
 
 Table \ref{table:exisiting-solutions-comparison} is an objective side-by-side comparison of our selected solutions.
+The code row specifies whether the software requires any technical knowledge to operate.
+The rating row is based on Capterra.
 
 \begin{table}[h]
 	\centerfloat
 	\footnotesize
-	\begin{tabularx}{1.25\linewidth}{ | >{\raggedright\arraybackslash}X
-			| >{\centering\arraybackslash}X
-			| >{\centering\arraybackslash}X
-			| >{\centering\arraybackslash}X
-			| >{\centering\arraybackslash}X
-			| >{\centering\arraybackslash}X
-			| >{\centering\arraybackslash}X |}
+	\begin{tabularx}{1.25\linewidth}{
+			>{\raggedright\arraybackslash}X
+			>{\centering\arraybackslash}X
+			>{\centering\arraybackslash}X
+			>{\centering\arraybackslash}X
+			>{\centering\arraybackslash}X
+			>{\centering\arraybackslash}X
+			>{\centering\arraybackslash}X
+		}
 		\hline
-		         & Firebase & Airtable    & Contentful & Sanity & Webflow CMS & Notion  \\
+		         & Firebase & Airtable    & Contentful & Sanity & Webflow CMS & Notion \\
 		\hline
-		Released & 2016     & 2012        & 2016       & 2016   & 2012        & 2012    \\
-		Type     & Database & Spreadsheet & CMS        & CMS    & CMS         & Wiki    \\
-		Requires & Yes      & No          & No         & No     & No          & No      \\
-		API      & Yes      & Yes         & Yes        & Yes    & Yes         & Partial \\
-		Rating   & 4.6      & 4.7         & 4.5        & ---    & ---         & 4.7     \\
+		Released & 2016     & 2012        & 2016       & 2016   & 2012        & 2012   \\
+		Type     & Database & Spreadsheet & CMS        & CMS    & CMS         & Wiki   \\
+		Code     & Yes      & No          & No         & No     & No          & No     \\
+		API      & Yes      & Yes         & Yes        & Yes    & Yes         & Beta   \\
+		Rating   & 4.6      & 4.7         & 4.5        & ---    & ---         & 4.7    \\
 		\hline
 	\end{tabularx}
 	\caption{Comparative table of the existing solutions}
@@ -200,24 +197,41 @@ Table \ref{table:exisiting-solutions-comparison} is an objective side-by-side co
 \subsection{Critique}
 
 Multiple solutions are trying to focus on various use cases, however,
-all of them suffer from noticeable performance issues, a bad UX (User
-Experience), and inadequate pricing for small and medium-sized
+all of them suffer from noticeable performance issues, a bad \acrshort{ux}, and inadequate pricing for small and medium-sized
 businesses.
 
-Notion is known for its slow performance and long loading times. Pages
-take on average between six and 12 seconds to load. \footnote{citation
-	needed} It also doesn't have an API, although one is being developed
-at the time of writing. Furthermore, Notion is less structured than
-products like Airtable or Firebase.
+Notion is known for its slow performance and long loading times.
+Pages take on average between six and 12 seconds to load~\autocite{akulov_case_2020}.
+It also doesn't have an API, although one is being developed at the time of writing~\footnote{Notion's API was recently launched in beta.}.
+Furthermore, Notion is less structured than products like Airtable or Firebase.
 
-Airtable is notable for its complexity, even for experienced users. It
-also suffers from some performance issues when loading large documents.
+Airtable is notable for its complexity, even for experienced users.
+It also suffers from some performance issues when loading large documents~\autocite{noauthor_airtable_nodate}.
 Furthermore, it doesn't have the same rich text capabilities as Notion.
-Finally, it lacks a real-time API and it's relatively expensive.
+Finally, it lacks a real-time API, and it is relatively expensive~\autocite{noauthor_airtable_nodate}.
 
 \subsubsection{Case study: Notion}
 
-TBD.
+Due to the popularity of Notion among various types of users, and due to the surge of sign-ups that it had seen, it seems to be the perfect product for a case study.
+While it is neither a database nor a \acrshort{cms}, it is often used as a limited content management solution for blogs.
+
+Notion is a front-end React application, which means that the whole application has to be downloaded, parsed, and executed by the browser before it can load.
+Unfortunately, this happens nearly every time you visit their website~\autocite{akulov_case_2020}.
+On a fast 3G connection from Tunisia, the Notion page, depicted in figure~\ref{fig:notion-job-board}, took 40 seconds to load. For the sake of comparison, the largest page ever on Wikipedia~\autocite{noauthor_long_nodate} took only 9 seconds to load.
+
+\lgfig{Notion page}{notion-job-board.png}{notion-job-board}
+
+While fetched resources can be cached for faster subsequent loads, processing JavaScript code and images is not \gls{cacheable} and will always result in a slow application.
+
+Further analysis shows that not much optimization has been done on Notion's part.
+The whole JavaScript code is loaded, regardless of whether it is needed on the requested page or not, unnecessary \gls{polyfill}s are loaded even for modern browsers, huge libraries are used---even when a smaller alternative exists---and images are served in their original format without optimization or minification.
+
+The \acrfull{ux}, aside from the loading issues, is rather simple.
+Any person can start using Notion without any prior knowledge required.
+
+The takeaway from studying Notion is that performance should not be an afterthought.
+Instead, it should be part of every decision in the design process of our application.
+As for the interface, we should strive to keep it as simple and easy as Notion.
 
 \subsection{Proposed solution}
 

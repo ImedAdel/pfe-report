@@ -1,3 +1,5 @@
 {"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Qot's solution for the problem in figure \\E(?:Dummy|Ina|Jimmy-)[0-9]+$"}
 {"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Q[React] It is an open-source front-end JavaScript library for developing uis created by Facebook starting in 2013 \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
 {"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QReakit.\\E$"}
+{"rule":"AGREEMENT_SENT_START","sentence":"^\\QThe cms is not usable outside of Webflow websites, however, it comes with an intuitive user interface.\\E$"}
+{"rule":"SENTENCE_WHITESPACE","sentence":"^\\QDev and Google Chrome Lighthouse for measuring performance, accessibility, speed and security, and Capterra for aggregating user reviews and forming a consensus about the main strain points in the existing tools.\\E$"}
