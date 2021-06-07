@@ -528,189 +528,204 @@
 	This is even more important when a single server could no longer match the demand, and we are required to scale our servers up.
 	In such cases, the Pub-Sub store would keep all of our servers in sync.
 
+
+	\section{Detailed architecture}
+
+	With our architectural patterns selected and our requirements fully defined, we can, now, proceed to producing detailed diagrams of our application. In the following sections, we will present our application's class, sequence, and activity diagrams.
+	\subsection{Class diagrams}
+
+	Figure~\ref{fig:gen-class-diagram} represents our application's general class diagram.
+
+	\begin{figure}[H]
+		\thisfloatpagestyle{empty}
+		\centerfloat
+		\sffamily
+		\begin{tikzpicture}[scale=0.5, every node/.append style={transform shape}]
+			\umlclass[x=-4,draw=none,rounded corners]{User}{
+				ID : UUID \\
+				Name : Text \\
+				Email : Text \\
+				Avatar : Text \\
+				CreatedAt: Timestamptz \\
+				ModifiedAt: Timestamptz
+			}{}
+
+			\umlclass[left=10cm of User,draw=none,rounded corners]{Space}{
+				ID : UUID \\
+				Name : Text \\
+				Handle : Text \\
+				CreatedAt: Timestamptz \\
+				ModifiedAt: Timestamptz
+			}{}
+
+
+			\umlclass[below left=4cm and 2cm of Space,draw=none,rounded corners]{Project}{
+				ID : UUID \\
+				Name : Text \\
+				Icon : Text \\
+				Description : Text \\
+				Version: Integer \\
+				SpaceID: UUID \\
+				CreatedAt: Timestamptz \\
+				ModifiedAt: Timestamptz \\
+				CreatedBy: UUID \\
+				ModifiedBy: UUID
+			}{}
+
+			\umlclass[left=4cm of Project,draw=none,rounded corners]{Member}{
+				UserID : UUID \\
+				SpaceID : UUID \\
+				AccessLevel: AccessLevel \\
+				CreatedAt: Timestamptz \\
+				ModifiedAt: Timestamptz
+			}{}
+
+			\umlclass[right=3cm of Project,draw=none,rounded corners]{Confirmation}{
+				UserID : UUID \\
+				SpaceID : UUID \\
+				Token: Text \\
+				CreatedAt: Timestamptz \\
+				ModifiedAt: Timestamptz
+			}{}
+
+			\umlclass[right=3cm of Confirmation,draw=none,rounded corners]{AccessToken}{
+				ID : UUID \\
+				Token : Text \\
+				Name : Text \\
+				Resource : Text \\
+				ResourceID : UUID \\
+				AccessLevel: AccessLevel \\
+				CreatedAt: Timestamptz \\
+				CreatedBy: UUID
+			}{}
+
+
+			\umlclass[below=2cm of Project,draw=none,rounded corners]{Collection}{
+				ID : UUID \\
+				Name : Text \\
+				Icon : Text \\
+				Description : Text \\
+				Version: Integer \\
+				ProjectID: UUID \\
+				CreatedAt: Timestamptz \\
+				ModifiedAt: Timestamptz \\
+				CreatedBy: UUID \\
+				ModifiedBy: UUID
+			}{}
+
+			\umlclass[below=2cm of Collection,draw=none,rounded corners]{Field}{
+				ID : UUID \\
+				Name : Text \\
+				Icon : Text \\
+				Description : Text \\
+				Version: Integer \\
+				SpaceID: UUID \\
+				CreatedAt: Timestamptz \\
+				ModifiedAt: Timestamptz \\
+				CreatedBy: UUID \\
+				ModifiedBy: UUID
+			}{}
+
+			\umlclass[right=4cm of Field,draw=none,rounded corners]{Document}{
+				ID : UUID \\
+				Version: Integer \\
+				CollectionID: UUID \\
+				CreatedAt: Timestamptz \\
+				ModifiedAt: Timestamptz \\
+				CreatedBy: UUID \\
+				ModifiedBy: UUID
+			}{}
+
+
+			\umlclass[left=4cm of Field,draw=none,rounded corners]{View}{
+				ID : UUID \\
+				Name : Text \\
+				Type : Text \\
+				Data : Text \\
+				Version: Integer \\
+				CollectionID: UUID \\
+				CreatedAt: Timestamptz \\
+				ModifiedAt: Timestamptz \\
+			}{}
+
+			\umlclass[below=2cm of Document,draw=none,rounded corners]{Block}{
+				ID : UUID \\
+				Data : Text \\
+				ParentID : UUID \\
+				Version: Integer \\
+				FieldID: UUID \\
+				DocumentID: UUID \\
+				CreatedAt: Timestamptz \\
+				ModifiedAt: Timestamptz \\
+				CreatedBy: UUID \\
+				ModifiedBy: UUID
+			}{}
+			\umlclass[below=1.5cm of AccessToken, type=enumeration,draw=none,rounded corners]{AccessLevel}{
+				Owner \\
+				Admin \\
+				ReadWrite \\
+				ReadOnly
+			}{}
+
+			% \umlVHVinherit{B}{A}
+			\umlVHVinherit{Document}{Collection}
+			\umluniassoc[geometry=-|-, weight=0.3, arg1=x, mult1=1, pos1=1.9, arg2=y, mult2=*, pos2=0.2]{Member}{User}
+			\umluniassoc[geometry=|-, arg1=x, mult1=1, pos1=1.9, arg2=y, mult2=*, pos2=0.2]{Member}{Space}
+
+			\umluniassoc[geometry=|-|, arg1=x, mult1=1, pos1=0.9, arg2=SpaceID, mult2=*, pos2=0.2]{Project}{Space}
+			\umluniassoc[geometry=|-, arg1=x, mult1=1, pos1=0.9, arg2=CreatedBy, mult2=*, pos2=0.2]{Project}{User}
+			\umluniassoc[geometry=-|-, arg1=x, mult1=1, pos1=1.9, arg2=ModifiedBy, mult2=*, pos2=0.2]{Project}{User}
+
+			\umluniassoc[geometry=-|-, arg1=x, mult1=1, pos1=1.9, arg2=y, mult2=*, pos2=0.2]{Confirmation}{User}
+
+			\umluniassoc[geometry=|-, arg1=x, mult1=1, pos1=1.9, arg2=y, mult2=*, pos2=0.2]{AccessToken}{User}
+
+			\umluniassoc[geometry=--, arg1=x, mult1=1, pos1=0.9, arg2=ProjectID, mult2=*, pos2=0.2]{Collection}{Project}
+			\umluniassoc[geometry=-|-, arg1=x, mult1=1, pos1=0.9, arg2=CreatedBy, mult2=*, pos2=0.2]{Collection}{User}
+			\umluniassoc[geometry=-|-, arg1=x, mult1=1, pos1=1.9, arg2=ModifiedBy, mult2=*, pos2=0.2]{Collection}{User}
+
+			\umluniassoc[geometry=-|-, arg1=x, mult1=1, pos1=0.9, arg2=CollectionID, mult2=*, pos2=0.2]{View}{Collection}
+
+			\umluniassoc[geometry=|-|, arg1=x, mult1=1, pos1=0.9, arg2=CollectionID, mult2=*, pos2=0.2]{Field}{Collection}
+
+			\umluniassoc[geometry=-|-, arg1=x, mult1=1, pos1=0.9, arg2=CollectionID, mult2=*, pos2=0.2]{Document}{Collection}
+			\umluniassoc[geometry=-|, arg1=x, mult1=1, pos1=0.9, arg2=CreatedBy, mult2=*, pos2=0.2]{Document}{User}
+			\umluniassoc[geometry=-|, arg1=x, mult1=1, pos1=1.9, arg2=ModifiedBy, mult2=*, pos2=0.2]{Document}{User}
+
+			\umluniassoc[geometry=|-|, arg1=x, mult1=1, pos1=0.9, arg2=DocumentID, mult2=*, pos2=0.2]{Block}{Document}
+			\umluniassoc[geometry=|-|, arg1=x, mult1=1, pos1=0.9, arg2=FieldID, mult2=*, pos2=0.2]{Block}{Field}
+			\umluniassoc[arg1=x, mult1=1, pos1=0.9, arg2=ParentID, mult2=*, pos2=0.2,loopsize=6cm]{Block}{Block}
+			\umluniassoc[geometry=-|, arg1=x, mult1=1, pos1=0.9, arg2=CreatedBy, mult2=*, pos2=0.2,arm1=3cm]{Block}{User}
+			\umluniassoc[geometry=-|, arg1=x, mult1=1, pos1=1.9, arg2=ModifiedBy, mult2=*, pos2=0.2,arm1=4cm]{Block}{User}
+
+
+		\end{tikzpicture}
+
+		\caption{General class diagram}
+		\label{fig:gen-class-diagram}
+	\end{figure}
 \end{toexclude}
 
-\section{Detailed architecture}
-
-With our architectural patterns selected and our requirements fully defined, we can, now, proceed to producing detailed diagrams of our application. In the following sections, we will present our application's class, sequence, and activity diagrams.
-\subsection{Class diagrams}
-
-Figure~\ref{fig:gen-class-diagram} represents our application's general class diagram.
+\subsection{Sequence diagrams}
+\subsubsection{"X" sequence diagram}
 
 \begin{figure}[H]
 	\thisfloatpagestyle{empty}
 	\centerfloat
 	\sffamily
-	\begin{tikzpicture}[scale=0.5, every node/.append style={transform shape}]
-		\umlclass[x=-4]{User}{
-			ID : UUID \\
-			Name : Text \\
-			Email : Text \\
-			Avatar : Text \\
-			CreatedAt: Timestamptz \\
-			ModifiedAt: Timestamptz
-		}{}
-
-		\umlclass[left=10cm of User]{Space}{
-			ID : UUID \\
-			Name : Text \\
-			Handle : Text \\
-			CreatedAt: Timestamptz \\
-			ModifiedAt: Timestamptz
-		}{}
-
-
-		\umlclass[below left=4cm and 2cm of Space]{Project}{
-			ID : UUID \\
-			Name : Text \\
-			Icon : Text \\
-			Description : Text \\
-			Version: Integer \\
-			SpaceID: UUID \\
-			CreatedAt: Timestamptz \\
-			ModifiedAt: Timestamptz \\
-			CreatedBy: UUID \\
-			ModifiedBy: UUID
-		}{}
-
-		\umlclass[left=4cm of Project]{Member}{
-			UserID : UUID \\
-			SpaceID : UUID \\
-			AccessLevel: AccessLevel \\
-			CreatedAt: Timestamptz \\
-			ModifiedAt: Timestamptz
-		}{}
-
-		\umlclass[right=3cm of Project]{Confirmation}{
-			UserID : UUID \\
-			SpaceID : UUID \\
-			Token: Text \\
-			CreatedAt: Timestamptz \\
-			ModifiedAt: Timestamptz
-		}{}
-
-		\umlclass[right=3cm of Confirmation]{AccessToken}{
-			ID : UUID \\
-			Token : Text \\
-			Name : Text \\
-			Resource : Text \\
-			ResourceID : UUID \\
-			AccessLevel: AccessLevel \\
-			CreatedAt: Timestamptz \\
-			CreatedBy: UUID
-		}{}
-
-
-		\umlclass[below=2cm of Project]{Collection}{
-			ID : UUID \\
-			Name : Text \\
-			Icon : Text \\
-			Description : Text \\
-			Version: Integer \\
-			ProjectID: UUID \\
-			CreatedAt: Timestamptz \\
-			ModifiedAt: Timestamptz \\
-			CreatedBy: UUID \\
-			ModifiedBy: UUID
-		}{}
-
-		\umlclass[below=2cm of Collection]{Field}{
-			ID : UUID \\
-			Name : Text \\
-			Icon : Text \\
-			Description : Text \\
-			Version: Integer \\
-			SpaceID: UUID \\
-			CreatedAt: Timestamptz \\
-			ModifiedAt: Timestamptz \\
-			CreatedBy: UUID \\
-			ModifiedBy: UUID
-		}{}
-
-		\umlclass[right=4cm of Field]{Document}{
-			ID : UUID \\
-			Version: Integer \\
-			CollectionID: UUID \\
-			CreatedAt: Timestamptz \\
-			ModifiedAt: Timestamptz \\
-			CreatedBy: UUID \\
-			ModifiedBy: UUID
-		}{}
-
-
-		\umlclass[left=4cm of Field]{View}{
-			ID : UUID \\
-			Name : Text \\
-			Type : Text \\
-			Data : Text \\
-			Version: Integer \\
-			CollectionID: UUID \\
-			CreatedAt: Timestamptz \\
-			ModifiedAt: Timestamptz \\
-		}{}
-
-		\umlclass[below=2cm of Document]{Block}{
-			ID : UUID \\
-			Data : Text \\
-			ParentID : UUID \\
-			Version: Integer \\
-			FieldID: UUID \\
-			DocumentID: UUID \\
-			CreatedAt: Timestamptz \\
-			ModifiedAt: Timestamptz \\
-			CreatedBy: UUID \\
-			ModifiedBy: UUID
-		}{}
-		\umlclass[below=1.5cm of AccessToken, type=enumeration]{AccessLevel}{
-			Owner \\
-			Admin \\
-			ReadWrite \\
-			ReadOnly
-		}{}
-
-		% \umlVHVinherit{B}{A}
-		\umlVHVinherit{Document}{Collection}
-		\umluniassoc[geometry=-|-, weight=0.3, arg1=x, mult1=1, pos1=1.9, arg2=y, mult2=*, pos2=0.2]{Member}{User}
-		\umluniassoc[geometry=|-, arg1=x, mult1=1, pos1=1.9, arg2=y, mult2=*, pos2=0.2]{Member}{Space}
-
-		\umluniassoc[geometry=|-|, arg1=x, mult1=1, pos1=0.9, arg2=SpaceID, mult2=*, pos2=0.2]{Project}{Space}
-		\umluniassoc[geometry=|-, arg1=x, mult1=1, pos1=0.9, arg2=CreatedBy, mult2=*, pos2=0.2]{Project}{User}
-		\umluniassoc[geometry=-|-, arg1=x, mult1=1, pos1=1.9, arg2=ModifiedBy, mult2=*, pos2=0.2]{Project}{User}
-
-		\umluniassoc[geometry=-|-, arg1=x, mult1=1, pos1=1.9, arg2=y, mult2=*, pos2=0.2]{Confirmation}{User}
-
-		\umluniassoc[geometry=|-, arg1=x, mult1=1, pos1=1.9, arg2=y, mult2=*, pos2=0.2]{AccessToken}{User}
-
-		\umluniassoc[geometry=--, arg1=x, mult1=1, pos1=0.9, arg2=ProjectID, mult2=*, pos2=0.2]{Collection}{Project}
-		\umluniassoc[geometry=-|-, arg1=x, mult1=1, pos1=0.9, arg2=CreatedBy, mult2=*, pos2=0.2]{Collection}{User}
-		\umluniassoc[geometry=-|-, arg1=x, mult1=1, pos1=1.9, arg2=ModifiedBy, mult2=*, pos2=0.2]{Collection}{User}
-
-		\umluniassoc[geometry=-|-, arg1=x, mult1=1, pos1=0.9, arg2=CollectionID, mult2=*, pos2=0.2]{View}{Collection}
-
-		\umluniassoc[geometry=|-|, arg1=x, mult1=1, pos1=0.9, arg2=CollectionID, mult2=*, pos2=0.2]{Field}{Collection}
-
-		\umluniassoc[geometry=-|-, arg1=x, mult1=1, pos1=0.9, arg2=CollectionID, mult2=*, pos2=0.2]{Document}{Collection}
-		\umluniassoc[geometry=-|, arg1=x, mult1=1, pos1=0.9, arg2=CreatedBy, mult2=*, pos2=0.2]{Document}{User}
-		\umluniassoc[geometry=-|, arg1=x, mult1=1, pos1=1.9, arg2=ModifiedBy, mult2=*, pos2=0.2]{Document}{User}
-
-		\umluniassoc[geometry=|-|, arg1=x, mult1=1, pos1=0.9, arg2=DocumentID, mult2=*, pos2=0.2]{Block}{Document}
-		\umluniassoc[geometry=|-|, arg1=x, mult1=1, pos1=0.9, arg2=FieldID, mult2=*, pos2=0.2]{Block}{Field}
-		\umluniassoc[arg1=x, mult1=1, pos1=0.9, arg2=ParentID, mult2=*, pos2=0.2,loopsize=6cm]{Block}{Block}
-		\umluniassoc[geometry=-|, arg1=x, mult1=1, pos1=0.9, arg2=CreatedBy, mult2=*, pos2=0.2,arm1=3cm]{Block}{User}
-		\umluniassoc[geometry=-|, arg1=x, mult1=1, pos1=1.9, arg2=ModifiedBy, mult2=*, pos2=0.2,arm1=4cm]{Block}{User}
-
+	\begin{tikzpicture}[scale=1, every node/.append style={transform shape}]
+		
 
 	\end{tikzpicture}
 
-	\caption{General class diagram}
-	\label{fig:gen-class-diagram}
+	\caption{"X" sequence diagram}
+	\label{fig:x-seq-diag}
 \end{figure}
 
-\subsection{Sequence diagrams}
 \subsection{Activity diagrams}
 \section{Conclusion}
 
-In this chapter, we analyzed the possible architectures of the different aspects of our applications, compared them, and made an objective choice. 
+In this chapter, we analyzed the possible architectures of the different aspects of our applications, compared them, and made an objective choice.
 Then, we proceeded to present, in details, the architecture of our application.
 
 Within the next chapter, we are going to glue all the pieces of research and theory together, and bring our application to life.
