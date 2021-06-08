@@ -538,360 +538,334 @@
   This is even more important when a single server could no longer match the demand, and we are required to scale our servers up.
   In such cases, the Pub-Sub store would keep all of our servers in sync.
 
+
+  \section{Detailed architecture}
+
+  With our architectural patterns selected and our requirements fully defined, we can, now, proceed to producing detailed diagrams of our application. In the following sections, we will present our application's class, and sequence diagrams.
+  \subsection{Class diagrams}
+
+  Figure~\ref{fig:gen-class-diagram} represents our application's general class diagram.
+
+  \begin{figure}[hp]
+    \thisfloatpagestyle{empty}
+    % \centerfloat
+    \centering
+    \sffamily
+    \tikzumlset{font=\tiny}
+    \begin{tikzpicture}[scale=0.65, every node/.append style={transform shape}]
+      \umlclass[x=-4,draw=none]{User}{
+        ID : UUID \\
+        Name : Text \\
+        Email : Text \\
+        Avatar : Text \\
+        CreatedAt: Timestamptz \\
+        ModifiedAt: Timestamptz
+      }{}
+
+      \umlclass[left=9cm of User,draw=none]{Space}{
+        ID : UUID \\
+        Name : Text \\
+        Handle : Text \\
+        CreatedAt: Timestamptz \\
+        ModifiedAt: Timestamptz
+      }{}
+
+
+      \umlclass[below left=4cm and 1cm of Space,draw=none]{Project}{
+        ID : UUID \\
+        Name : Text \\
+        Icon : Text \\
+        Description : Text \\
+        Version: Integer \\
+        % SpaceID: UUID \\
+        CreatedAt: Timestamptz \\
+        ModifiedAt: Timestamptz
+        % CreatedBy: UUID \\
+        % ModifiedBy: UUID
+      }{}
+
+      % \umlclass[left=4cm of Project,draw=none]{Member}{
+      %   UserID : UUID \\
+      %   SpaceID : UUID \\
+      %   AccessLevel: AccessLevel \\
+      %   CreatedAt: Timestamptz \\
+      %   ModifiedAt: Timestamptz
+      % }{}
+
+      \umlclass[right=3cm of Project,draw=none]{Confirmation}{
+        % UserID : UUID \\
+        % SpaceID : UUID \\
+        Token: Text \\
+        CreatedAt: Timestamptz \\
+        ModifiedAt: Timestamptz
+      }{}
+
+      \umlclass[right=3cm of Confirmation,draw=none]{AccessToken}{
+        ID : UUID \\
+        Token : Text \\
+        Name : Text \\
+        Resource : Text \\
+        ResourceID : UUID \\
+        AccessLevel: AccessLevel \\
+        CreatedAt: Timestamptz
+        % CreatedBy: UUID
+      }{}
+
+
+      \umlclass[below right=2cm and 1cm of Project,draw=none]{Collection}{
+        ID : UUID \\
+        Name : Text \\
+        Icon : Text \\
+        Description : Text \\
+        Version: Integer \\
+        % ProjectID: UUID \\
+        CreatedAt: Timestamptz \\
+        ModifiedAt: Timestamptz
+        % CreatedBy: UUID \\
+        % ModifiedBy: UUID
+      }{}
+
+      \umlclass[below=2cm of Collection,draw=none]{Field}{
+        ID : UUID \\
+        Name : Text \\
+        Icon : Text \\
+        Description : Text \\
+        Version: Integer \\
+        SpaceID: UUID \\
+        CreatedAt: Timestamptz \\
+        ModifiedAt: Timestamptz
+        % CreatedBy: UUID \\
+        % ModifiedBy: UUID
+      }{}
+
+      \umlclass[right=2.5cm of Field,draw=none]{Document}{
+        ID : UUID \\
+        Version: Integer \\
+        CollectionID: UUID \\
+        CreatedAt: Timestamptz \\
+        ModifiedAt: Timestamptz
+        % CreatedBy: UUID \\
+        % ModifiedBy: UUID
+      }{}
+
+
+      \umlclass[left=2.5cm of Field,draw=none]{View}{
+        ID : UUID \\
+        Name : Text \\
+        Type : Text \\
+        Data : Text \\
+        Version: Integer \\
+        % CollectionID: UUID \\
+        CreatedAt: Timestamptz \\
+        ModifiedAt: Timestamptz
+      }{}
+
+      \umlclass[below=2cm of Document,draw=none]{Block}{
+        ID : UUID \\
+        Data : Text \\
+        % ParentID : UUID \\
+        Version: Integer \\
+        % FieldID: UUID \\
+        % DocumentID: UUID \\
+        CreatedAt: Timestamptz \\
+        ModifiedAt: Timestamptz
+        % CreatedBy: UUID \\
+        % ModifiedBy: UUID
+      }{}
+      \umlclass[below=1.5cm of AccessToken, type=enumeration,draw=none]{AccessLevel}{
+        Owner \\
+        Admin \\
+        ReadWrite \\
+        ReadOnly
+      }{}
+
+      \umlnote[below=1.5cm of AccessToken, width=3cm,draw=none]{AccessToken}{
+        AccessLevel is one of
+        \begin{itemize}
+          \item Owner
+          \item Admin
+          \item ReadWrite
+          \item Reaonly
+        \end{itemize}
+      }
+
+      \umlassoc[mult2=$1..*$,mult1=$1..*$,anchors=150 and 30]{User}{Space}
+
+      \umlassoc[geometry=-|,mult2=$0..*$,mult1=$1$,anchors=180 and 90]{Space}{Project}
+
+      \umlassoc[geometry=|-|,mult2=$0..*$,arg2=modifies,pos2=2.6,align2=right,mult1=$1$,anchors=130 and 100,weight=-0.35]{User}{Project}
+      \umlassoc[geometry=|-|,mult2=$0..*$,arg2=creates,pos2=2.8,align2=right,mult1=$1..*$,anchors=110 and 120,weight=-0.45]{User}{Project}
+
+      \umlassoc[geometry=|-,mult2=$0..*$,arg2=modifies,mult1=$1$,anchors=-90 and 20,pos2=1.8]{User}{Document}
+      \umlassoc[geometry=|-,mult2=$0..*$,arg2=creates,mult1=$1..*$,anchors=-100 and 30,pos2=1.6]{User}{Document}
+
+      \umlassoc[geometry=|-,mult2=$0..*$,arg2=modifies,mult1=$1$,anchors=-120 and 20,weight=0.7,pos2=1.8]{User}{Collection}
+      \umlassoc[geometry=|-,mult2=$0..*$,arg2=creates,mult1=$1..*$,anchors=-130 and 30,weight=0.8,pos2=1.6]{User}{Collection}
+
+      \umlassoc[geometry=|-,mult2=$0..*$,arg2=modifies,mult1=$1$,anchors=-60 and 20,pos2=1.8]{User}{Block}
+      \umlassoc[geometry=|-,mult2=$0..*$,arg2=creates,mult1=$1..*$,anchors=-70 and 30,pos2=1.6]{User}{Block}
+
+      \umlassoc[geometry=-|-,mult2=$0..*$,arg2=has,mult1=$1$,anchors=170 and 0,weight=0.7]{User}{Confirmation}
+      \umlassoc[geometry=-|,mult2=$0..*$,arg2=has,mult1=$1$,anchors=210 and 90,weight=0.7]{User}{AccessToken}
+
+      \umlassoc[geometry=|-|,mult2=$0..*$,arg2=has,mult1=$1$,anchors=-90 and 90]{Project}{Collection}
+
+      \umlassoc[geometry=-|,mult2=$1..*$,arg2=has,mult1=$1$,anchors=180 and 90]{Collection}{View}
+      \umlassoc[geometry=--,mult2=$1..*$,arg2=has,mult1=$1$,anchors=-90 and 90]{Collection}{Field}
+      \umlassoc[geometry=-|,mult2=$1..*$,arg2=has,mult1=$1$,anchors=0 and 90]{Collection}{Document}
+
+      \umlassoc[geometry=--,mult2=$0..*$,arg2=has,mult1=$1$,anchors=-90 and 90]{Document}{Block}
+      \umlassoc[geometry=-|,mult2=$1$,arg1=has,mult1=$0..*$,anchors=180 and -90]{Block}{Field}
+      \umlassoc[geometry=--,mult2=$0..*$,arg2=has,mult1=$1$,angle1=-90, angle2=0,loopsize=2cm]{Block}{Block}
+
+
+    \end{tikzpicture}
+
+    \caption{General class diagram}
+    \label{fig:gen-class-diagram}
+  \end{figure}
 \end{toexclude}
 
-\section{Detailed architecture}
 
-With our architectural patterns selected and our requirements fully defined, we can, now, proceed to producing detailed diagrams of our application. In the following sections, we will present our application's class, and sequence diagrams.
-\subsection{Class diagrams}
+\subsection{Sequence diagrams}
 
-Figure~\ref{fig:gen-class-diagram} represents our application's general class diagram.
+\begin{sdfig}{Sign up}{sign up}{sign-up}
+  \umlactor[no ddots]{Visitor}
+  \umlobject[no ddots,draw=none]{Client}
+  \umlobject[no ddots,draw=none]{Server}
+  \umlobject[no ddots,draw=none]{Database}
+  % \umlobject[no ddots,draw=none]{Pub-Sub}
 
-\begin{figure}[hp]
-  \thisfloatpagestyle{empty}
-  % \centerfloat
-  \centering
-  \sffamily
-  \tikzumlset{font=\tiny}
-  \begin{tikzpicture}[scale=0.65, every node/.append style={transform shape}]
-    \umlclass[x=-4,draw=none]{User}{
-      ID : UUID \\
-      Name : Text \\
-      Email : Text \\
-      Avatar : Text \\
-      CreatedAt: Timestamptz \\
-      ModifiedAt: Timestamptz
-    }{}
-
-    \umlclass[left=9cm of User,draw=none]{Space}{
-      ID : UUID \\
-      Name : Text \\
-      Handle : Text \\
-      CreatedAt: Timestamptz \\
-      ModifiedAt: Timestamptz
-    }{}
-
-
-    \umlclass[below left=4cm and 1cm of Space,draw=none]{Project}{
-      ID : UUID \\
-      Name : Text \\
-      Icon : Text \\
-      Description : Text \\
-      Version: Integer \\
-      % SpaceID: UUID \\
-      CreatedAt: Timestamptz \\
-      ModifiedAt: Timestamptz
-      % CreatedBy: UUID \\
-      % ModifiedBy: UUID
-    }{}
-
-    % \umlclass[left=4cm of Project,draw=none]{Member}{
-    %   UserID : UUID \\
-    %   SpaceID : UUID \\
-    %   AccessLevel: AccessLevel \\
-    %   CreatedAt: Timestamptz \\
-    %   ModifiedAt: Timestamptz
-    % }{}
-
-    \umlclass[right=3cm of Project,draw=none]{Confirmation}{
-      % UserID : UUID \\
-      % SpaceID : UUID \\
-      Token: Text \\
-      CreatedAt: Timestamptz \\
-      ModifiedAt: Timestamptz
-    }{}
-
-    \umlclass[right=3cm of Confirmation,draw=none]{AccessToken}{
-      ID : UUID \\
-      Token : Text \\
-      Name : Text \\
-      Resource : Text \\
-      ResourceID : UUID \\
-      AccessLevel: AccessLevel \\
-      CreatedAt: Timestamptz
-      % CreatedBy: UUID
-    }{}
-
-
-    \umlclass[below right=2cm and 1cm of Project,draw=none]{Collection}{
-      ID : UUID \\
-      Name : Text \\
-      Icon : Text \\
-      Description : Text \\
-      Version: Integer \\
-      % ProjectID: UUID \\
-      CreatedAt: Timestamptz \\
-      ModifiedAt: Timestamptz
-      % CreatedBy: UUID \\
-      % ModifiedBy: UUID
-    }{}
-
-    \umlclass[below=2cm of Collection,draw=none]{Field}{
-      ID : UUID \\
-      Name : Text \\
-      Icon : Text \\
-      Description : Text \\
-      Version: Integer \\
-      SpaceID: UUID \\
-      CreatedAt: Timestamptz \\
-      ModifiedAt: Timestamptz
-      % CreatedBy: UUID \\
-      % ModifiedBy: UUID
-    }{}
-
-    \umlclass[right=2.5cm of Field,draw=none]{Document}{
-      ID : UUID \\
-      Version: Integer \\
-      CollectionID: UUID \\
-      CreatedAt: Timestamptz \\
-      ModifiedAt: Timestamptz
-      % CreatedBy: UUID \\
-      % ModifiedBy: UUID
-    }{}
-
-
-    \umlclass[left=2.5cm of Field,draw=none]{View}{
-      ID : UUID \\
-      Name : Text \\
-      Type : Text \\
-      Data : Text \\
-      Version: Integer \\
-      % CollectionID: UUID \\
-      CreatedAt: Timestamptz \\
-      ModifiedAt: Timestamptz
-    }{}
-
-    \umlclass[below=2cm of Document,draw=none]{Block}{
-      ID : UUID \\
-      Data : Text \\
-      % ParentID : UUID \\
-      Version: Integer \\
-      % FieldID: UUID \\
-      % DocumentID: UUID \\
-      CreatedAt: Timestamptz \\
-      ModifiedAt: Timestamptz
-      % CreatedBy: UUID \\
-      % ModifiedBy: UUID
-    }{}
-    \umlclass[below=1.5cm of AccessToken, type=enumeration,draw=none]{AccessLevel}{
-      Owner \\
-      Admin \\
-      ReadWrite \\
-      ReadOnly
-    }{}
-
-    \umlnote[below=1.5cm of AccessToken, width=3cm,draw=none]{AccessToken}{
-      AccessLevel is one of
-      \begin{itemize}
-        \item Owner
-        \item Admin
-        \item ReadWrite
-        \item Reaonly
-      \end{itemize}
-    }
-
-    \umlassoc[mult2=$1..*$,mult1=$1..*$,anchors=150 and 30]{User}{Space}
-
-    \umlassoc[geometry=-|,mult2=$0..*$,mult1=$1$,anchors=180 and 90]{Space}{Project}
-
-    \umlassoc[geometry=|-|,mult2=$0..*$,arg2=modifies,pos2=2.6,align2=right,mult1=$1$,anchors=130 and 100,weight=-0.35]{User}{Project}
-    \umlassoc[geometry=|-|,mult2=$0..*$,arg2=creates,pos2=2.8,align2=right,mult1=$1..*$,anchors=110 and 120,weight=-0.45]{User}{Project}
-
-    \umlassoc[geometry=|-,mult2=$0..*$,arg2=modifies,mult1=$1$,anchors=-90 and 20,pos2=1.8]{User}{Document}
-    \umlassoc[geometry=|-,mult2=$0..*$,arg2=creates,mult1=$1..*$,anchors=-100 and 30,pos2=1.6]{User}{Document}
-
-    \umlassoc[geometry=|-,mult2=$0..*$,arg2=modifies,mult1=$1$,anchors=-120 and 20,weight=0.7,pos2=1.8]{User}{Collection}
-    \umlassoc[geometry=|-,mult2=$0..*$,arg2=creates,mult1=$1..*$,anchors=-130 and 30,weight=0.8,pos2=1.6]{User}{Collection}
-
-    \umlassoc[geometry=|-,mult2=$0..*$,arg2=modifies,mult1=$1$,anchors=-60 and 20,pos2=1.8]{User}{Block}
-    \umlassoc[geometry=|-,mult2=$0..*$,arg2=creates,mult1=$1..*$,anchors=-70 and 30,pos2=1.6]{User}{Block}
-
-    \umlassoc[geometry=-|-,mult2=$0..*$,arg2=has,mult1=$1$,anchors=170 and 0,weight=0.7]{User}{Confirmation}
-    \umlassoc[geometry=-|,mult2=$0..*$,arg2=has,mult1=$1$,anchors=210 and 90,weight=0.7]{User}{AccessToken}
-
-    \umlassoc[geometry=|-|,mult2=$0..*$,arg2=has,mult1=$1$,anchors=-90 and 90]{Project}{Collection}
-
-    \umlassoc[geometry=-|,mult2=$1..*$,arg2=has,mult1=$1$,anchors=180 and 90]{Collection}{View}
-    \umlassoc[geometry=--,mult2=$1..*$,arg2=has,mult1=$1$,anchors=-90 and 90]{Collection}{Field}
-    \umlassoc[geometry=-|,mult2=$1..*$,arg2=has,mult1=$1$,anchors=0 and 90]{Collection}{Document}
-
-    \umlassoc[geometry=--,mult2=$0..*$,arg2=has,mult1=$1$,anchors=-90 and 90]{Document}{Block}
-    \umlassoc[geometry=-|,mult2=$1$,arg1=has,mult1=$0..*$,anchors=180 and -90]{Block}{Field}
-    \umlassoc[geometry=--,mult2=$0..*$,arg2=has,mult1=$1$,angle1=-90, angle2=0,loopsize=2cm]{Block}{Block}
-
-
-  \end{tikzpicture}
-
-  \caption{General class diagram}
-  \label{fig:gen-class-diagram}
-\end{figure}
-
+  \begin{umlcall}[op={Sign up}]{Visitor}{Client}
+    \begin{umlcall}[op={Validate}]{Client}{Client}
+      \begin{umlfragment}[type=alt, label=valid]
+        \begin{umlcall}[type=return,op={Loading}]{Client}{Visitor}
+          \begin{umlcall}[op={Sign up}]{Client}{Server}
+            \begin{umlcall}[op={Has user}]{Server}{Database}
+              \begin{umlfragment}[type=alt, label=true]
+                \begin{umlcall}[type=return,op={Yes}]{Database}{Server}
+                  \begin{umlcall}[type=return,op={Error}]{Server}{Client}
+                    \begin{umlcall}[type=return,op={Error}]{Client}{Visitor}
+                    \end{umlcall}
+                  \end{umlcall}
+                \end{umlcall}
+                \umlfpart[else]
+                \begin{umlcall}[type=return,op={No}]{Database}{Server}
+                  \begin{umlcall}[op={Create user}]{Server}{Database}
+                  \end{umlcall}
+                  \begin{umlcall}[op={Create OTP}]{Server}{Database}
+                    \begin{umlcall}[op={Send email}]{Server}{Server}
+                      \begin{umlcall}[type=return,op={Ok}]{Server}{Client}
+                        \begin{umlcall}[type=return,op={Ok}]{Client}{Visitor}
+                        \end{umlcall}
+                      \end{umlcall}
+                    \end{umlcall}
+                  \end{umlcall}
+                \end{umlcall}
+              \end{umlfragment}
+            \end{umlcall}
+          \end{umlcall}
+        \end{umlcall}
+        \umlfpart[else]
+        \begin{umlcall}[type=return,op={Error}]{Client}{Visitor}
+        \end{umlcall}
+      \end{umlfragment}
+    \end{umlcall}
+  \end{umlcall}
+\end{sdfig}
 \begin{toexclude}
 
-  \subsection{Sequence diagrams}
 
-  \begin{sdfig}{Sign up}{sign up}{sign-up}
-    \umlactor[no ddots]{Visitor}
-    \umlobject[no ddots,draw=none]{Client}
-    \umlobject[no ddots,draw=none]{Server}
-    \umlobject[no ddots,draw=none]{Database}
-    % \umlobject[no ddots,draw=none]{Pub-Sub}
+\begin{sdfig}{Log in}{log in}{log-in}
+  \umlactor[no ddots]{Visitor}
+  \umlobject[no ddots,draw=none]{Client}
+  \umlobject[no ddots,draw=none]{Server}
+  \umlobject[no ddots,draw=none]{Database}
+  % \umlobject[no ddots,draw=none]{Pub-Sub}
 
-    \begin{umlcall}[op={Sign up}]{Visitor}{Client}
-      \begin{umlcall}[op={Validate}]{Client}{Client}
-        \begin{umlfragment}[type=alt, label=valid]
-          \begin{umlcall}[type=return,op={Loading}]{Client}{Visitor}
-            \begin{umlcall}[op={Sign up}]{Client}{Server}
-              \begin{umlcall}[op={Has user}]{Server}{Database}
-                \begin{umlfragment}[type=alt, label=true]
-                  \begin{umlcall}[type=return,op={Yes}]{Database}{Server}
-                    \begin{umlcall}[type=return,op={Error}]{Server}{Client}
-                      \begin{umlcall}[type=return,op={Error}]{Client}{Visitor}
-                      \end{umlcall}
-                    \end{umlcall}
-                  \end{umlcall}
-                  \umlfpart[else]
-                  \begin{umlcall}[type=return,op={No}]{Database}{Server}
-                    \begin{umlcall}[op={Create user}]{Server}{Database}
-                    \end{umlcall}
-                    \begin{umlcall}[op={Create OTP}]{Server}{Database}
-                      \begin{umlcall}[op={Send email}]{Server}{Server}
-                        \begin{umlcall}[type=return,op={Done}]{Server}{Client}
-                          \begin{umlcall}[type=return,op={Done}]{Client}{Visitor}
-                          \end{umlcall}
+  \begin{umlcall}[op={Log in}]{Visitor}{Client}
+    \begin{umlcall}[op={Validate}]{Client}{Client}
+      \begin{umlfragment}[type=alt, label=valid]
+        \begin{umlcall}[type=return,op={Loading}]{Client}{Visitor}
+          \begin{umlcall}[op={Log in}]{Client}{Server}
+            \begin{umlcall}[op={Has user}]{Server}{Database}
+              \begin{umlfragment}[type=alt, label=true]
+                \begin{umlcall}[type=return,op={Yes}]{Database}{Server}
+                  \begin{umlcall}[op={Create OTP}]{Server}{Database}
+                    \begin{umlcall}[op={Send email}]{Server}{Server}
+                      \begin{umlcall}[type=return,op={Ok}]{Server}{Client}
+                        \begin{umlcall}[type=return,op={Ok}]{Client}{Visitor}
                         \end{umlcall}
                       \end{umlcall}
                     \end{umlcall}
                   \end{umlcall}
-                \end{umlfragment}
+                \end{umlcall}
+                \umlfpart[else]
+                \begin{umlcall}[type=return,op={No}]{Database}{Server}
+                  \begin{umlcall}[type=return,op={Error}]{Server}{Client}
+                    \begin{umlcall}[type=return,op={Error}]{Client}{Visitor}
+                    \end{umlcall}
+                  \end{umlcall}
+                \end{umlcall}
+              \end{umlfragment}
+            \end{umlcall}
+          \end{umlcall}
+        \end{umlcall}
+        \umlfpart[else]
+        \begin{umlcall}[type=return,op={Error}]{Client}{Visitor}
+        \end{umlcall}
+      \end{umlfragment}
+    \end{umlcall}
+  \end{umlcall}
+\end{sdfig}
+
+
+\begin{sdfig}{Confirm email}{confirm email}{confirm-email}
+  \umlactor[no ddots]{Visitor}
+  \umlobject[no ddots,draw=none]{Client}
+  \umlobject[no ddots,draw=none]{Server}
+  \umlobject[no ddots,draw=none]{Database}
+  % \umlobject[no ddots,draw=none]{Pub-Sub}
+
+  \begin{umlcall}[op={Confirm}]{Visitor}{Client}
+    \begin{umlcall}[op={Confirm}]{Client}{Server}
+      \begin{umlcall}[op={Has OTP}]{Server}{Database}
+        \begin{umlfragment}[type=alt, label=true]
+          \begin{umlcall}[type=return,op={Yes}]{Database}{Server}
+            \begin{umlcall}[op={Add cookies}]{Server}{Server}
+            \end{umlcall}
+            \begin{umlcall}[type=return,op={Ok}]{Server}{Client}
+              \begin{umlcall}[type=return,op={Ok}]{Client}{Visitor}
               \end{umlcall}
             \end{umlcall}
           \end{umlcall}
           \umlfpart[else]
-          \begin{umlcall}[type=return,op={Error}]{Client}{Visitor}
+          \begin{umlcall}[type=return,op={No}]{Database}{Server}
+            \begin{umlcall}[type=return,op={Error}]{Server}{Client}
+              \begin{umlcall}[type=return,op={Error}]{Client}{Visitor}
+              \end{umlcall}
+            \end{umlcall}
           \end{umlcall}
         \end{umlfragment}
       \end{umlcall}
     \end{umlcall}
-  \end{sdfig}
+  \end{umlcall}
+\end{sdfig}
 
 
-  \begin{sdfig}{Log in}{log in}{log-in}
-    \umlactor[no ddots]{Visitor}
-    \umlobject[no ddots,draw=none]{Client}
-    \umlobject[no ddots,draw=none]{Server}
-    \umlobject[no ddots,draw=none]{Database}
-    % \umlobject[no ddots,draw=none]{Pub-Sub}
+\begin{sdfig}{Create workspace}{create workspace}{create-workspace}[1][H]
+  \umlactor[no ddots]{Owner}
+  \umlobject[no ddots,draw=none]{Client}
+  \umlobject[no ddots,draw=none]{Server}
+  \umlobject[no ddots,draw=none]{Database}
+  % \umlobject[no ddots,draw=none]{Pub-Sub}
 
-    \begin{umlcall}[op={Log in}]{Visitor}{Client}
-      \begin{umlcall}[op={Validate}]{Client}{Client}
-        \begin{umlfragment}[type=alt, label=valid]
-          \begin{umlcall}[type=return,op={Loading}]{Client}{Visitor}
-            \begin{umlcall}[op={Log in}]{Client}{Server}
-              \begin{umlcall}[op={Has user}]{Server}{Database}
-                \begin{umlfragment}[type=alt, label=true]
-                  \begin{umlcall}[type=return,op={Yes}]{Database}{Server}
-                    \begin{umlcall}[op={Create OTP}]{Server}{Database}
-                      \begin{umlcall}[op={Send email}]{Server}{Server}
-                        \begin{umlcall}[type=return,op={Done}]{Server}{Client}
-                          \begin{umlcall}[type=return,op={Done}]{Client}{Visitor}
-                          \end{umlcall}
-                        \end{umlcall}
-                      \end{umlcall}
-                    \end{umlcall}
-                  \end{umlcall}
-                  \umlfpart[else]
-                  \begin{umlcall}[type=return,op={No}]{Database}{Server}
-                    \begin{umlcall}[type=return,op={Error}]{Server}{Client}
-                      \begin{umlcall}[type=return,op={Error}]{Client}{Visitor}
-                      \end{umlcall}
-                    \end{umlcall}
-                  \end{umlcall}
-                \end{umlfragment}
-              \end{umlcall}
-            \end{umlcall}
-          \end{umlcall}
-          \umlfpart[else]
-          \begin{umlcall}[type=return,op={Error}]{Client}{Visitor}
-          \end{umlcall}
-        \end{umlfragment}
-      \end{umlcall}
+  \begin{seqdigauth}[Owner]
+    \begin{umlcall}[op={Create workspace},return={Redirect to workspace creation}]{Owner}{Client}
     \end{umlcall}
-  \end{sdfig}
-
-
-  \begin{sdfig}{Confirm email}{confirm email}{confirm-email}
-    \umlactor[no ddots]{Visitor}
-    \umlobject[no ddots,draw=none]{Client}
-    \umlobject[no ddots,draw=none]{Server}
-    \umlobject[no ddots,draw=none]{Database}
-    % \umlobject[no ddots,draw=none]{Pub-Sub}
-
-    \begin{umlcall}[op={Confirm}]{Visitor}{Client}
-      \begin{umlcall}[op={Confirm}]{Client}{Server}
-        \begin{umlcall}[op={Has OTP}]{Server}{Database}
-          \begin{umlfragment}[type=alt, label=true]
-            \begin{umlcall}[type=return,op={Yes}]{Database}{Server}
-              \begin{umlcall}[op={Add cookies}]{Server}{Server}
-              \end{umlcall}
-              \begin{umlcall}[type=return,op={Done}]{Server}{Client}
-                \begin{umlcall}[type=return,op={Done}]{Client}{Visitor}
-                \end{umlcall}
-              \end{umlcall}
-            \end{umlcall}
-            \umlfpart[else]
-            \begin{umlcall}[type=return,op={No}]{Database}{Server}
-              \begin{umlcall}[type=return,op={Error}]{Server}{Client}
-                \begin{umlcall}[type=return,op={Error}]{Client}{Visitor}
-                \end{umlcall}
-              \end{umlcall}
-            \end{umlcall}
-          \end{umlfragment}
-        \end{umlcall}
-      \end{umlcall}
-    \end{umlcall}
-  \end{sdfig}
-
-
-  \begin{sdfig}{Create workspace}{create workspace}{create-workspace}[1][H]
-    \umlactor[no ddots]{Owner}
-    \umlobject[no ddots,draw=none]{Client}
-    \umlobject[no ddots,draw=none]{Server}
-    \umlobject[no ddots,draw=none]{Database}
-    % \umlobject[no ddots,draw=none]{Pub-Sub}
-
-    \begin{seqdigauth}[Owner]
-      \begin{umlcall}[op={Create workspace},return={Redirect to workspace creation}]{Owner}{Client}
-      \end{umlcall}
-      \begin{umlcall}[op={Submit name}]{Owner}{Client}
-        \begin{umlcall}[op={Create workspace},return=Ok]{Client}{Server}
-          \begin{umlcall}[op={Create project}]{Server}{Database}
-            \begin{umlcall}[op={Create collection}]{Server}{Database}
-              \begin{umlcall}[op={Create field}]{Server}{Database}
-              \end{umlcall}
-              \begin{umlcall}[op={Create view}]{Server}{Database}
-              \end{umlcall}
-              \begin{umlcall}[op={Create document}]{Server}{Database}
-                \begin{umlcall}[op={Create block}]{Server}{Database}
-                \end{umlcall}
-              \end{umlcall}
-            \end{umlcall}
-          \end{umlcall}
-        \end{umlcall}
-      \end{umlcall}
-    \end{seqdigauth}
-  \end{sdfig}
-
-  \begin{sdfig}{Create collection}{create collection}{create-collection}[1][H]
-    \umlactor[no ddots]{Editor}
-    \umlobject[no ddots,draw=none]{Client}
-    \umlobject[no ddots,draw=none]{Server}
-    \umlobject[no ddots,draw=none]{Database}
-    % \umlobject[no ddots,draw=none]{Pub-Sub}
-
-    \begin{seqdigauth}[Editor]
-      \begin{umlcall}[op={Create collection},return=Ok]{Editor}{Client}
-        \begin{umlcall}[op={Create collection},return=Ok]{Client}{Server}
+    \begin{umlcall}[op={Submit name}]{Owner}{Client}
+      \begin{umlcall}[op={Create workspace},return=Ok]{Client}{Server}
+        \begin{umlcall}[op={Create project}]{Server}{Database}
           \begin{umlcall}[op={Create collection}]{Server}{Database}
             \begin{umlcall}[op={Create field}]{Server}{Database}
             \end{umlcall}
@@ -904,77 +878,103 @@ Figure~\ref{fig:gen-class-diagram} represents our application's general class di
           \end{umlcall}
         \end{umlcall}
       \end{umlcall}
-    \end{seqdigauth}
-  \end{sdfig}
+    \end{umlcall}
+  \end{seqdigauth}
+\end{sdfig}
 
+\begin{sdfig}{Create collection}{create collection}{create-collection}[1][H]
+  \umlactor[no ddots]{Editor}
+  \umlobject[no ddots,draw=none]{Client}
+  \umlobject[no ddots,draw=none]{Server}
+  \umlobject[no ddots,draw=none]{Database}
+  % \umlobject[no ddots,draw=none]{Pub-Sub}
 
-  \begin{sdfig}{Create field}{create field}{create-field}[1][H]
-    \umlactor[no ddots]{Editor}
-    \umlobject[no ddots,draw=none]{Client}
-    \umlobject[no ddots,draw=none]{Server}
-    \umlobject[no ddots,draw=none]{Database}
-    % \umlobject[no ddots,draw=none]{Pub-Sub}
-
-    \begin{seqdigauth}[Editor]
-      \begin{umlcall}[op={Create field},return={Select type}]{Editor}{Client}
-      \end{umlcall}
-
-      \begin{umlcall}[op={Select type},return=Ok]{Editor}{Client}
-        \begin{umlcall}[op={Update local state}]{Client}{Client}
-        \end{umlcall}
-        \begin{umlcall}[op={Create field},return=Ok]{Client}{Server}
+  \begin{seqdigauth}[Editor]
+    \begin{umlcall}[op={Create collection},return=Ok]{Editor}{Client}
+      \begin{umlcall}[op={Create collection},return=Ok]{Client}{Server}
+        \begin{umlcall}[op={Create collection}]{Server}{Database}
           \begin{umlcall}[op={Create field}]{Server}{Database}
-            \begin{umlcall}[op={Create blocks}]{Server}{Database}
+          \end{umlcall}
+          \begin{umlcall}[op={Create view}]{Server}{Database}
+          \end{umlcall}
+          \begin{umlcall}[op={Create document}]{Server}{Database}
+            \begin{umlcall}[op={Create block}]{Server}{Database}
             \end{umlcall}
           \end{umlcall}
         \end{umlcall}
       \end{umlcall}
-    \end{seqdigauth}
-  \end{sdfig}
+    \end{umlcall}
+  \end{seqdigauth}
+\end{sdfig}
 
-  \begin{sdfig}{Update block}{update block}{update-block}
-    \umlactor[no ddots]{Editor}
-    \umlobject[no ddots,draw=none]{Client}
-    \umlobject[no ddots,draw=none]{Server}
-    \umlobject[no ddots,draw=none]{Database}
-    \umlobject[no ddots,draw=none]{Pub-Sub}
 
-    \begin{seqdigauth}[Editor]
-      \begin{umlcall}[op={Update block},return={Select type}]{Editor}{Client}
+\begin{sdfig}{Create field}{create field}{create-field}[1][H]
+  \umlactor[no ddots]{Editor}
+  \umlobject[no ddots,draw=none]{Client}
+  \umlobject[no ddots,draw=none]{Server}
+  \umlobject[no ddots,draw=none]{Database}
+  % \umlobject[no ddots,draw=none]{Pub-Sub}
+
+  \begin{seqdigauth}[Editor]
+    \begin{umlcall}[op={Create field},return={Select type}]{Editor}{Client}
+    \end{umlcall}
+
+    \begin{umlcall}[op={Select type},return=Ok]{Editor}{Client}
+      \begin{umlcall}[op={Update local state}]{Client}{Client}
       \end{umlcall}
-
-      \begin{umlcall}[op={Update block}]{Editor}{Client}
-        \begin{umlcall}[op={Update local state}]{Client}{Client}
-        \end{umlcall}
-        \begin{umlcall}[op={Update block}]{Client}{Server}
-          \begin{umlcall}[op={Get block}]{Server}{Database}
-            \begin{umlcall}[op={Compare versions}]{Server}{Server}
-              \begin{umlfragment}[type=alt, label=equal]
-                \begin{umlcall}[op={Update block}]{Server}{Database}
-                  \begin{umlcall}[op={Propagate change}]{Server}{Pub-Sub}
-                    \begin{umlcall}[op={Propagate}]{Pub-Sub}{Pub-Sub}
-                    \end{umlcall}
-                  \end{umlcall}
-                \end{umlcall}
-                \umlfpart[else]
-                \begin{umlcall}[op={Refuse change},type=return]{Server}{Client}
-                  \begin{umlcall}[op={Update local state}]{Client}{Client}
-                  \end{umlcall}
-                \end{umlcall}
-              \end{umlfragment}
-            \end{umlcall}
+      \begin{umlcall}[op={Create field},return=Ok]{Client}{Server}
+        \begin{umlcall}[op={Create field}]{Server}{Database}
+          \begin{umlcall}[op={Create blocks}]{Server}{Database}
           \end{umlcall}
         \end{umlcall}
       \end{umlcall}
-    \end{seqdigauth}
-  \end{sdfig}
+    \end{umlcall}
+  \end{seqdigauth}
+\end{sdfig}
 
-  % \subsection{Activity diagrams}
-  \section{Conclusion}
+\begin{sdfig}{Update block}{update block}{update-block}
+  \umlactor[no ddots]{Editor}
+  \umlobject[no ddots,draw=none]{Client}
+  \umlobject[no ddots,draw=none]{Server}
+  \umlobject[no ddots,draw=none]{Database}
+  \umlobject[no ddots,draw=none]{Pub-Sub}
 
-  In this chapter, we analyzed the possible architectures of the different aspects of our applications, compared them, and made an objective choice.
-  Then, we proceeded to present, in details, the architecture of our application.
+  \begin{seqdigauth}[Editor]
+    \begin{umlcall}[op={Update block},return={Select type}]{Editor}{Client}
+    \end{umlcall}
 
-  Within the next chapter, we are going to glue all the pieces of research and theory together, and bring our application to life.
+    \begin{umlcall}[op={Update block}]{Editor}{Client}
+      \begin{umlcall}[op={Update local state}]{Client}{Client}
+      \end{umlcall}
+      \begin{umlcall}[op={Update block}]{Client}{Server}
+        \begin{umlcall}[op={Get block}]{Server}{Database}
+          \begin{umlcall}[op={Compare versions}]{Server}{Server}
+            \begin{umlfragment}[type=alt, label=equal]
+              \begin{umlcall}[op={Update block}]{Server}{Database}
+                \begin{umlcall}[op={Propagate change}]{Server}{Pub-Sub}
+                  \begin{umlcall}[op={Propagate}]{Pub-Sub}{Pub-Sub}
+                  \end{umlcall}
+                \end{umlcall}
+              \end{umlcall}
+              \umlfpart[else]
+              \begin{umlcall}[op={Refuse change},type=return]{Server}{Client}
+                \begin{umlcall}[op={Update local state}]{Client}{Client}
+                \end{umlcall}
+              \end{umlcall}
+            \end{umlfragment}
+          \end{umlcall}
+        \end{umlcall}
+      \end{umlcall}
+    \end{umlcall}
+  \end{seqdigauth}
+\end{sdfig}
+
+% \subsection{Activity diagrams}
+\section{Conclusion}
+
+In this chapter, we analyzed the possible architectures of the different aspects of our applications, compared them, and made an objective choice.
+Then, we proceeded to present, in details, the architecture of our application.
+
+Within the next chapter, we are going to glue all the pieces of research and theory together, and bring our application to life.
 
 \end{toexclude}

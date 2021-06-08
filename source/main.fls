@@ -551,7 +551,6 @@ OUTPUT /home/imed/Code/pfe/report/source/main.lot
 OUTPUT /home/imed/Code/pfe/report/source/Chapters/Conceptual.aux
 INPUT /home/imed/Code/pfe/report/source/Chapters/Conceptual.tex
 INPUT /home/imed/Code/pfe/report/source/Chapters/Conceptual.tex
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /home/imed/Code/pfe/report/source/main.acr
 INPUT /home/imed/Code/pfe/report/source/main.acr
 INPUT /home/imed/Code/pfe/report/source/main.acr
