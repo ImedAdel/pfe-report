@@ -355,7 +355,7 @@
     \sffamily
     \begin{tikzpicture}
       \draw[fill=purple!20,draw=none] (0,0)
-      -- (2,0) node[midway,below] {Client}
+      -- (2,0) node[midway,below] {Interface}
       -- (2,4)
       -- (0,4)
       -- (0,0);
@@ -402,7 +402,7 @@
 
   The most common multitier architecture is the three-tier one, illustrated in figure~\ref{fig:threetier-arch}. It is composed of:
   \begin{description}
-    \item[Client] It is often also called "front-end".
+    \item[Client] It is often also called "front-end" or the interface.
           This is the tier that the end user interacts with directly.
           It is also the one where the \acrshort{mvvm} pattern is implemented.
     \item[Server] It is also called the "back-end".
@@ -467,7 +467,7 @@
     \sffamily
     \begin{tikzpicture}
       \draw[fill=blue!30,draw=none] (0,0)
-      -- (2,0) node[midway,below] {Client}
+      -- (2,0) node[midway,below] {Interface}
       -- (2,4)
       -- (0,4)
       -- (0,0);
@@ -731,21 +731,21 @@
 
 \begin{sdfig}{Sign up}{sign up}{sign-up}
   \umlactor[no ddots]{Visitor}
-  \umlobject[no ddots,draw=none]{Client}
+  \umlobject[no ddots,draw=none]{Interface}
   \umlobject[no ddots,draw=none]{Server}
   \umlobject[no ddots,draw=none]{Database}
   % \umlobject[no ddots,draw=none]{Pub-Sub}
 
-  \begin{umlcall}[op={Sign up}]{Visitor}{Client}
-    \begin{umlcall}[op={Validate}]{Client}{Client}
+  \begin{umlcall}[op={Sign up}]{Visitor}{Interface}
+    \begin{umlcall}[op={Validate}]{Interface}{Interface}
       \begin{umlfragment}[type=alt, label=valid]
-        \begin{umlcall}[type=return,op={Loading}]{Client}{Visitor}
-          \begin{umlcall}[op={Sign up}]{Client}{Server}
+        \begin{umlcall}[type=return,op={Loading}]{Interface}{Visitor}
+          \begin{umlcall}[op={Sign up}]{Interface}{Server}
             \begin{umlcall}[op={Has user}]{Server}{Database}
               \begin{umlfragment}[type=alt, label=true]
                 \begin{umlcall}[type=return,op={Yes}]{Database}{Server}
-                  \begin{umlcall}[type=return,op={Error}]{Server}{Client}
-                    \begin{umlcall}[type=return,op={Error}]{Client}{Visitor}
+                  \begin{umlcall}[type=return,op={Error}]{Server}{Interface}
+                    \begin{umlcall}[type=return,op={Error}]{Interface}{Visitor}
                     \end{umlcall}
                   \end{umlcall}
                 \end{umlcall}
@@ -755,8 +755,8 @@
                   \end{umlcall}
                   \begin{umlcall}[op={Create OTP}]{Server}{Database}
                     \begin{umlcall}[op={Send email}]{Server}{Server}
-                      \begin{umlcall}[type=return,op={Ok}]{Server}{Client}
-                        \begin{umlcall}[type=return,op={Ok}]{Client}{Visitor}
+                      \begin{umlcall}[type=return,op={Ok}]{Server}{Interface}
+                        \begin{umlcall}[type=return,op={Ok}]{Interface}{Visitor}
                         \end{umlcall}
                       \end{umlcall}
                     \end{umlcall}
@@ -767,7 +767,7 @@
           \end{umlcall}
         \end{umlcall}
         \umlfpart[else]
-        \begin{umlcall}[type=return,op={Error}]{Client}{Visitor}
+        \begin{umlcall}[type=return,op={Error}]{Interface}{Visitor}
         \end{umlcall}
       \end{umlfragment}
     \end{umlcall}
@@ -778,23 +778,23 @@
 
 \begin{sdfig}{Log in}{log in}{log-in}
   \umlactor[no ddots]{Visitor}
-  \umlobject[no ddots,draw=none]{Client}
+  \umlobject[no ddots,draw=none]{Interface}
   \umlobject[no ddots,draw=none]{Server}
   \umlobject[no ddots,draw=none]{Database}
   % \umlobject[no ddots,draw=none]{Pub-Sub}
 
-  \begin{umlcall}[op={Log in}]{Visitor}{Client}
-    \begin{umlcall}[op={Validate}]{Client}{Client}
+  \begin{umlcall}[op={Log in}]{Visitor}{Interface}
+    \begin{umlcall}[op={Validate}]{Interface}{Interface}
       \begin{umlfragment}[type=alt, label=valid]
-        \begin{umlcall}[type=return,op={Loading}]{Client}{Visitor}
-          \begin{umlcall}[op={Log in}]{Client}{Server}
+        \begin{umlcall}[type=return,op={Loading}]{Interface}{Visitor}
+          \begin{umlcall}[op={Log in}]{Interface}{Server}
             \begin{umlcall}[op={Has user}]{Server}{Database}
               \begin{umlfragment}[type=alt, label=true]
                 \begin{umlcall}[type=return,op={Yes}]{Database}{Server}
                   \begin{umlcall}[op={Create OTP}]{Server}{Database}
                     \begin{umlcall}[op={Send email}]{Server}{Server}
-                      \begin{umlcall}[type=return,op={Ok}]{Server}{Client}
-                        \begin{umlcall}[type=return,op={Ok}]{Client}{Visitor}
+                      \begin{umlcall}[type=return,op={Ok}]{Server}{Interface}
+                        \begin{umlcall}[type=return,op={Ok}]{Interface}{Visitor}
                         \end{umlcall}
                       \end{umlcall}
                     \end{umlcall}
@@ -802,8 +802,8 @@
                 \end{umlcall}
                 \umlfpart[else]
                 \begin{umlcall}[type=return,op={No}]{Database}{Server}
-                  \begin{umlcall}[type=return,op={Error}]{Server}{Client}
-                    \begin{umlcall}[type=return,op={Error}]{Client}{Visitor}
+                  \begin{umlcall}[type=return,op={Error}]{Server}{Interface}
+                    \begin{umlcall}[type=return,op={Error}]{Interface}{Visitor}
                     \end{umlcall}
                   \end{umlcall}
                 \end{umlcall}
@@ -812,7 +812,7 @@
           \end{umlcall}
         \end{umlcall}
         \umlfpart[else]
-        \begin{umlcall}[type=return,op={Error}]{Client}{Visitor}
+        \begin{umlcall}[type=return,op={Error}]{Interface}{Visitor}
         \end{umlcall}
       \end{umlfragment}
     \end{umlcall}
@@ -822,27 +822,27 @@
 
 \begin{sdfig}{Confirm email}{confirm email}{confirm-email}
   \umlactor[no ddots]{Visitor}
-  \umlobject[no ddots,draw=none]{Client}
+  \umlobject[no ddots,draw=none]{Interface}
   \umlobject[no ddots,draw=none]{Server}
   \umlobject[no ddots,draw=none]{Database}
   % \umlobject[no ddots,draw=none]{Pub-Sub}
 
-  \begin{umlcall}[op={Confirm}]{Visitor}{Client}
-    \begin{umlcall}[op={Confirm}]{Client}{Server}
+  \begin{umlcall}[op={Confirm}]{Visitor}{Interface}
+    \begin{umlcall}[op={Confirm}]{Interface}{Server}
       \begin{umlcall}[op={Has OTP}]{Server}{Database}
         \begin{umlfragment}[type=alt, label=true]
           \begin{umlcall}[type=return,op={Yes}]{Database}{Server}
             \begin{umlcall}[op={Add cookies}]{Server}{Server}
             \end{umlcall}
-            \begin{umlcall}[type=return,op={Ok}]{Server}{Client}
-              \begin{umlcall}[type=return,op={Ok}]{Client}{Visitor}
+            \begin{umlcall}[type=return,op={Ok}]{Server}{Interface}
+              \begin{umlcall}[type=return,op={Ok}]{Interface}{Visitor}
               \end{umlcall}
             \end{umlcall}
           \end{umlcall}
           \umlfpart[else]
           \begin{umlcall}[type=return,op={No}]{Database}{Server}
-            \begin{umlcall}[type=return,op={Error}]{Server}{Client}
-              \begin{umlcall}[type=return,op={Error}]{Client}{Visitor}
+            \begin{umlcall}[type=return,op={Error}]{Server}{Interface}
+              \begin{umlcall}[type=return,op={Error}]{Interface}{Visitor}
               \end{umlcall}
             \end{umlcall}
           \end{umlcall}
@@ -855,16 +855,16 @@
 
 \begin{sdfig}{Create workspace}{create workspace}{create-workspace}[1][H]
   \umlactor[no ddots]{Owner}
-  \umlobject[no ddots,draw=none]{Client}
+  \umlobject[no ddots,draw=none]{Interface}
   \umlobject[no ddots,draw=none]{Server}
   \umlobject[no ddots,draw=none]{Database}
   % \umlobject[no ddots,draw=none]{Pub-Sub}
 
   \begin{seqdigauth}[Owner]
-    \begin{umlcall}[op={Create workspace},return={Redirect to workspace creation}]{Owner}{Client}
+    \begin{umlcall}[op={Create workspace},return={Redirect to workspace creation}]{Owner}{Interface}
     \end{umlcall}
-    \begin{umlcall}[op={Submit name}]{Owner}{Client}
-      \begin{umlcall}[op={Create workspace},return=Ok]{Client}{Server}
+    \begin{umlcall}[op={Submit name}]{Owner}{Interface}
+      \begin{umlcall}[op={Create workspace},return=Ok]{Interface}{Server}
         \begin{umlcall}[op={Create project}]{Server}{Database}
           \begin{umlcall}[op={Create collection}]{Server}{Database}
             \begin{umlcall}[op={Create field}]{Server}{Database}
@@ -884,14 +884,14 @@
 
 \begin{sdfig}{Create collection}{create collection}{create-collection}[1][H]
   \umlactor[no ddots]{Editor}
-  \umlobject[no ddots,draw=none]{Client}
+  \umlobject[no ddots,draw=none]{Interface}
   \umlobject[no ddots,draw=none]{Server}
   \umlobject[no ddots,draw=none]{Database}
   % \umlobject[no ddots,draw=none]{Pub-Sub}
 
   \begin{seqdigauth}[Editor]
-    \begin{umlcall}[op={Create collection},return=Ok]{Editor}{Client}
-      \begin{umlcall}[op={Create collection},return=Ok]{Client}{Server}
+    \begin{umlcall}[op={Create collection},return=Ok]{Editor}{Interface}
+      \begin{umlcall}[op={Create collection},return=Ok]{Interface}{Server}
         \begin{umlcall}[op={Create collection}]{Server}{Database}
           \begin{umlcall}[op={Create field}]{Server}{Database}
           \end{umlcall}
@@ -910,19 +910,19 @@
 
 \begin{sdfig}{Create field}{create field}{create-field}[1][H]
   \umlactor[no ddots]{Editor}
-  \umlobject[no ddots,draw=none]{Client}
+  \umlobject[no ddots,draw=none]{Interface}
   \umlobject[no ddots,draw=none]{Server}
   \umlobject[no ddots,draw=none]{Database}
   % \umlobject[no ddots,draw=none]{Pub-Sub}
 
   \begin{seqdigauth}[Editor]
-    \begin{umlcall}[op={Create field},return={Select type}]{Editor}{Client}
+    \begin{umlcall}[op={Create field},return={Select type}]{Editor}{Interface}
     \end{umlcall}
 
-    \begin{umlcall}[op={Select type},return=Ok]{Editor}{Client}
-      \begin{umlcall}[op={Update local state}]{Client}{Client}
+    \begin{umlcall}[op={Select type},return=Ok]{Editor}{Interface}
+      \begin{umlcall}[op={Update local state}]{Interface}{Interface}
       \end{umlcall}
-      \begin{umlcall}[op={Create field},return=Ok]{Client}{Server}
+      \begin{umlcall}[op={Create field},return=Ok]{Interface}{Server}
         \begin{umlcall}[op={Create field}]{Server}{Database}
           \begin{umlcall}[op={Create blocks}]{Server}{Database}
           \end{umlcall}
@@ -934,19 +934,19 @@
 
 \begin{sdfig}{Update block}{update block}{update-block}
   \umlactor[no ddots]{Editor}
-  \umlobject[no ddots,draw=none]{Client}
+  \umlobject[no ddots,draw=none]{Interface}
   \umlobject[no ddots,draw=none]{Server}
   \umlobject[no ddots,draw=none]{Database}
   \umlobject[no ddots,draw=none]{Pub-Sub}
 
   \begin{seqdigauth}[Editor]
-    \begin{umlcall}[op={Update block},return={Select type}]{Editor}{Client}
+    \begin{umlcall}[op={Update block},return={Select type}]{Editor}{Interface}
     \end{umlcall}
 
-    \begin{umlcall}[op={Update block}]{Editor}{Client}
-      \begin{umlcall}[op={Update local state}]{Client}{Client}
+    \begin{umlcall}[op={Update block}]{Editor}{Interface}
+      \begin{umlcall}[op={Update local state}]{Interface}{Interface}
       \end{umlcall}
-      \begin{umlcall}[op={Update block}]{Client}{Server}
+      \begin{umlcall}[op={Update block}]{Interface}{Server}
         \begin{umlcall}[op={Get block}]{Server}{Database}
           \begin{umlcall}[op={Compare versions}]{Server}{Server}
             \begin{umlfragment}[type=alt, label=equal]
@@ -957,8 +957,8 @@
                 \end{umlcall}
               \end{umlcall}
               \umlfpart[else]
-              \begin{umlcall}[op={Refuse change},type=return]{Server}{Client}
-                \begin{umlcall}[op={Update local state}]{Client}{Client}
+              \begin{umlcall}[op={Refuse change},type=return]{Server}{Interface}
+                \begin{umlcall}[op={Update local state}]{Interface}{Interface}
                 \end{umlcall}
               \end{umlcall}
             \end{umlfragment}
