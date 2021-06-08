@@ -31,7 +31,7 @@
 \RequirePackage{fontspec}
 
 \setmainfont[Numbers=OldStyle,Ligatures={Required,Common,Contextual}]{EB Garamond}
-% \setsansfont{Inter}
+\setsansfont{Inter}
            
 \RequirePackage{polyglossia}
 \setmainlanguage{english}
@@ -171,7 +171,7 @@
   \begin{figure}[#5]
     \thisfloatpagestyle{empty}
     \centerfloat
-    % \sffamily
+    \sffamily
     \tikzsetnextfilename{#3-sequence-diagram}
     \begin{tikzpicture}[scale=#4, every node/.append style={transform shape}]
 	  \begin{umlseqdiag}
