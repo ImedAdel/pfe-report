@@ -171,16 +171,18 @@ Diagram~\ref{fig:login-use-case-diagram} describes the "log in" use case of our 
 Diagram~\ref{fig:view-use-case-diagram} describes the "view resources" use case of our application.
 
 \begin{figure}[H]
+  \thisfloatpagestyle{empty}
   \centerfloat
   \sffamily
-  \begin{tikzpicture}
+  \begin{tikzpicture}[scale=0.7, every node/.append style={transform shape}]
     \begin{umlsystem}[x=5]{Application}
-      \umlusecase[y=1, name=d,draw=none]{View document}
+      \umlusecase[y=0, name=r,draw=none]{View resources}
+      \umlusecase[right=1cm of r, name=d,draw=none]{View document}
       \umlusecase[below=1cm of d, name=c,draw=none]{View collection}
-      \umlusecase[below=2cm of c, name=p,draw=none]{View project}
+      \umlusecase[below=1cm of c, name=p,draw=none]{View project}
       \umlusecase[below=1cm of p, name=w,draw=none]{View workspace}
 
-      \umlusecase[below right=0.5cm and 4cm of c, fill=yellow!20, name=auth,draw=none]{
+      \umlusecase[below right=0.25cm and 4cm of c, fill=yellow!20, name=auth,draw=none]{
         \shortstack{Authentication\\ and authorization}
       }
     \end{umlsystem}
@@ -194,10 +196,11 @@ Diagram~\ref{fig:view-use-case-diagram} describes the "view resources" use case 
     \umlinherit{Admin}{Editor}
     \umlinherit{Owner}{Admin}
 
-    \umlassoc{Viewer}{d}
-    \umlassoc{Viewer}{c}
-    \umlassoc{Viewer}{p}
-    \umlassoc{Viewer}{w}
+    \umlassoc{Viewer}{r}
+    \umlassoc{r}{d}
+    \umlassoc[geometry=|-,anchor1=-70]{r}{c}
+    \umlassoc[geometry=|-,anchor1=-90]{r}{p}
+    \umlassoc[geometry=|-,anchor1=-110]{r}{w}
 
     \umlHVinclude[name=incl]{d}{auth}
     \umlHVinclude[name=incl]{c}{auth}
@@ -216,11 +219,13 @@ Diagram~\ref{fig:view-use-case-diagram} describes the "view resources" use case 
 Diagram~\ref{fig:edit-use-case-diagram} describes the "edit resources" use case of our application.
 
 \begin{figure}[H]
+  \thisfloatpagestyle{empty}
   \centerfloat
   \sffamily
-  \begin{tikzpicture}[scale=0.65, every node/.append style={transform shape}]
+  \begin{tikzpicture}[scale=0.5, every node/.append style={transform shape}]
     \begin{umlsystem}[x=5]{Application}
-      \umlusecase[y=1, name=d,draw=none]{Edit document}
+      \umlusecase[y=0, name=r,draw=none]{Edit resources}
+      \umlusecase[right=1cm of r, name=d,draw=none]{Edit document}
       \umlusecase[below=4cm of d, name=c,draw=none]{Edit collection}
       \umlusecase[below=4cm of c, name=p,draw=none]{Edit project}
       \umlusecase[below=6cm of p, name=w,draw=none]{Edit workspace}
@@ -229,9 +234,8 @@ Diagram~\ref{fig:edit-use-case-diagram} describes the "edit resources" use case 
       \umlusecase[above right=3cm and 10cm of d, name=ub,draw=none]{Update blocks}
       \umlusecase[below=4cm of ub, name=uf,draw=none]{Update fields}
 
-      \umlusecase[below=4cm of uf, name=un,draw=none]{Update name}
-      \umlusecase[below=4cm of un, name=ud,draw=none]{Update description}
-      \umlusecase[below=4cm of ud, name=del,draw=none]{Delete}
+      \umlusecase[below=4cm of uf, name=un,draw=none]{Update value}
+      \umlusecase[below=4cm of un, name=del,draw=none]{Delete}
 
       \umlusecase[below=3cm of del, name=uat,draw=none]{
         \shortstack{Update access\\ tokens}
@@ -249,33 +253,32 @@ Diagram~\ref{fig:edit-use-case-diagram} describes the "edit resources" use case 
     \umlinherit{Admin}{Editor}
     \umlinherit{Owner}{Admin}
 
-    \umlassoc{Editor}{d}
-    \umlassoc{Editor}{c}
-    \umlassoc{Editor}{p}
-    \umlassoc{Editor}{w}
+    \umlassoc{Editor}{r}
+    \umlassoc{r}{d}
+    \umlVHassoc[anchors=-80 and 180]{r}{c}
+    \umlVHassoc[anchors=-100 and 180]{r}{p}
+    \umlVHassoc[anchors=-120 and 180]{r}{w}
 
     \umlHVinclude[pos stereo=0.5]{d}{auth}
     \umlHVinclude[pos stereo=0.5]{c}{auth}
     \umlHVinclude[pos stereo=0.5]{p}{auth}
     \umlVHinclude[pos stereo=0.5]{w}{auth}
 
-    \umlextend{c}{un}
-    \umlextend{c}{ud}
-    \umlextend{c}{uf}
-    \umlextend{c}{del}
+    \umlHVextend[anchors=180 and -70]{un}{c}
+    \umlVHVextend[anchors=-90 and 90]{uf}{c}
+    \umlVHVextend[anchors=90 and -120]{del}{c}
 
-    \umlextend{d}{uf}
-    \umlextend{d}{ub}
-    \umlextend{d}{del}
+    \umlHVextend[anchors=180 and -90]{uf}{d}
+    \umlHVextend[anchors=180 and 90]{ub}{d}
+    \umlHVHextend[anchors=180 and 0]{del}{d}
 
-    \umlextend{p}{un}
-    \umlextend{p}{ud}
-    \umlextend{p}{del}
+    \umlVHVextend[anchors=-130 and 40,weight=0.6]{un}{p}
+    \umlVHVextend[anchors=-120 and -120,weight=-0.9]{del}{p}
 
-    \umlextend{d}{uat}
-    \umlextend{c}{uat}
-    \umlextend{p}{uat}
-    \umlextend{w}{uat}
+    \umlHVHextend[anchors=170 and 0,weight=0.6]{uat}{d}
+    \umlVHVextend[anchors=90 and 0,weight=0.2]{uat}{c}
+    \umlHVextend[anchors=190 and -60]{uat}{p}
+    \umlVHextend[anchors=-90 and 0]{uat}{w}
 
   \end{tikzpicture}
 
@@ -289,12 +292,13 @@ Diagram~\ref{fig:manage-use-case-diagram} describes the "manage users" use case 
 \begin{figure}[H]
   \centerfloat
   \sffamily
-  \begin{tikzpicture}
+  \begin{tikzpicture}[scale=0.8, every node/.append style={transform shape}]
     \begin{umlsystem}[x=5]{Application}
-      \umlusecase[y=0, name=au,draw=none]{Add user}
+      \umlusecase[y=0, name=r,draw=none]{Manage users}
+      \umlusecase[right=1cm of r, name=au,draw=none]{Add user}
       \umlusecase[below=2cm of au, name=uur,draw=none]{\shortstack{Update\\ user role}}
       \umlusecase[below=2cm of uur, name=du,draw=none]{Delete user}
-      \umlusecase[below=2cm of du, name=uwn,draw=none]{\shortstack{Update\\ workspace name}}
+      % \umlusecase[below=2cm of du, name=uwn,draw=none]{\shortstack{Update\\ workspace name}}
 
       \umlusecase[below right=4cm and 4cm of du, fill=yellow!20, name=auth,draw=none]{
         \shortstack{Authentication\\ and authorization}
@@ -305,15 +309,16 @@ Diagram~\ref{fig:manage-use-case-diagram} describes the "manage users" use case 
     \umlactor[y=-4]{Owner}
     \umlinherit{Owner}{Admin}
 
-    \umlassoc{Admin}{au}
-    \umlassoc{Admin}{uur}
-    \umlassoc{Admin}{du}
-    \umlassoc{Admin}{uwn}
+    \umlassoc{Admin}{r}
+    \umlassoc{r}{au}
+    \umlVHassoc[anchors=-80 and 180]{r}{uur}
+    \umlVHassoc[anchors=-100 and 180]{r}{du}
+    % \umlVHassoc[anchors=-120 and 180]{r}{uwn}
 
     \umlHVinclude{au}{auth}
     \umlHVinclude{uur}{auth}
-    \umlHVinclude{du}{auth}
-    \umlVHinclude{uwn}{auth}
+    \umlVHinclude{du}{auth}
+    % \umlVHinclude{uwn}{auth}
 
   \end{tikzpicture}
 
@@ -328,9 +333,12 @@ Diagram~\ref{fig:spaces-use-case-diagram} describes the "manage workspace" use c
 \begin{figure}[H]
   \centerfloat
   \sffamily
-  \begin{tikzpicture}
+  \begin{tikzpicture}[scale=0.8, every node/.append style={transform shape}]
     \begin{umlsystem}[x=5]{Application}
-      \umlusecase[y=0, name=del]{Delete}
+      \umlusecase[y=0, name=r,draw=none]{Manage workspace}
+      \umlusecase[right=1cm of r, name=c,draw=none]{Create}
+      \umlusecase[below=1cm of c, name=un,draw=none]{Update name}
+      \umlusecase[below=1cm of un, name=del,draw=none]{Delete}
 
       \umlusecase[below right=4cm and 4cm of del, fill=yellow!20, name=auth,draw=none]{
         \shortstack{Authentication\\ and authorization}
@@ -339,11 +347,14 @@ Diagram~\ref{fig:spaces-use-case-diagram} describes the "manage workspace" use c
 
     \umlactor[y=0]{Owner}
 
-    \umlassoc{Owner}{del}
+    \umlassoc{Owner}{r}
+    \umlassoc{r}{c}
+    \umlVHassoc[anchors=-80 and 180]{r}{un}
+    \umlVHassoc[anchors=-100 and 180]{r}{del}
 
-    \umlHVinclude{del}{auth}
-
-
+    \umlHVinclude{c}{auth}
+    \umlHVinclude{un}{auth}
+    \umlVHinclude{del}{auth}
   \end{tikzpicture}
 
   \caption{"Manage workspace" use case diagram}
