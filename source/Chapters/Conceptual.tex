@@ -552,7 +552,7 @@ Figure~\ref{fig:gen-class-diagram} represents our application's general class di
   % \centerfloat
   \centering
   \sffamily
-  \tikzumlset{font=\tiny} 
+  \tikzumlset{font=\tiny}
   \begin{tikzpicture}[scale=0.65, every node/.append style={transform shape}]
     \umlclass[x=-4,draw=none]{User}{
       ID : UUID \\
@@ -580,7 +580,7 @@ Figure~\ref{fig:gen-class-diagram} represents our application's general class di
       Version: Integer \\
       % SpaceID: UUID \\
       CreatedAt: Timestamptz \\
-      ModifiedAt: Timestamptz \\
+      ModifiedAt: Timestamptz
       % CreatedBy: UUID \\
       % ModifiedBy: UUID
     }{}
@@ -608,7 +608,7 @@ Figure~\ref{fig:gen-class-diagram} represents our application's general class di
       Resource : Text \\
       ResourceID : UUID \\
       AccessLevel: AccessLevel \\
-      CreatedAt: Timestamptz \\
+      CreatedAt: Timestamptz
       % CreatedBy: UUID
     }{}
 
@@ -621,7 +621,7 @@ Figure~\ref{fig:gen-class-diagram} represents our application's general class di
       Version: Integer \\
       % ProjectID: UUID \\
       CreatedAt: Timestamptz \\
-      ModifiedAt: Timestamptz \\
+      ModifiedAt: Timestamptz
       % CreatedBy: UUID \\
       % ModifiedBy: UUID
     }{}
@@ -634,7 +634,7 @@ Figure~\ref{fig:gen-class-diagram} represents our application's general class di
       Version: Integer \\
       SpaceID: UUID \\
       CreatedAt: Timestamptz \\
-      ModifiedAt: Timestamptz \\
+      ModifiedAt: Timestamptz
       % CreatedBy: UUID \\
       % ModifiedBy: UUID
     }{}
@@ -644,7 +644,7 @@ Figure~\ref{fig:gen-class-diagram} represents our application's general class di
       Version: Integer \\
       CollectionID: UUID \\
       CreatedAt: Timestamptz \\
-      ModifiedAt: Timestamptz \\
+      ModifiedAt: Timestamptz
       % CreatedBy: UUID \\
       % ModifiedBy: UUID
     }{}
@@ -658,7 +658,7 @@ Figure~\ref{fig:gen-class-diagram} represents our application's general class di
       Version: Integer \\
       % CollectionID: UUID \\
       CreatedAt: Timestamptz \\
-      ModifiedAt: Timestamptz \\
+      ModifiedAt: Timestamptz
     }{}
 
     \umlclass[below=2cm of Document,draw=none]{Block}{
@@ -669,7 +669,7 @@ Figure~\ref{fig:gen-class-diagram} represents our application's general class di
       % FieldID: UUID \\
       % DocumentID: UUID \\
       CreatedAt: Timestamptz \\
-      ModifiedAt: Timestamptz \\
+      ModifiedAt: Timestamptz
       % CreatedBy: UUID \\
       % ModifiedBy: UUID
     }{}
@@ -679,6 +679,16 @@ Figure~\ref{fig:gen-class-diagram} represents our application's general class di
       ReadWrite \\
       ReadOnly
     }{}
+
+    \umlnote[below=1.5cm of AccessToken, width=3cm,draw=none]{AccessToken}{
+      AccessLevel is one of
+      \begin{itemize}
+        \item Owner
+        \item Admin
+        \item ReadWrite
+        \item Reaonly
+      \end{itemize}
+    }
 
     \umlassoc[mult2=$1..*$,mult1=$1..*$,anchors=150 and 30]{User}{Space}
 
