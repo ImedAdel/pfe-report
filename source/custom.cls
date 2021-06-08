@@ -145,33 +145,34 @@
 \RequirePackage{subcaption}
 
 \NewDocumentEnvironment{seqdigauth}{O{Owner}}{%
-  \begin{umlcall}[op={Verify auth}]{#1}{Client}
-		\begin{umlfragment}[type=alt,label=authenticated]
-			\begin{umlcall}[type=return,op=Ok]{Client}{#1}
+  \begin{umlcall}[op={Verify auth}]{#1}{Interface}
+		\begin{umlfragment}[type=alt,label=authenticated,inner ysep=2]
+			\begin{umlcall}[type=return,op=Ok]{Interface}{#1}
+      \end{umlcall}
     }{%
-    \end{umlcall}
     \umlfpart[else]
-    \begin{umlcall}[op={Redirect},type=return]{Client}{#1}
+    \begin{umlcall}[op={Redirect},type=return]{Interface}{#1}
     \end{umlcall}
   \end{umlfragment}
 \end{umlcall}
 }
 
-\NewDocumentEnvironment{sdfig}{m m m O{0.8} O{p} o}{%
+\NewDocumentEnvironment{sdfig}{m m m O{0.8} O{hp} o}{%
 \subsubsection{#1}%
 
   \IfValueTF{#6}{%
     #6%
 
-    Figure~\ref{fig:#3-sequence-diagram} represents the sequence diagram for "#2".%
+    Figure~\ref{fig:#3-sequence-diagram} represents the sequence diagram for ``#2''.%
   }{%
-  Figure~\ref{fig:#3-sequence-diagram} represents the sequence diagram for "#2".%
+  Figure~\ref{fig:#3-sequence-diagram} represents the sequence diagram for ``#2''.%
   }%
 
   \begin{figure}[#5]
     \thisfloatpagestyle{empty}
-    \centerfloat
+    \centering
     \sffamily
+    \tikzumlset{font=\tiny}
     \tikzsetnextfilename{#3-sequence-diagram}
     \begin{tikzpicture}[scale=#4, every node/.append style={transform shape}]
 	  \begin{umlseqdiag}
@@ -179,7 +180,7 @@
 }{%
   \end{umlseqdiag}
   \end{tikzpicture}
-\caption{"#1" sequence diagram}
+\caption{``#1'' sequence diagram}
 \label{fig:#3-sequence-diagram}
 \end{figure}
 }

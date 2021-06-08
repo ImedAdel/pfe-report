@@ -724,103 +724,110 @@
     \caption{General class diagram}
     \label{fig:gen-class-diagram}
   \end{figure}
+
+
+  \subsection{Sequence diagrams}
+
+  \begin{sdfig}{Sign up}{sign up}{sign-up}[0.8][hp][
+      In order to mitigate the security issues of storing passwords, we follow the model of passwordless sign up and log in.
+      Instead of asking our users for a password, which may not be as secure and unique as one might hope, we generate a \acrfull{otp} and email it to the user.
+      The \acrshort{otp} is stored for a limited time in our database and it is removed once used.
+      The user, therefore, has to click the confirmation link in their email in order to verify their identity.
+    ]
+    \umlactor[no ddots]{Visitor}
+    \umlobject[no ddots,draw=none]{Interface}
+    \umlobject[no ddots,draw=none]{Server}
+    \umlobject[no ddots,draw=none]{Database}
+    % \umlobject[no ddots,draw=none]{Pub-Sub}
+
+    \begin{umlcall}[op={Sign up}]{Visitor}{Interface}
+      \begin{umlcall}[op={Validate}]{Interface}{Interface}
+        \begin{umlfragment}[type=alt, label=valid]
+          \begin{umlcall}[type=return,op={Loading}]{Interface}{Visitor}
+            \begin{umlcall}[op={Sign up}]{Interface}{Server}
+              \begin{umlcall}[op={Has user}]{Server}{Database}
+                \begin{umlfragment}[type=alt, label=true]
+                  \begin{umlcall}[type=return,op={Yes}]{Database}{Server}
+                    \begin{umlcall}[type=return,op={Error}]{Server}{Interface}
+                      \begin{umlcall}[type=return,op={Show error}]{Interface}{Visitor}
+                      \end{umlcall}
+                    \end{umlcall}
+                  \end{umlcall}
+                  \umlfpart[else]
+                  \begin{umlcall}[type=return,op={No}]{Database}{Server}
+                    \begin{umlcall}[op={Create user}]{Server}{Database}
+                    \end{umlcall}
+                    \begin{umlcall}[op={Create OTP}]{Server}{Database}
+                      \begin{umlcall}[op={Send email}]{Server}{Server}
+                        \begin{umlcall}[type=return,op={Ok}]{Server}{Interface}
+                          \begin{umlcall}[type=return,op={Show success}]{Interface}{Visitor}
+                          \end{umlcall}
+                        \end{umlcall}
+                      \end{umlcall}
+                    \end{umlcall}
+                  \end{umlcall}
+                \end{umlfragment}
+              \end{umlcall}
+            \end{umlcall}
+          \end{umlcall}
+          \umlfpart[else]
+          \begin{umlcall}[type=return,op={Show error}]{Interface}{Visitor}
+          \end{umlcall}
+        \end{umlfragment}
+      \end{umlcall}
+    \end{umlcall}
+  \end{sdfig}
+
+  \begin{sdfig}{Log in}{log in}{log-in}
+    \umlactor[no ddots]{Visitor}
+    \umlobject[no ddots,draw=none]{Interface}
+    \umlobject[no ddots,draw=none]{Server}
+    \umlobject[no ddots,draw=none]{Database}
+    % \umlobject[no ddots,draw=none]{Pub-Sub}
+
+    \begin{umlcall}[op={Log in}]{Visitor}{Interface}
+      \begin{umlcall}[op={Validate}]{Interface}{Interface}
+        \begin{umlfragment}[type=alt, label=valid]
+          \begin{umlcall}[type=return,op={Loading}]{Interface}{Visitor}
+            \begin{umlcall}[op={Log in}]{Interface}{Server}
+              \begin{umlcall}[op={Has user}]{Server}{Database}
+                \begin{umlfragment}[type=alt, label=true]
+                  \begin{umlcall}[type=return,op={Yes}]{Database}{Server}
+                    \begin{umlcall}[op={Create OTP}]{Server}{Database}
+                      \begin{umlcall}[op={Send email}]{Server}{Server}
+                        \begin{umlcall}[type=return,op={Ok}]{Server}{Interface}
+                          \begin{umlcall}[type=return,op={Show success}]{Interface}{Visitor}
+                          \end{umlcall}
+                        \end{umlcall}
+                      \end{umlcall}
+                    \end{umlcall}
+                  \end{umlcall}
+                  \umlfpart[else]
+                  \begin{umlcall}[type=return,op={No}]{Database}{Server}
+                    \begin{umlcall}[type=return,op={Error}]{Server}{Interface}
+                      \begin{umlcall}[type=return,op={Show error}]{Interface}{Visitor}
+                      \end{umlcall}
+                    \end{umlcall}
+                  \end{umlcall}
+                \end{umlfragment}
+              \end{umlcall}
+            \end{umlcall}
+          \end{umlcall}
+          \umlfpart[else]
+          \begin{umlcall}[type=return,op={Show error}]{Interface}{Visitor}
+          \end{umlcall}
+        \end{umlfragment}
+      \end{umlcall}
+    \end{umlcall}
+  \end{sdfig}
 \end{toexclude}
 
 
-\subsection{Sequence diagrams}
-
-\begin{sdfig}{Sign up}{sign up}{sign-up}
-  \umlactor[no ddots]{Visitor}
-  \umlobject[no ddots,draw=none]{Interface}
-  \umlobject[no ddots,draw=none]{Server}
-  \umlobject[no ddots,draw=none]{Database}
-  % \umlobject[no ddots,draw=none]{Pub-Sub}
-
-  \begin{umlcall}[op={Sign up}]{Visitor}{Interface}
-    \begin{umlcall}[op={Validate}]{Interface}{Interface}
-      \begin{umlfragment}[type=alt, label=valid]
-        \begin{umlcall}[type=return,op={Loading}]{Interface}{Visitor}
-          \begin{umlcall}[op={Sign up}]{Interface}{Server}
-            \begin{umlcall}[op={Has user}]{Server}{Database}
-              \begin{umlfragment}[type=alt, label=true]
-                \begin{umlcall}[type=return,op={Yes}]{Database}{Server}
-                  \begin{umlcall}[type=return,op={Error}]{Server}{Interface}
-                    \begin{umlcall}[type=return,op={Error}]{Interface}{Visitor}
-                    \end{umlcall}
-                  \end{umlcall}
-                \end{umlcall}
-                \umlfpart[else]
-                \begin{umlcall}[type=return,op={No}]{Database}{Server}
-                  \begin{umlcall}[op={Create user}]{Server}{Database}
-                  \end{umlcall}
-                  \begin{umlcall}[op={Create OTP}]{Server}{Database}
-                    \begin{umlcall}[op={Send email}]{Server}{Server}
-                      \begin{umlcall}[type=return,op={Ok}]{Server}{Interface}
-                        \begin{umlcall}[type=return,op={Ok}]{Interface}{Visitor}
-                        \end{umlcall}
-                      \end{umlcall}
-                    \end{umlcall}
-                  \end{umlcall}
-                \end{umlcall}
-              \end{umlfragment}
-            \end{umlcall}
-          \end{umlcall}
-        \end{umlcall}
-        \umlfpart[else]
-        \begin{umlcall}[type=return,op={Error}]{Interface}{Visitor}
-        \end{umlcall}
-      \end{umlfragment}
-    \end{umlcall}
-  \end{umlcall}
-\end{sdfig}
-\begin{toexclude}
-
-
-\begin{sdfig}{Log in}{log in}{log-in}
-  \umlactor[no ddots]{Visitor}
-  \umlobject[no ddots,draw=none]{Interface}
-  \umlobject[no ddots,draw=none]{Server}
-  \umlobject[no ddots,draw=none]{Database}
-  % \umlobject[no ddots,draw=none]{Pub-Sub}
-
-  \begin{umlcall}[op={Log in}]{Visitor}{Interface}
-    \begin{umlcall}[op={Validate}]{Interface}{Interface}
-      \begin{umlfragment}[type=alt, label=valid]
-        \begin{umlcall}[type=return,op={Loading}]{Interface}{Visitor}
-          \begin{umlcall}[op={Log in}]{Interface}{Server}
-            \begin{umlcall}[op={Has user}]{Server}{Database}
-              \begin{umlfragment}[type=alt, label=true]
-                \begin{umlcall}[type=return,op={Yes}]{Database}{Server}
-                  \begin{umlcall}[op={Create OTP}]{Server}{Database}
-                    \begin{umlcall}[op={Send email}]{Server}{Server}
-                      \begin{umlcall}[type=return,op={Ok}]{Server}{Interface}
-                        \begin{umlcall}[type=return,op={Ok}]{Interface}{Visitor}
-                        \end{umlcall}
-                      \end{umlcall}
-                    \end{umlcall}
-                  \end{umlcall}
-                \end{umlcall}
-                \umlfpart[else]
-                \begin{umlcall}[type=return,op={No}]{Database}{Server}
-                  \begin{umlcall}[type=return,op={Error}]{Server}{Interface}
-                    \begin{umlcall}[type=return,op={Error}]{Interface}{Visitor}
-                    \end{umlcall}
-                  \end{umlcall}
-                \end{umlcall}
-              \end{umlfragment}
-            \end{umlcall}
-          \end{umlcall}
-        \end{umlcall}
-        \umlfpart[else]
-        \begin{umlcall}[type=return,op={Error}]{Interface}{Visitor}
-        \end{umlcall}
-      \end{umlfragment}
-    \end{umlcall}
-  \end{umlcall}
-\end{sdfig}
-
-
-\begin{sdfig}{Confirm email}{confirm email}{confirm-email}
+\begin{sdfig}{Confirm email}{confirm email}{confirm-email}[1][!hp][
+    Upon receiving a confirmation email, the user has to click the confirm button, which sends a request to the server with the \acrshort{otp}.
+    The server validates the password and either accepts it and authenticates the user, or refuses it and alarms them about the error.
+    Since having users check their email every time is a poor \acrfull{ux}, the server uses time-limited browser cookies for storing the user's authentication state.
+  ]
   \umlactor[no ddots]{Visitor}
   \umlobject[no ddots,draw=none]{Interface}
   \umlobject[no ddots,draw=none]{Server}
@@ -833,16 +840,16 @@
         \begin{umlfragment}[type=alt, label=true]
           \begin{umlcall}[type=return,op={Yes}]{Database}{Server}
             \begin{umlcall}[op={Add cookies}]{Server}{Server}
-            \end{umlcall}
-            \begin{umlcall}[type=return,op={Ok}]{Server}{Interface}
-              \begin{umlcall}[type=return,op={Ok}]{Interface}{Visitor}
+              \begin{umlcall}[type=return,op={Ok}]{Server}{Interface}
+                \begin{umlcall}[type=return,op={Redirect to home}]{Interface}{Visitor}
+                \end{umlcall}
               \end{umlcall}
             \end{umlcall}
           \end{umlcall}
           \umlfpart[else]
           \begin{umlcall}[type=return,op={No}]{Database}{Server}
             \begin{umlcall}[type=return,op={Error}]{Server}{Interface}
-              \begin{umlcall}[type=return,op={Error}]{Interface}{Visitor}
+              \begin{umlcall}[type=return,op={Show error}]{Interface}{Visitor}
               \end{umlcall}
             \end{umlcall}
           \end{umlcall}
@@ -852,8 +859,11 @@
   \end{umlcall}
 \end{sdfig}
 
-
-\begin{sdfig}{Create workspace}{create workspace}{create-workspace}[1][H]
+\begin{sdfig}{Create workspace}{create workspace}{create-workspace}[1][!hp][
+    Whenever a user creates a new workspace, we only ask for a name, and we intentionally create everything they may need to start working.
+    This is because an empty workspace is intimidating and can slow on-boarding process for new users.
+    The same process is followed whenever the user creates a project, a collection, or a document.
+  ]
   \umlactor[no ddots]{Owner}
   \umlobject[no ddots,draw=none]{Interface}
   \umlobject[no ddots,draw=none]{Server}
@@ -866,23 +876,25 @@
     \begin{umlcall}[op={Submit name}]{Owner}{Interface}
       \begin{umlcall}[op={Create workspace},return=Ok]{Interface}{Server}
         \begin{umlcall}[op={Create project}]{Server}{Database}
-          \begin{umlcall}[op={Create collection}]{Server}{Database}
-            \begin{umlcall}[op={Create field}]{Server}{Database}
-            \end{umlcall}
-            \begin{umlcall}[op={Create view}]{Server}{Database}
-            \end{umlcall}
-            \begin{umlcall}[op={Create document}]{Server}{Database}
-              \begin{umlcall}[op={Create block}]{Server}{Database}
-              \end{umlcall}
-            \end{umlcall}
-          \end{umlcall}
+        \end{umlcall}
+        \begin{umlcall}[op={Create collection}]{Server}{Database}
+        \end{umlcall}
+        \begin{umlcall}[op={Create field}]{Server}{Database}
+        \end{umlcall}
+        \begin{umlcall}[op={Create view}]{Server}{Database}
+        \end{umlcall}
+        \begin{umlcall}[op={Create document}]{Server}{Database}
+        \end{umlcall}
+        \begin{umlcall}[op={Create block}]{Server}{Database}
         \end{umlcall}
       \end{umlcall}
     \end{umlcall}
   \end{seqdigauth}
 \end{sdfig}
 
-\begin{sdfig}{Create collection}{create collection}{create-collection}[1][H]
+% \begin{toexclude}
+
+\begin{sdfig}{Create collection}{create collection}{create-collection}[1][!hp]
   \umlactor[no ddots]{Editor}
   \umlobject[no ddots,draw=none]{Interface}
   \umlobject[no ddots,draw=none]{Server}
@@ -893,14 +905,14 @@
     \begin{umlcall}[op={Create collection},return=Ok]{Editor}{Interface}
       \begin{umlcall}[op={Create collection},return=Ok]{Interface}{Server}
         \begin{umlcall}[op={Create collection}]{Server}{Database}
-          \begin{umlcall}[op={Create field}]{Server}{Database}
-          \end{umlcall}
-          \begin{umlcall}[op={Create view}]{Server}{Database}
-          \end{umlcall}
-          \begin{umlcall}[op={Create document}]{Server}{Database}
-            \begin{umlcall}[op={Create block}]{Server}{Database}
-            \end{umlcall}
-          \end{umlcall}
+        \end{umlcall}
+        \begin{umlcall}[op={Create field}]{Server}{Database}
+        \end{umlcall}
+        \begin{umlcall}[op={Create view}]{Server}{Database}
+        \end{umlcall}
+        \begin{umlcall}[op={Create document}]{Server}{Database}
+        \end{umlcall}
+        \begin{umlcall}[op={Create block}]{Server}{Database}
         \end{umlcall}
       \end{umlcall}
     \end{umlcall}
@@ -908,7 +920,7 @@
 \end{sdfig}
 
 
-\begin{sdfig}{Create field}{create field}{create-field}[1][H]
+\begin{sdfig}{Create field}{create field}{create-field}[1][!hp]
   \umlactor[no ddots]{Editor}
   \umlobject[no ddots,draw=none]{Interface}
   \umlobject[no ddots,draw=none]{Server}
@@ -924,15 +936,20 @@
       \end{umlcall}
       \begin{umlcall}[op={Create field},return=Ok]{Interface}{Server}
         \begin{umlcall}[op={Create field}]{Server}{Database}
-          \begin{umlcall}[op={Create blocks}]{Server}{Database}
-          \end{umlcall}
+        \end{umlcall}
+        \begin{umlcall}[op={Create blocks}]{Server}{Database}
         \end{umlcall}
       \end{umlcall}
     \end{umlcall}
   \end{seqdigauth}
 \end{sdfig}
 
-\begin{sdfig}{Update block}{update block}{update-block}
+\begin{sdfig}{Update block}{update block}{update-block}[0.7][!hp][
+    Updating a block is the most common task in our application. It happens within milliseconds and it is quickly propagated to all the connected collaborators.
+    This work by first updating the local state in order to give the effect of an immediate change. Then, the updated block is sent to the server, which would compare its version with the one stored in the database---our source of truth.
+    The equality of versions means that the user has an up-to-date local state, and therefore, their change is accepted and sent to the other users. However, the unequality of versions indicates that the user's local state is out-of-date. Since they are online, they will eventually get the missing updates. So, their change is refused.
+    The same method applies to updating fields too.
+  ]
   \umlactor[no ddots]{Editor}
   \umlobject[no ddots,draw=none]{Interface}
   \umlobject[no ddots,draw=none]{Server}
@@ -940,29 +957,27 @@
   \umlobject[no ddots,draw=none]{Pub-Sub}
 
   \begin{seqdigauth}[Editor]
-    \begin{umlcall}[op={Update block},return={Select type}]{Editor}{Interface}
-    \end{umlcall}
-
     \begin{umlcall}[op={Update block}]{Editor}{Interface}
       \begin{umlcall}[op={Update local state}]{Interface}{Interface}
       \end{umlcall}
       \begin{umlcall}[op={Update block}]{Interface}{Server}
         \begin{umlcall}[op={Get block}]{Server}{Database}
-          \begin{umlcall}[op={Compare versions}]{Server}{Server}
-            \begin{umlfragment}[type=alt, label=equal]
-              \begin{umlcall}[op={Update block}]{Server}{Database}
-                \begin{umlcall}[op={Propagate change}]{Server}{Pub-Sub}
-                  \begin{umlcall}[op={Propagate}]{Pub-Sub}{Pub-Sub}
-                  \end{umlcall}
-                \end{umlcall}
+        \end{umlcall}
+
+        \begin{umlcall}[op={Compare versions}]{Server}{Server}
+          \begin{umlfragment}[type=alt, label=equal]
+            \begin{umlcall}[op={Update block}]{Server}{Database}
+            \end{umlcall}
+            \begin{umlcall}[op={Propagate change}]{Server}{Pub-Sub}
+            \end{umlcall}
+            \begin{umlcall}[op={Propagate}]{Pub-Sub}{Pub-Sub}
+            \end{umlcall}
+            \umlfpart[else]
+            \begin{umlcall}[op={Refuse change},type=return]{Server}{Interface}
+              \begin{umlcall}[op={Update local state}]{Interface}{Interface}
               \end{umlcall}
-              \umlfpart[else]
-              \begin{umlcall}[op={Refuse change},type=return]{Server}{Interface}
-                \begin{umlcall}[op={Update local state}]{Interface}{Interface}
-                \end{umlcall}
-              \end{umlcall}
-            \end{umlfragment}
-          \end{umlcall}
+            \end{umlcall}
+          \end{umlfragment}
         \end{umlcall}
       \end{umlcall}
     \end{umlcall}
@@ -977,4 +992,4 @@ Then, we proceeded to present, in details, the architecture of our application.
 
 Within the next chapter, we are going to glue all the pieces of research and theory together, and bring our application to life.
 
-\end{toexclude}
+% \end{toexclude}
