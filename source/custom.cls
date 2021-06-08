@@ -89,6 +89,7 @@
 \RequirePackage{comment}
 \excludecomment{toexclude}
 
+\RequirePackage{xparse}
 % \RequirePackage[showframe]{geometry}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -142,6 +143,46 @@
 
 \RequirePackage{chronosys}
 \RequirePackage{subcaption}
+
+\NewDocumentEnvironment{seqdigauth}{O{Owner}}{%
+  \begin{umlcall}[op={Verify auth}]{#1}{Client}
+		\begin{umlfragment}[type=alt,label=authenticated]
+			\begin{umlcall}[type=return,op=Ok]{Client}{#1}
+    }{%
+    \end{umlcall}
+    \umlfpart[else]
+    \begin{umlcall}[op={Redirect},type=return]{Client}{#1}
+    \end{umlcall}
+  \end{umlfragment}
+\end{umlcall}
+}
+
+\NewDocumentEnvironment{sdfig}{m m m O{0.8} O{p} o}{%
+\subsubsection{#1}%
+
+  \IfValueTF{#6}{%
+    #6%
+
+    Figure~\ref{fig:#3-sequence-diagram} represents the sequence diagram for "#2".%
+  }{%
+  Figure~\ref{fig:#3-sequence-diagram} represents the sequence diagram for "#2".%
+  }%
+
+  \begin{figure}[#5]
+    \thisfloatpagestyle{empty}
+    \centerfloat
+    \sffamily
+    \tikzsetnextfilename{#3-sequence-diagram}
+    \begin{tikzpicture}[scale=#4, every node/.append style={transform shape}]
+	  \begin{umlseqdiag}
+
+}{%
+  \end{umlseqdiag}
+  \end{tikzpicture}
+\caption{"#1" sequence diagram}
+\label{fig:#3-sequence-diagram}
+\end{figure}
+}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
