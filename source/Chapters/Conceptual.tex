@@ -35,18 +35,18 @@ Another Google-backed product from the same era was Google Wave, a collaborative
 Since 2010, the number of web-based collaborative software has been exploding with successful examples such as Figma and Notion. Figure~\ref{fig:timeline-collab} shows the resurgence of products with real-time collaboration.
 
 \begin{figure}
-	\centerfloat
-	\startchronology[startyear=1960, height=0.1pc, arrow=false]
-	\chronoevent{1968}{"The Mother of All Demos" \endgraf by Douglas Engelbart}
-	\chronoevent[markdepth=56pt]{2006}{Writely}
-	\chronoevent{2009}{Google Wave}
-	\chronoevent[markdepth=104pt]{2016}{Notion}
-	\chronoevent[markdepth=64pt]{2016}{Figma}
-	\chronoevent[markdepth=24pt]{2018}{Notion 2}
-	\stopchronology
+  \centerfloat
+  \startchronology[startyear=1960, height=0.1pc, arrow=false]
+  \chronoevent{1968}{"The Mother of All Demos" \endgraf by Douglas Engelbart}
+  \chronoevent[markdepth=56pt]{2006}{Writely}
+  \chronoevent{2009}{Google Wave}
+  \chronoevent[markdepth=104pt]{2016}{Notion}
+  \chronoevent[markdepth=64pt]{2016}{Figma}
+  \chronoevent[markdepth=24pt]{2018}{Notion 2}
+  \stopchronology
 
-	\caption{Timeline of real-time collaboration}
-	\label{fig:timeline-collab}
+  \caption{Timeline of real-time collaboration}
+  \label{fig:timeline-collab}
 \end{figure}
 
 \subsection{Theoretical grounds}
@@ -57,26 +57,26 @@ Network latency is the main culprit for such a dilemma as modifications can reac
 Figure \ref{fig:collab-problem} shows a common example of conflicting changes by two users caused mainly by network latency.
 
 \begin{figure}[H]
-	\centerfloat
-	\sffamily
-	\begin{tikzpicture}[node distance=2.0cm]
+  \centerfloat
+  % \sffamily
+  \begin{tikzpicture}[node distance=2.0cm]
 
-		\node(original) {Mary};
-		\node(alice-1)[below left of=original] {M\textcolor{red}{\cancel{ar}}y};
-		\node(alice-2)[below of=alice-1] {My};
-		\node(bob-1)[below right of=original] {\textcolor{red}{\cancel{M}}\textcolor{green}{H}ary};
-		\node(bob-2)[below of=bob-1] {Hary};
-		\node(result)[below right of=alice-2] {?};
+    \node(original) {Mary};
+    \node(alice-1)[below left of=original] {M\textcolor{red}{\cancel{ar}}y};
+    \node(alice-2)[below of=alice-1] {My};
+    \node(bob-1)[below right of=original] {\textcolor{red}{\cancel{M}}\textcolor{green}{H}ary};
+    \node(bob-2)[below of=bob-1] {Hary};
+    \node(result)[below right of=alice-2] {?};
 
-		\node[right of=bob-1] {Bob};
-		\node[left of=alice-1] {Alice};
+    \node[right of=bob-1] {Bob};
+    \node[left of=alice-1] {Alice};
 
-		\draw[->] (original) -- (alice-1) -- (alice-2) -- (result);
-		\draw[->] (original) -- (bob-1) -- (bob-2) -- (result);
-	\end{tikzpicture}
+    \draw[->] (original) -- (alice-1) -- (alice-2) -- (result);
+    \draw[->] (original) -- (bob-1) -- (bob-2) -- (result);
+  \end{tikzpicture}
 
-	\caption{Example of a common problem in real-time collaboration}
-	\label{fig:collab-problem}
+  \caption{Example of a common problem in real-time collaboration}
+  \label{fig:collab-problem}
 \end{figure}
 
 Over the years, two main algorithms emerged for dealing with real-time collaboration, \acrfull{crdt} and \acrfull{ot}.
@@ -93,82 +93,82 @@ Figure~\ref{fig:collab-sol-ot} illustrates the solution proposed by \acrshort{ot
 
 
 \begin{figure}[H]
-	\centerfloat
-	\sffamily
-	\begin{tikzpicture}[node distance=4cm]
+  \centerfloat
+  % \sffamily
+  \begin{tikzpicture}[node distance=4cm]
 
-		\node(bob-1)[rectangle, draw=none,fill=gray!20] {abc};
-		\node(bob-2)[rectangle, draw=none,fill=gray!20, below of=bob-1] {ab};
-		\node(bob-3)[rectangle, draw=none,fill=gray!20, below of=bob-2] {dab};
+    \node(bob-1)[rectangle, draw=none,fill=gray!20] {abc};
+    \node(bob-2)[rectangle, draw=none,fill=gray!20, below of=bob-1] {ab};
+    \node(bob-3)[rectangle, draw=none,fill=gray!20, below of=bob-2] {dab};
 
-		\node(alice-1)[rectangle, draw=none,fill=gray!20, right of=bob-1] {abc};
-		\node(alice-2)[rectangle, draw=none,fill=gray!20, below of=alice-1] {dabc};
-		\node(alice-3)[rectangle, draw=none,fill=gray!20, right of=bob-3] {dac};
+    \node(alice-1)[rectangle, draw=none,fill=gray!20, right of=bob-1] {abc};
+    \node(alice-2)[rectangle, draw=none,fill=gray!20, below of=alice-1] {dabc};
+    \node(alice-3)[rectangle, draw=none,fill=gray!20, right of=bob-3] {dac};
 
-		\node at (0,1) {Bob};
-		\node at (4,1) {Alice};
+    \node at (0,1) {Bob};
+    \node at (4,1) {Alice};
 
 
-		\draw[->] (bob-1) --node[left]{$del(2)$} (bob-2) -- (bob-3);
-		\draw[->] (alice-1) --node[right]{$ins(0,d)$} (alice-2) -- (alice-3);
-		\draw[->] (alice-2) --node[left, near end,fill=white]{$ins(0,d)$} (bob-3);
-		\draw[->] (bob-2) --node[right,near end,fill=white]{$del(2)$} (alice-3);
-	\end{tikzpicture}
-	\caption{Without \acrshort{ot}}
-	\label{fig:ot-sol-before}
+    \draw[->] (bob-1) --node[left]{$del(2)$} (bob-2) -- (bob-3);
+    \draw[->] (alice-1) --node[right]{$ins(0,d)$} (alice-2) -- (alice-3);
+    \draw[->] (alice-2) --node[left, near end,fill=white]{$ins(0,d)$} (bob-3);
+    \draw[->] (bob-2) --node[right,near end,fill=white]{$del(2)$} (alice-3);
+  \end{tikzpicture}
+  \caption{Without \acrshort{ot}}
+  \label{fig:ot-sol-before}
 \end{figure}
 
 \begin{figure}[H]
-	\centerfloat
-	\sffamily
-	\begin{tikzpicture}[node distance=4cm]
+  \centerfloat
+  % \sffamily
+  \begin{tikzpicture}[node distance=4cm]
 
-		\node(bob-1)[rectangle, draw=none, fill=gray!20] {abc};
-		\node(bob-2)[rectangle, draw=none, fill=gray!20, below of=bob-1] {ab};
-		\node(bob-3)[rectangle, draw=none, fill=gray!20, below of=bob-2] {dab};
+    \node(bob-1)[rectangle, draw=none, fill=gray!20] {abc};
+    \node(bob-2)[rectangle, draw=none, fill=gray!20, below of=bob-1] {ab};
+    \node(bob-3)[rectangle, draw=none, fill=gray!20, below of=bob-2] {dab};
 
-		\node(alice-1)[rectangle, draw=none, fill=gray!20, right of=bob-1] {abc};
-		\node(alice-2)[rectangle, draw=none, fill=gray!20, below of=alice-1] {dabc};
-		\node(alice-3)[rectangle, draw=none, fill=gray!20, right of=bob-3] {dab};
+    \node(alice-1)[rectangle, draw=none, fill=gray!20, right of=bob-1] {abc};
+    \node(alice-2)[rectangle, draw=none, fill=gray!20, below of=alice-1] {dabc};
+    \node(alice-3)[rectangle, draw=none, fill=gray!20, right of=bob-3] {dab};
 
-		\node at (0,1) {Bob};
-		\node at (4,1) {Alice};
+    \node at (0,1) {Bob};
+    \node at (4,1) {Alice};
 
 
-		\draw[->] (bob-1) --node[left]{$del(2)$} (bob-2) -- (bob-3);
-		\draw[->] (alice-1) --node[right]{$ins(0,d)$} (alice-2) -- (alice-3);
-		\draw[->] (alice-2) --node[left, near end,fill=white]{$ins(0,d)$} (bob-3);
-		\draw[->] (bob-2) --node[right,near end,fill=white]{$OT(del(2))=del(3)$} (alice-3);
-	\end{tikzpicture}
-	\caption{With \acrshort{ot}}
-	\label{fig:ot-sol-after}
+    \draw[->] (bob-1) --node[left]{$del(2)$} (bob-2) -- (bob-3);
+    \draw[->] (alice-1) --node[right]{$ins(0,d)$} (alice-2) -- (alice-3);
+    \draw[->] (alice-2) --node[left, near end,fill=white]{$ins(0,d)$} (bob-3);
+    \draw[->] (bob-2) --node[right,near end,fill=white]{$OT(del(2))=del(3)$} (alice-3);
+  \end{tikzpicture}
+  \caption{With \acrshort{ot}}
+  \label{fig:ot-sol-after}
 \end{figure}
 
 
 \begin{figure}[H]
-	\centerfloat
-	\sffamily
-	\begin{tikzpicture}[node distance=2.0cm]
+  \centerfloat
+  % \sffamily
+  \begin{tikzpicture}[node distance=2.0cm]
 
-		\node(original) {Mary};
-		\node(alice-1)[below left of=original] {M\textcolor{red}{\cancel{ar}}y};
-		\node(alice-2)[below of=alice-1] {My};
-		\node(alice-3)[below of=alice-2] {Hy};
-		\node(bob-1)[below right of=original] {\textcolor{red}{\cancel{M}}\textcolor{green}{H}ary};
-		\node(bob-2)[below of=bob-1] {Hary};
-		\node(bob-3)[below of=bob-2] {Hy};
+    \node(original) {Mary};
+    \node(alice-1)[below left of=original] {M\textcolor{red}{\cancel{ar}}y};
+    \node(alice-2)[below of=alice-1] {My};
+    \node(alice-3)[below of=alice-2] {Hy};
+    \node(bob-1)[below right of=original] {\textcolor{red}{\cancel{M}}\textcolor{green}{H}ary};
+    \node(bob-2)[below of=bob-1] {Hary};
+    \node(bob-3)[below of=bob-2] {Hy};
 
-		\node[right of=bob-1] {Bob};
-		\node[left of=alice-1] {Alice};
+    \node[right of=bob-1] {Bob};
+    \node[left of=alice-1] {Alice};
 
-		\draw[->] (original) -- (alice-1) -- (alice-2) -- (alice-3);
-		\draw[->] (original) -- (bob-1) -- (bob-2) -- (bob-3);
-		\draw[->] (bob-2) --node[below]{\textcolor{red}{\cancel{M}}\textcolor{green}{H}} (alice-2);
-		\draw[->] (alice-3) --node[below]{\textcolor{red}{\cancel{ar}}} (bob-2);
-	\end{tikzpicture}
+    \draw[->] (original) -- (alice-1) -- (alice-2) -- (alice-3);
+    \draw[->] (original) -- (bob-1) -- (bob-2) -- (bob-3);
+    \draw[->] (bob-2) --node[below]{\textcolor{red}{\cancel{M}}\textcolor{green}{H}} (alice-2);
+    \draw[->] (alice-3) --node[below]{\textcolor{red}{\cancel{ar}}} (bob-2);
+  \end{tikzpicture}
 
-	\caption{\acrshort{ot}'s solution for the problem in figure~\ref{fig:collab-problem}}
-	\label{fig:collab-sol-ot}
+  \caption{\acrshort{ot}'s solution for the problem in figure~\ref{fig:collab-problem}}
+  \label{fig:collab-sol-ot}
 \end{figure}
 
 As seen in the previous examples, \acrshort{ot} can be hard and costly to set up, even for text-based documents.
@@ -231,38 +231,38 @@ Figure~\ref{fig:excalidraw-algo} illustrates the algorithm implemented by Excali
 \subsubsection{Automerge}
 
 \begin{figure}[h]
-	\centerfloat
-	\sffamily
-	\begin{tikzpicture}[auto,scale=0.8]
-		\path [draw,dotted] (4,-1) -- (4,8);
-		\node (left0)  at (0,7.5) [rectangle,draw=none,fill=gray!20] {\{``colors'': \{``blue'': ``\#0000ff''\}\}};
-		\node (right0) at (8,7.5) [rectangle,draw=none,fill=gray!20] {\{``colors'': \{``blue'': ``\#0000ff''\}\}};
-		\node [matrix] (left1) at (0,4) [rectangle,draw=none,fill=gray!20] {
-			\node {\{``colors'': \{``blue'': ``\#0000ff'',}; \\
-			\node {``red'': ``\#ff0000''\}\}}; \\
-		};
-		\node (right1) at (8,5.5) [rectangle,draw=none,fill=gray!20] {\{``colors'': \{\}\}};
-		\node (right2) at (8,3) [rectangle,draw=none,fill=gray!20] {\{``colors'': \{``green'': ``\#00ff00''\}\}};
-		\node [matrix] (left2) at (0,0) [rectangle,draw=none,fill=gray!20] {
-			\node {\{``colors'': \{``red'': ``\#ff0000'',}; \\
-			\node {``green'': ``\#00ff00''\}\}}; \\
-		};
-		\node [matrix] (right3) at (8,0) [rectangle,draw=none,fill=gray!20] {
-			\node {\{``colors'': \{``red'': ``\#ff0000'',}; \\
-			\node {``green'': ``\#00ff00''\}\}}; \\
-		};
-		\node (comms) at (4,2.1) [text=blue!20] {\footnotesize network communication};
-		\draw [thick,->] (left0)  -- (left1)
-		node [left,text width=4.2cm,text centered,midway]  {doc.get(``colors'').get(``red'') := ``\#ff0000'';};
-		\draw [thick,->] (right0) to node [right] {doc.get(``colors'') := \{\};} (right1);
-		\draw [thick,->] (right1) -- (right2)
-		node [right,text width=4.2cm,text centered,midway] {doc.get(``colors'').get(``green'') := ``\#00ff00'';};
-		\draw [thick,->] (left1)  to (left2);
-		\draw [thick,->] (right2) to (right3);
-		\draw [thick,dashed,blue!20,->] (left1.south)  to [out=270,in=135] (right3.north west);
-		\draw [thick,dashed,blue!20,->] (right2.south) to [out=270,in=45]  (left2.north east);
-	\end{tikzpicture}
-	\caption{Example of Automerge algorithms}\label{fig:automerge-algo}
+  \centerfloat
+  % \sffamily
+  \begin{tikzpicture}[auto,scale=0.8]
+    \path [draw,dotted] (4,-1) -- (4,8);
+    \node (left0)  at (0,7.5) [rectangle,draw=none,fill=gray!20] {\{``colors'': \{``blue'': ``\#0000ff''\}\}};
+    \node (right0) at (8,7.5) [rectangle,draw=none,fill=gray!20] {\{``colors'': \{``blue'': ``\#0000ff''\}\}};
+    \node [matrix] (left1) at (0,4) [rectangle,draw=none,fill=gray!20] {
+      \node {\{``colors'': \{``blue'': ``\#0000ff'',}; \\
+      \node {``red'': ``\#ff0000''\}\}}; \\
+    };
+    \node (right1) at (8,5.5) [rectangle,draw=none,fill=gray!20] {\{``colors'': \{\}\}};
+    \node (right2) at (8,3) [rectangle,draw=none,fill=gray!20] {\{``colors'': \{``green'': ``\#00ff00''\}\}};
+    \node [matrix] (left2) at (0,0) [rectangle,draw=none,fill=gray!20] {
+      \node {\{``colors'': \{``red'': ``\#ff0000'',}; \\
+      \node {``green'': ``\#00ff00''\}\}}; \\
+    };
+    \node [matrix] (right3) at (8,0) [rectangle,draw=none,fill=gray!20] {
+      \node {\{``colors'': \{``red'': ``\#ff0000'',}; \\
+      \node {``green'': ``\#00ff00''\}\}}; \\
+    };
+    \node (comms) at (4,2.1) [text=blue!20] {\footnotesize network communication};
+    \draw [thick,->] (left0)  -- (left1)
+    node [left,text width=4.2cm,text centered,midway]  {doc.get(``colors'').get(``red'') := ``\#ff0000'';};
+    \draw [thick,->] (right0) to node [right] {doc.get(``colors'') := \{\};} (right1);
+    \draw [thick,->] (right1) -- (right2)
+    node [right,text width=4.2cm,text centered,midway] {doc.get(``colors'').get(``green'') := ``\#00ff00'';};
+    \draw [thick,->] (left1)  to (left2);
+    \draw [thick,->] (right2) to (right3);
+    \draw [thick,dashed,blue!20,->] (left1.south)  to [out=270,in=135] (right3.north west);
+    \draw [thick,dashed,blue!20,->] (right2.south) to [out=270,in=45]  (left2.north east);
+  \end{tikzpicture}
+  \caption{Example of Automerge algorithms}\label{fig:automerge-algo}
 \end{figure}
 
 Automerge is a set of algorithms for applying \acrshort{crdt} concepts to a \acrfull{json} data structure without having prior knowledge of the inner working of the data structure or the infrastructure used to transmit changes.
@@ -306,43 +306,43 @@ The \acrshort{mvc} pattern, illustrated in figure~\ref{fig:mvc-arch}, tends to g
 While this pattern is the most common in the software world, it is starting to fall into disuse with the proliferation of \acrshort{ui} libraries, and microservices.
 
 \begin{figure}[H]
-	\centerfloat
-	\sffamily
-	\begin{tikzpicture}[node distance=4.0cm]
-		\node(model)[rectangle,fill=gray!20] {Model};
-		\node(view)[rectangle,fill=gray!20, below left of=model] {View};
-		\node(controller)[rectangle,fill=gray!20, below right of=model] {Controller};
-		\node(user)[circle,fill=gray!20, below right of=view] {User};
+  \centerfloat
+  % \sffamily
+  \begin{tikzpicture}[node distance=4.0cm]
+    \node(model)[rectangle,fill=gray!20] {Model};
+    \node(view)[rectangle,fill=gray!20, below left of=model] {View};
+    \node(controller)[rectangle,fill=gray!20, below right of=model] {Controller};
+    \node(user)[circle,fill=gray!20, below right of=view] {User};
 
-		\path[->]
-		(model) edge[bend right=30] node[left] {updates} (view)
-		(view) edge node[left] {sees} (user)
-		(controller) edge[bend right=30] node[right] {manipulates} (model)
-		(user) edge node[right] {uses} (controller);
-		% \draw[thick,->] (model) .. controls +(left:2cm) and +(up:2cm) .. (view);
-		% \draw[thick,->] (model) .. controls +(right:2cm) and +(up:2cm) .. (controller);
+    \path[->]
+    (model) edge[bend right=30] node[left] {updates} (view)
+    (view) edge node[left] {sees} (user)
+    (controller) edge[bend right=30] node[right] {manipulates} (model)
+    (user) edge node[right] {uses} (controller);
+    % \draw[thick,->] (model) .. controls +(left:2cm) and +(up:2cm) .. (view);
+    % \draw[thick,->] (model) .. controls +(right:2cm) and +(up:2cm) .. (controller);
 
-	\end{tikzpicture}
+  \end{tikzpicture}
 
-	\caption{The \acrshort{mvc} pattern}
-	\label{fig:mvc-arch}
+  \caption{The \acrshort{mvc} pattern}
+  \label{fig:mvc-arch}
 \end{figure}
 
 \begin{figure}[H]
-	\centerfloat
-	\sffamily
-	\begin{tikzpicture}
-		\draw (0,0) -- (4,0) -- (4,6) -- (0,6) -- (0,0);
-		\node(db)[rectangle,fill=gray!20] at (2,1) {Database};
-		\node(bl)[rectangle,fill=gray!20] at (2,3) {Business Logic};
-		\node(ui)[rectangle,fill=gray!20] at (2,5) {UI};
+  \centerfloat
+  % \sffamily
+  \begin{tikzpicture}
+    \draw (0,0) -- (4,0) -- (4,6) -- (0,6) -- (0,0);
+    \node(db)[rectangle,fill=gray!20] at (2,1) {Database};
+    \node(bl)[rectangle,fill=gray!20] at (2,3) {Business Logic};
+    \node(ui)[rectangle,fill=gray!20] at (2,5) {UI};
 
-		\draw[thick, <->] (db) -- (bl);
-		\draw[thick, <->] (bl) -- (ui);
-	\end{tikzpicture}
+    \draw[thick, <->] (db) -- (bl);
+    \draw[thick, <->] (bl) -- (ui);
+  \end{tikzpicture}
 
-	\caption{The monolith architecture}
-	\label{fig:monolith-arch}
+  \caption{The monolith architecture}
+  \label{fig:monolith-arch}
 \end{figure}
 
 More recent web applications are usually built on the \acrshort{mvvm} pattern with a modular, multitiered client-server architecture.
@@ -351,50 +351,50 @@ This focus on modularity helps in scaling and maintaining software with ease.
 \subsubsection{Multitier architecture}
 
 \begin{figure}[H]
-	\centerfloat
-	\sffamily
-	\begin{tikzpicture}
-		\draw[fill=purple!20,draw=none] (0,0)
-		-- (2,0) node[midway,below] {Client}
-		-- (2,4)
-		-- (0,4)
-		-- (0,0);
+  \centerfloat
+  % \sffamily
+  \begin{tikzpicture}
+    \draw[fill=purple!20,draw=none] (0,0)
+    -- (2,0) node[midway,below] {Client}
+    -- (2,4)
+    -- (0,4)
+    -- (0,0);
 
-		\draw[fill=blue!20,draw=none] (4,0)
-		-- (6,0) node[midway,below] {Server}
-		-- (6,4)
-		-- (4,4)
-		-- (4,0);
+    \draw[fill=blue!20,draw=none] (4,0)
+    -- (6,0) node[midway,below] {Server}
+    -- (6,4)
+    -- (4,4)
+    -- (4,0);
 
-		\coordinate (x) at (9,0);
+    \coordinate (x) at (9,0);
 
-		% \draw[fill=pink!20] (8,0)
-		% -- (10,0) node[midway,below] {Database}
-		% -- (10,4)
-		% -- (8,4)
-		% -- (8,0);
+    % \draw[fill=pink!20] (8,0)
+    % -- (10,0) node[midway,below] {Database}
+    % -- (10,4)
+    % -- (8,4)
+    % -- (8,0);
 
-		\node[cylinder,
-			draw = none,
-			text = black,
-			cylinder uses custom fill,
-			cylinder body fill = magenta!10,
-			cylinder end fill = magenta!40,
-			aspect = 0.2,
-			% minimum size = 2cm,
-			minimum height=2cm,
-			minimum width=2cm,
-			shape border rotate = 90, above of=x] (c) {Data};
+    \node[cylinder,
+      draw = none,
+      text = black,
+      cylinder uses custom fill,
+      cylinder body fill = magenta!10,
+      cylinder end fill = magenta!40,
+      aspect = 0.2,
+      % minimum size = 2cm,
+      minimum height=2cm,
+      minimum width=2cm,
+      shape border rotate = 90, above of=x] (c) {Data};
 
-		\path [draw,dotted] (3,-1) -- (3,5);
-		\path [draw,dotted] (7,-1) -- (7,5);
+    \path [draw,dotted] (3,-1) -- (3,5);
+    \path [draw,dotted] (7,-1) -- (7,5);
 
-		\draw[thick, <->] (2, 2) -- (4,2);
-		\draw[thick, <->] (6, 2) -- (c);
-	\end{tikzpicture}
+    \draw[thick, <->] (2, 2) -- (4,2);
+    \draw[thick, <->] (6, 2) -- (c);
+  \end{tikzpicture}
 
-	\caption{The three-tier architecture}
-	\label{fig:threetier-arch}
+  \caption{The three-tier architecture}
+  \label{fig:threetier-arch}
 \end{figure}
 
 Multitier architecture or \emph{n}-tier architecture is a multilayer client-server architecture in which presentation, logic, and data are physically distinct layers. This architecture guarantees flexibility and reusability for developers since layers can be reused, removed, or expanded, without reworking the whole application.
@@ -402,13 +402,13 @@ Furthermore, it is easily scalable in case of a surge in usage or a system failu
 
 The most common multitier architecture is the three-tier one, illustrated in figure~\ref{fig:threetier-arch}. It is composed of:
 \begin{description}
-	\item[Client] It is often also called "front-end".
-	      This is the tier that the end user interacts with directly.
-	      It is also the one where the \acrshort{mvvm} pattern is implemented.
-	\item[Server] It is also called the "back-end".
-	      This is where the data processing and business logic happens.
-	\item[Database] This is the data tier.
-	      It represents any system used for storing data, be it a database, or a logging storage system.
+  \item[Client] It is often also called "front-end".
+        This is the tier that the end user interacts with directly.
+        It is also the one where the \acrshort{mvvm} pattern is implemented.
+  \item[Server] It is also called the "back-end".
+        This is where the data processing and business logic happens.
+  \item[Database] This is the data tier.
+        It represents any system used for storing data, be it a database, or a logging storage system.
 \end{description}
 
 For more advanced use cases, it is not uncommon to see an even more distributed \emph{n}-tier architecture.
@@ -420,20 +420,20 @@ Therefore, each application has to find a sweet spot between scalability and fle
 \subsubsection{\acrshort{mvvm} pattern}
 
 \begin{figure}[H]
-	\centerfloat
-	\sffamily
-	\begin{tikzpicture}[node distance=4.0cm]
-		\node(m)[rectangle,draw=none, fill=gray!20] {Model};
-		\node(vm)[rectangle,draw=none, fill=gray!20, left of=m] {ViewModel};
-		\node(v)[rectangle,draw=none, fill=gray!20, left of=vm] {View};
+  \centerfloat
+  % \sffamily
+  \begin{tikzpicture}[node distance=4.0cm]
+    \node(m)[rectangle,draw=none, fill=gray!20] {Model};
+    \node(vm)[rectangle,draw=none, fill=gray!20, left of=m] {ViewModel};
+    \node(v)[rectangle,draw=none, fill=gray!20, left of=vm] {View};
 
-		\draw[thick, <->] (v) -- (vm);
-		\draw[thick, <->] (vm) -- (m);
+    \draw[thick, <->] (v) -- (vm);
+    \draw[thick, <->] (vm) -- (m);
 
-	\end{tikzpicture}
+  \end{tikzpicture}
 
-	\caption{The \acrshort{mvvm} pattern}
-	\label{fig:mvvm-arch}
+  \caption{The \acrshort{mvvm} pattern}
+  \label{fig:mvvm-arch}
 \end{figure}
 
 \acrfull{mvvm} is an architectural pattern for developing application that separates the development of the \acrfull{ui} (the \emph{view}) from the development of the backend logic (the \emph{model}) so the view is independent of the model.
@@ -450,86 +450,86 @@ Our choice of architectural patterns is largely guided by the architecture of ou
 In order to achieve these goals, we can identify the following components of our architecture:
 
 \begin{itemize}
-	\item A front-end application that can stay online and functional even when the rest of the system fails;
-	\item A separate view and data layers for a good developer experience;
-	\item A server that can be easily scaled or replaced in case of failure or in the case of a surge in usage;
-	\item Separate servers for our application and for our users' database, since an increase of demand on our application's API does not translate to an increase of demand on the application itself;
-	\item A cloud-hosted database to act as the source of truth for all of our system components;
-	\item An intermediate data store or pub-sub server for communicating between the different servers and keeping them in sync;
+  \item A front-end application that can stay online and functional even when the rest of the system fails;
+  \item A separate view and data layers for a good developer experience;
+  \item A server that can be easily scaled or replaced in case of failure or in the case of a surge in usage;
+  \item Separate servers for our application and for our users' database, since an increase of demand on our application's API does not translate to an increase of demand on the application itself;
+  \item A cloud-hosted database to act as the source of truth for all of our system components;
+  \item An intermediate data store or pub-sub server for communicating between the different servers and keeping them in sync;
 \end{itemize}
 
 These considerations make it clear that an n-tier architecture is the most suitable for our application. Figure~\ref{fig:ntier-arch} illustrates our choice of architecture.
 
 
 \begin{figure}[H]
-	\centerfloat
-	\tikzsetnextfilename{ntier-arch}
-	\sffamily
-	\begin{tikzpicture}
-		\draw[fill=blue!30,draw=none] (0,0)
-		-- (2,0) node[midway,below] {Client}
-		-- (2,4)
-		-- (0,4)
-		-- (0,0);
+  \centerfloat
+  \tikzsetnextfilename{ntier-arch}
+  % \sffamily
+  \begin{tikzpicture}
+    \draw[fill=blue!30,draw=none] (0,0)
+    -- (2,0) node[midway,below] {Client}
+    -- (2,4)
+    -- (0,4)
+    -- (0,0);
 
-		\draw[fill=blue!20,draw=none] (4,-1)
-		-- (6,-1) node[midway,below] {Main Server}
-		-- (6,1)
-		-- (4,1)
-		-- (4,-1);
+    \draw[fill=blue!20,draw=none] (4,-1)
+    -- (6,-1) node[midway,below] {Main Server}
+    -- (6,1)
+    -- (4,1)
+    -- (4,-1);
 
-		\draw[fill=blue!20,draw=none] (4,3)
-		-- (6,3) node[midway,below] {API Server}
-		-- (6,5)
-		-- (4,5)
-		-- (4,3);
+    \draw[fill=blue!20,draw=none] (4,3)
+    -- (6,3) node[midway,below] {API Server}
+    -- (6,5)
+    -- (4,5)
+    -- (4,3);
 
-		\coordinate (x) at (9,-1);
-		\coordinate (y) at (9,2);
+    \coordinate (x) at (9,-1);
+    \coordinate (y) at (9,2);
 
-		% \draw[fill=pink!20] (8,0)
-		% -- (10,0) node[midway,below] {Database}
-		% -- (10,4)
-		% -- (8,4)
-		% -- (8,0);
+    % \draw[fill=pink!20] (8,0)
+    % -- (10,0) node[midway,below] {Database}
+    % -- (10,4)
+    % -- (8,4)
+    % -- (8,0);
 
-		\node[cylinder,
-			draw = none,
-			text = black,
-			cylinder uses custom fill,
-			cylinder body fill = purple!10,
-			cylinder end fill = purple!40,
-			aspect = 0.2,
-			% minimum size = 2cm,
-			minimum height=2cm,
-			minimum width=2cm,
-			shape border rotate = 90, above of=x] (c) {Database};
+    \node[cylinder,
+      draw = none,
+      text = black,
+      cylinder uses custom fill,
+      cylinder body fill = purple!10,
+      cylinder end fill = purple!40,
+      aspect = 0.2,
+      % minimum size = 2cm,
+      minimum height=2cm,
+      minimum width=2cm,
+      shape border rotate = 90, above of=x] (c) {Database};
 
-		\node[cylinder,
-			draw = none,
-			text = black,
-			cylinder uses custom fill,
-			cylinder body fill = red!10,
-			cylinder end fill = red!40,
-			aspect = 0.2,
-			% minimum size = 2cm,
-			minimum height=2cm,
-			minimum width=2cm,
-			shape border rotate = 90, above of=y] (p) {Pub-Sub};
+    \node[cylinder,
+      draw = none,
+      text = black,
+      cylinder uses custom fill,
+      cylinder body fill = red!10,
+      cylinder end fill = red!40,
+      aspect = 0.2,
+      % minimum size = 2cm,
+      minimum height=2cm,
+      minimum width=2cm,
+      shape border rotate = 90, above of=y] (p) {Pub-Sub};
 
-		\path [draw,dotted] (3,-1) -- (3,5);
-		\path [draw,dotted] (7,-1) -- (7,5);
+    \path [draw,dotted] (3,-1) -- (3,5);
+    \path [draw,dotted] (7,-1) -- (7,5);
 
-		\draw[thick, <->] (2, 1) -- (4,0);
-		\draw[thick, <->] (2, 3) -- (4,4);
-		\draw[thick, <->] (6, 0) -- (c);
-		\draw[thick, <->] (6, 0) -- (p);
-		\draw[thick, <->] (6, 4) -- (c);
-		\draw[thick, <->] (6, 4) -- (p);
-	\end{tikzpicture}
+    \draw[thick, <->] (2, 1) -- (4,0);
+    \draw[thick, <->] (2, 3) -- (4,4);
+    \draw[thick, <->] (6, 0) -- (c);
+    \draw[thick, <->] (6, 0) -- (p);
+    \draw[thick, <->] (6, 4) -- (c);
+    \draw[thick, <->] (6, 4) -- (p);
+  \end{tikzpicture}
 
-	\caption{Our \emph{n}-tier architecture}
-	\label{fig:ntier-arch}
+  \caption{Our \emph{n}-tier architecture}
+  \label{fig:ntier-arch}
 \end{figure}
 
 We rely on two servers to match our users' needs. The main server handles everything from business logic, data processing, and real-time collaboration, while the API server is used to compile our users' visual databases and serve them on demand in \acrshort{json} format.
@@ -547,415 +547,415 @@ With our architectural patterns selected and our requirements fully defined, we 
 Figure~\ref{fig:gen-class-diagram} represents our application's general class diagram.
 
 \begin{figure}[H]
-	\thisfloatpagestyle{empty}
-	\centerfloat
-	\sffamily
-	\begin{tikzpicture}[scale=0.5, every node/.append style={transform shape}]
-		\umlclass[x=-4,draw=none]{User}{
-			ID : UUID \\
-			Name : Text \\
-			Email : Text \\
-			Avatar : Text \\
-			CreatedAt: Timestamptz \\
-			ModifiedAt: Timestamptz
-		}{}
+  \thisfloatpagestyle{empty}
+  \centerfloat
+  % \sffamily
+  \begin{tikzpicture}[scale=0.5, every node/.append style={transform shape}]
+    \umlclass[x=-4,draw=none]{User}{
+      ID : UUID \\
+      Name : Text \\
+      Email : Text \\
+      Avatar : Text \\
+      CreatedAt: Timestamptz \\
+      ModifiedAt: Timestamptz
+    }{}
 
-		\umlclass[left=10cm of User,draw=none]{Space}{
-			ID : UUID \\
-			Name : Text \\
-			Handle : Text \\
-			CreatedAt: Timestamptz \\
-			ModifiedAt: Timestamptz
-		}{}
-
-
-		\umlclass[below left=4cm and 2cm of Space,draw=none]{Project}{
-			ID : UUID \\
-			Name : Text \\
-			Icon : Text \\
-			Description : Text \\
-			Version: Integer \\
-			SpaceID: UUID \\
-			CreatedAt: Timestamptz \\
-			ModifiedAt: Timestamptz \\
-			CreatedBy: UUID \\
-			ModifiedBy: UUID
-		}{}
-
-		\umlclass[left=4cm of Project,draw=none]{Member}{
-			UserID : UUID \\
-			SpaceID : UUID \\
-			AccessLevel: AccessLevel \\
-			CreatedAt: Timestamptz \\
-			ModifiedAt: Timestamptz
-		}{}
-
-		\umlclass[right=3cm of Project,draw=none]{Confirmation}{
-			UserID : UUID \\
-			SpaceID : UUID \\
-			Token: Text \\
-			CreatedAt: Timestamptz \\
-			ModifiedAt: Timestamptz
-		}{}
-
-		\umlclass[right=3cm of Confirmation,draw=none]{AccessToken}{
-			ID : UUID \\
-			Token : Text \\
-			Name : Text \\
-			Resource : Text \\
-			ResourceID : UUID \\
-			AccessLevel: AccessLevel \\
-			CreatedAt: Timestamptz \\
-			CreatedBy: UUID
-		}{}
+    \umlclass[left=10cm of User,draw=none]{Space}{
+      ID : UUID \\
+      Name : Text \\
+      Handle : Text \\
+      CreatedAt: Timestamptz \\
+      ModifiedAt: Timestamptz
+    }{}
 
 
-		\umlclass[below=2cm of Project,draw=none]{Collection}{
-			ID : UUID \\
-			Name : Text \\
-			Icon : Text \\
-			Description : Text \\
-			Version: Integer \\
-			ProjectID: UUID \\
-			CreatedAt: Timestamptz \\
-			ModifiedAt: Timestamptz \\
-			CreatedBy: UUID \\
-			ModifiedBy: UUID
-		}{}
+    \umlclass[below left=4cm and 2cm of Space,draw=none]{Project}{
+      ID : UUID \\
+      Name : Text \\
+      Icon : Text \\
+      Description : Text \\
+      Version: Integer \\
+      SpaceID: UUID \\
+      CreatedAt: Timestamptz \\
+      ModifiedAt: Timestamptz \\
+      CreatedBy: UUID \\
+      ModifiedBy: UUID
+    }{}
 
-		\umlclass[below=2cm of Collection,draw=none]{Field}{
-			ID : UUID \\
-			Name : Text \\
-			Icon : Text \\
-			Description : Text \\
-			Version: Integer \\
-			SpaceID: UUID \\
-			CreatedAt: Timestamptz \\
-			ModifiedAt: Timestamptz \\
-			CreatedBy: UUID \\
-			ModifiedBy: UUID
-		}{}
+    \umlclass[left=4cm of Project,draw=none]{Member}{
+      UserID : UUID \\
+      SpaceID : UUID \\
+      AccessLevel: AccessLevel \\
+      CreatedAt: Timestamptz \\
+      ModifiedAt: Timestamptz
+    }{}
 
-		\umlclass[right=4cm of Field,draw=none]{Document}{
-			ID : UUID \\
-			Version: Integer \\
-			CollectionID: UUID \\
-			CreatedAt: Timestamptz \\
-			ModifiedAt: Timestamptz \\
-			CreatedBy: UUID \\
-			ModifiedBy: UUID
-		}{}
+    \umlclass[right=3cm of Project,draw=none]{Confirmation}{
+      UserID : UUID \\
+      SpaceID : UUID \\
+      Token: Text \\
+      CreatedAt: Timestamptz \\
+      ModifiedAt: Timestamptz
+    }{}
 
-
-		\umlclass[left=4cm of Field,draw=none]{View}{
-			ID : UUID \\
-			Name : Text \\
-			Type : Text \\
-			Data : Text \\
-			Version: Integer \\
-			CollectionID: UUID \\
-			CreatedAt: Timestamptz \\
-			ModifiedAt: Timestamptz \\
-		}{}
-
-		\umlclass[below=2cm of Document,draw=none]{Block}{
-			ID : UUID \\
-			Data : Text \\
-			ParentID : UUID \\
-			Version: Integer \\
-			FieldID: UUID \\
-			DocumentID: UUID \\
-			CreatedAt: Timestamptz \\
-			ModifiedAt: Timestamptz \\
-			CreatedBy: UUID \\
-			ModifiedBy: UUID
-		}{}
-		\umlclass[below=1.5cm of AccessToken, type=enumeration,draw=none]{AccessLevel}{
-			Owner \\
-			Admin \\
-			ReadWrite \\
-			ReadOnly
-		}{}
-
-		% \umlVHVinherit{B}{A}
-		\umlVHVinherit{Document}{Collection}
-		\umluniassoc[geometry=-|-, weight=0.3, arg1=x, mult1=1, pos1=1.9, arg2=y, mult2=*, pos2=0.2]{Member}{User}
-		\umluniassoc[geometry=|-, arg1=x, mult1=1, pos1=1.9, arg2=y, mult2=*, pos2=0.2]{Member}{Space}
-
-		\umluniassoc[geometry=|-|, arg1=x, mult1=1, pos1=0.9, arg2=SpaceID, mult2=*, pos2=0.2]{Project}{Space}
-		\umluniassoc[geometry=|-, arg1=x, mult1=1, pos1=0.9, arg2=CreatedBy, mult2=*, pos2=0.2]{Project}{User}
-		\umluniassoc[geometry=-|-, arg1=x, mult1=1, pos1=1.9, arg2=ModifiedBy, mult2=*, pos2=0.2]{Project}{User}
-
-		\umluniassoc[geometry=-|-, arg1=x, mult1=1, pos1=1.9, arg2=y, mult2=*, pos2=0.2]{Confirmation}{User}
-
-		\umluniassoc[geometry=|-, arg1=x, mult1=1, pos1=1.9, arg2=y, mult2=*, pos2=0.2]{AccessToken}{User}
-
-		\umluniassoc[geometry=--, arg1=x, mult1=1, pos1=0.9, arg2=ProjectID, mult2=*, pos2=0.2]{Collection}{Project}
-		\umluniassoc[geometry=-|-, arg1=x, mult1=1, pos1=0.9, arg2=CreatedBy, mult2=*, pos2=0.2]{Collection}{User}
-		\umluniassoc[geometry=-|-, arg1=x, mult1=1, pos1=1.9, arg2=ModifiedBy, mult2=*, pos2=0.2]{Collection}{User}
-
-		\umluniassoc[geometry=-|-, arg1=x, mult1=1, pos1=0.9, arg2=CollectionID, mult2=*, pos2=0.2]{View}{Collection}
-
-		\umluniassoc[geometry=|-|, arg1=x, mult1=1, pos1=0.9, arg2=CollectionID, mult2=*, pos2=0.2]{Field}{Collection}
-
-		\umluniassoc[geometry=-|-, arg1=x, mult1=1, pos1=0.9, arg2=CollectionID, mult2=*, pos2=0.2]{Document}{Collection}
-		\umluniassoc[geometry=-|, arg1=x, mult1=1, pos1=0.9, arg2=CreatedBy, mult2=*, pos2=0.2]{Document}{User}
-		\umluniassoc[geometry=-|, arg1=x, mult1=1, pos1=1.9, arg2=ModifiedBy, mult2=*, pos2=0.2]{Document}{User}
-
-		\umluniassoc[geometry=|-|, arg1=x, mult1=1, pos1=0.9, arg2=DocumentID, mult2=*, pos2=0.2]{Block}{Document}
-		\umluniassoc[geometry=|-|, arg1=x, mult1=1, pos1=0.9, arg2=FieldID, mult2=*, pos2=0.2]{Block}{Field}
-		\umluniassoc[arg1=x, mult1=1, pos1=0.9, arg2=ParentID, mult2=*, pos2=0.2,loopsize=6cm]{Block}{Block}
-		\umluniassoc[geometry=-|, arg1=x, mult1=1, pos1=0.9, arg2=CreatedBy, mult2=*, pos2=0.2,arm1=3cm]{Block}{User}
-		\umluniassoc[geometry=-|, arg1=x, mult1=1, pos1=1.9, arg2=ModifiedBy, mult2=*, pos2=0.2,arm1=4cm]{Block}{User}
+    \umlclass[right=3cm of Confirmation,draw=none]{AccessToken}{
+      ID : UUID \\
+      Token : Text \\
+      Name : Text \\
+      Resource : Text \\
+      ResourceID : UUID \\
+      AccessLevel: AccessLevel \\
+      CreatedAt: Timestamptz \\
+      CreatedBy: UUID
+    }{}
 
 
-	\end{tikzpicture}
+    \umlclass[below=2cm of Project,draw=none]{Collection}{
+      ID : UUID \\
+      Name : Text \\
+      Icon : Text \\
+      Description : Text \\
+      Version: Integer \\
+      ProjectID: UUID \\
+      CreatedAt: Timestamptz \\
+      ModifiedAt: Timestamptz \\
+      CreatedBy: UUID \\
+      ModifiedBy: UUID
+    }{}
 
-	\caption{General class diagram}
-	\label{fig:gen-class-diagram}
+    \umlclass[below=2cm of Collection,draw=none]{Field}{
+      ID : UUID \\
+      Name : Text \\
+      Icon : Text \\
+      Description : Text \\
+      Version: Integer \\
+      SpaceID: UUID \\
+      CreatedAt: Timestamptz \\
+      ModifiedAt: Timestamptz \\
+      CreatedBy: UUID \\
+      ModifiedBy: UUID
+    }{}
+
+    \umlclass[right=4cm of Field,draw=none]{Document}{
+      ID : UUID \\
+      Version: Integer \\
+      CollectionID: UUID \\
+      CreatedAt: Timestamptz \\
+      ModifiedAt: Timestamptz \\
+      CreatedBy: UUID \\
+      ModifiedBy: UUID
+    }{}
+
+
+    \umlclass[left=4cm of Field,draw=none]{View}{
+      ID : UUID \\
+      Name : Text \\
+      Type : Text \\
+      Data : Text \\
+      Version: Integer \\
+      CollectionID: UUID \\
+      CreatedAt: Timestamptz \\
+      ModifiedAt: Timestamptz \\
+    }{}
+
+    \umlclass[below=2cm of Document,draw=none]{Block}{
+      ID : UUID \\
+      Data : Text \\
+      ParentID : UUID \\
+      Version: Integer \\
+      FieldID: UUID \\
+      DocumentID: UUID \\
+      CreatedAt: Timestamptz \\
+      ModifiedAt: Timestamptz \\
+      CreatedBy: UUID \\
+      ModifiedBy: UUID
+    }{}
+    \umlclass[below=1.5cm of AccessToken, type=enumeration,draw=none]{AccessLevel}{
+      Owner \\
+      Admin \\
+      ReadWrite \\
+      ReadOnly
+    }{}
+
+    % \umlVHVinherit{B}{A}
+    \umlVHVinherit{Document}{Collection}
+    \umluniassoc[geometry=-|-, weight=0.3, arg1=x, mult1=1, pos1=1.9, arg2=y, mult2=*, pos2=0.2]{Member}{User}
+    \umluniassoc[geometry=|-, arg1=x, mult1=1, pos1=1.9, arg2=y, mult2=*, pos2=0.2]{Member}{Space}
+
+    \umluniassoc[geometry=|-|, arg1=x, mult1=1, pos1=0.9, arg2=SpaceID, mult2=*, pos2=0.2]{Project}{Space}
+    \umluniassoc[geometry=|-, arg1=x, mult1=1, pos1=0.9, arg2=CreatedBy, mult2=*, pos2=0.2]{Project}{User}
+    \umluniassoc[geometry=-|-, arg1=x, mult1=1, pos1=1.9, arg2=ModifiedBy, mult2=*, pos2=0.2]{Project}{User}
+
+    \umluniassoc[geometry=-|-, arg1=x, mult1=1, pos1=1.9, arg2=y, mult2=*, pos2=0.2]{Confirmation}{User}
+
+    \umluniassoc[geometry=|-, arg1=x, mult1=1, pos1=1.9, arg2=y, mult2=*, pos2=0.2]{AccessToken}{User}
+
+    \umluniassoc[geometry=--, arg1=x, mult1=1, pos1=0.9, arg2=ProjectID, mult2=*, pos2=0.2]{Collection}{Project}
+    \umluniassoc[geometry=-|-, arg1=x, mult1=1, pos1=0.9, arg2=CreatedBy, mult2=*, pos2=0.2]{Collection}{User}
+    \umluniassoc[geometry=-|-, arg1=x, mult1=1, pos1=1.9, arg2=ModifiedBy, mult2=*, pos2=0.2]{Collection}{User}
+
+    \umluniassoc[geometry=-|-, arg1=x, mult1=1, pos1=0.9, arg2=CollectionID, mult2=*, pos2=0.2]{View}{Collection}
+
+    \umluniassoc[geometry=|-|, arg1=x, mult1=1, pos1=0.9, arg2=CollectionID, mult2=*, pos2=0.2]{Field}{Collection}
+
+    \umluniassoc[geometry=-|-, arg1=x, mult1=1, pos1=0.9, arg2=CollectionID, mult2=*, pos2=0.2]{Document}{Collection}
+    \umluniassoc[geometry=-|, arg1=x, mult1=1, pos1=0.9, arg2=CreatedBy, mult2=*, pos2=0.2]{Document}{User}
+    \umluniassoc[geometry=-|, arg1=x, mult1=1, pos1=1.9, arg2=ModifiedBy, mult2=*, pos2=0.2]{Document}{User}
+
+    \umluniassoc[geometry=|-|, arg1=x, mult1=1, pos1=0.9, arg2=DocumentID, mult2=*, pos2=0.2]{Block}{Document}
+    \umluniassoc[geometry=|-|, arg1=x, mult1=1, pos1=0.9, arg2=FieldID, mult2=*, pos2=0.2]{Block}{Field}
+    \umluniassoc[arg1=x, mult1=1, pos1=0.9, arg2=ParentID, mult2=*, pos2=0.2,loopsize=6cm]{Block}{Block}
+    \umluniassoc[geometry=-|, arg1=x, mult1=1, pos1=0.9, arg2=CreatedBy, mult2=*, pos2=0.2,arm1=3cm]{Block}{User}
+    \umluniassoc[geometry=-|, arg1=x, mult1=1, pos1=1.9, arg2=ModifiedBy, mult2=*, pos2=0.2,arm1=4cm]{Block}{User}
+
+
+  \end{tikzpicture}
+
+  \caption{General class diagram}
+  \label{fig:gen-class-diagram}
 \end{figure}
 
 \subsection{Sequence diagrams}
 
 \begin{sdfig}{Sign up}{sign up}{sign-up}
-	\umlactor[no ddots]{Visitor}
-	\umlobject[no ddots,draw=none]{Client}
-	\umlobject[no ddots,draw=none]{Server}
-	\umlobject[no ddots,draw=none]{Database}
-	% \umlobject[no ddots,draw=none]{Pub-Sub}
+  \umlactor[no ddots]{Visitor}
+  \umlobject[no ddots,draw=none]{Client}
+  \umlobject[no ddots,draw=none]{Server}
+  \umlobject[no ddots,draw=none]{Database}
+  % \umlobject[no ddots,draw=none]{Pub-Sub}
 
-	\begin{umlcall}[op={Sign up}]{Visitor}{Client}
-		\begin{umlcall}[op={Validate}]{Client}{Client}
-			\begin{umlfragment}[type=alt, label=valid]
-				\begin{umlcall}[type=return,op={Loading}]{Client}{Visitor}
-					\begin{umlcall}[op={Sign up}]{Client}{Server}
-						\begin{umlcall}[op={Has user}]{Server}{Database}
-							\begin{umlfragment}[type=alt, label=true]
-								\begin{umlcall}[type=return,op={Yes}]{Database}{Server}
-									\begin{umlcall}[type=return,op={Error}]{Server}{Client}
-										\begin{umlcall}[type=return,op={Error}]{Client}{Visitor}
-										\end{umlcall}
-									\end{umlcall}
-								\end{umlcall}
-								\umlfpart[else]
-								\begin{umlcall}[type=return,op={No}]{Database}{Server}
-									\begin{umlcall}[op={Create user}]{Server}{Database}
-									\end{umlcall}
-									\begin{umlcall}[op={Create OTP}]{Server}{Database}
-										\begin{umlcall}[op={Send email}]{Server}{Server}
-											\begin{umlcall}[type=return,op={Done}]{Server}{Client}
-												\begin{umlcall}[type=return,op={Done}]{Client}{Visitor}
-												\end{umlcall}
-											\end{umlcall}
-										\end{umlcall}
-									\end{umlcall}
-								\end{umlcall}
-							\end{umlfragment}
-						\end{umlcall}
-					\end{umlcall}
-				\end{umlcall}
-				\umlfpart[else]
-				\begin{umlcall}[type=return,op={Error}]{Client}{Visitor}
-				\end{umlcall}
-			\end{umlfragment}
-		\end{umlcall}
-	\end{umlcall}
+  \begin{umlcall}[op={Sign up}]{Visitor}{Client}
+    \begin{umlcall}[op={Validate}]{Client}{Client}
+      \begin{umlfragment}[type=alt, label=valid]
+        \begin{umlcall}[type=return,op={Loading}]{Client}{Visitor}
+          \begin{umlcall}[op={Sign up}]{Client}{Server}
+            \begin{umlcall}[op={Has user}]{Server}{Database}
+              \begin{umlfragment}[type=alt, label=true]
+                \begin{umlcall}[type=return,op={Yes}]{Database}{Server}
+                  \begin{umlcall}[type=return,op={Error}]{Server}{Client}
+                    \begin{umlcall}[type=return,op={Error}]{Client}{Visitor}
+                    \end{umlcall}
+                  \end{umlcall}
+                \end{umlcall}
+                \umlfpart[else]
+                \begin{umlcall}[type=return,op={No}]{Database}{Server}
+                  \begin{umlcall}[op={Create user}]{Server}{Database}
+                  \end{umlcall}
+                  \begin{umlcall}[op={Create OTP}]{Server}{Database}
+                    \begin{umlcall}[op={Send email}]{Server}{Server}
+                      \begin{umlcall}[type=return,op={Done}]{Server}{Client}
+                        \begin{umlcall}[type=return,op={Done}]{Client}{Visitor}
+                        \end{umlcall}
+                      \end{umlcall}
+                    \end{umlcall}
+                  \end{umlcall}
+                \end{umlcall}
+              \end{umlfragment}
+            \end{umlcall}
+          \end{umlcall}
+        \end{umlcall}
+        \umlfpart[else]
+        \begin{umlcall}[type=return,op={Error}]{Client}{Visitor}
+        \end{umlcall}
+      \end{umlfragment}
+    \end{umlcall}
+  \end{umlcall}
 \end{sdfig}
 
 
 \begin{sdfig}{Log in}{log in}{log-in}
-	\umlactor[no ddots]{Visitor}
-	\umlobject[no ddots,draw=none]{Client}
-	\umlobject[no ddots,draw=none]{Server}
-	\umlobject[no ddots,draw=none]{Database}
-	% \umlobject[no ddots,draw=none]{Pub-Sub}
+  \umlactor[no ddots]{Visitor}
+  \umlobject[no ddots,draw=none]{Client}
+  \umlobject[no ddots,draw=none]{Server}
+  \umlobject[no ddots,draw=none]{Database}
+  % \umlobject[no ddots,draw=none]{Pub-Sub}
 
-	\begin{umlcall}[op={Log in}]{Visitor}{Client}
-		\begin{umlcall}[op={Validate}]{Client}{Client}
-			\begin{umlfragment}[type=alt, label=valid]
-				\begin{umlcall}[type=return,op={Loading}]{Client}{Visitor}
-					\begin{umlcall}[op={Log in}]{Client}{Server}
-						\begin{umlcall}[op={Has user}]{Server}{Database}
-							\begin{umlfragment}[type=alt, label=true]
-								\begin{umlcall}[type=return,op={Yes}]{Database}{Server}
-									\begin{umlcall}[op={Create OTP}]{Server}{Database}
-										\begin{umlcall}[op={Send email}]{Server}{Server}
-											\begin{umlcall}[type=return,op={Done}]{Server}{Client}
-												\begin{umlcall}[type=return,op={Done}]{Client}{Visitor}
-												\end{umlcall}
-											\end{umlcall}
-										\end{umlcall}
-									\end{umlcall}
-								\end{umlcall}
-								\umlfpart[else]
-								\begin{umlcall}[type=return,op={No}]{Database}{Server}
-									\begin{umlcall}[type=return,op={Error}]{Server}{Client}
-										\begin{umlcall}[type=return,op={Error}]{Client}{Visitor}
-										\end{umlcall}
-									\end{umlcall}
-								\end{umlcall}
-							\end{umlfragment}
-						\end{umlcall}
-					\end{umlcall}
-				\end{umlcall}
-				\umlfpart[else]
-				\begin{umlcall}[type=return,op={Error}]{Client}{Visitor}
-				\end{umlcall}
-			\end{umlfragment}
-		\end{umlcall}
-	\end{umlcall}
+  \begin{umlcall}[op={Log in}]{Visitor}{Client}
+    \begin{umlcall}[op={Validate}]{Client}{Client}
+      \begin{umlfragment}[type=alt, label=valid]
+        \begin{umlcall}[type=return,op={Loading}]{Client}{Visitor}
+          \begin{umlcall}[op={Log in}]{Client}{Server}
+            \begin{umlcall}[op={Has user}]{Server}{Database}
+              \begin{umlfragment}[type=alt, label=true]
+                \begin{umlcall}[type=return,op={Yes}]{Database}{Server}
+                  \begin{umlcall}[op={Create OTP}]{Server}{Database}
+                    \begin{umlcall}[op={Send email}]{Server}{Server}
+                      \begin{umlcall}[type=return,op={Done}]{Server}{Client}
+                        \begin{umlcall}[type=return,op={Done}]{Client}{Visitor}
+                        \end{umlcall}
+                      \end{umlcall}
+                    \end{umlcall}
+                  \end{umlcall}
+                \end{umlcall}
+                \umlfpart[else]
+                \begin{umlcall}[type=return,op={No}]{Database}{Server}
+                  \begin{umlcall}[type=return,op={Error}]{Server}{Client}
+                    \begin{umlcall}[type=return,op={Error}]{Client}{Visitor}
+                    \end{umlcall}
+                  \end{umlcall}
+                \end{umlcall}
+              \end{umlfragment}
+            \end{umlcall}
+          \end{umlcall}
+        \end{umlcall}
+        \umlfpart[else]
+        \begin{umlcall}[type=return,op={Error}]{Client}{Visitor}
+        \end{umlcall}
+      \end{umlfragment}
+    \end{umlcall}
+  \end{umlcall}
 \end{sdfig}
 
 
 \begin{sdfig}{Confirm email}{confirm email}{confirm-email}
-	\umlactor[no ddots]{Visitor}
-	\umlobject[no ddots,draw=none]{Client}
-	\umlobject[no ddots,draw=none]{Server}
-	\umlobject[no ddots,draw=none]{Database}
-	% \umlobject[no ddots,draw=none]{Pub-Sub}
+  \umlactor[no ddots]{Visitor}
+  \umlobject[no ddots,draw=none]{Client}
+  \umlobject[no ddots,draw=none]{Server}
+  \umlobject[no ddots,draw=none]{Database}
+  % \umlobject[no ddots,draw=none]{Pub-Sub}
 
-	\begin{umlcall}[op={Confirm}]{Visitor}{Client}
-		\begin{umlcall}[op={Confirm}]{Client}{Server}
-			\begin{umlcall}[op={Has OTP}]{Server}{Database}
-				\begin{umlfragment}[type=alt, label=true]
-					\begin{umlcall}[type=return,op={Yes}]{Database}{Server}
-						\begin{umlcall}[op={Add cookies}]{Server}{Server}
-						\end{umlcall}
-						\begin{umlcall}[type=return,op={Done}]{Server}{Client}
-							\begin{umlcall}[type=return,op={Done}]{Client}{Visitor}
-							\end{umlcall}
-						\end{umlcall}
-					\end{umlcall}
-					\umlfpart[else]
-					\begin{umlcall}[type=return,op={No}]{Database}{Server}
-						\begin{umlcall}[type=return,op={Error}]{Server}{Client}
-							\begin{umlcall}[type=return,op={Error}]{Client}{Visitor}
-							\end{umlcall}
-						\end{umlcall}
-					\end{umlcall}
-				\end{umlfragment}
-			\end{umlcall}
-		\end{umlcall}
-	\end{umlcall}
+  \begin{umlcall}[op={Confirm}]{Visitor}{Client}
+    \begin{umlcall}[op={Confirm}]{Client}{Server}
+      \begin{umlcall}[op={Has OTP}]{Server}{Database}
+        \begin{umlfragment}[type=alt, label=true]
+          \begin{umlcall}[type=return,op={Yes}]{Database}{Server}
+            \begin{umlcall}[op={Add cookies}]{Server}{Server}
+            \end{umlcall}
+            \begin{umlcall}[type=return,op={Done}]{Server}{Client}
+              \begin{umlcall}[type=return,op={Done}]{Client}{Visitor}
+              \end{umlcall}
+            \end{umlcall}
+          \end{umlcall}
+          \umlfpart[else]
+          \begin{umlcall}[type=return,op={No}]{Database}{Server}
+            \begin{umlcall}[type=return,op={Error}]{Server}{Client}
+              \begin{umlcall}[type=return,op={Error}]{Client}{Visitor}
+              \end{umlcall}
+            \end{umlcall}
+          \end{umlcall}
+        \end{umlfragment}
+      \end{umlcall}
+    \end{umlcall}
+  \end{umlcall}
 \end{sdfig}
 
 
 \begin{sdfig}{Create workspace}{create workspace}{create-workspace}[1][H]
-	\umlactor[no ddots]{Owner}
-	\umlobject[no ddots,draw=none]{Client}
-	\umlobject[no ddots,draw=none]{Server}
-	\umlobject[no ddots,draw=none]{Database}
-	% \umlobject[no ddots,draw=none]{Pub-Sub}
+  \umlactor[no ddots]{Owner}
+  \umlobject[no ddots,draw=none]{Client}
+  \umlobject[no ddots,draw=none]{Server}
+  \umlobject[no ddots,draw=none]{Database}
+  % \umlobject[no ddots,draw=none]{Pub-Sub}
 
-	\begin{seqdigauth}[Owner]
-		\begin{umlcall}[op={Create workspace},return={Redirect to workspace creation}]{Owner}{Client}
-		\end{umlcall}
-		\begin{umlcall}[op={Submit name}]{Owner}{Client}
-			\begin{umlcall}[op={Create workspace},return=Ok]{Client}{Server}
-				\begin{umlcall}[op={Create project}]{Server}{Database}
-					\begin{umlcall}[op={Create collection}]{Server}{Database}
-						\begin{umlcall}[op={Create field}]{Server}{Database}
-						\end{umlcall}
-						\begin{umlcall}[op={Create view}]{Server}{Database}
-						\end{umlcall}
-						\begin{umlcall}[op={Create document}]{Server}{Database}
-							\begin{umlcall}[op={Create block}]{Server}{Database}
-							\end{umlcall}
-						\end{umlcall}
-					\end{umlcall}
-				\end{umlcall}
-			\end{umlcall}
-		\end{umlcall}
-	\end{seqdigauth}
+  \begin{seqdigauth}[Owner]
+    \begin{umlcall}[op={Create workspace},return={Redirect to workspace creation}]{Owner}{Client}
+    \end{umlcall}
+    \begin{umlcall}[op={Submit name}]{Owner}{Client}
+      \begin{umlcall}[op={Create workspace},return=Ok]{Client}{Server}
+        \begin{umlcall}[op={Create project}]{Server}{Database}
+          \begin{umlcall}[op={Create collection}]{Server}{Database}
+            \begin{umlcall}[op={Create field}]{Server}{Database}
+            \end{umlcall}
+            \begin{umlcall}[op={Create view}]{Server}{Database}
+            \end{umlcall}
+            \begin{umlcall}[op={Create document}]{Server}{Database}
+              \begin{umlcall}[op={Create block}]{Server}{Database}
+              \end{umlcall}
+            \end{umlcall}
+          \end{umlcall}
+        \end{umlcall}
+      \end{umlcall}
+    \end{umlcall}
+  \end{seqdigauth}
 \end{sdfig}
 
 \begin{sdfig}{Create collection}{create collection}{create-collection}[1][H]
-	\umlactor[no ddots]{Editor}
-	\umlobject[no ddots,draw=none]{Client}
-	\umlobject[no ddots,draw=none]{Server}
-	\umlobject[no ddots,draw=none]{Database}
-	% \umlobject[no ddots,draw=none]{Pub-Sub}
+  \umlactor[no ddots]{Editor}
+  \umlobject[no ddots,draw=none]{Client}
+  \umlobject[no ddots,draw=none]{Server}
+  \umlobject[no ddots,draw=none]{Database}
+  % \umlobject[no ddots,draw=none]{Pub-Sub}
 
-	\begin{seqdigauth}[Editor]
-		\begin{umlcall}[op={Create collection},return=Ok]{Editor}{Client}
-			\begin{umlcall}[op={Create collection},return=Ok]{Client}{Server}
-				\begin{umlcall}[op={Create collection}]{Server}{Database}
-					\begin{umlcall}[op={Create field}]{Server}{Database}
-					\end{umlcall}
-					\begin{umlcall}[op={Create view}]{Server}{Database}
-					\end{umlcall}
-					\begin{umlcall}[op={Create document}]{Server}{Database}
-						\begin{umlcall}[op={Create block}]{Server}{Database}
-						\end{umlcall}
-					\end{umlcall}
-				\end{umlcall}
-			\end{umlcall}
-		\end{umlcall}
-	\end{seqdigauth}
+  \begin{seqdigauth}[Editor]
+    \begin{umlcall}[op={Create collection},return=Ok]{Editor}{Client}
+      \begin{umlcall}[op={Create collection},return=Ok]{Client}{Server}
+        \begin{umlcall}[op={Create collection}]{Server}{Database}
+          \begin{umlcall}[op={Create field}]{Server}{Database}
+          \end{umlcall}
+          \begin{umlcall}[op={Create view}]{Server}{Database}
+          \end{umlcall}
+          \begin{umlcall}[op={Create document}]{Server}{Database}
+            \begin{umlcall}[op={Create block}]{Server}{Database}
+            \end{umlcall}
+          \end{umlcall}
+        \end{umlcall}
+      \end{umlcall}
+    \end{umlcall}
+  \end{seqdigauth}
 \end{sdfig}
 
 
 \begin{sdfig}{Create field}{create field}{create-field}[1][H]
-	\umlactor[no ddots]{Editor}
-	\umlobject[no ddots,draw=none]{Client}
-	\umlobject[no ddots,draw=none]{Server}
-	\umlobject[no ddots,draw=none]{Database}
-	% \umlobject[no ddots,draw=none]{Pub-Sub}
+  \umlactor[no ddots]{Editor}
+  \umlobject[no ddots,draw=none]{Client}
+  \umlobject[no ddots,draw=none]{Server}
+  \umlobject[no ddots,draw=none]{Database}
+  % \umlobject[no ddots,draw=none]{Pub-Sub}
 
-	\begin{seqdigauth}[Editor]
-		\begin{umlcall}[op={Create field},return={Select type}]{Editor}{Client}
-		\end{umlcall}
+  \begin{seqdigauth}[Editor]
+    \begin{umlcall}[op={Create field},return={Select type}]{Editor}{Client}
+    \end{umlcall}
 
-		\begin{umlcall}[op={Select type},return=Ok]{Editor}{Client}
-			\begin{umlcall}[op={Update local state}]{Client}{Client}
-			\end{umlcall}
-			\begin{umlcall}[op={Create field},return=Ok]{Client}{Server}
-				\begin{umlcall}[op={Create field}]{Server}{Database}
-					\begin{umlcall}[op={Create blocks}]{Server}{Database}
-					\end{umlcall}
-				\end{umlcall}
-			\end{umlcall}
-		\end{umlcall}
-	\end{seqdigauth}
+    \begin{umlcall}[op={Select type},return=Ok]{Editor}{Client}
+      \begin{umlcall}[op={Update local state}]{Client}{Client}
+      \end{umlcall}
+      \begin{umlcall}[op={Create field},return=Ok]{Client}{Server}
+        \begin{umlcall}[op={Create field}]{Server}{Database}
+          \begin{umlcall}[op={Create blocks}]{Server}{Database}
+          \end{umlcall}
+        \end{umlcall}
+      \end{umlcall}
+    \end{umlcall}
+  \end{seqdigauth}
 \end{sdfig}
 
 % \end{toexclude}
 
 \begin{sdfig}{Update block}{update block}{update-block}
-	\umlactor[no ddots]{Editor}
-	\umlobject[no ddots,draw=none]{Client}
-	\umlobject[no ddots,draw=none]{Server}
-	\umlobject[no ddots,draw=none]{Database}
-	\umlobject[no ddots,draw=none]{Pub-Sub}
+  \umlactor[no ddots]{Editor}
+  \umlobject[no ddots,draw=none]{Client}
+  \umlobject[no ddots,draw=none]{Server}
+  \umlobject[no ddots,draw=none]{Database}
+  \umlobject[no ddots,draw=none]{Pub-Sub}
 
-	\begin{seqdigauth}[Editor]
-		\begin{umlcall}[op={Update block},return={Select type}]{Editor}{Client}
-		\end{umlcall}
+  \begin{seqdigauth}[Editor]
+    \begin{umlcall}[op={Update block},return={Select type}]{Editor}{Client}
+    \end{umlcall}
 
-		\begin{umlcall}[op={Update block}]{Editor}{Client}
-			\begin{umlcall}[op={Update local state}]{Client}{Client}
-			\end{umlcall}
-			\begin{umlcall}[op={Update block}]{Client}{Server}
-				\begin{umlcall}[op={Get block}]{Server}{Database}
-					\begin{umlcall}[op={Compare versions}]{Server}{Server}
-						\begin{umlfragment}[type=alt, label=equal]
-							\begin{umlcall}[op={Update block}]{Server}{Database}
-								\begin{umlcall}[op={Propagate change}]{Server}{Pub-Sub}
-									\begin{umlcall}[op={Propagate}]{Pub-Sub}{Pub-Sub}
-									\end{umlcall}
-								\end{umlcall}
-							\end{umlcall}
-							\umlfpart[else]
-							\begin{umlcall}[op={Refuse change},type=return]{Server}{Client}
-								\begin{umlcall}[op={Update local state}]{Client}{Client}
-								\end{umlcall}
-							\end{umlcall}
-						\end{umlfragment}
-					\end{umlcall}
-				\end{umlcall}
-			\end{umlcall}
-		\end{umlcall}
-	\end{seqdigauth}
+    \begin{umlcall}[op={Update block}]{Editor}{Client}
+      \begin{umlcall}[op={Update local state}]{Client}{Client}
+      \end{umlcall}
+      \begin{umlcall}[op={Update block}]{Client}{Server}
+        \begin{umlcall}[op={Get block}]{Server}{Database}
+          \begin{umlcall}[op={Compare versions}]{Server}{Server}
+            \begin{umlfragment}[type=alt, label=equal]
+              \begin{umlcall}[op={Update block}]{Server}{Database}
+                \begin{umlcall}[op={Propagate change}]{Server}{Pub-Sub}
+                  \begin{umlcall}[op={Propagate}]{Pub-Sub}{Pub-Sub}
+                  \end{umlcall}
+                \end{umlcall}
+              \end{umlcall}
+              \umlfpart[else]
+              \begin{umlcall}[op={Refuse change},type=return]{Server}{Client}
+                \begin{umlcall}[op={Update local state}]{Client}{Client}
+                \end{umlcall}
+              \end{umlcall}
+            \end{umlfragment}
+          \end{umlcall}
+        \end{umlcall}
+      \end{umlcall}
+    \end{umlcall}
+  \end{seqdigauth}
 \end{sdfig}
 
 % \subsection{Activity diagrams}

@@ -22,18 +22,18 @@ With the \acrshort{mvvm} pattern in mind, we have multiple options to pick from.
 The selection of these options is based on our past-expertise in them.
 
 \begin{description}
-	\item[React] An open-source front-end JavaScript library for developing \acrshort{ui}s created by Facebook starting in 2013~\autocite{noauthor_why_nodate}.
+  \item[React] An open-source front-end JavaScript library for developing \acrshort{ui}s created by Facebook starting in 2013~\autocite{noauthor_why_nodate}.
 
-	      It advocates declarative, componenet-based views and relies on a virtual \acrfull{dom} to selectively update the browser's \acrshort{dom} based on state changes, thus, achieving better performance and a greater developer experience~\autocite{noauthor_react_nodate}.
+        It advocates declarative, componenet-based views and relies on a virtual \acrfull{dom} to selectively update the browser's \acrshort{dom} based on state changes, thus, achieving better performance and a greater developer experience~\autocite{noauthor_react_nodate}.
 
-	\item[Vue.js] An open-source front-end JavaScript framework for developing \acrshort{ui}s created by Evan You starting in 2014~\autocite{macrae_vue.js:_2018}.
+  \item[Vue.js] An open-source front-end JavaScript framework for developing \acrshort{ui}s created by Evan You starting in 2014~\autocite{macrae_vue.js:_2018}.
 
-	      In a similar fashion to React, Vue.js also relies on a virtual \acrshort{dom} and advocates a component-based architecture.
+        In a similar fashion to React, Vue.js also relies on a virtual \acrshort{dom} and advocates a component-based architecture.
 
-	\item[Svelte] An open-source front-end JavaScript \emph{compiler} created by Rich Harris in 2016~\autocite{nov_26_2016_frameworks_nodate}.
-	      Contrary to React and Vue.js, Svelte is \emph{not} a run-time library.
-	      Instead, it operates like a language on its own that gets compiled down to efficient JavaScript code.
-	      Therefore, it does not rely on concepts such as the virtual \acrshort{dom} and minimizes the final size of the application.
+  \item[Svelte] An open-source front-end JavaScript \emph{compiler} created by Rich Harris in 2016~\autocite{nov_26_2016_frameworks_nodate}.
+        Contrary to React and Vue.js, Svelte is \emph{not} a run-time library.
+        Instead, it operates like a language on its own that gets compiled down to efficient JavaScript code.
+        Therefore, it does not rely on concepts such as the virtual \acrshort{dom} and minimizes the final size of the application.
 \end{description}
 
 While React and Vue.js are similar, Svelte has a completely different approach that can offer better performance.
@@ -53,13 +53,13 @@ The choice of the technology is also limited by our expertise.
 A performant language or framework with no expertise would as good as or maybe even worse than a slow language with experience in using it.
 
 \begin{description}
-	\item[Node.js] An open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine\footnote{The JavaScript engine used in Google Chrome} and executes JavaScript code outside a web browser. It has an event-driven architecture that aims to optimize throughput and scalability in web applications, especially ones with real-time requirements~\autocite{node.js_about_nodate}.
+  \item[Node.js] An open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine\footnote{The JavaScript engine used in Google Chrome} and executes JavaScript code outside a web browser. It has an event-driven architecture that aims to optimize throughput and scalability in web applications, especially ones with real-time requirements~\autocite{node.js_about_nodate}.
 
-	\item[Go] A statically typed\footnote{Type safety is checked during compilation}, compiled programming language created at Google.
-	      Its syntax is similar to C, but with memory safety, garbage collection, structural typing, and concurrency~\autocite{metz_google_nodate}.
-	      Being a compiled, concurrent programming language, Go usually offers better performance than Node.js~\autocite{noauthor_go_nodate}.
+  \item[Go] A statically typed\footnote{Type safety is checked during compilation}, compiled programming language created at Google.
+        Its syntax is similar to C, but with memory safety, garbage collection, structural typing, and concurrency~\autocite{metz_google_nodate}.
+        Being a compiled, concurrent programming language, Go usually offers better performance than Node.js~\autocite{noauthor_go_nodate}.
 
-	\item[Rust] A multi-paradigm\footnote{It supports object-oriented, and functional programming, among others} programming language designed for performance and memory safety, which it achieves without garbage collection~\autocite{noauthor_frequently_2016}. It is notable for its extreme speed and low usage of server resources even when compared to Go~\autocite{noauthor_rust_nodate}.
+  \item[Rust] A multi-paradigm\footnote{It supports object-oriented, and functional programming, among others} programming language designed for performance and memory safety, which it achieves without garbage collection~\autocite{noauthor_frequently_2016}. It is notable for its extreme speed and low usage of server resources even when compared to Go~\autocite{noauthor_rust_nodate}.
 \end{description}
 
 When comparing our options, Rust wins by sheer performance, while Node.js wins for its large community and the ability to share code between our front-end and our back-end.
@@ -72,13 +72,13 @@ Aside from being regularly queried by our users, our database will act as the so
 Therefore, the choice of our application's data store must primarily rely on the performance of such store.
 
 \begin{description}
-	\item[MongoDB] A source-available\footnote{A type of a licensing in which the source code can be viewed, but with no or restricted modification} cross-platform NoSQL database program~\autocite{noauthor_what_nodate}.
-	      MongoDB uses JSON-like documents with optional schemas.
-	      It is developed by MongoDB Inc. and licensed under \acrfull{sspl}~\autocite{noauthor_what_nodate}. It was initially released in 2009~\autocite{noauthor_mongodb_nodate}.
-	\item[MySQL] A widely used open-source \acrfull{rdmbs} initially released in 1995~\autocite{noauthor_mysql_nodate-1}.
-	\item[PostgreSQL] A free and open-source \acrshort{rdmbs} emphasizing extensibility and SQL compliance initially released in 1985~\autocite{noauthor_postgresql_nodate-1,noauthor_postgresql:_2017,noauthor_1._2021}. It offers various features, including transactions, automatically updatable views, materialized views, triggers, and stored procedures~\autocite{noauthor_1._2021}.
-	      It is designed to handle a wide range of workloads, from single machines to data warehouses or web servers with numerous concurrent users.
-	      Some notable products built on top of Postgres include Amazon Redshift, a data warehouse service.
+  \item[MongoDB] A source-available\footnote{A type of a licensing in which the source code can be viewed, but with no or restricted modification} cross-platform NoSQL database program~\autocite{noauthor_what_nodate}.
+        MongoDB uses JSON-like documents with optional schemas.
+        It is developed by MongoDB Inc. and licensed under \acrfull{sspl}~\autocite{noauthor_what_nodate}. It was initially released in 2009~\autocite{noauthor_mongodb_nodate}.
+  \item[MySQL] A widely used open-source \acrfull{rdmbs} initially released in 1995~\autocite{noauthor_mysql_nodate-1}.
+  \item[PostgreSQL] A free and open-source \acrshort{rdmbs} emphasizing extensibility and SQL compliance initially released in 1985~\autocite{noauthor_postgresql_nodate-1,noauthor_postgresql:_2017,noauthor_1._2021}. It offers various features, including transactions, automatically updatable views, materialized views, triggers, and stored procedures~\autocite{noauthor_1._2021}.
+        It is designed to handle a wide range of workloads, from single machines to data warehouses or web servers with numerous concurrent users.
+        Some notable products built on top of Postgres include Amazon Redshift, a data warehouse service.
 \end{description}
 
 Since each user can shape their database however they like, it might be tempting to choose a NoSQL database, such as MongoDB, for our application.
@@ -132,23 +132,23 @@ A concept similar to that of Tailwind CSS, sometimes labeled Atomic CSS, is curr
 \subsubsection{Windowing}
 
 \begin{figure}[H]
-	\centerfloat
-	\tikzsetnextfilename{windowing-example}
-	\sffamily
-	\begin{tikzpicture}
-		\node[fill=green!30, minimum width=4cm, minimum height=1cm] (r1) {Row};
-		\node[fill=green!30, minimum width=4cm, minimum height=1cm, below=0.08cm of r1] (r2) {Row};
-		\node[fill=green!30, minimum width=4cm, minimum height=1cm, below=0.08cm of r2] (r3) {Row};
-		\node[fill=green!30, minimum width=4cm, minimum height=1cm, below=0.08cm of r3] (r4) {Row};
-		\node[fill=gray!30, minimum width=4cm, minimum height=1cm, below=0.08cm of r4] (r5) {Not Rendered};
-		\node[fill=gray!30, minimum width=4cm, minimum height=1cm, below=0.08cm of r5] (r6) {Not Rendered};
+  \centerfloat
+  \tikzsetnextfilename{windowing-example}
+  % \sffamily
+  \begin{tikzpicture}
+    \node[fill=green!30, minimum width=4cm, minimum height=1cm] (r1) {Row};
+    \node[fill=green!30, minimum width=4cm, minimum height=1cm, below=0.08cm of r1] (r2) {Row};
+    \node[fill=green!30, minimum width=4cm, minimum height=1cm, below=0.08cm of r2] (r3) {Row};
+    \node[fill=green!30, minimum width=4cm, minimum height=1cm, below=0.08cm of r3] (r4) {Row};
+    \node[fill=gray!30, minimum width=4cm, minimum height=1cm, below=0.08cm of r4] (r5) {Not Rendered};
+    \node[fill=gray!30, minimum width=4cm, minimum height=1cm, below=0.08cm of r5] (r6) {Not Rendered};
 
-		\node[draw, minimum width=4.5cm, minimum height=3.5cm, below=0cm of r1.north, rounded corners] (w1) {};
-		\node[fill=white, opacity=0.5, minimum width=4.5cm, minimum height=3cm, below=0cm of w1.south] {};
-	\end{tikzpicture}
+    \node[draw, minimum width=4.5cm, minimum height=3.5cm, below=0cm of r1.north, rounded corners] (w1) {};
+    \node[fill=white, opacity=0.5, minimum width=4.5cm, minimum height=3cm, below=0cm of w1.south] {};
+  \end{tikzpicture}
 
-	\caption{Example of the windowing pattern}
-	\label{fig:windowing-example}
+  \caption{Example of the windowing pattern}
+  \label{fig:windowing-example}
 \end{figure}
 
 Windowing or virtual scrolling is a pattern for rendering large lists of data without slowing down the application.
