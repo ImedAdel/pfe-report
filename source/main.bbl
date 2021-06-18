@@ -16,52 +16,5 @@
   {}
 \endgroup
 
-
-\refsection{0}
-  \datalist[entry]{nty/global//global/global}
-    \entry{noauthor_cacheable_nodate}{misc}{}
-      \list{language}{1}{%
-        {en-US}%
-      }
-      \field{sortinit}{C}
-      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{A cacheable response is an HTTP response that can be cached, that is stored to be retrieved and used later, saving a new request to the server. Not all HTTP responses can be cached, these are the following constraints for an HTTP response to be cached:}
-      \field{shorttitle}{Cacheable - {MDN} {Web} {Docs} {Glossary}}
-      \field{title}{Cacheable - {MDN} {Web} {Docs} {Glossary}: {Definitions} of {Web}-related terms | {MDN}}
-      \field{urlday}{7}
-      \field{urlmonth}{6}
-      \field{urlyear}{2021}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://developer.mozilla.org/en-US/docs/Glossary/cacheable
-      \endverb
-      \verb{url}
-      \verb https://developer.mozilla.org/en-US/docs/Glossary/cacheable
-      \endverb
-    \endentry
-    \entry{noauthor_polyfill_nodate}{misc}{}
-      \list{language}{1}{%
-        {en-US}%
-      }
-      \field{sortinit}{P}
-      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{A polyfill is a piece of code (usually JavaScript on the Web) used to provide modern functionality on older browsers that do not natively support it.}
-      \field{shorttitle}{Polyfill - {MDN} {Web} {Docs} {Glossary}}
-      \field{title}{Polyfill - {MDN} {Web} {Docs} {Glossary}: {Definitions} of {Web}-related terms | {MDN}}
-      \field{urlday}{7}
-      \field{urlmonth}{6}
-      \field{urlyear}{2021}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://developer.mozilla.org/en-US/docs/Glossary/Polyfill
-      \endverb
-      \verb{url}
-      \verb https://developer.mozilla.org/en-US/docs/Glossary/Polyfill
-      \endverb
-    \endentry
-  \enddatalist
-\endrefsection
 \endinput
 

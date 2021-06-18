@@ -505,6 +505,8 @@ INPUT /home/imed/Code/pfe/report/source/Chapters/Dedic.aux
 INPUT /home/imed/Code/pfe/report/source/Chapters/Dedic.aux
 INPUT /home/imed/Code/pfe/report/source/Chapters/Conclusion.aux
 INPUT /home/imed/Code/pfe/report/source/Chapters/Conclusion.aux
+INPUT /home/imed/Code/pfe/report/source/Chapters/Abstract.aux
+INPUT /home/imed/Code/pfe/report/source/Chapters/Abstract.aux
 OUTPUT /home/imed/Code/pfe/report/source/main.aux
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
@@ -558,12 +560,9 @@ OUTPUT /home/imed/Code/pfe/report/source/main.lot
 OUTPUT /home/imed/Code/pfe/report/source/Chapters/Conclusion.aux
 INPUT /home/imed/Code/pfe/report/source/Chapters/Conclusion.tex
 INPUT /home/imed/Code/pfe/report/source/Chapters/Conclusion.tex
-INPUT /home/imed/Code/pfe/report/source/main.acr
-INPUT /home/imed/Code/pfe/report/source/main.acr
-INPUT /home/imed/Code/pfe/report/source/main.acr
-INPUT /home/imed/Code/pfe/report/source/main.gls
-INPUT /home/imed/Code/pfe/report/source/main.gls
-INPUT /home/imed/Code/pfe/report/source/main.gls
+OUTPUT /home/imed/Code/pfe/report/source/Chapters/Abstract.aux
+INPUT /home/imed/Code/pfe/report/source/Chapters/Abstract.tex
+INPUT /home/imed/Code/pfe/report/source/Chapters/Abstract.tex
 INPUT /home/imed/Code/pfe/report/source/main.aux
 INPUT /home/imed/Code/pfe/report/source/Chapters/Title.aux
 INPUT /home/imed/Code/pfe/report/source/Chapters/Title.aux
@@ -571,5 +570,7 @@ INPUT /home/imed/Code/pfe/report/source/Chapters/Dedic.aux
 INPUT /home/imed/Code/pfe/report/source/Chapters/Dedic.aux
 INPUT /home/imed/Code/pfe/report/source/Chapters/Conclusion.aux
 INPUT /home/imed/Code/pfe/report/source/Chapters/Conclusion.aux
+INPUT /home/imed/Code/pfe/report/source/Chapters/Abstract.aux
+INPUT /home/imed/Code/pfe/report/source/Chapters/Abstract.aux
 INPUT /home/imed/Code/pfe/report/source/main.run.xml
 OUTPUT /home/imed/Code/pfe/report/source/main.run.xml
