@@ -19,77 +19,24 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
-    \entry{noauthor_airtable_nodate}{misc}{}
-      \field{sortinit}{A}
-      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
-      \field{labeltitlesource}{title}
-      \field{abstract}{With the help of Capterra, learn about Airtable, its features, pricing information, popular comparisons to other Digital Asset Management products and more. Still not sure about Airtable? Check out alternatives and read real reviews from real users.}
-      \field{title}{Airtable {Pricing}, {Alternatives} \& {More} 2021 - {Capterra}}
-      \field{urlday}{7}
-      \field{urlmonth}{6}
-      \field{urlyear}{2021}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.capterra.com/p/146652/Airtable/
-      \endverb
-      \verb{url}
-      \verb https://www.capterra.com/p/146652/Airtable/
-      \endverb
-    \endentry
-    \entry{akulov_case_2020}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=559d3680a03b0757a31ec82560449941}{%
-           family={Akulov},
-           familyi={A\bibinitperiod},
-           given={Ivan},
-           giveni={I\bibinitperiod}}}%
-      }
-      \strng{namehash}{559d3680a03b0757a31ec82560449941}
-      \strng{fullhash}{559d3680a03b0757a31ec82560449941}
-      \strng{bibnamehash}{559d3680a03b0757a31ec82560449941}
-      \strng{authorbibnamehash}{559d3680a03b0757a31ec82560449941}
-      \strng{authornamehash}{559d3680a03b0757a31ec82560449941}
-      \strng{authorfullhash}{559d3680a03b0757a31ec82560449941}
-      \field{sortinit}{A}
-      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{How to make a React app load {\textasciitilde}30\% faster – by tuning some configs and delaying some scripts}
-      \field{journaltitle}{PerfPerfPerf}
-      \field{month}{5}
-      \field{shorttitle}{Case study}
-      \field{title}{Case study: {Analyzing} {Notion} app performance}
-      \field{urlday}{7}
-      \field{urlmonth}{6}
-      \field{urlyear}{2021}
-      \field{year}{2020}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://3perf.com/blog/notion/
-      \endverb
-      \verb{url}
-      \verb https://3perf.com/blog/notion/
-      \endverb
-    \endentry
-    \entry{noauthor_api-first_nodate}{misc}{}
+    \entry{noauthor_building_nodate}{misc}{}
       \list{language}{1}{%
         {en}%
       }
-      \field{sortinit}{A}
-      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
       \field{labeltitlesource}{title}
-      \field{abstract}{More than a headless CMS, Contentful is the API-first content management platform to create, manage and publish content on any digital channel.}
-      \field{journaltitle}{Contentful}
-      \field{title}{{API}-first content platform to build digital experiences}
-      \field{urlday}{18}
+      \field{abstract}{Excalidraw is a whiteboard tool that lets you easily sketch diagrams that have a hand-drawn feel to them. As tech companies started to institute mandatory work from home policies due to the COVID-19 pandemic, we realized that Excalidraw could be the perfect substitute for the whiteboard that is usually required for systems design interviews.}
+      \field{title}{Building {Excalidraw}'s {P2P} {Collaboration} {Feature} | {Excalidraw} {Blog}}
+      \field{urlday}{5}
       \field{urlmonth}{6}
       \field{urlyear}{2021}
       \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://www.contentful.com/
+      \verb https://blog.excalidraw.com/building-excalidraw-p2p-collaboration-feature/
       \endverb
       \verb{url}
-      \verb https://www.contentful.com/
+      \verb https://blog.excalidraw.com/building-excalidraw-p2p-collaboration-feature/
       \endverb
     \endentry
     \entry{noauthor_cacheable_nodate}{misc}{}
@@ -113,150 +60,252 @@
       \verb https://developer.mozilla.org/en-US/docs/Glossary/cacheable
       \endverb
     \endentry
-    \entry{noauthor_focus_nodate}{misc}{}
-      \list{language}{1}{%
-        {en}%
+    \entry{chang_ehub_2005}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=3bb5d254bf122c67a2c69223f5c89a1a}{%
+           family={Chang},
+           familyi={C\bibinitperiod},
+           given={Emily},
+           giveni={E\bibinitperiod}}}%
       }
-      \field{sortinit}{F}
-      \field{sortinithash}{fb0c0faa89eb6abae8213bf60e6799ea}
+      \list{language}{1}{%
+        {English}%
+      }
+      \strng{namehash}{3bb5d254bf122c67a2c69223f5c89a1a}
+      \strng{fullhash}{3bb5d254bf122c67a2c69223f5c89a1a}
+      \strng{bibnamehash}{3bb5d254bf122c67a2c69223f5c89a1a}
+      \strng{authorbibnamehash}{3bb5d254bf122c67a2c69223f5c89a1a}
+      \strng{authornamehash}{3bb5d254bf122c67a2c69223f5c89a1a}
+      \strng{authorfullhash}{3bb5d254bf122c67a2c69223f5c89a1a}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Notion}
-      \field{title}{Focus on performance \& reliability}
-      \field{urlday}{18}
+      \field{journaltitle}{eHub}
+      \field{month}{10}
+      \field{title}{{eHub} {Interviews} {Writely}}
+      \field{urlday}{4}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{year}{2005}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://web.archive.org/web/20110722190058/http://emilychang.com/ehub/app/ehub-interviews-writely/
+      \endverb
+      \verb{url}
+      \verb https://web.archive.org/web/20110722190058/http://emilychang.com/ehub/app/ehub-interviews-writely/
+      \endverb
+    \endentry
+    \entry{noauthor_document_nodate}{misc}{}
+      \list{language}{1}{%
+        {en-US}%
+      }
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Discover the benefits to co-authoring documents in your organization and learn about versioning, checkin/checkout, and mixed Office environments.}
+      \field{title}{Document collaboration and co-authoring}
+      \field{urlday}{4}
       \field{urlmonth}{6}
       \field{urlyear}{2021}
       \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://www.notion.so/Focus-on-performance-reliability-89f937a6ccc04905b1dcfa878537e08d
+      \verb https://support.microsoft.com/en-us/office/document-collaboration-and-co-authoring-ee1509b4-1f6e-401e-b04a-782d26f564a4
       \endverb
       \verb{url}
-      \verb https://www.notion.so/Focus-on-performance-reliability-89f937a6ccc04905b1dcfa878537e08d
+      \verb https://support.microsoft.com/en-us/office/document-collaboration-and-co-authoring-ee1509b4-1f6e-401e-b04a-782d26f564a4
       \endverb
     \endentry
-    \entry{noauthor_google_2018}{misc}{}
+    \entry{noauthor_firsts:_nodate}{misc}{}
+      \field{sortinit}{F}
+      \field{sortinithash}{fb0c0faa89eb6abae8213bf60e6799ea}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Doug Engelbart's 1968 "Mother of All Demos" - brief background with links to complete video footage, annotated video footage, abridged video footage, 1998 retrospective panel discussion by the original participants, and more}
+      \field{title}{Firsts: {The} {Demo} - {Doug} {Engelbart} {Institute}}
+      \field{urlday}{4}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.dougengelbart.org/content/view/209/448/
+      \endverb
+      \verb{url}
+      \verb https://www.dougengelbart.org/content/view/209/448/
+      \endverb
+    \endentry
+    \entry{fried_google_nodate}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=62fff6e0e9245bded11d28640760e735}{%
+           family={Fried},
+           familyi={F\bibinitperiod},
+           given={Ina},
+           giveni={I\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{62fff6e0e9245bded11d28640760e735}
+      \strng{fullhash}{62fff6e0e9245bded11d28640760e735}
+      \strng{bibnamehash}{62fff6e0e9245bded11d28640760e735}
+      \strng{authorbibnamehash}{62fff6e0e9245bded11d28640760e735}
+      \strng{authornamehash}{62fff6e0e9245bded11d28640760e735}
+      \strng{authorfullhash}{62fff6e0e9245bded11d28640760e735}
+      \field{sortinit}{F}
+      \field{sortinithash}{fb0c0faa89eb6abae8213bf60e6799ea}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The search giant says the real-time collaboration tool saw less use than the company had hoped. The company will aim to use technology in other products.}
+      \field{journaltitle}{CNET}
+      \field{title}{Google pulls plug on {Google} {Wave}}
+      \field{urlday}{4}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.cnet.com/news/google-pulls-plug-on-google-wave/
+      \endverb
+      \verb{url}
+      \verb https://www.cnet.com/news/google-pulls-plug-on-google-wave/
+      \endverb
+    \endentry
+    \entry{noauthor_google_2006}{misc}{}
       \list{language}{1}{%
         {en-US}%
       }
       \field{sortinit}{G}
       \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
       \field{labeltitlesource}{title}
-      \field{abstract}{This write-up is a comprehensive insight into Firebase. I bumped into it while searching for a quicker way of writing \& deploying mobile apps. If you are a mobile developer, professionally or even a hobbyist. Chances are you have already read something about it in the past.}
-      \field{journaltitle}{8bitmen.com}
-      \field{month}{11}
-      \field{title}{Google {Cloud} {Firebase} - {What}, {Why}, {How}, {Use} {Cases} - {Everything} {About} {It}}
-      \field{urlday}{18}
+      \field{abstract}{Elevate your enterprise data technology and strategy at Transform 2021. Google has acquired Upstartle, the Silicon Valley-based maker of online word processor Writely. It gives Google yet another tool in its kit of applications to take on Microsoft — and brush aside its dominance through the desktop. There are many similar products out there, in […]}
+      \field{journaltitle}{VentureBeat}
+      \field{month}{3}
+      \field{title}{Google acquires online word processor, {Writely}}
+      \field{urlday}{4}
       \field{urlmonth}{6}
       \field{urlyear}{2021}
-      \field{year}{2018}
+      \field{year}{2006}
       \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://www.8bitmen.com/firebase-oversimplified-everything-you-should-know/
+      \verb https://venturebeat.com/2006/03/09/google-acquires-online-word-processor-writely/
       \endverb
       \verb{url}
-      \verb https://www.8bitmen.com/firebase-oversimplified-everything-you-should-know/
+      \verb https://venturebeat.com/2006/03/09/google-acquires-online-word-processor-writely/
       \endverb
     \endentry
-    \entry{noauthor_googlechrome/web.dev_2021}{misc}{}
-      \list{publisher}{1}{%
-        {GoogleChrome}%
+    \entry{noauthor_javascript_nodate}{misc}{}
+      \field{sortinit}{j}
+      \field{sortinithash}{c45040a764d616897e7f5b30174d7b92}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Stack Overflow}
+      \field{title}{javascript - {MVVM} architectural pattern for a {ReactJS} application}
+      \field{urlday}{5}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://stackoverflow.com/questions/51506440/mvvm-architectural-pattern-for-a-reactjs-application
+      \endverb
+      \verb{url}
+      \verb https://stackoverflow.com/questions/51506440/mvvm-architectural-pattern-for-a-reactjs-application
+      \endverb
+    \endentry
+    \entry{kleppmann_conflict-free_2017}{article}{}
+      \name{author}{2}{}{%
+        {{hash=34b8d5b1d29d175527a6642f3ec8a76d}{%
+           family={Kleppmann},
+           familyi={K\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=fc4b061bc9e1eb54449d09671ee62255}{%
+           family={Beresford},
+           familyi={B\bibinitperiod},
+           given={Alastair\bibnamedelima R.},
+           giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
       }
-      \field{sortinit}{G}
-      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \strng{namehash}{07935bd06be5b22ec7f95e31888ab36f}
+      \strng{fullhash}{07935bd06be5b22ec7f95e31888ab36f}
+      \strng{bibnamehash}{07935bd06be5b22ec7f95e31888ab36f}
+      \strng{authorbibnamehash}{07935bd06be5b22ec7f95e31888ab36f}
+      \strng{authornamehash}{07935bd06be5b22ec7f95e31888ab36f}
+      \strng{authorfullhash}{07935bd06be5b22ec7f95e31888ab36f}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{The frontend, backend, and content source code for web.dev}
-      \field{month}{6}
-      \field{note}{original-date: 2018-09-12T23:22:46Z}
-      \field{title}{{GoogleChrome}/web.dev}
-      \field{urlday}{18}
-      \field{urlmonth}{6}
-      \field{urlyear}{2021}
-      \field{year}{2021}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://github.com/GoogleChrome/web.dev
+      \field{abstract}{Many applications model their data in a general-purpose storage format such as JSON. This data structure is modified by the application as a result of user input. Such modifications are well understood if performed sequentially on a single copy of the data, but if the data is replicated and modified concurrently on multiple devices, it is unclear what the semantics should be. In this paper we present an algorithm and formal semantics for a JSON data structure that automatically resolves concurrent modifications such that no updates are lost, and such that all replicas converge towards the same state (a conflict-free replicated datatype or CRDT). It supports arbitrarily nested list and map types, which can be modified by insertion, deletion and assignment. The algorithm performs all merging client-side and does not depend on ordering guarantees from the network, making it suitable for deployment on mobile devices with poor network connectivity, in peer-to-peer networks, and in messaging systems with end-to-end encryption.}
+      \field{issn}{1558-2183}
+      \field{journaltitle}{IEEE Transactions on Parallel and Distributed Systems}
+      \field{month}{10}
+      \field{number}{10}
+      \field{title}{A {Conflict}-{Free} {Replicated} {JSON} {Datatype}}
+      \field{volume}{28}
+      \field{year}{2017}
+      \field{pages}{2733\bibrangedash 2746}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1109/TPDS.2017.2697382
       \endverb
-      \verb{url}
-      \verb https://github.com/GoogleChrome/web.dev
-      \endverb
-      \keyw{javascript,css,html,web,progressive-web-app,web-app,mobile-web}
+      \keyw{Data structures,Collaboration,Semantics,Registers,Servers,Data models,Mobile handsets,CRDTs,collaborative editing,P2P,JSON,optimistic replication,operational semantics,eventual consistency}
     \endentry
-    \entry{noauthor_i_nodate}{misc}{}
-      \field{sortinit}{I}
-      \field{sortinithash}{9417e9a1288a9371e2691d999083ed39}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Capterra helps millions of people find the best business software. With software reviews, ratings, infographics, and the most comprehensive list of the top business software products available, you're sure to find what you need at Capterra.}
-      \field{title}{I just used {Capterra} to find software!}
-      \field{urlday}{18}
-      \field{urlmonth}{6}
-      \field{urlyear}{2021}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.capterra.com/
-      \endverb
-      \verb{url}
-      \verb https://www.capterra.com/
-      \endverb
-    \endentry
-    \entry{noauthor_lighthouse_nodate}{misc}{}
-      \list{language}{1}{%
-        {en}%
+    \entry{pautasso_microservices_2017}{article}{}
+      \name{author}{5}{}{%
+        {{hash=72f4c42f181b1843dc1b20d49f768775}{%
+           family={Pautasso},
+           familyi={P\bibinitperiod},
+           given={Cesare},
+           giveni={C\bibinitperiod}}}%
+        {{hash=bf0c5cc5d9e500fedda1d337af7eb24e}{%
+           family={Zimmermann},
+           familyi={Z\bibinitperiod},
+           given={Olaf},
+           giveni={O\bibinitperiod}}}%
+        {{hash=d1ff4cc9d5727a5f76ad7bf041390a1b}{%
+           family={Amundsen},
+           familyi={A\bibinitperiod},
+           given={Mike},
+           giveni={M\bibinitperiod}}}%
+        {{hash=bc0d2dbdc2f0a7a80ec11019d6142dbb}{%
+           family={Lewis},
+           familyi={L\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+        {{hash=3eef3c65bc687548d589365867080132}{%
+           family={Josuttis},
+           familyi={J\bibinitperiod},
+           given={Nicolai},
+           giveni={N\bibinitperiod}}}%
       }
-      \field{sortinit}{L}
-      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Learn how to set up Lighthouse to audit your web apps.}
-      \field{journaltitle}{Google Developers}
-      \field{title}{Lighthouse | {Tools} for {Web} {Developers}}
-      \field{urlday}{18}
+      \strng{namehash}{24abb54b5cf23798b9cf8ff4bd8084f3}
+      \strng{fullhash}{24abb54b5cf23798b9cf8ff4bd8084f3}
+      \strng{bibnamehash}{24abb54b5cf23798b9cf8ff4bd8084f3}
+      \strng{authorbibnamehash}{24abb54b5cf23798b9cf8ff4bd8084f3}
+      \strng{authornamehash}{24abb54b5cf23798b9cf8ff4bd8084f3}
+      \strng{authorfullhash}{24abb54b5cf23798b9cf8ff4bd8084f3}
+      \field{sortinit}{P}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{issn}{0740-7459, 1937-4194}
+      \field{journaltitle}{IEEE Software}
+      \field{month}{3}
+      \field{number}{2}
+      \field{shorttitle}{Microservices in {Practice}, {Part} 2}
+      \field{title}{Microservices in {Practice}, {Part} 2: {Service} {Integration} and {Sustainability}}
+      \field{urlday}{5}
       \field{urlmonth}{6}
       \field{urlyear}{2021}
+      \field{volume}{34}
+      \field{year}{2017}
       \field{urldateera}{ce}
+      \field{pages}{97\bibrangedash 104}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/MS.2017.56
+      \endverb
       \verb{urlraw}
-      \verb https://developers.google.com/web/tools/lighthouse
+      \verb https://ieeexplore.ieee.org/document/7888407/
       \endverb
       \verb{url}
-      \verb https://developers.google.com/web/tools/lighthouse
-      \endverb
-    \endentry
-    \entry{noauthor_long_nodate}{misc}{}
-      \list{language}{1}{%
-        {en}%
-      }
-      \field{sortinit}{L}
-      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Wikipedia}
-      \field{title}{Long pages}
-      \field{urlday}{7}
-      \field{urlmonth}{6}
-      \field{urlyear}{2021}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://en.wikipedia.org/wiki/Special:LongPages
-      \endverb
-      \verb{url}
-      \verb https://en.wikipedia.org/wiki/Special:LongPages
-      \endverb
-    \endentry
-    \entry{noauthor_notion_nodate}{misc}{}
-      \list{language}{1}{%
-        {en}%
-      }
-      \field{sortinit}{N}
-      \field{sortinithash}{98cf339a479c0454fe09153a08675a15}
-      \field{labeltitlesource}{title}
-      \field{abstract}{A new tool that blends your everyday work apps into one. It's the all-in-one workspace for you and your team}
-      \field{journaltitle}{Notion}
-      \field{title}{Notion – {The} all-in-one workspace for your notes, tasks, wikis, and databases.}
-      \field{urlday}{18}
-      \field{urlmonth}{6}
-      \field{urlyear}{2021}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.notion.so
-      \endverb
-      \verb{url}
-      \verb https://www.notion.so
+      \verb https://ieeexplore.ieee.org/document/7888407/
       \endverb
     \endentry
     \entry{noauthor_polyfill_nodate}{misc}{}
@@ -280,44 +329,289 @@
       \verb https://developer.mozilla.org/en-US/docs/Glossary/Polyfill
       \endverb
     \endentry
-    \entry{noauthor_unified_nodate}{misc}{}
+    \entry{noauthor_rethinking_nodate}{misc}{}
       \list{language}{1}{%
         {en}%
       }
-      \field{sortinit}{T}
-      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
       \field{labeltitlesource}{title}
-      \field{abstract}{Sanity is the unified content platform that lets your team work together in real-time to build engaging digital experiences across channels.}
-      \field{title}{The {Unified} {Content} {Platform} – {Sanity}.io}
-      \field{urlday}{18}
+      \field{abstract}{Excalidraw started as a virtual tool to draw diagrams but a lot of people started using it to replace physical whiteboards. In this post we’ll walk through many aspects of physical whiteboards that do not make sense to translate as is in the virtual world.}
+      \field{title}{Rethinking {Virtual} {Whiteboard} | {Excalidraw} {Blog}}
+      \field{urlday}{5}
       \field{urlmonth}{6}
       \field{urlyear}{2021}
       \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://www.sanity.io/
+      \verb https://blog.excalidraw.com/rethinking-virtual-whiteboard/
       \endverb
       \verb{url}
-      \verb https://www.sanity.io/
+      \verb https://blog.excalidraw.com/rethinking-virtual-whiteboard/
       \endverb
     \endentry
-    \entry{noauthor_web_nodate}{misc}{}
+    \entry{shapiro_conflict-free_2011}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=f13a03ea8c9e34968f9bc55bb4e93d9f}{%
+           family={Shapiro},
+           familyi={S\bibinitperiod},
+           given={Marc},
+           giveni={M\bibinitperiod}}}%
+        {{hash=01eb907fe4f9429b911ea87887f73363}{%
+           family={Preguiça},
+           familyi={P\bibinitperiod},
+           given={Nuno},
+           giveni={N\bibinitperiod}}}%
+        {{hash=0bb140bbbc1d3ac7ec6a28bd9d506581}{%
+           family={Baquero},
+           familyi={B\bibinitperiod},
+           given={Carlos},
+           giveni={C\bibinitperiod}}}%
+        {{hash=d091ed4cb7e2ab01f03d04bfcd52f83f}{%
+           family={Zawirski},
+           familyi={Z\bibinitperiod},
+           given={Marek},
+           giveni={M\bibinitperiod}}}%
+      }
+      \name{editor}{3}{}{%
+        {{hash=e815d3c85a6566efef0716dbeb6df496}{%
+           family={Défago},
+           familyi={D\bibinitperiod},
+           given={Xavier},
+           giveni={X\bibinitperiod}}}%
+        {{hash=cac3f398e493ef46fe9796f1a3524e9e}{%
+           family={Petit},
+           familyi={P\bibinitperiod},
+           given={Franck},
+           giveni={F\bibinitperiod}}}%
+        {{hash=043d604a66f23a1f2f7c302317fd87a2}{%
+           family={Villain},
+           familyi={V\bibinitperiod},
+           given={Vincent},
+           giveni={V\bibinitperiod}}}%
+      }
       \list{language}{1}{%
         {en}%
       }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{00bf62d46bf695019c2c8f76a176456a}
+      \strng{fullhash}{00bf62d46bf695019c2c8f76a176456a}
+      \strng{bibnamehash}{00bf62d46bf695019c2c8f76a176456a}
+      \strng{authorbibnamehash}{00bf62d46bf695019c2c8f76a176456a}
+      \strng{authornamehash}{00bf62d46bf695019c2c8f76a176456a}
+      \strng{authorfullhash}{00bf62d46bf695019c2c8f76a176456a}
+      \strng{editorbibnamehash}{6a150f6c69114b0eaf2bbc447992dbfb}
+      \strng{editornamehash}{6a150f6c69114b0eaf2bbc447992dbfb}
+      \strng{editorfullhash}{6a150f6c69114b0eaf2bbc447992dbfb}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Replicating data under Eventual Consistency (EC) allows any replica to accept updates without remote synchronisation. This ensures performance and scalability in large-scale distributed systems (e.g., clouds). However, published EC approaches are ad-hoc and error-prone. Under a formal Strong Eventual Consistency (SEC) model, we study sufficient conditions for convergence. A data type that satisfies these conditions is called a Conflict-free Replicated Data Type (CRDT). Replicas of any CRDT are guaranteed to converge in a self-stabilising manner, despite any number of failures. This paper formalises two popular approaches (state- and operation-based) and their relevant sufficient conditions. We study a number of useful CRDTs, such as sets with clean semantics, supporting both add and remove operations, and consider in depth the more complex Graph data type. CRDT types can be composed to develop large-scale distributed applications, and have interesting theoretical properties.}
+      \field{booktitle}{Stabilization, {Safety}, and {Security} of {Distributed} {Systems}}
+      \field{isbn}{9783642245503}
+      \field{series}{Lecture {Notes} in {Computer} {Science}}
+      \field{title}{Conflict-{Free} {Replicated} {Data} {Types}}
+      \field{year}{2011}
+      \field{pages}{386\bibrangedash 400}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1007/978-3-642-24550-3_29
+      \endverb
+      \keyw{Eventual Consistency,Replicated Shared Objects,Large-Scale Distributed Systems}
+    \endentry
+    \entry{smith_patterns_2009}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=991eb1e033c962cafd66f30fa0593451}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Josh},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en-us}%
+      }
+      \strng{namehash}{991eb1e033c962cafd66f30fa0593451}
+      \strng{fullhash}{991eb1e033c962cafd66f30fa0593451}
+      \strng{bibnamehash}{991eb1e033c962cafd66f30fa0593451}
+      \strng{authorbibnamehash}{991eb1e033c962cafd66f30fa0593451}
+      \strng{authornamehash}{991eb1e033c962cafd66f30fa0593451}
+      \strng{authorfullhash}{991eb1e033c962cafd66f30fa0593451}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Patterns - {WPF} {Apps} {With} {The} {Model}-{View}-{ViewModel} {Design} {Pattern}}
+      \field{urlday}{5}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{year}{2009}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.microsoft.com/en-us/archive/msdn-magazine/2009/february/patterns-wpf-apps-with-the-model-view-viewmodel-design-pattern
+      \endverb
+      \verb{url}
+      \verb https://docs.microsoft.com/en-us/archive/msdn-magazine/2009/february/patterns-wpf-apps-with-the-model-view-viewmodel-design-pattern
+      \endverb
+    \endentry
+    \entry{sun_real_2020}{article}{}
+      \name{author}{5}{}{%
+        {{hash=637fdbefe4bb1ef3b5f562de5d806ecc}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Chengzheng},
+           giveni={C\bibinitperiod}}}%
+        {{hash=d72e4639bdaeeacb0048e12586285e47}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=1c14237c88450fac0355a0a791eaf34d}{%
+           family={Ng},
+           familyi={N\bibinitperiod},
+           given={Agustina},
+           giveni={A\bibinitperiod}}}%
+        {{hash=4c3492d3e614de77c03ddd4b66dc0d6b}{%
+           family={Cai},
+           familyi={C\bibinitperiod},
+           given={Weiwei},
+           giveni={W\bibinitperiod}}}%
+        {{hash=2651e067a9cb96496cc38412686d2d71}{%
+           family={Cho},
+           familyi={C\bibinitperiod},
+           given={Bryden},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{c2c440c027ccb37e31f73ceed07e675e}
+      \strng{fullhash}{c2c440c027ccb37e31f73ceed07e675e}
+      \strng{bibnamehash}{c2c440c027ccb37e31f73ceed07e675e}
+      \strng{authorbibnamehash}{c2c440c027ccb37e31f73ceed07e675e}
+      \strng{authornamehash}{c2c440c027ccb37e31f73ceed07e675e}
+      \strng{authorfullhash}{c2c440c027ccb37e31f73ceed07e675e}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{OT (Operational Transformation) was invented for supporting real-time co-editors in the late 1980s and has evolved to become a collection of core techniques widely used in today's working co-editors and adopted in major industrial products. CRDT (Commutative Replicated Data Type) for co-editors was first proposed around 2006, under the name of WOOT (WithOut Operational Transformation). Follow-up CRDT variations are commonly labeled as "post-OT" techniques capable of making concurrent operations natively commutativity in co-editors. On top of that, CRDT solutions have made broad claims of superiority over OT solutions, and routinely portrayed OT as an incorrect, complex and inefficient technique. Over one decade later, however, CRDT is rarely found in working co-editors, and OT remains the choice for building the vast majority of today's co-editors. Contradictions between the reality and CRDT's purported advantages have been the source of much confusion and debate in co-editing research and developer communities. Have the vast majority of co-editors been unfortunate in choosing the faulty and inferior OT, or those CRDT claims are false? What are the real differences between OT and CRDT for co-editors? What are the key factors and underlying reasons behind the choices between OT and CRDT in the real world? A thorough examination of these questions is relevant not only to researchers who are exploring the frontiers of co-editing technologies and systems, but also to practitioners who are seeking viable techniques to build real world applications. To seek truth from facts, we set out to conduct a comprehensive and critical review on representative OT and CRDT solutions and working co-editors based on them. From this work, we have made important discoveries about OT and CRDT, and revealed facts and evidences that refute CRDT claims over OT on all accounts. We report our discoveries in a series of articles and the current article is the first one in this series. In this paper, we present a general transformation framework for consistency maintenance in co-editors, which was distilled from dissecting and examining representative OT and CRDT solutions (and other alternative solutions) during this work, and report our discoveries under the guidance of this framework. In particular, we reveal that CRDT is like OT in following a general transformation approach, but achieves the same transformation indirectly, in contrast to OT direct transformation approach; and CRDT is not natively commutative for concurrent co-editing operations, but has to achieve the same OT commutativity indirectly as well, with consequential correctness and complexity issues. Uncovering the hidden transformation nature and demystifying the commutativity property of CRDT provides much-needed clarity about what CRDT really is and is not to co-editing, and serves as the foundation to explore the real differences between OT and CRDT in correctness, complexity, implementation, and real world applications, which are reported in follow-up articles. We hope discoveries from this work help clear up common misconceptions and confusions surrounding OT and CRDT, and accelerate progress in co-editing technology for real world applications.?}
+      \field{issn}{2573-0142}
+      \field{journaltitle}{Proceedings of the ACM on Human-Computer Interaction}
+      \field{month}{1}
+      \field{number}{GROUP}
+      \field{title}{Real {Differences} between {OT} and {CRDT} under a {General} {Transformation} {Framework} for {Consistency} {Maintenance} in {Co}-{Editors}}
+      \field{urlday}{4}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{volume}{4}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 26}
+      \range{pages}{26}
+      \verb{doi}
+      \verb 10.1145/3375186
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/3375186
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/3375186
+      \endverb
+    \endentry
+    \entry{tools_2020_nodate}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=8588f26f40642b4c0d7ac4381d6782ce}{%
+           family={Tools},
+           familyi={T\bibinitperiod},
+           given={U.\bibnamedelimi X.},
+           giveni={U\bibinitperiod\bibinitdelim X\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en-us}%
+      }
+      \strng{namehash}{8588f26f40642b4c0d7ac4381d6782ce}
+      \strng{fullhash}{8588f26f40642b4c0d7ac4381d6782ce}
+      \strng{bibnamehash}{8588f26f40642b4c0d7ac4381d6782ce}
+      \strng{authorbibnamehash}{8588f26f40642b4c0d7ac4381d6782ce}
+      \strng{authornamehash}{8588f26f40642b4c0d7ac4381d6782ce}
+      \strng{authorfullhash}{8588f26f40642b4c0d7ac4381d6782ce}
       \field{sortinit}{T}
       \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
+      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Build and manage powerful, content-driven websites with completely custom content structures — without writing code or managing databases.}
-      \field{title}{The web {CMS} for designers | {Webflow}}
-      \field{urlday}{18}
+      \field{abstract}{See the most popular tools used by over 4,000 designers based on this annual survey.}
+      \field{title}{2020 {Tools} {Survey} {Results}}
+      \field{urlday}{5}
       \field{urlmonth}{6}
       \field{urlyear}{2021}
       \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://webflow.com/cms
+      \verb https://uxtools.co/survey-2020/
       \endverb
       \verb{url}
-      \verb https://webflow.com/cms
+      \verb https://uxtools.co/survey-2020/
+      \endverb
+    \endentry
+    \entry{wallace_how_nodate}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=f2a8c3d7362bf4e6a7dbc4d6ceae7a10}{%
+           family={Wallace},
+           familyi={W\bibinitperiod},
+           given={Evan},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en-US}%
+      }
+      \strng{namehash}{f2a8c3d7362bf4e6a7dbc4d6ceae7a10}
+      \strng{fullhash}{f2a8c3d7362bf4e6a7dbc4d6ceae7a10}
+      \strng{bibnamehash}{f2a8c3d7362bf4e6a7dbc4d6ceae7a10}
+      \strng{authorbibnamehash}{f2a8c3d7362bf4e6a7dbc4d6ceae7a10}
+      \strng{authornamehash}{f2a8c3d7362bf4e6a7dbc4d6ceae7a10}
+      \strng{authorfullhash}{f2a8c3d7362bf4e6a7dbc4d6ceae7a10}
+      \field{sortinit}{W}
+      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A peek into the homegrown solution we built as the first design tool with live collaborative editing.}
+      \field{journaltitle}{Figma}
+      \field{title}{How {Figma}’s multiplayer technology works}
+      \field{urlday}{5}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.figma.com/blog/how-figmas-multiplayer-technology-works/
+      \endverb
+      \verb{url}
+      \verb https://www.figma.com/blog/how-figmas-multiplayer-technology-works/
+      \endverb
+    \endentry
+    \entry{noauthor_whats_nodate}{misc}{}
+      \list{language}{1}{%
+        {en}%
+      }
+      \field{sortinit}{W}
+      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{News and notes from the Google Drive team}
+      \field{journaltitle}{Google Drive Blog}
+      \field{shorttitle}{What’s different about the new {Google} {Docs}}
+      \field{title}{What’s different about the new {Google} {Docs}: {Conflict} resolution}
+      \field{urlday}{4}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://drive.googleblog.com/2010/09/whats-different-about-new-google-docs_22.html
+      \endverb
+      \verb{url}
+      \verb https://drive.googleblog.com/2010/09/whats-different-about-new-google-docs_22.html
       \endverb
     \endentry
   \enddatalist
