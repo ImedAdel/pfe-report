@@ -4,13 +4,8 @@
 \section{Introduction}
 
 The aim of this chapter is to contextualize our work.
-We will start by introducing the hosting institution for the graduation project.
-Then, we will present the project, its motivations, and its objectives.
-Finally, we will discuss the development process used throughout the making of this project.
-
-\section{Host}
-
-This project is done as part of the final graduation project with the goal of obtaining the License Degree in Computer Science within the Higher School of Sciences and Technology of Hammam Sousse.
+We will start by presenting the project, its motivations, and its objectives.
+Then, we will discuss the development process used throughout the making of this project.
 
 \section{Project presentation}
 
@@ -61,26 +56,26 @@ We will start by presenting the selected solutions.
 \logofig{Firebase}{firebase-logo.png}
 
 Firebase is a platform developed by Google for creating mobile and web
-applications.
+applications~\autocite{noauthor_google_2018}.
 It was initially released in 2012.
 It offers, among its products, a real-time database, in which, data is stored in JSON format and synced between all the connected clients.
 The database was not developed with non-technical users in mind, however, its real-time capabilities offer an example of what's desired in real-time database software.
 Firebase Realtime Database has been successfully used to
-develop highly demanding mobile applications.
+develop highly demanding mobile applications~\autocite{noauthor_google_2018}.
 
 \subsubsection{Airtable}
 
 \logofig{Airtable}{airtable-logo.png}
 
 Airtable is a visual database app inspired by the ease of spreadsheets
-and the wide adoption of software like Microsoft Excel.
+and the wide adoption of software like Microsoft Excel~\autocite{noauthor_airtable_nodate}.
 The company behind the app was founded in 2012.
 
 Airtable comes with team collaboration out of the box. It also
 automatically generates a REST API from each database.
 
 Pricing is done per team member.
-There are several limits to the size of storage and uploads.
+There are several limits to the size of storage and uploads~\autocite{noauthor_airtable_nodate}.
 
 \subsubsection{Contentful}
 
@@ -89,18 +84,18 @@ There are several limits to the size of storage and uploads.
 Contentful is a headless
 \footnote{Content is decoupled from the main application.
 	It's made accessible through a set of APIs.}
-\acrfull{cms}.
+\acrfull{cms}~\autocite{noauthor_api-first_nodate}.
 It offers a flexible \acrshort{cms} editor and a configurable API.
 It also comes with multiple \acrshort{sdk}s in multiple programming languages to make its integration easier.
 
-Pricing is offered per package, with the lowest premium package starting at US\$489 per month.
+Pricing is offered per package, with the lowest premium package starting at US\$489 per month~\autocite{noauthor_api-first_nodate}.
 
 \subsubsection{Sanity}
 
 \logofig{Sanity}{sanity-logo.png}
 
 Sanity is another headless CMS.
-It competes directly with Contentful, offers an even more configurable editor, and its pricing starts at US\$199 per month.
+It competes directly with Contentful, offers an even more configurable editor, and its pricing starts at US\$199 per month~\autocite{noauthor_unified_nodate}.
 It comes with real-time collaboration, a feature that Contentful lacks.
 
 \subsubsection{Webflow CMS}
@@ -108,7 +103,7 @@ It comes with real-time collaboration, a feature that Contentful lacks.
 \logofig{Webflow}{webflow-logo.png}
 
 Webflow is a website builder.
-It bundles a \acrshort{cms} and an e-commerce management system along with its visual website builder.
+It bundles a \acrshort{cms} and an e-commerce management system along with its visual website builder~\autocite{noauthor_web_nodate}.
 The \acrshort{cms} is not usable outside of Webflow websites, however, it comes with an intuitive user interface.
 
 \subsubsection{Notion}
@@ -116,11 +111,11 @@ The \acrshort{cms} is not usable outside of Webflow websites, however, it comes 
 \logofig{Notion}{notion-logo-2.png}
 
 Notion is a new contender in the space of content management.
-It presents itself as a collaborative workspace for teams.
+It presents itself as a collaborative workspace for teams~\autocite{noauthor_notion_nodate}.
 Its use cases vary from product management and team documentation to note-taking and personal organization.
 The initial version of Notion was released in 2016.
 The second version, which received a lot of praise and media coverage, was released two years later in 2018.
-However, the largest surge in sign-ups happened during the pandemic, with 40\% of sign-ups occurring from December 2020 to January.
+However, the largest surge in sign-ups happened during the pandemic, with 40\% of sign-ups occurring from December 2020 to January~\autocite{noauthor_focus_nodate}.
 
 Notion is built on the concept of blocks: A block is any single piece
 of content you add to your page, like a to-do item, an image, a code
@@ -131,7 +126,7 @@ Notion is also built as a collaborative web app---eliminating the need
 for saving and figuring out how to share one's documents as is the case in other apps.
 
 Pricing is done per workspace member with unlimited storage starting
-from the free plan.
+from the free plan~\autocite{noauthor_notion_nodate}.
 
 \subsection{Comparison of the existing solutions}
 
@@ -143,7 +138,7 @@ For a fair and objective comparison of the different solutions, we will rely on 
 
 \paragraph{Web.Dev}
 
-Web.Dev is a web application developed by Google that uses the Lighthouse tool to measure different websites and web applications metrics.
+Web.Dev is a web application developed by Google that uses the Lighthouse tool to measure different websites and web applications metrics~\autocite{noauthor_googlechrome/web.dev_2021}.
 It can only audit public web pages, however, it offers metrics totally unbiased by our browser setup.
 
 \paragraph{Google Chrome Lighthouse}
@@ -151,7 +146,7 @@ It can only audit public web pages, however, it offers metrics totally unbiased 
 \logofig{Lighthouse}{lighthouse-logo.png}
 
 Google Chrome Lighthouse is an extension available by default in Google Chrome browsers.
-It can measure different website and web application metrics.
+It can measure different website and web application metrics~\autocite{noauthor_lighthouse_nodate}.
 It can audit both public and private web pages. However, the results can be affected by any installed browser extensions.
 Which is why we run this tool in an isolated browser installed for this particular use case.
 
@@ -159,7 +154,7 @@ Which is why we run this tool in an isolated browser installed for this particul
 
 \logofig{Capterra}{capterra-logo.png}
 
-Capterra is a free resource that helps businesses of all kinds compare available software and find the right software for their needs.
+Capterra is a free resource that helps businesses of all kinds compare available software and find the right software for their needs~\autocite{noauthor_i_nodate}.
 It offers software ratings, reviews and buying guides.
 
 \subsubsection{Comparison table}
@@ -202,7 +197,7 @@ businesses.
 
 Notion is known for its slow performance and long loading times.
 Pages take on average between six and 12 seconds to load~\autocite{akulov_case_2020}.
-It also doesn't have an API, although one is being developed at the time of writing~\footnote{Notion's API was recently launched in beta.}.
+It also does not have an API, although one is being developed at the time of writing~\footnote{Notion's API was recently launched in beta.}.
 Furthermore, Notion is less structured than products like Airtable or Firebase.
 
 Airtable is notable for its complexity, even for experienced users.
@@ -210,10 +205,10 @@ It also suffers from some performance issues when loading large documents~\autoc
 Furthermore, it doesn't have the same rich text capabilities as Notion.
 Finally, it lacks a real-time API, and it is relatively expensive~\autocite{noauthor_airtable_nodate}.
 
-\subsubsection{Case study: Notion}
-
 Due to the popularity of Notion among various types of users, and due to the surge of sign-ups that it had seen, it seems to be the perfect product for a case study.
 While it is neither a database nor a \acrshort{cms}, it is often used as a limited content management solution for blogs.
+
+\subsubsection{Case study: Notion}
 
 Notion is a front-end React application, which means that the whole application has to be downloaded, parsed, and executed by the browser before it can load.
 Unfortunately, this happens nearly every time you visit their website~\autocite{akulov_case_2020}.
@@ -225,6 +220,10 @@ While fetched resources can be cached for faster subsequent loads, processing Ja
 
 Further analysis shows that not much optimization has been done on Notion's part.
 The whole JavaScript code is loaded, regardless of whether it is needed on the requested page or not, unnecessary \gls{polyfill}s are loaded even for modern browsers, huge libraries are used---even when a smaller alternative exists---and images are served in their original format without optimization or minification.
+
+Another interesting point in the case of Notion is the over-reliance on JavaScript for styling the application, instead of CSS.
+In fact, even transitions that could be easily done using CSS are performed using JavaScript.
+By doing this, Notion loses the possible performance boosts gained from using CSS and pushing more of the rendering to the \acrfull{gpu}.
 
 The \acrfull{ux}, aside from the loading issues, is rather simple.
 Any person can start using Notion without any prior knowledge required.
@@ -255,36 +254,6 @@ Agile software development is an umbrella term for a set of frameworks and pract
 It advocates adaptive planning, evolutionary development, early delivery, and continual improvement, and it encourages flexible responses to change.
 It derives its values from a range of software development frameworks and methodologies.
 
-\subsubsection{Values}
-
-The Manifesto for Agile Software Development proclaims the following values:
-
-\begin{itemize}
-	\item Individuals and interactions over processes and tools
-	\item Working software over comprehensive documentation
-	\item Customer collaboration over contract negotiation
-	\item Responding to change over following a plan
-\end{itemize}
-
-\subsubsection{Principles}
-
-The Manifesto for Agile Software Development is based on twelve principles:
-
-\begin{enumerate}
-	\item Customer satisfaction by early and continuous delivery of valuable software
-	\item Welcome changing requirements, even in late development
-	\item Deliver working software frequently (weeks rather than months)
-	\item Close, daily cooperation between business people and developers
-	\item Projects are built around motivated individuals, who should be trusted
-	\item Face-to-face conversation is the best form of communication (co-location)
-	\item Working software is the primary measure of progress
-	\item Sustainable development, able to maintain a constant pace
-	\item Continuous attention to technical excellence and good design
-	\item Simplicity—the art of maximizing the amount of work not done—is essential
-	\item Best architectures, requirements, and designs emerge from self-organizing teams
-	\item Regularly, the team reflects on how to become more effective, and adjusts accordingly
-\end{enumerate}
-
 \subsection{\acrlong{fdd}}
 
 \acrfull{fdd} is an Agile method for developing software iteratively and incrementally. It encourages planning, design, and development based on features.
@@ -296,6 +265,6 @@ Work is divided into smaller tasks that are visualized on top of a Kanban board.
 
 \section{Conclusion}
 
-In summary, throughout this chapter, we have presented our project, the hosting institution, the motivations behind our choices, and our objectives. We also researched the existing solutions and we started drawing the picture for what our project strives to achieve.
+In summary, throughout this chapter, we have presented our project, the motivations behind our choices, and our objectives. We also researched the existing solutions, and we started drawing the picture for what our project strives to achieve.
 
 Within the next chapter, we will be going into more details of this picture by focusing on the analysis and specification of needs for out project.
