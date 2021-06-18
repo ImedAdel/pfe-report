@@ -2182,30 +2182,10 @@
     <bcf:datasource type="file" datatype="bibtex">main.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="2">noauthor_document_nodate</bcf:citekey>
-    <bcf:citekey order="3">noauthor_firsts:_nodate</bcf:citekey>
-    <bcf:citekey order="4">chang_ehub_2005</bcf:citekey>
-    <bcf:citekey order="5">noauthor_google_2006</bcf:citekey>
-    <bcf:citekey order="6">fried_google_nodate</bcf:citekey>
-    <bcf:citekey order="7">sun_real_2020</bcf:citekey>
-    <bcf:citekey order="8">noauthor_whats_nodate</bcf:citekey>
-    <bcf:citekey order="9">sun_real_2020</bcf:citekey>
-    <bcf:citekey order="10">shapiro_conflict-free_2011</bcf:citekey>
-    <bcf:citekey order="11">shapiro_conflict-free_2011</bcf:citekey>
-    <bcf:citekey order="12">tools_2020_nodate</bcf:citekey>
-    <bcf:citekey order="13">wallace_how_nodate</bcf:citekey>
-    <bcf:citekey order="14">wallace_how_nodate</bcf:citekey>
-    <bcf:citekey order="15">noauthor_rethinking_nodate</bcf:citekey>
-    <bcf:citekey order="16">noauthor_building_nodate</bcf:citekey>
-    <bcf:citekey order="17">noauthor_building_nodate</bcf:citekey>
-    <bcf:citekey order="18">noauthor_building_nodate</bcf:citekey>
-    <bcf:citekey order="19">noauthor_building_nodate</bcf:citekey>
-    <bcf:citekey order="20">kleppmann_conflict-free_2017</bcf:citekey>
-    <bcf:citekey order="21">pautasso_microservices_2017</bcf:citekey>
-    <bcf:citekey order="22">smith_patterns_2009</bcf:citekey>
-    <bcf:citekey order="23">noauthor_javascript_nodate</bcf:citekey>
-    <bcf:citekey order="24">noauthor_cacheable_nodate</bcf:citekey>
-    <bcf:citekey order="25">noauthor_polyfill_nodate</bcf:citekey>
+    <bcf:citekey order="1">gemayel_how_nodate</bcf:citekey>
+    <bcf:citekey order="2">garrett_elements_2011</bcf:citekey>
+    <bcf:citekey order="3">noauthor_cacheable_nodate</bcf:citekey>
+    <bcf:citekey order="4">noauthor_polyfill_nodate</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
