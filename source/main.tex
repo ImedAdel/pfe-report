@@ -1,6 +1,6 @@
 % \PassOptionsToPackage{final}{graphicx}
-\documentclass[draft]{custom}
-% \documentclass[final]{custom}
+% \documentclass[draft]{custom}
+\documentclass[final]{custom}
 
 \title{A Collaborative Visual Database}
 %\subtitle{A minimal, modern \LaTeX{} package for typesetting your thesis}
@@ -14,6 +14,7 @@
 \begin{document}
 
 \frontmatter
+\includepdf[pages=-]{frontmatter.pdf}
 \include{Chapters/Title}
 \include{Chapters/Dedic}
 \tableofcontents
@@ -21,11 +22,11 @@
 \listoftables
 
 \mainmatter
-% \include{Chapters/General-Introduction}
-% \include{Chapters/Introduction}
-% \include{Chapters/Analysis}
-% \include{Chapters/Conceptual}
-% \include{Chapters/Implementation}
+\include{Chapters/General-Introduction}
+\include{Chapters/Introduction}
+\include{Chapters/Analysis}
+\include{Chapters/Conceptual}
+\include{Chapters/Implementation}
 \include{Chapters/Conclusion}
 
 \backmatter

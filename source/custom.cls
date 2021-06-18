@@ -94,6 +94,7 @@
 
 % \RequirePackage[most]{tcolorbox}
 \RequirePackage{fancybox}
+\RequirePackage{pdfpages}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Tables
@@ -121,7 +122,7 @@
 \newcommand{\logofig}[2]{
   \begin{figure}[H]
     \centerfloat
-    \includegraphics[width=\maxwidth{0.6\linewidth},height=\maxheight{0.3\linewidth},keepaspectratio]{#2}
+    \includegraphics[width=\maxwidth{0.2\linewidth},height=\maxheight{0.1\linewidth},keepaspectratio]{#2}
     \caption{#1 logo}
   \end{figure}
 }

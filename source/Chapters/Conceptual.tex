@@ -95,7 +95,7 @@ Figure~\ref{fig:collab-sol-ot} illustrates the solution proposed by \acrshort{ot
 \begin{figure}[H]
   \centerfloat
   \sffamily
-  \begin{tikzpicture}[node distance=4cm]
+  \begin{tikzpicture}[node distance=4cm,scale=0.5, every node/.append style={transform shape}]
 
     \node(bob-1)[rectangle, draw=none,fill=gray!20] {abc};
     \node(bob-2)[rectangle, draw=none,fill=gray!20, below of=bob-1] {ab};
@@ -121,7 +121,7 @@ Figure~\ref{fig:collab-sol-ot} illustrates the solution proposed by \acrshort{ot
 \begin{figure}[H]
   \centerfloat
   \sffamily
-  \begin{tikzpicture}[node distance=4cm]
+  \begin{tikzpicture}[node distance=4cm,scale=0.5, every node/.append style={transform shape}]
 
     \node(bob-1)[rectangle, draw=none, fill=gray!20] {abc};
     \node(bob-2)[rectangle, draw=none, fill=gray!20, below of=bob-1] {ab};
@@ -148,7 +148,7 @@ Figure~\ref{fig:collab-sol-ot} illustrates the solution proposed by \acrshort{ot
 \begin{figure}[H]
   \centerfloat
   \sffamily
-  \begin{tikzpicture}[node distance=2.0cm]
+  \begin{tikzpicture}[node distance=2.0cm,scale=0.5, every node/.append style={transform shape}]
 
     \node(original) {Mary};
     \node(alice-1)[below left of=original] {M\textcolor{red}{\cancel{ar}}y};
@@ -728,7 +728,7 @@ Figure~\ref{fig:gen-class-diagram} represents our application's general class di
 
 \subsection{Sequence diagrams}
 
-\begin{sdfig}{Sign up}{sign up}{sign-up}[0.8][hp][
+\begin{sdfig}{Sign up}{sign up}{sign-up}[0.6][hp][
     In order to mitigate the security issues of storing passwords, we follow the model of passwordless sign up and log in.
     Instead of asking our users for a password, which may not be as secure and unique as one might hope, we generate a \acrfull{otp} and email it to the user.
     The \acrshort{otp} is stored for a limited time in our database and it is removed once used.

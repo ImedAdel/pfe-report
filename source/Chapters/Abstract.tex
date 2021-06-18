@@ -2,15 +2,16 @@
 
 %\renewcommand{\abstractname}{Abstract} % Uncomment to change the name of the abstract
 
-\pdfbookmark[1]{Abstract}{Abstract} % Bookmark name visible in a PDF viewer
-\pagenumbering{gobble}
+% \pdfbookmark[1]{Abstract}{Abstract} % Bookmark name visible in a PDF viewer
 
 \begingroup
-% \let\clearpage\relax
+\let\clearpage\relax
+\pagenumbering{gobble}
+% \pagestyle{empty}
 % \let\cleardoublepage\relax
 % \let\cleardoublepage\relax
 
-\section*{Abstract}
+\chapter*{Abstract}
 The goal of this project is to develop a collaborative visual database for small and medium-sized enterprises with limited technical knowledge. The project relies on modified CRDT algorithms for real-time collaboration and a set of modern web technologies to ensure the best user experience.
 \\~\\
 \textbf{Keywords}: Real-time, collaboration, database, no-code, React.
@@ -19,7 +20,7 @@ The goal of this project is to develop a collaborative visual database for small
 \vspace{1cm}
 % \vspace*{\fill}
 
-\section*{Résumé}
+\chapter*{Résumé}
 L'objectif de ce projet est de développer une base de données visuelle collaborative pour les petites et moyennes entreprises ayant des connaissances techniques limitées. Le projet s'appuie sur des algorithmes CRDT modifiés pour une collaboration en temps réel et sur un ensemble de technologies Web modernes pour garantir la meilleure expérience utilisateur.
 \\~\\
 \textbf{Mots-clés} : Temps réel, collaboration, base de données, sans code, React.
