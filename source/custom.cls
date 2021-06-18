@@ -92,6 +92,9 @@
 \RequirePackage{xparse}
 % \RequirePackage[showframe]{geometry}
 
+% \RequirePackage[most]{tcolorbox}
+\RequirePackage{fancybox}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Tables
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -135,9 +138,18 @@
 \newcommand{\wirefig}[3]{
   \begin{figure}[H]
     \centerfloat
-    \includegraphics[width=\maxwidth{1.2\linewidth},height=\maxheight{0.6\linewidth},keepaspectratio]{#3}
+    \includegraphics[width=\maxwidth{1.0\linewidth},height=\maxheight{0.5\linewidth},keepaspectratio]{#3}
     \caption{"#1" wireframe}
     \label{fig:#2-wireframe}
+  \end{figure}
+}
+
+\newcommand{\uifig}[3]{
+  \begin{figure}[H]
+    \centerfloat
+    \shadowbox{\includegraphics[width=\maxwidth{1.0\linewidth},height=\maxheight{0.5\linewidth},keepaspectratio]{#3}}
+    \caption{"#1" interface}
+    \label{fig:#2-ui}
   \end{figure}
 }
 
