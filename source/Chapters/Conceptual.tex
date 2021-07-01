@@ -2,6 +2,8 @@
 \label{chap:conceptual}
 
 % \begin{toexclude}
+\section{Introduction}
+
 The deciding factor for the success of one application and the failure of another is the architecture.
 In order to achieve the requirements we set in the previous chapter, along with solving the issues faced by the existing solutions, we need to carefully design our systems.
 
@@ -552,6 +554,7 @@ Figure~\ref{fig:gen-class-diagram} represents our application's general class di
   \centering
   \sffamily
   \tikzumlset{font=\tiny}
+  \tikzsetnextfilename{general-class-diagram}
   \begin{tikzpicture}[scale=0.65, every node/.append style={transform shape}]
     \umlclass[x=-4,draw=none]{User}{
       ID : UUID \\
@@ -628,10 +631,10 @@ Figure~\ref{fig:gen-class-diagram} represents our application's general class di
     \umlclass[below=2cm of Collection,draw=none]{Field}{
       ID : UUID \\
       Name : Text \\
-      Icon : Text \\
-      Description : Text \\
+      Type : Text \\
+      % Description : Text \\
       Version: Integer \\
-      SpaceID: UUID \\
+      % SpaceID: UUID \\
       CreatedAt: Timestamptz \\
       ModifiedAt: Timestamptz
       % CreatedBy: UUID \\
@@ -641,7 +644,7 @@ Figure~\ref{fig:gen-class-diagram} represents our application's general class di
     \umlclass[right=2.5cm of Field,draw=none]{Document}{
       ID : UUID \\
       Version: Integer \\
-      CollectionID: UUID \\
+      % CollectionID: UUID \\
       CreatedAt: Timestamptz \\
       ModifiedAt: Timestamptz
       % CreatedBy: UUID \\
@@ -693,8 +696,8 @@ Figure~\ref{fig:gen-class-diagram} represents our application's general class di
 
     \umlassoc[geometry=-|,mult2=$0..*$,mult1=$1$,anchors=180 and 90]{Space}{Project}
 
-    \umlassoc[geometry=|-|,mult2=$0..*$,arg2=modifies,pos2=2.6,align2=right,mult1=$1$,anchors=130 and 100,weight=-0.35]{User}{Project}
-    \umlassoc[geometry=|-|,mult2=$0..*$,arg2=creates,pos2=2.8,align2=right,mult1=$1..*$,anchors=110 and 120,weight=-0.45]{User}{Project}
+    \umlassoc[geometry=|-|,mult2=$0..*$,arg2=modifies,pos2=2.6,align2=right,mult1=$1..*$,anchors=130 and 100,weight=-0.35]{User}{Project}
+    \umlassoc[geometry=|-|,mult2=$0..*$,arg2=creates,pos2=2.8,align2=right,mult1=$1$,anchors=110 and 120,weight=-0.45]{User}{Project}
 
     \umlassoc[geometry=|-,mult2=$0..*$,arg2=modifies,mult1=$1$,anchors=-90 and 20,pos2=1.8]{User}{Document}
     \umlassoc[geometry=|-,mult2=$0..*$,arg2=creates,mult1=$1..*$,anchors=-100 and 30,pos2=1.6]{User}{Document}

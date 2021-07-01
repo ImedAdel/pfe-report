@@ -1,6 +1,8 @@
 \chapter{Implementation}
 \label{chap:implementation}
 
+\section{Introduction}
+
 As exciting as ideas may be, they are worthless if they never leave the books to the real world.
 In this chapter, we are finally bringing our application to life.
 We will start, as always, by exploring the possible choice for our implementation, proceed to justify our choice, and finally present our application.
@@ -230,12 +232,14 @@ Figure~\ref{fig:login-ui} shows the interface of the login page.
 
 \subsection{"Confirm" interface}
 Figure~\ref{fig:confirm-ui} shows the interface of the confirm page.
+The page deliberately shows a button and asks for manual confirmation to avoid any possible security issues resulting from automatic confirmation when visiting this page.
 
 \uifig{Confirm}{confirm}{ui-confirm.png}
 
 
 \subsection{"Confirmation email" interface}
 Figure~\ref{fig:email-ui} shows the interface of the confirmation email.
+The button is a link to the confirmation page.
 
 \uifig{Confirmation email}{email}{ui-email.png}
 

@@ -2,7 +2,7 @@
 \ProvidesClass{custom}[2021/03/31 My custom thesis and book class]
 
 \PassOptionsToPackage{
-  DIV  = 8,    % TODO: Make configurable
+  DIV  = 12,    % TODO: Make configurable
   BCOR = 10mm,  % TODO: Make configurable
 }{typearea}
 
@@ -76,7 +76,7 @@
 \RequirePackage{tikz-uml}
 \RequirePackage{tikz-cd}
 \RequirePackage{pgfplots}
-
+% \tikzset{external/force remake}
 % \tikzexternalize[
 % %   mode=graphics if exists,
 % % figure list=true,
@@ -111,6 +111,7 @@
 \RequirePackage{graphicx}
 \graphicspath{%
   {Graphics/}
+  {TikzFigures/}
   {./}
 }
 
